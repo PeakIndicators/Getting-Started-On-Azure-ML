@@ -9,7 +9,7 @@ A lot of data science and machine learning experimentation is performed by runni
 
 ` cd Users`
 
- `git clone https://github.com/MicrosoftLearning/mslearn-dp100`
+ `git clone https://github.com/felicity-borg/Getting-Started-On-Azure-ML/tree/main/labs`
  
  4. When the command has completed, in the **My files** pane, click ↻ to refresh the view and verify that a new **Users/mslearn-dp100** folder has been created. This folder contains multiple **.ipynb** notebook files.
  
