@@ -21,7 +21,7 @@ A lot of data science and machine learning experimentation is performed by runni
  
  6. Close the terminal pane, terminating the session.
  
- 7. In the **Users/mslearn-dp100 folder**, open the **Get Started with Notebooks** notebook. Then read the notes and follow the instructions it contains to learn how to connect to your Azure ML workspace, view resources and run cells. 
+ 7. In the **Users/mslearn-dp100 folder**, open the **Getting_Started_with_Azure_ML.ipynb** notebook. Then read the notes and follow the instructions it contains to learn how to connect to your Azure ML workspace, view resources and run cells. 
  
  **Tip:** To run a code cell, select the cell you want to run and then use the ▷ button to run it.
  
