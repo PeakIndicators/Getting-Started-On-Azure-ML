@@ -21,7 +21,15 @@ A lot of data science and machine learning experimentation is performed by runni
  
  6. Close the terminal pane, terminating the session.
  
- 7. In the **Users/mslearn-dp100 folder**, open the **Get Started with Notebooks** notebook. Then read the notes and follow the instructions it contains.
+ 7. In the **Users/mslearn-dp100 folder**, open the **Get Started with Notebooks** notebook. Then read the notes and follow the instructions it contains to learn how to connect to your Azure ML workspace, view resources and run cells. 
  
+ **Tip:** To run a code cell, select the cell you want to run and then use the ▷ button to run it.
  
+ ## Stop your compute instance
+ 
+ When you are done with using your compute instance shut down your compute instance to avoid incurring unnecessary charges in your Azure subscription.
+ 
+ 1. In Azure Machine Learning studio, on the **Compute** page, select your compute instance.
+ 
+2. Click **Stop** to stop your compute instance. When it has shut down, its status will change to **Stopped**.
 
