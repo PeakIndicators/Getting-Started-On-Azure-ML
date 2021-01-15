@@ -48,11 +48,10 @@ The following example demonstrates what the form looks like when you create an *
 
 After you create a datastore, create a dataset to interact with your data. Datasets package your data into a lazily evaluated consumable object for machine learning tasks, like training. [Learn more about datasets](https://docs.microsoft.com/en-us/azure/machine-learning/how-to-create-register-datasets).
 
-There are two types of datasets, FileDataset and TabularDataset. [FileDatasets](https://docs.microsoft.com/en-us/azure/machine-learning/how-to-create-register-datasets#filedataset) create references to single or multiple files or public URLs. Whereas, [TabularDatasets](https://docs.microsoft.com/en-us/azure/machine-learning/how-to-create-register-datasets#tabulardataset) represent your data in a tabular format.
+There are two types of datasets, FileDataset and TabularDataset. 
+[FileDatasets](https://docs.microsoft.com/en-us/azure/machine-learning/how-to-create-register-datasets#filedataset) create references to single or multiple files or public URLs. Whereas, [TabularDatasets](https://docs.microsoft.com/en-us/azure/machine-learning/how-to-create-register-datasets#tabulardataset) represent your data in a tabular format.
 
 The following steps and animation show how to create a dataset in [Azure Machine Learning studio](https://ml.azure.com/).
-
-**Note**—Datasets created through Azure Machine Learning studio are automatically registered to the workspace.
 
 ![](https://docs.microsoft.com/en-us/azure/machine-learning/media/how-to-connect-data-ui/create-dataset-ui.gif)
 
@@ -67,8 +66,6 @@ To create a dataset in the studio:
 4. Select **Tabular** or **File** for Dataset type.
 
 5. Select **Next** to open the **Datastore and file selection** form. On this form you select where to keep your dataset after creation, as well as select what data files to use for your dataset. 
-
-  * Enable skip validation if your data is in a virtual network. Learn more about [virtual network isolation and privacy](https://docs.microsoft.com/en-us/azure/machine-learning/how-to-enable-studio-virtual-network).
 
   * For Tabular datasets, you can specify a 'timeseries' trait to enable time related operations on your dataset. Learn how to [add the timeseries trait to your dataset](https://docs.microsoft.com/en-us/azure/machine-learning/how-to-monitor-datasets#studio-dataset).
 
@@ -115,41 +112,3 @@ Specifically, Azure Machine Learning dataset's data profile includes:
 | Variance |Measure of how far spread out this column's data is from its average value. |
 | Skewness |	Measure of how different this column's data is from a normal distribution. |
 | Kurtosis |	Measure of how heavily tailed this column's data is compared to a normal distribution. |
-
-## Storage access and permissions
-To ensure you securely connect to your Azure storage service, Azure Machine Learning requires that you have permission to access the corresponding data storage. This access depends on the authentication credentials used to register the datastore.
-
-## Virtual network
-If your data storage account is in a **virtual network**, additional configuration steps are required to ensure Azure Machine Learning has access to your data. See [Network isolation & privacy](https://docs.microsoft.com/en-us/azure/machine-learning/how-to-enable-studio-virtual-network) to ensure the appropriate configuration steps are applied when you create and register your datastore.
-
-## Access validation
-**As part of the initial datastore creation and registration process**, Azure Machine Learning automatically validates that the underlying storage service exists and the user provided principal (username, service principal, or SAS token) has access to the specified storage.
-
-**After datastore creation**, this validation is only performed for methods that require access to the underlying storage container, **not** each time datastore objects are retrieved. For example, validation happens if you want to download files from your datastore; but if you just want to change your default datastore, then validation does not happen.
-
-To authenticate your access to the underlying storage service, you can provide either your account key, shared access signatures (SAS) tokens, or service principal according to the datastore type you want to create. The [storage type matrix](https://docs.microsoft.com/en-us/azure/machine-learning/how-to-access-data#matrix) lists the supported authentication types that correspond to each datastore type.
-
-You can find account key, SAS token, and service principal information on your [Azure portal](https://portal.azure.com/).
-
-* If you plan to use an account key or SAS token for authentication, select **Storage Accounts** on the left pane, and choose the storage account that you want to register.
-  The **Overview** page provides information such as the account name, container, and file share name.
-
-    1. For account keys, go to **Access keys** on the **Settings pane**.
-
-    2. For SAS tokens, go to **Shared access signatures** on the **Settings pane**.
-
-* If you plan to use a [service principal](https://docs.microsoft.com/en-us/azure/active-directory/develop/howto-create-service-principal-portal) for authentication, go to your **App registrations** and select which app you want to use.
-  * Its corresponding **Overview** page will contain required information like tenant ID and client ID.
-
-**Important**:
-*If you need to change your access keys for an Azure Storage account (account key or SAS token), be sure to sync the new credentials with your workspace and the datastores connected to it. [Learn how to sync your updated credentials](https://docs.microsoft.com/en-us/azure/machine-learning/how-to-change-storage-access-key).
-
-## Permission 
-For Azure blob container and Azure Data Lake Gen 2 storage, make sure your authentication credentials have **Storage Blob Data Reader** access. Learn more about [Storage Blob Data Reader](https://docs.microsoft.com/en-us/azure/role-based-access-control/built-in-roles#storage-blob-data-reader). An account SAS token defaults to no permissions.
-
-* For data **read access**, your authentication credentials must have a minimum of list and read permissions for containers and objects.
-
-* For data **write access**, write and add permissions also are required.
-
-## Train with datasets
-Use your datasets in your machine learning experiments for training ML models. [Learn more about how to train with datasets](https://docs.microsoft.com/en-us/azure/machine-learning/how-to-train-with-datasets).
