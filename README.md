@@ -15,5 +15,5 @@ Content:
 * Create a real time webservice
 * Integrate with Git
 * How to work with desktop tools and connect to Azure ML
-* [Jupyter Lab notebooks] (https://github.com/felicity-borg/Getting-Started-On-Azure-ML/tree/main/labs)
+* [Jupyter Lab notebooks](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/tree/main/labs)
 * [Data for your notebooks](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/tree/main/labs)
