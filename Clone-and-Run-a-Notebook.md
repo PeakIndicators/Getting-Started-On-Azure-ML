@@ -1,4 +1,4 @@
-# Clone and run a notebook
+# Running a Jupyter notebook and installing Azure Machine Learning SDK
 
 A lot of data science and machine learning experimentation is performed by running code in notebooks. Your compute instance includes fully featured Python notebook environments (Jupyter and JuypyterLab) that you can use for extensive work; but for basic notebook editing, you can use the built-in Notebooks page in Azure Machine learning studio.
 
@@ -11,5 +11,17 @@ A lot of data science and machine learning experimentation is performed by runni
 
  `git clone https://github.com/MicrosoftLearning/mslearn-dp100`
  
- 4. When the command has completed, in the My files pane, click ↻ to refresh the view and verify that a new Users/mslearn-dp100 folder has been created. This folder contains multiple .ipynb notebook files.
+ 4. When the command has completed, in the **My files** pane, click ↻ to refresh the view and verify that a new **Users/mslearn-dp100** folder has been created. This folder contains multiple **.ipynb** notebook files.
+ 
+ 5. In the terminal pane, enter the following command to upgrade the Azure Machine Learning SDK and notebook widgets python packages to the latest version (these packages are used in most of the notebooks):
+ 
+ ` pip install --upgrade azureml-sdk azureml-widgets`
+ 
+ You may see some warnings as the package dependencies are installed. You can ignore these.
+ 
+ 6. Close the terminal pane, terminating the session.
+ 
+ 7. In the **Users/mslearn-dp100 folder**, open the **Get Started with Notebooks** notebook. Then read the notes and follow the instructions it contains.
+ 
+ 
 
