@@ -6,8 +6,9 @@ Content:
 
 * [How to access Azure ML](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Azure-ML-Studio.md)
 * [Create compute instances](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Azure-ML-Studio.md)
-* Create a Datastore
-* Create Datasets
+* [Create a Datastore](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Work-With-Data-in-Azure-ML.md)
+* [Create Datasets](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Work-With-Data-in-Azure-ML.md)
+* Create a notebook
 * Clone and run a notebook
 * Integrate with Git
 * Create an Experiment
