@@ -10,7 +10,7 @@ Content:
 * [Create Datasets](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Work-With-Data-in-Azure-ML.md)
 * [Running a Notebook](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Clone-and-Run-a-Notebook.md)
 * [Create an Experiment](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Azure-ML-Experiments.md)
-* Create a pipeline
+* [Create a pipeline](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Orchestrate-ML-With-Pipelines.md)
 * Create a batch webservice
 * Create a real time webservice
 * Integrate with Git
