@@ -89,7 +89,7 @@ An experiment script is just a Python code file that contains the code you want 
 
 To run a script as an experiment, you must define a *script configuration* that defines the script to be run and the Python environment in which to run it. This is implemented by using a **ScriptRunConfig** object.
 
-For example, the following code could be used to run an experiment based on a script in the **experiment_files** folder (which must also contain any files used by the script, such as the *data.csv *file in previous script code example):
+For example, the following code could be used to run an experiment based on a script in the **experiment_files** folder (which must also contain any files used by the script, such as the *data.csv* file in previous script code example):
 
 ![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/4.PNG)
 
