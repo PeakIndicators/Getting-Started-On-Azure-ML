@@ -67,11 +67,11 @@ To use a **PipelineData** object to pass data between steps, you must:
 
 For example, the following code defines a **PipelineData** object that for the preprocessed data that must be passed between the steps.
 
-1[](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/7.PNG)
+![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/7.PNG)
 
 In the scripts themselves, you can obtain a reference to the **PipelineData** object from the script argument, and use it like a local folder.
 
-1[](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/8.PNG)
+![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/8.PNG)
 
 
 
