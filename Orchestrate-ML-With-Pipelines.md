@@ -114,3 +114,40 @@ To initiate a published endpoint, you make an HTTP request to its REST endpoint,
 For example, the following Python code makes a REST request to run a pipeline and displays the returned run ID.
 
 ![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/13.PNG)
+
+## Use pipeline parameters
+
+You can increase the flexibility of a pipeline by defining parameters.
+
+### Defining parameters for a pipeline
+To define parameters for a pipeline, create a **PipelineParameter** object for each parameter, and specify each parameter in at least one step.
+
+For example, you could use the following code to include a parameter for a regularization rate in the script used by an estimator:
+
+![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/14.PNG)
+
+**Note: You must define parameters for a pipeline before publishing it.**
+
+### Running a pipeline with a parameter
+
+After you publish a parameterized pipeline, you can pass parameter values in the JSON payload for the REST interface:
+
+![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/15.PNG)
+
+## Schedule pipelines
+
+After you have published a pipeline, you can initiate it on demand through its REST endpoint, or you can have the pipeline run automatically based on a periodic schedule or in response to data updates.
+
+### Scheduling a pipeline for periodic intervals
+To schedule a pipeline to run at periodic intervals, you must define a **ScheduleRecurrence** that determines the run frequency, and use it to create a **Schedule**.
+
+For example, the following code schedules a daily run of a published pipeline.
+
+
+![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/16.PNG)
+
+### Triggering a pipeline run on data changes
+To schedule a pipeline to run whenever data changes, you must create a **Schedule** that monitors a specified path on a datastore, like this:
+
+![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/17.PNG)
+
