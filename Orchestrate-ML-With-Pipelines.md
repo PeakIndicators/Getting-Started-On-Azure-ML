@@ -151,3 +151,28 @@ To schedule a pipeline to run whenever data changes, you must create a **Schedul
 
 ![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/17.PNG)
 
+## Create a Pipeline
+
+You can use the Azure Machine Learning SDK to perform all of the tasks required to create and operate a machine learning solution in Azure. Rather than perform these tasks individually, you can use pipelines to orchestrate the steps required to prepare data, run training scripts, register models, and other tasks.
+
+### Before you start
+
+If you have not already done so, create a [compute instance](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Azure-ML-Studio.md) and ensure you have [cloned the notebooks] (https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Clone-and-Run-a-Notebook.md) required for this exercise.
+
+## Open Jupyter
+
+1. In Azure Machine Learning studio, view the **Compute** page for your workspace; and on the Compute Instances tab, start your compute instance if it is not already running.
+2. When the compute instance is running, click the **Jupyter** link to open the Jupyter home page in a new browser tab. Be sure to open Jupyter and not JupyterLab.
+
+
+## Create and publish a pipeline
+In this exercise, the code to create and publish a pipeline is provided in a notebook.
+
+1. In the Jupyter home page, browse to the Users/labs folder where you cloned the notebook repository, and open the **Create-Pipeline.ipynb** notebook.
+
+2. Then read the notes in the notebook, running each code cell in turn.
+
+3. When you have finished running the code in the notebook, on the **File** menu, click **Close and Halt** to close it and shut down its Python kernel. Then close all Jupyter browser tabs.
+
+### Clean-up
+If you’re finished working with Azure Machine Learning for now, in Azure Machine Learning studio, on the **Compute** page, on the Compute Instances tab, select your compute instance and click **Stop** to shut it down. Otherwise, leave it running for the next lab.
