@@ -9,7 +9,7 @@ Before getting into detail on how to work with Azure Machine Learning Studio, le
 ## What is machine learning?
 Machine learning is a data science technique that allows computers to use existing data to forecast future behaviors, outcomes, and trends. By using machine learning, computers learn without being explicitly programmed. Forecasts or predictions from machine learning can make apps and devices smarter. 
 
-## How does Azure provides tools to perform machine learning?
+## How can we perform machine learning tasks in Azure?
 Among others, Azure has a resource called: Azure Machine Learning Studio, which is the web portal for data scientist developers in Azure Machine Learning. The studio combines no-code and code-first experiences for an inclusive data science platform.
 
 With this in mind, the main purpose of this repository, is to establish a guide on how to get started with Azure Machine Learning Studio.
