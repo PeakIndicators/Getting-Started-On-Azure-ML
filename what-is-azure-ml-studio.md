@@ -13,3 +13,46 @@ A taxonomy of studio is illustrated in the following diagram (provided by Micros
   <img src="https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/azure-machine-learning-taxonomy.png">
 </p>
 
+The diagram shows the following components of a workspace:
+
+* A workspace can contain Azure Machine Learning compute instances, cloud resources configured with the Python environment necessary to run Azure Machine Learning.
+* User roles enable you to share your workspace with other users, teams, or projects.
+* Compute targets are used to run your experiments.
+* When you create the workspace, associated resources are also created for you.
+* Experiments are training runs you use to build your models.
+* Pipelines are reusable workflows for training and retraining your model.
+* Datasets aid in management of the data you use for model training and pipeline creation.
+* Once you have a model you want to deploy, you create a registered model.
+* Use the registered model and a scoring script to create a deployment endpoint.
+
+## What tasks can we do within Azure Machine Learning Studio?
+
+Once again if we check Microsoft documentation we can define those task as:
+
+* Run an experiment to train a model - writes experiment run results to the workspace.
+* Use automated ML to train a model - writes training results to the workspace.
+* Register a model in the workspace.
+* Deploy a model - uses the registered model to create a deployment.
+* Create and run reusable workflows.
+* View machine learning artifacts such as experiments, pipelines, models, deployments.
+* Track and monitor models.
+
+## How can the user interact with the tools provided by Azure Machine Learning Studio?
+
+* On the web accessing Azure Portal and then selecting the resource Azure Machine Learning studio
+* In any Python environment with the Azure Machine Learning SDK for Python.
+* In any R environment with the Azure Machine Learning SDK for R (preview).
+* On the command line using the Azure Machine Learning CLI extension
+* Azure Machine Learning VS Code Extension
+
+In our guidelines we will start by focusing on the web access and then we will give an overview on the other options.
+
+Web Access: [How to access Azure ML Studio](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Azure-ML-Studio.md)
+
+#### Note
+Azure Machine Learning Studio has suffered a branding rename, previouly it was called Azure Machine Learning Workspace and it has been renamed to Azure Machine Learning Studio. Therefore, some Microsoft documentation hasn't been updated yet and it might still refer to Azure Machine Learning Workspace but as we said it's the same resource as Azure Machine Learning Studio.
+
+
+
+
+*Source: https://docs.microsoft.com/en-us/azure/machine-learning/concept-workspace*
