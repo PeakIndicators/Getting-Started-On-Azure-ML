@@ -74,4 +74,43 @@ In the scripts themselves, you can obtain a reference to the **PipelineData** ob
 ![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/8.PNG)
 
 
+## Reuse pipeline steps
 
+Pipelines with multiple long-running steps can take a significant time to complete. Azure Machine Learning includes some caching and reuse features to reduce this time.
+
+### Managing step output reuse
+By default, the step output from a previous pipeline run is reused without rerunning the step provided the script, source directory, and other parameters for the step have not changed. Step reuse can reduce the time it takes to run a pipeline, but it can lead to stale results when changes to downstream data sources have not been accounted for.
+
+To control reuse for an individual step, you can set the **allow_reuse** parameter in the step configuration, like this:
+
+![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/9.PNG)
+
+### Forcing all steps to run
+When you have multiple steps, you can force all of them to run regardless of individual reuse configuration by setting the **regenerate_outputs** parameter when submitting the pipeline experiment:
+
+`pipeline_run = experiment.submit(train_pipeline, regenerate_outputs=True)`
+
+## Publish pipelines
+
+After you have created a pipeline, you can publish it to create a REST endpoint through which the pipeline can be run on demand.
+
+### Publishing a pipeline
+To publish a pipeline, you can call its publish method, as shown here:
+
+![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/10.PNG)
+
+Alternatively, you can call the **publish** method on a successful run of the pipeline:
+
+
+![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/11.PNG)
+
+After the pipeline has been published, you can view it in Azure Machine Learning studio. You can also determine the URI of its endpoint like this:
+
+![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/12.PNG)
+
+### Using a published pipeline
+To initiate a published endpoint, you make an HTTP request to its REST endpoint, passing an authorization header with a token for a service principal with permission to run the pipeline, and a JSON payload specifying the experiment name. The pipeline is run asynchronously, so the response from a successful REST call includes the run ID. You can use this to track the run in Azure Machine Learning studio.
+
+For example, the following Python code makes a REST request to run a pipeline and displays the returned run ID.
+
+![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/13.PNG)
