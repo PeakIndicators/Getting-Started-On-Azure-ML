@@ -14,6 +14,11 @@ The Azure resources created alongside studio include:
 ## Connect and explore Azure Machine Learning Studio
 
 You can manage some studio assets in the Azure portal, but for data scientists, this tool contains lots of irrelevant information and links that relate to managing general Azure resources. Azure Machine Learning studio provides a dedicated web portal for working with your studio.
+There are 2 options while connecting via web portal:
+* Option 1 - Accessing Azure Machine Learning Studio through Azure Portal
+* Option 2 - Accessing Azure Machine Learning Studio diretly from Azure ML Studio web link
+
+The next steps will show, for each option, how the user can connect:
 
 **Option 1 - Accessing Azure Machine Learning Studio through Azure Portal**
 
