@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/azure%20ML%20logo.png">
+</p>
+
 # Getting Started On Azure Machine Learning Studio
 
 Before getting into detail on how to work with Azure Machine Learning Studio, let's introduce what is the tool for. 
@@ -29,7 +33,7 @@ Content:
 
 * [What is Azure ML Studio](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Azure-ML-Studio.md)
 * [How to access Azure ML Studio](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Azure-ML-Studio.md)
-* [Create compute instances](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Create-Compute-Instance.md)
+* [Create compute instances](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Azure-ML-Studio.md)
 * [Create a Datastore (Code Free)](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Work-With-Data-in-Azure-ML.md)
 * [Create Datasets (Code Free)](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Work-With-Data-in-Azure-ML.md)
 * [Running a Notebook](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Clone-and-Run-a-Notebook.md)
