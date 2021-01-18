@@ -26,12 +26,12 @@ We recommend the use of the most up-to-date browser that's compatible with your 
 * Chrome (latest version)
 * Firefox (latest version)
 
-We will also re-use some of Microsoft documentation on the subject but we will try to present it in a structured way.
+We will also re-use some of Microsoft documentation (see: https://docs.microsoft.com/en-us/azure/machine-learning/) on the subject but we will try to present it in a structured way.
 
 
 Content: 
 
-* [What is Azure ML Studio](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Azure-ML-Studio.md)
+* [What is Azure ML Studio](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/what-is-azure-ml-studio.md)
 * [How to access Azure ML Studio](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Azure-ML-Studio.md)
 * [Create compute instances](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Azure-ML-Studio.md)
 * [Create a Datastore (Code Free)](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Work-With-Data-in-Azure-ML.md)
