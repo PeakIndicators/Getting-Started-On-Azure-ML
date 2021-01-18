@@ -1,10 +1,12 @@
-# What is Azure ML Studio?
+# What is Azure Machine Learning Studio?
 
 Azure Machine Learning Studio is the top-level resource for Azure Machine Learning, providing a centralized place to work with all the artifacts created by the users while working with Azure Machine Learning. 
 Studio keeps a history of all training runs, including logs, metrics, output and a snapshot of the scripts. 
 The user can then utilise this information to determine which training run produces the best model.
 
 Once the user has a model he likes, it can be registered within the studio and can then can be used alongside with scoring scripts to deploy to Azure Container Instances, Azure Kubernetes Service or to a field-programmable gate array (FPGA) as a REST-based HTTP endpoint. The model can also be deployed to an Azure IoT Edge device as a module.
+
+As a sum-up we can say that Azure Machine Learning Studio is a context for the experiments, data, compute targets, and other assets associated with a machine learning workload.
 
 ## Taxonomy
 A taxonomy of studio is illustrated in the following diagram (provided by Microsoft):
@@ -13,9 +15,9 @@ A taxonomy of studio is illustrated in the following diagram (provided by Micros
   <img src="https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/azure-machine-learning-taxonomy.png">
 </p>
 
-The diagram shows the following components of a workspace:
+The diagram shows the following components of Azure Machine Learning Studio:
 
-* A workspace can contain Azure Machine Learning compute instances, cloud resources configured with the Python environment necessary to run Azure Machine Learning.
+* It can contain Azure Machine Learning compute instances, cloud resources configured with the Python environment necessary to run Azure Machine Learning.
 * User roles enable you to share your workspace with other users, teams, or projects.
 * Compute targets are used to run your experiments.
 * When you create the workspace, associated resources are also created for you.
@@ -24,6 +26,18 @@ The diagram shows the following components of a workspace:
 * Datasets aid in management of the data you use for model training and pipeline creation.
 * Once you have a model you want to deploy, you create a registered model.
 * Use the registered model and a scoring script to create a deployment endpoint.
+
+
+## Azure Machine Learning Studio for Machine Learning Assets
+Azure Machine Learning Studio defines the boundary for a set of related machine learning assets. You can use it to group machine learning assets based on projects, deployment environments (for example, test and production), teams, or some other organizing principle. The assets in a workspace include:
+
+* Compute targets for development, training, and deployment.
+* Data for experimentation and model training.
+* Notebooks containing shared code and documentation.
+* Experiments, including run history with logged metrics and outputs.
+* Pipelines that define orchestrated multi-step processes.
+* Models that you have trained.
+
 
 ## What tasks can we do within Azure Machine Learning Studio?
 
