@@ -1,6 +1,6 @@
 # Running a Jupyter notebook and installing Azure Machine Learning SDK
 
-A lot of data science and machine learning experimentation is performed by running code in notebooks. Your compute instance includes fully featured Python notebook environments (Jupyter and JuypyterLab) that you can use for extensive work; but for basic notebook editing, you can use the built-in Notebooks page in Azure Machine learning studio.
+A lot of data science and machine learning experimentation is performed by running code in notebooks. Your compute instance includes fully featured Python and R notebook environments (Jupyter and JuypyterLab) that you can use for extensive work; but for basic notebook editing, you can use the built-in Notebooks page in Azure Machine learning studio.
 
 1. In Azure Machine Learning studio, view the **Notebooks** page.
 
