@@ -172,7 +172,7 @@ There’s no point in training and registering machine learning models if you do
 
 ### Before you start
 
-If you have not already done so, create a [compute instance](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Azure-ML-Studio.md) and ensure you have [cloned the notebooks] (https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Clone-and-Run-a-Notebook.md) required for this exercise.
+If you have not already done so, create a [compute instance](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Azure-ML-Studio.md) and ensure you have [cloned the notebooks](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Clone-and-Run-a-Notebook.md) required for this exercise.
 
 ## Open Jupyter
 
@@ -188,7 +188,3 @@ In this exercise, the code to deploy a model as a real-time inferencing service 
 2. Then read the notes in the notebook, running each code cell in turn.
 
 3. When you have finished running the code in the notebook, on the **File** menu, click **Close and Halt** to close it and shut down its Python kernel. Then close all Jupyter browser tabs.
-
-### Clean-up
-If you’re finished working with Azure Machine Learning for now, in Azure Machine Learning studio, on the **Compute** page, on the Compute Instances tab, select your compute instance and click **Stop** to shut it down. Otherwise, leave it running for the next lab.
-
