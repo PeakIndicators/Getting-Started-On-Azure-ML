@@ -175,4 +175,4 @@ In this exercise, the code to create and publish a pipeline is provided in a not
 3. When you have finished running the code in the notebook, on the **File** menu, click **Close and Halt** to close it and shut down its Python kernel. Then close all Jupyter browser tabs.
 
 ### Clean-up
-If you’re finished working with Azure Machine Learning for now, in Azure Machine Learning studio, on the **Compute** page, on the Compute Instances tab, select your compute instance and click **Stop** to shut it down. Otherwise, leave it running for the next lab.
+If you’re finished working with Azure Machine Learning for now refer to [this page](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Stop-Compute-Instance.md) to stop your compute instance.  
