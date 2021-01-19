@@ -34,7 +34,7 @@ Content:
 * [What is Azure ML Studio](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/what-is-azure-ml-studio.md)
 * [How to access Azure ML Studio](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Azure-ML-Studio.md)
 * [Create compute instances](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Create-Compute-Instance.md)
-* [Stop a compute instace](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Stop-Compute-Instance.md)
+* [Stop a compute instance](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Stop-Compute-Instance.md)
 * [Create a Datastore (Code Free)](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Work-With-Data-in-Azure-ML.md)
 * [Create Datasets (Code Free)](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Work-With-Data-in-Azure-ML.md)
 * [Running a Notebook](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Clone-and-Run-a-Notebook.md)
