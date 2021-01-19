@@ -188,3 +188,6 @@ In this exercise, the code to deploy a model as a real-time inferencing service 
 2. Then read the notes in the notebook, running each code cell in turn.
 
 3. When you have finished running the code in the notebook, on the **File** menu, click **Close and Halt** to close it and shut down its Python kernel. Then close all Jupyter browser tabs.
+
+### Clean-up
+If you’re finished working with Azure Machine Learning for now refer to [this page](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Stop-Compute-Instance.md) to stop your compute instance.  
