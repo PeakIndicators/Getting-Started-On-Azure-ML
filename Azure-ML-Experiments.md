@@ -2,7 +2,7 @@
 
 Like any scientific discipline, data science involves running experiments; typically to explore data or to build and evaluate predictive models. In Azure Machine Learning, an experiment is a named process, usually the running of a script or a pipeline, that can generate metrics and outputs and be tracked in the Azure Machine Learning workspace.
 
-![](https://docs.microsoft.com/en-us/learn/wwl-data-ai/intro-to-azure-machine-learning-service/media/03-01-experiment.jpg)
+![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/Azure-ML-Experiments.PNG)
 
 An experiment can be run multiple times, with different data, code, or settings; and Azure Machine Learning tracks each run, enabling you to view run history and compare results for each run.
 
