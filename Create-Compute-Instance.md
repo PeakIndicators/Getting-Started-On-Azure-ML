@@ -25,3 +25,11 @@ For most scenarios a compute instance is enough for developing and testing code.
     * **Assign to another user:** Unselected (you can use this to assign a compute instance to a data scientist)
   
 3. Wait for the compute instance to start and its status to change to **Running**.
+
+**When you are done with using your compute instance for now shut down your compute instance to avoid incurring unnecessary charges in your Azure subscription.**
+
+To stop your compute instance:
+
+* In Azure Machine Learning studio, on the **Compute** page, select your compute instance.
+
+* Click **Stop** to stop your compute instance. When it has shut down, its status will change to **Stopped**.
