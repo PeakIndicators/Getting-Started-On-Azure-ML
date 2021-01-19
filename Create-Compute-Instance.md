@@ -26,6 +26,8 @@ For most scenarios a compute instance is enough for developing and testing code.
   
 3. Wait for the compute instance to start and its status to change to **Running**.
 
+## Stop Compute Instance
+
 **When you are done with using your compute instance for now shut down your compute instance to avoid incurring unnecessary charges in your Azure subscription.**
 
 To stop your compute instance:
