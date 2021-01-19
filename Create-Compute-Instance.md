@@ -19,7 +19,7 @@ For most scenarios a compute instance is enough for developing and testing code.
 * **Virtual machine type:** Select *CPU* for general use unless you know your code will use GPU (example for training deep learning models
 * **Virtual machine size:** *Standard_DS2_v2* if you want to run AutoML runs and pipeline runs select *Standard_DS3_v2*. Select a compute with higher RAM if you are training on large datasets or want to do real-time inferencing, etc.  
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/NewCompute1.PNG
+![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/NewCompute1.PNG)
 
 * **Compute name:** *enter a unique name*
 * **Enable SSH access:** Unselected (you can use this to enable direct access to the virtual machine using an SSH client)
@@ -27,11 +27,13 @@ For most scenarios a compute instance is enough for developing and testing code.
     * **Enable virtual network:** Unselected (you would typically use this in an enterprise environment to enhance network security)
     * **Assign to another user:** Unselected (you can use this to assign a compute instance to a data scientist)
     
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/NewCompute2.PNG
+![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/NewCompute2.PNG)
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/NewCompute3.PNG
+![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/NewCompute3.PNG)
   
 3. Wait for the compute instance to start and its status to change to **Running**.
+
+![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/NewCompute4.PNG)
 
 ## Stop Compute Instance
 
