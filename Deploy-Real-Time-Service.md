@@ -4,7 +4,7 @@
 
 In machine learning, *inferencing* refers to the use of a trained model to predict labels for new data on which the model has not been trained. Often, the model is deployed as part of a service that enables applications to request immediate, or *real-time*, predictions for individual or small numbers of data observations.
 
-![](https://docs.microsoft.com/en-us/learn/wwl-data-ai/register-and-deploy-model-with-amls/media/07-01-real-time.jpg)
+![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/Deploy.PNG)
 
 In Azure Machine learning, you can create real-time inferencing solutions by deploying a model as a service, hosted in a containerized platform such as Azure Kubernetes Services (AKS).
 
