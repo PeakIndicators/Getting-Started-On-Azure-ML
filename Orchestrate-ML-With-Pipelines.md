@@ -55,7 +55,7 @@ The **PipelineData** object is a special kind of **DataReference** that:
 
 You can view a **PipelineData** object as an intermediary store for data that must be passed from a step to a subsequent step.
 
-![](https://docs.microsoft.com/en-us/learn/wwl-data-ai/create-pipelines-in-aml/media/06-01-pipelinedata.jpg)
+![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/Pipeline-Steps.PNG)
 
 ### PipelineData step inputs and outputs
 
