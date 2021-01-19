@@ -11,6 +11,8 @@ One of the benefits of Azure Machine Learning is the ability to create cloud-bas
 * **Inference clusters:** Deployment targets for predictive services that use your trained models.
 * **Attached compute:** Links to other Azure compute resources, such as Virtual Machines or Azure Databricks clusters.
 
+![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/TypesOfComputeInstances.PNG)
+
 For most scenarios a compute instance is enough for developing and testing code.  As a development environment, a compute instance cannot, however, be shared with other users in your workspace—each individual will have to create their own compute instance. 
 
 2. On the **Compute instances** tab, add a new compute instance with the following settings. You’ll use this as a workstation to run code in notebooks.
@@ -39,8 +41,6 @@ For most scenarios a compute instance is enough for developing and testing code.
 
 **When you are done with using your compute instance for now shut down your compute instance to avoid incurring unnecessary charges in your Azure subscription.**
 
-To stop your compute instance:
+To stop your compute instance please follow the steps provided in:
 
-* In Azure Machine Learning studio, on the **Compute** page, select your compute instance.
-
-* Click **Stop** to stop your compute instance. When it has shut down, its status will change to **Stopped**.
+* [Stop a compute instance](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Stop-Compute-Instance.md)
