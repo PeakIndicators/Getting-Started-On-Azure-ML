@@ -124,7 +124,7 @@ You can access Jupyter from 2 options:
 4. You can start developing your code.
 
 ## Notebooks using the RStudio option provided on the compute instance (for R only)
-1. On the **Compute instances** tab, select your compute instance and click on JupylerLab 
+1. On the **Compute instances** tab, select your compute instance and click on RStudio 
 
 ![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/RStudio1.PNG)
 
