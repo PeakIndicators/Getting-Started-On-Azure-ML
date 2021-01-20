@@ -98,7 +98,7 @@ An implicitly created RunConfiguration object defines the Python environment for
 
 ## Run Experiments
 
-In this tutorial we provide some jupyter notebook templates (more detail in: [Jupyter Lab notebook templates](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/tree/main/labs).
+In this tutorial we provide some jupyter notebook templates (more detail in: [Jupyter Lab notebook templates](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/tree/main/labs)).
 
 ### Before you start
 
