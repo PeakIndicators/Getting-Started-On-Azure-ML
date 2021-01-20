@@ -45,7 +45,7 @@ Content:
 * [Create a Pipeline](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Orchestrate-ML-With-Pipelines.md)
 * [Deploy a model as a real-time inferencing service](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Deploy-Real-Time-Service.md)
 * [Create a batch webservice](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Deploy-Batch-Inference-Pipeline.md)
-* Integrate with Git
+* [Integrate with Git](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Integrate-with-Git.md)
 * How to work with desktop tools and connect to Azure ML
 * [Jupyter Lab notebook templates](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/tree/main/labs)
 * [Data for your notebook templates](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/tree/main/labs)
