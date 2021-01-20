@@ -133,4 +133,4 @@ A green success message appears at the top of the Run screen, and in the Model s
 
 ![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/automatedml14.PNG)
  
-Now you have an operational web service to generate predictions.
+Now we have an operational web service to generate predictions.
