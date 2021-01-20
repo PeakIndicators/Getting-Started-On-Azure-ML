@@ -1,4 +1,4 @@
-# Create a compute instance
+# Create a Compute Instance
 
 One of the benefits of Azure Machine Learning is the ability to create cloud-based compute (*Compute Instances*) in a workspace to provide a development environment that is managed with all of the other assets in the workspace. These compute instances enable you to run experiments and training scripts at scale.
 
@@ -50,4 +50,4 @@ For most scenarios a compute instance is enough for developing and testing code.
 
 To stop your compute instance please follow the steps provided in:
 
-* [Stop a compute instance](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Stop-Compute-Instance.md)
+* [Stop a Compute Instance](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Stop-Compute-Instance.md)
