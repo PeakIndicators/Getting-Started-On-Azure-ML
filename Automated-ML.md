@@ -82,3 +82,6 @@ Select **Save**.
 8. Select **Finish** to run the experiment. 
 
 9. The Run Detail screen opens with the Run status at the top as the experiment preparation begins. This status updates as the experiment progresses. Notifications also appear in the top right corner of the studio, to inform you of the status of your experiment.
+
+![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/automatedml8.PNG)
+
