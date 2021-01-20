@@ -51,4 +51,4 @@ Content:
 * [JupyterLab notebook templates](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/tree/main/labs)
 * [Data for your notebook templates](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/tree/main/labs)
 * How to work with Azure Machine Learning Studio Designer
-* How to work with Azure Machine Learning Studio Automated ML
+* [How to work with Azure Machine Learning Studio Automated ML](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Automated-ML.md)
