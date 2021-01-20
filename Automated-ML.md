@@ -49,3 +49,36 @@ Anyway, independent on the type of model, the steps are aimilar.
 
 Click **Next**.
 
+6. On the **Task type and settings** form, complete the setup for your automated ML experiment by specifying the machine learning task type and configuration settings. 
+Select the **machine learning task type** and then select *View additional configuration settings* and populate the fields as follows. 
+
+![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/automatedml4.PNG)
+
+These settings are to better control the training job. Otherwise, defaults are applied based on experiment selection and data.
+
+| **Additional configurations** | **Description** |
+| ---------- | -------------- |
+| Primary metric|	Evaluation metric that the machine learning algorithm will be measured by.	|
+| Explain best model|	Automatically shows explainability on the best model created by automated ML.|
+|Blocked algorithms|	Algorithms you want to exclude from the training job	|
+|Exit criterion|	If a criteria is met, the training job is stopped.|
+|Validation|	Choose a cross-validation type and number of tests.|
+|Concurrency|	The maximum number of parallel iterations executed per iteration|
+
+![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/automatedml5.PNG)
+
+Once all the setting are properly filled, select **Save**.
+
+7. Select **View featurization settings**. 
+
+![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/automatedml6.PNG)
+
+Configure accordingly.
+
+![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/automatedml7.PNG)
+
+Select **Save**.
+
+8. Select **Finish** to run the experiment. 
+
+9. The Run Detail screen opens with the Run status at the top as the experiment preparation begins. This status updates as the experiment progresses. Notifications also appear in the top right corner of the studio, to inform you of the status of your experiment.
