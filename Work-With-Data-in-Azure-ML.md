@@ -41,14 +41,14 @@ In most machine learning projects, you will likely need to work with data source
 1. Sign in to Azure Machine Learning studio.
 2. Select **Datastores** on the left pane under **Manage**.
 
-![](https://docs.microsoft.com/en-us/azure/machine-learning/media/how-to-connect-data-ui/datastore1.PNG)
+![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/datastore1.PNG)
 
 3. Select + **New datastore**.
 
-![](https://docs.microsoft.com/en-us/azure/machine-learning/media/how-to-connect-data-ui/datastore2.PNG)
+![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/datastore2.PNG)
 
 4. Complete the form to create and register a new datastore. See the [storage access and permissions section](https://docs.microsoft.com/en-us/azure/machine-learning/how-to-connect-data-ui#access-validation) if you need support on how to find the authentication credentials you need to populate this form.
 
 The following example demonstrates what the form looks like when you create an **Azure blob datastore**:
 
-![](https://docs.microsoft.com/en-us/azure/machine-learning/media/how-to-connect-data-ui/new-datastore-form.png)
+![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/new-datastore-form.png)
