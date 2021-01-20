@@ -39,6 +39,7 @@ Content:
 * [Unregister a Datastore](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Unregister-a-datastore.md)
 * [Create Datasets (Code Free)](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Work-With-Data-in-Azure-ML-Datasets.md)
 * [Unregister Datasets](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Unregister-a-dataset.md)
+* [Work with Data in Azure Machine Learning using code](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Work-with-Data-in-Azure-ML-code.md)
 * [Creating and Running a Python or R Notebook](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Creating-and-Running-a-Python-Notebook.md)
 * [Cloning and Running a Notebook](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Clone-and-Run-a-Notebook.md)
 * [Create an Experiment](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Azure-ML-Experiments.md)
