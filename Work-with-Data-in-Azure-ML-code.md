@@ -186,3 +186,34 @@ You can also pass a file dataset as a *named input*. In this approach, you use t
 *Script:*
 
 ![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/57.PNG)
+
+## Exercise - Work with data
+
+Although it’s fairly common to work with data on their local file system, in an enterprise environment it can be more effective to store the data in a central location where multiple data scientists and machine learning engineers can access it.
+
+In this exercise, you’ll explore *datastores* and *datasets*, which are the primary objects used to abstract data access in Azure Machine Learning.
+
+### Before you start
+
+In this tutorial we provide some jupyter notebook templates (more detail in: [Jupyter Lab notebook templates](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/tree/main/labs)).
+
+If you have not already done so, create a [compute instance](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Azure-ML-Studio.md) and ensure you have [Cloned the notebooks](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Clone-and-Run-a-Notebook.md) required for this exercise.
+
+## Open Jupyter
+
+1. In Azure Machine Learning studio, view the **Compute** page for your workspace; and on the Compute Instances tab, start your compute instance if it is not already running.
+2. When the compute instance is running, click the **Jupyter** link to open the Jupyter home page in a new browser tab. Be sure to open Jupyter and not JupyterLab.
+
+
+## Example on how to run experiments in a notebook
+Experiments in Azure Machine Learning need to be initiated from some sort of *control layer*; often a script or program. In this exercise, you’ll use a notebook to control experiments.
+
+1. In the Jupyter home page, browse to the Users/labs folder where you cloned the notebook repository, and open the **Work-with-Data.ipynb** notebook.
+
+2. Then read the notes in the notebook, running each code cell in turn.
+
+3. When you have finished running the code in the notebook, on the **File** menu, click **Close and Halt** to close it and shut down its Python kernel. Then close all Jupyter browser tabs.
+
+### Clean-up
+If you’re finished working with Azure Machine Learning for now refer to [this page](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Stop-Compute-Instance.md) to stop your compute instance.  
+
