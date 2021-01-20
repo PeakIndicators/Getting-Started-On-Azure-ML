@@ -1,4 +1,4 @@
-# Connect to data with the Azure Machine Learning studio - Datastore Creation (Code Free)
+# Connect to data with the Azure Machine Learning studio - Datastore Creation using the web portal
 
 ## Introduction to data connection in Azure Machine Learning Studio
 
