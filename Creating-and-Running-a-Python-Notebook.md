@@ -3,15 +3,15 @@
 There are few possible ways of creating and running python or R notebooks in Azure Machine Learning studio:
 
 1. Running those directly in the portal (this supports both Python and R)
-2. Using the Jupyter option provided on the compute instance (for python only)
-3. Using the JupyterLab option provided on the compute instance (for python only)
+2. Using the JupyterLab option provided on the compute instance (for python only)
+3. Using the Jupyter option provided on the compute instance (for python only)
 4. Using the RStudio option provided on the compute instance (for R only)
 
 The next sections will explain how to use eaxh of the options described above.
 
 ### Before you start
 
-If you have not already done so, create a [compute instance](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Azure-ML-Studio.md)
+If you have not already done so, create a [compute instance](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Azure-ML-Studio.md).
 
 ## Notebooks directly in your Azure Machine Learning studio (Python or R)
 In your Azure Machine Learning studio, create a new Jupyter notebook and start working. The newly created notebook is stored in the default studio storage. This notebook can be shared with anyone with access to the studio.
@@ -36,11 +36,11 @@ To create a new notebook:
 
 ![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/create-new-notebook4.PNG)
 
-6. Double click on the file name to open it and you can start your code.
+6. Double click on the file name to open it and you can start your code (select the type of language as it's explained bellow).
 
 **Notes**
   * On the top level you see see the option **Compute** where in order to execute the code you need to have your compute up and running.
-  * Also on the top level you can see the type of language you are going to use, you can choose between Python, R or Python 3.6 - Azure ML (this last one will include Azure ML SDKs.
+  * Also on the top level you can see the type of language you are going to use, you can choose between Python 3, R or Python 3.6 - Azure ML (this last one will include Azure ML SDKs).
   
  ![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/create-new-notebook5.PNG)
  
@@ -53,14 +53,89 @@ _Language Options_
 
 ![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/create-new-notebook7.PNG)
 
+
+## Notebooks using the JupyterLab option provided on the compute instance (for python only)
+You can access Jupyter lab from 2 options:
+
+### Using the notebook option from studio
+
+1. While in the notebook pane in studio (the one explained above). You can open JypyterLab editor by selecting it on the Editors option.
+![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/Jupyterlab1.PNG)
+
+2. Once you click on that option you will be redirected to JupyterLab embebed in Azure ML Studio and which is installed in your compute instance (everything is done by Azure, the user can just select the editor and start working with it). If you haven't done yet you will be prompted to add your credentials.
+
+![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/azure-login-screen.PNG)
+
+3. Once the right credentials are provided you will be redirected to JupyterLab Editor.
+![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/Jupyterlab2.PNG)
+
+4. You can start developing your code.
+
+### Using the compute instance option from studio
+
+1. On the **Compute instances** tab, select your compute instance and click on JupylerLab 
+
+![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/Jupyterlab1.PNG)
+
+2. Once you click on that option you will be redirected to JupyterLab embebed in Azure ML Studio and which is installed in your compute instance (everything is done by Azure, the user can just select the editor and start working with it). If you haven't done yet you will be prompted to add your credentials.
+
+![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/azure-login-screen.PNG)
+
+3. Once the right credentials are provided you will be redirected to JupyterLab Editor.
+![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/Jupyterlab2.PNG)
+
+4. You can start developing your code.
+
+
 ## Notebooks using the Jupyter option provided on the compute instance (for python only)
+You can access Jupyter from 2 options:
 
+### Using the notebook option from studio
 
+1. While in the notebook pane in studio (the one explained above). You can open Jypyter editor by selecting it on the Editors option.
+![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/Jupyter1.PNG)
 
+2. Once you click on that option you will be redirected to Jupyter editor embebed in Azure ML Studio and which is installed in your compute instance (everything is done by Azure, the user can just select the editor and start working with it). If you haven't done yet you will be prompted to add your credentials.
 
+![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/azure-login-screen.PNG)
 
+3. Once the right credentials are provided you will be redirected to Jupyter Editor. First you need to select the folder where your file is and the double click on the file name in order to start editing it.
+![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/Jupyter2.PNG)
 
+![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/Jupyter4.PNG)
 
+4. You can start developing your code.
+
+### Using the compute instance option from studio
+
+1. On the **Compute instances** tab, select your compute instance and click on JupylerLab 
+
+![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/Jupyter3.PNG)
+
+2. Once you click on that option you will be redirected to JupyterLab embebed in Azure ML Studio and which is installed in your compute instance (everything is done by Azure, the user can just select the editor and start working with it). If you haven't done yet you will be prompted to add your credentials.
+
+![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/azure-login-screen.PNG)
+
+3. Once the right credentials are provided you will be redirected to Jupyter Editor. First you need to select the folder where your file is and the double click on the file name in order to start editing it.
+![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/Jupyter2.PNG)
+
+![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/Jupyter4.PNG)
+
+4. You can start developing your code.
+
+## Notebooks using the RStudio option provided on the compute instance (for R only)
+1. On the **Compute instances** tab, select your compute instance and click on JupylerLab 
+
+![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/RStudio1.PNG)
+
+2. Once you click on that option you will be redirected to JupyterLab embebed in Azure ML Studio and which is installed in your compute instance (everything is done by Azure, the user can just select the editor and start working with it). If you haven't done yet you will be prompted to add your credentials.
+
+![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/azure-login-screen.PNG)
+
+3. Once the right credentials are provided you will be redirected to Jupyter Editor. First you need to select the folder where your file is and the double click on the file name in order to start editing it.
+![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/RStudio2.PNG)
+
+4. You can start developing your code.
 
 ## Clone samples
 Your workspace contains a Samples folder with notebooks designed to help you explore the SDK and serve as examples for your own machine learning projects. You can clone these notebooks into your own folder on your workspace storage container.
