@@ -1,6 +1,4 @@
-# Clean-up
-
- ## Stop your compute instance
+# Stop your Compute Instance
  
  When you are done with using your compute instance for now shut down your compute instance to avoid incurring unnecessary charges in your Azure subscription.
  
