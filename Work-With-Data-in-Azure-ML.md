@@ -49,9 +49,9 @@ In most machine learning projects, you will likely need to work with data source
 
 4. Complete the form to create and register a new datastore. See the [storage access and permissions section](https://docs.microsoft.com/en-us/azure/machine-learning/how-to-connect-data-ui#access-validation) if you need support on how to find the authentication credentials you need to populate this form.
 
-**Note:** Datastore name should only consist of lowercase letters, digits and underscore.
+  **Note:** Datastore name should only consist of lowercase letters, digits and underscore.
 
-The following example demonstrates what the form looks like when you create an **Azure blob datastore**:
+  The following example demonstrates what the form looks like when you create an **Azure blob datastore**:
 
 ![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/new-datastore-form.png)
 
