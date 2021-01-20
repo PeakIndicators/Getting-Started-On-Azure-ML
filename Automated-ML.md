@@ -132,5 +132,5 @@ Deploying a model might take about 20 minutes to complete. The deployment proces
 A green success message appears at the top of the Run screen, and in the Model summary pane, a status message appears under Deploy status. Select Refresh periodically to check the deployment status.
 
 ![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/automatedml14.PNG)
-
+ 
 Now you have an operational web service to generate predictions.
