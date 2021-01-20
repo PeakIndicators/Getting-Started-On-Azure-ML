@@ -1,7 +1,9 @@
-# Connect to data with the Azure Machine Learning studio
+# Connect to data with the Azure Machine Learning studio - Dataset Creation (Code Free)
 
-This document will detail how:
-* You can access your data without using code. 
+## Introduction to data connection in Azure Machine Learning Studio
+
+In Azure Machine Learning Studio you can:
+* Access your data without using code. 
 
 * Connect to your data in storage services on Azure with [Azure Machine Learning datastores](https://docs.microsoft.com/en-us/azure/machine-learning/how-to-access-data), and then package that data for tasks in your ML workflows with [Azure Machine Learning datasets](https://docs.microsoft.com/en-us/azure/machine-learning/how-to-create-register-datasets).
 
@@ -11,6 +13,8 @@ The following table defines and summarizes the benefits of datastores and datase
 | ---------- | -------------- | ---------------- |
 |Datastores | Securely connect to your storage service on Azure, by storing your connection information, like your subscription ID and token authorization in your [Key Vault](https://azure.microsoft.com/services/key-vault/) associated with the workspace | Because your information is securely stored, you: <ul><li>Don't put authentication credentials or original data sources at risk.</li><li>No longer need to hard code them in your scripts.</li></ul>|
 |Datasets | By creating a dataset, you create a reference to the data source location, along with a copy of its metadata. With datasets you can: <ul><li> Access data during model training.</li><li>Share data and collaborate with other users.</li><li>Leverage open-source libraries, like pandas, for data exploration</li></ul> | Because datasets are lazily evaluated, and the data remains in its existing location, you: <ul><li>Keep a single copy of data in your storage.</li><li> Incur no extra storage cost.</li><li> Don't risk unintentionally changing your original data sources.</li><li>Improve ML workflow performance speeds.</li></ul>|
+
+In this section we will explain how to create a Dataset.
 
 
 ## Create datasets
