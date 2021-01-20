@@ -55,11 +55,11 @@ _Language Options_
 
 
 ## Notebooks using the JupyterLab option provided on the compute instance (for python only)
-You can access Jupyter lab from 2 options:
+You can access JupyterLab from 2 options:
 
-### Using the notebook option from studio
+### Option 1: Using the notebook option from studio
 
-1. While in the notebook pane in studio (the one explained above). You can open JupyterLab editor by selecting it on the Editors option.
+1. While in the notebook pane in studio (the one explained above). You can open JupyterLab editor by selecting it in the Editors option.
 ![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/Jupyterlab1.PNG)
 
 2. Once you click on that option you will be redirected to JupyterLab embebed in Azure ML Studio and which is installed in your compute instance (everything is done by Azure, the user can just select the editor and start working with it). If you haven't done yet you will be prompted to add your credentials.
@@ -71,7 +71,7 @@ You can access Jupyter lab from 2 options:
 
 4. You can start developing your code.
 
-### Using the compute instance option from studio
+### Option 2: Using the compute instance option from studio
 
 1. On the **Compute instances** tab, select your compute instance and click on JupyterLab 
 
@@ -90,9 +90,9 @@ You can access Jupyter lab from 2 options:
 ## Notebooks using the Jupyter option provided on the compute instance (for python only)
 You can access Jupyter from 2 options:
 
-### Using the notebook option from studio
+### Option 1: Using the notebook option from studio
 
-1. While in the notebook pane in studio (the one explained above). You can open Jypyter editor by selecting it on the Editors option.
+1. While in the notebook pane in studio (the one explained above). You can open Jypyter editor by selecting it in the Editors option.
 ![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/jupyter1.PNG)
 
 2. Once you click on that option you will be redirected to Jupyter editor embebed in Azure ML Studio and which is installed in your compute instance (everything is done by Azure, the user can just select the editor and start working with it). If you haven't done yet you will be prompted to add your credentials.
@@ -106,13 +106,13 @@ You can access Jupyter from 2 options:
 
 4. You can start developing your code.
 
-### Using the compute instance option from studio
+### Option 2: Using the compute instance option from studio
 
 1. On the **Compute instances** tab, select your compute instance and click on Jupyter 
 
 ![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/jupyter3.PNG)
 
-2. Once you click on that option you will be redirected to JupyterLab embebed in Azure ML Studio and which is installed in your compute instance (everything is done by Azure, the user can just select the editor and start working with it). If you haven't done yet you will be prompted to add your credentials.
+2. Once you click on that option you will be redirected to Jupyter embebed in Azure ML Studio and which is installed in your compute instance (everything is done by Azure, the user can just select the editor and start working with it). If you haven't done yet you will be prompted to add your credentials.
 
 ![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/azure-login-screen.PNG)
 
@@ -128,7 +128,7 @@ You can access Jupyter from 2 options:
 
 ![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/RStudio1.PNG)
 
-2. Once you click on that option you will be redirected to JupyterLab embebed in Azure ML Studio and which is installed in your compute instance (everything is done by Azure, the user can just select the editor and start working with it). If you haven't done yet you will be prompted to add your credentials.
+2. Once you click on that option you will be redirected to RStudio embebed in Azure ML Studio and which is installed in your compute instance (everything is done by Azure, the user can just select the editor and start working with it). If you haven't done yet you will be prompted to add your credentials.
 
 ![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/azure-login-screen.PNG)
 
