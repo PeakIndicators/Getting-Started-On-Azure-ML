@@ -31,7 +31,7 @@ Anyway, independent on the type of model, the steps are aimilar.
 
 ![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/automatedml1.png)
 
-3. Select +New automated ML run.
+3. Select **+New automated ML** run.
 
 4. A new window will appear where you need to select the dataset you want to work on and then press Next.
 
