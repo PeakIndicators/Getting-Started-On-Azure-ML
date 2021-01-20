@@ -48,14 +48,16 @@ To create a dataset in the studio:
 
 ![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/dataset4.PNG)
 
-  * If you leave unchecked the option **Skip Data Validation** then studio will not validate the data path or try to access the data for preview and schema.
+     * If you leave unchecked the option **Skip Data Validation** then studio will not validate the data path or try to access the data for preview and schema.
 
-  * For Tabular datasets, you can specify a 'timeseries' trait to enable time related operations on your dataset. Learn how to [add the timeseries trait to your dataset](https://docs.microsoft.com/en-us/azure/machine-learning/how-to-monitor-datasets#studio-dataset).
+     * For Tabular datasets, you can specify a 'timeseries' trait to enable time related operations on your dataset. Learn how to [add the timeseries trait to your dataset](https://docs.microsoft.com/en-us/azure/machine-learning/how-to-monitor-datasets#studio-dataset).
 
 6. Select **Next** to populate the **Settings and preview** and **Schema** forms; they are intelligently populated based on file type and you can further configure your dataset prior to creation on these forms.
 
+**Settings and preview**
 ![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/dataset5.PNG)
 
+**Schema**
 ![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/dataset6.PNG)
 
 7. Select **Next** to review the **Confirm details** form. Check your selections and create an optional data profile for your dataset. Learn more about [data profiling](https://docs.microsoft.com/en-us/azure/machine-learning/how-to-connect-data-ui#profile).
@@ -71,15 +73,9 @@ After you create your dataset, verify you can view the profile and preview in th
 
 1. Select **Datasets** in the **Assets** section of the left pane.
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/dataset1.PNG)
-
 2. Select the name of the dataset you want to view.
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/dataset8.PNG)
-
 3. Select the **Explore** tab.
-
-
 
 4. Select the **Preview** or **Profile** tab.
 
