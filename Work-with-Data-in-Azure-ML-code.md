@@ -168,16 +168,16 @@ Just as with a Tabular dataset, there are two ways you can pass a file dataset t
 You can pass a file dataset as a script argument. Unlike with a tabular dataset, you must specify a mode for the file dataset argument, which can be **as_download** or **as_mount**. This provides an access point that the script can use to read the files in the dataset. In most cases, you should use **as_download**, which copies the files to a temporary location on the compute where the script is being run. However, if you are working with a large amount of data for which there may not be enough storage space on the experiment compute, use **as_mount** to stream the files directly from their source.
 
 *ScriptRunConfig:*
-[](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/54.PNG)
+![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/54.PNG)
 
 *Script:*
-[](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/55.PNG)
+![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/55.PNG)
 
 ### Use a named input for a file dataset
 You can also pass a file dataset as a *named input*. In this approach, you use the **as_named_input** method of the dataset to specify a name before specifying the access mode. Then in the script, you can retrieve the dataset by name from the run context's **input_datasets** collection and read the files from there. As with tabular datasets, if you use a named input, you still need to include a script argument for the dataset, even though you don’t actually use it to retrieve the dataset.
 
 *ScriptRunConfig:*
-](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/56.PNG)
+![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/56.PNG)
 
 *Script:*
-](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/57.PNG)
+![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/57.PNG)
