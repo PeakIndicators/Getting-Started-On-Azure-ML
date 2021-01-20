@@ -26,7 +26,7 @@ We recommend the use of the most up-to-date browser that's compatible with your 
 * Chrome (latest version)
 * Firefox (latest version)
 
-We will also re-use some of Microsoft documentation (see: https://docs.microsoft.com/en-us/azure/machine-learning/) on the subject but we will try to present it in a structured way. This repo contains snippets of code and notebooks that you will be able to run in your own time. All the code used in this repo is shown in Python but there is growing support on using R in Azure Machine Learning.
+We will also re-use some of Microsoft documentation (see: https://docs.microsoft.com/en-us/azure/machine-learning/) on the subject but we will try to present it in a structured way. This repo contains snippets of code and notebooks that you will be able to run in your own time. All the code used in this repo is shown in Python unless specifiied otheriwse. 
 
 
 Content: 
