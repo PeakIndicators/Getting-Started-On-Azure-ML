@@ -37,14 +37,15 @@ Anyway, independent on the type of model, the steps are aimilar.
 
 ![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/automatedml2.PNG)
 
-5. After loading and configuring the data, the next step is to set up the experiment on the  **Configure Run** section. This setup includes experiment design tasks such as, selecting the size of your compute environment and specifying what column you want to predict.
+5. After loading and configuring the data, the next step is to set up the experiment on the  **Configure Run** section. This setup includes experiment design tasks such as, selecting the size of your compute environment and specifying what column you want to predict. Populate the Configure Run form as follows:
 
-Select the Create new radio button.
+* Enter this **experiment name** taking into account the rule: experiment name must be 1-256 characters, start with a letter or a number and can only contain letters, numbers, underscores and dashes.
 
-Populate the Configure Run form as follows:
+* Select the target column, which is what you want to predict. 
 
-Enter this experiment name: my-1st-automl-experiment
-
-Select Column21 as the target column, what you want to predict. This column indicates whether the client subscribed to a term deposit or not.
+* Select the compute cluster created for this feature.
 
 ![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/automatedml3.PNG)
+
+Click **Next**.
+
