@@ -33,13 +33,13 @@ Content:
 
 * [What is Azure ML Studio](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/what-is-azure-ml-studio.md)
 * [How to access Azure ML Studio](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Azure-ML-Studio.md)
-* [Create compute instances](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Create-Compute-Instance.md)
-* [Stop a compute instance](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Stop-Compute-Instance.md)
+* [Create Compute Instances](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Create-Compute-Instance.md)
+* [Stop a Compute Instance](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Stop-Compute-Instance.md)
 * [Create a Datastore (Code Free)](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Work-With-Data-in-Azure-ML.md)
 * [Unregister a Datastore](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Unregister-a-datastore.md)
 * [Create Datasets (Code Free)](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Work-With-Data-in-Azure-ML-Datasets.md)
 * [Unregister Datasets](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Unregister-a-dataset.md)
-* Creating and Running a Notebook
+* Creating and Running a Python Notebook
 * [Cloning and Running a Notebook](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Clone-and-Run-a-Notebook.md)
 * [Create an Experiment](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Azure-ML-Experiments.md)
 * [Create a Pipeline](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Orchestrate-ML-With-Pipelines.md)
