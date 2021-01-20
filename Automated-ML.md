@@ -87,3 +87,14 @@ _Preparation takes 10-15 minutes to prepare the experiment run. Once running, it
 
 ![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/automatedml8.PNG)
 
+
+### Explore automated ML models
+Once the automated ML run finishes or even when it's running. You can check the models that are being/were tested.
+
+1. Navigate to the Models tab and see the algorithms (models) tested. By default, the models are ordered by metric score as they complete. 
+
+2. select the Algorithm name of a completed model to explore its performance details.
+
+The following navigates through the Details and the Metrics tabs to view the selected model's properties, metrics, and performance charts.
+
+![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/automatedml9.gif)
