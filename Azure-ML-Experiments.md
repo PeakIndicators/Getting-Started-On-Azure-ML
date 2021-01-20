@@ -25,7 +25,7 @@ Every experiment generates log files that include the messages that would be wri
 
 **More Information:** For more information about logging metrics during experiment runs, see [Monitor Azure ML experiment runs and metrics](https://aka.ms/AA70zf6) in the Azure Machine Learning documentation.
 
-As an exaple the following code records the number of observations (records) in a CSV file:
+As an example, the following code records the number of observations (records) in a CSV file:
 
 ![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/2.PNG)
 
