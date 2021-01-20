@@ -38,7 +38,7 @@ In most machine learning projects, you will likely need to work with data source
 
  To create a new datastore in a few steps with the Azure Machine Learning studio:
  
-1. Sign in to Azure Machine Learning studio.
+1. Sign in to [Azure Machine Learning studio](https://ml.azure.com/).
 2. Select **Datastores** on the left pane under **Manage**.
 
 ![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/datastore1.PNG)
