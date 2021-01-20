@@ -108,7 +108,7 @@ If you have not already done so, create a [compute instance](https://github.com/
 2. When the compute instance is running, click the **Jupyter** link to open the Jupyter home page in a new browser tab. Be sure to open Jupyter and not JupyterLab.
 
 
-## Run experiments in a notebook
+## Example on how to run experiments in a notebook
 Experiments in Azure Machine Learning need to be initiated from some sort of *control layer*; often a script or program. In this exercise, you’ll use a notebook to control experiments.
 
 1. In the Jupyter home page, browse to the Users/labs folder where you cloned the notebook repository, and open the **Run-Experiments.ipynb** notebook.
