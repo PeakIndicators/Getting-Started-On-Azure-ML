@@ -66,6 +66,8 @@ You can also schedule the published pipeline to have it run automatically, as sh
 
 In many scenarios, inferencing is performed as a batch process that uses a predictive model to score a large number of cases. To implement this kind of inferencing solution in Azure Machine Learning, you can create a batch inferencing pipeline.
 
+In this tutorial we provide some jupyter notebook templates (more detail in: _[Jupyter Lab notebook templates](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/tree/main/labs)_). This example is based on the one provided in order to create a Batch Inferencing Service.
+
 ### Before you start
 
 If you have not already done so, create a [compute instance](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Azure-ML-Studio.md) and ensure you have [cloned the notebooks](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Clone-and-Run-a-Notebook.md) required for this exercise.
