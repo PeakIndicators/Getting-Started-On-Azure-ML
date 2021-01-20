@@ -34,32 +34,54 @@ To create a dataset in the studio:
 
 2. Select **Datasets** in the **Assets** section of the left pane.
 
+![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/dataset1.PNG)
+
 3. Select **Create Dataset** to choose the source of your dataset. This source can be local files, a datastore, public URLs, or [Azure Open Datasets](https://docs.microsoft.com/en-us/azure/open-datasets/how-to-create-azure-machine-learning-dataset-from-open-dataset).
 
-4. Select **Tabular** or **File** for Dataset type.
+![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/dataset2.PNG)
+
+4. Assign a **Name** to your dataset (rule: Dataset name cannot have trailing whitespace), select **Tabular** or **File** for Dataset type and provide a description of it. 
+
+![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/dataset3.PNG)
 
 5. Select **Next** to open the **Datastore and file selection** form. On this form you select where to keep your dataset after creation, as well as select what data files to use for your dataset. 
+
+![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/dataset4.PNG)
+
+  * If you leave unchecked the option **Skip Data Validation** then studio will not validate the data path or try to access the data for preview and schema.
 
   * For Tabular datasets, you can specify a 'timeseries' trait to enable time related operations on your dataset. Learn how to [add the timeseries trait to your dataset](https://docs.microsoft.com/en-us/azure/machine-learning/how-to-monitor-datasets#studio-dataset).
 
 6. Select **Next** to populate the **Settings and preview** and **Schema** forms; they are intelligently populated based on file type and you can further configure your dataset prior to creation on these forms.
 
+![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/dataset5.PNG)
+
+![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/dataset6.PNG)
+
 7. Select **Next** to review the **Confirm details** form. Check your selections and create an optional data profile for your dataset. Learn more about [data profiling](https://docs.microsoft.com/en-us/azure/machine-learning/how-to-connect-data-ui#profile).
 
+![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/dataset7.PNG)
+
 8. Select **Create** to complete your dataset creation.
+
+![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/dataset8.PNG)
 
 ## Data profile and preview
 After you create your dataset, verify you can view the profile and preview in the studio with the following steps.
 
-1. Sign in to the Azure Machine Learning studio
+1. Select **Datasets** in the **Assets** section of the left pane.
 
-2. Select **Datasets** in the **Assets** section of the left pane.
+![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/dataset1.PNG)
 
-3. Select the name of the dataset you want to view.
+2. Select the name of the dataset you want to view.
 
-4. Select the **Explore** tab.
+![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/dataset8.PNG)
 
-5. Select the **Preview** or **Profile** tab.
+3. Select the **Explore** tab.
+
+
+
+4. Select the **Preview** or **Profile** tab.
 
 ![](https://docs.microsoft.com/en-us/azure/machine-learning/media/how-to-connect-data-ui/dataset-preview-profile.gif)
 
