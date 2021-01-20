@@ -52,3 +52,5 @@ In most machine learning projects, you will likely need to work with data source
 The following example demonstrates what the form looks like when you create an **Azure blob datastore**:
 
 ![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/new-datastore-form.png)
+
+**Note:** Datastore name should only consist of lowercase letters, digits and underscore.
