@@ -7,7 +7,7 @@ There are few possible ways of creating and running python or R notebooks in Azu
 3. Using the Jupyter option provided on the compute instance (for python only)
 4. Using the RStudio option provided on the compute instance (for R only)
 
-The next sections will explain how to use eaxh of the options described above.
+The next sections will explain how to use each of the options described above.
 
 ### Before you start
 
@@ -138,8 +138,12 @@ You can access Jupyter from 2 options:
 4. You can start developing your code.
 
 ## Clone samples
-Your workspace contains a Samples folder with notebooks designed to help you explore the SDK and serve as examples for your own machine learning projects. You can clone these notebooks into your own folder on your workspace storage container.
+Your studio contains a Samples folder with notebooks designed to help you explore the SDK and serve as examples for your own machine learning projects. You can clone these notebooks into your own folder on your storage container.
+
+![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/samplenotebooks.PNG)
+
+Also in this tutorial we provide with some python templates. Please check [Jupyter Lab notebook templates](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/tree/main/labs).
 
 ## Use files from Git and version my files
-You can access all Git operations by using a terminal window. All Git files and folders will be stored in your workspace file system.
+You can access all Git operations by using a terminal window. All Git files and folders will be stored in your workspace file system. For more details check: Integrate with Git
 
