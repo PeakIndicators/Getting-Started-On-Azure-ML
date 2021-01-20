@@ -33,6 +33,18 @@ Anyway, independent on the type of model, the steps are aimilar.
 
 3. Select **+New automated ML** run.
 
-4. A new window will appear where you need to select the dataset you want to work on and then press Next.
+4. A new window will appear where you need to select the dataset you want to work with and then press **Next**.
 
 ![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/automatedml2.PNG)
+
+5. After loading and configuring the data, the next step is to set up the experiment on the  **Configure Run** section. This setup includes experiment design tasks such as, selecting the size of your compute environment and specifying what column you want to predict.
+
+Select the Create new radio button.
+
+Populate the Configure Run form as follows:
+
+Enter this experiment name: my-1st-automl-experiment
+
+Select Column21 as the target column, what you want to predict. This column indicates whether the client subscribed to a term deposit or not.
+
+![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/automatedml3.PNG)
