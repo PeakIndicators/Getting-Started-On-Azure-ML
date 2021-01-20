@@ -122,3 +122,62 @@ In this example, the .png files in the **images** folder have been added to the 
 You can retrieve a specific version of a dataset by specifying the **version** parameter in the **get_by_name** method of the **Dataset** class.
 
 `img_ds = Dataset.get_by_name(workspace=ws, name='img_files', version=2)`
+
+## Use datasets
+
+Datasets are the primary way to pass data to experiments that train models.
+
+## Work with tabular datasets
+You can read data directly from a tabular dataset by converting it into a Pandas or Spark dataframe:
+
+![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/48.PNG)
+
+## Pass a tabular dataset to an experiment script
+When you need to access a dataset in an experiment script, you must pass the dataset to the script. There are two ways you can do this.
+
+### Use a script argument for a tabular dataset
+You can pass a tabular dataset as a script argument. When you take this approach, the argument received by the script is the unique ID for the dataset in your workspace. In the script, you can then get the workspace from the run context and use it to retrieve the dataset by it's ID.
+
+*ScriptRunConfig:*
+
+![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/49.PNG)
+
+*Script:*
+
+![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/50.PNG)
+
+## Use a named input for a tabular dataset
+Alternatively, you can pass a tabular dataset as a *named input*. In this approach, you use the **as_named_input** method of the dataset to specify a name for the dataset. Then in the script, you can retrieve the dataset by name from the run context's **input_datasets** collection without needing to retrieve it from the workspace. Note that if you use this approach, you still need to include a script argument for the dataset, even though you don’t actually use it to retrieve the dataset.
+
+*ScriptRunConfig:*
+
+![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/51.PNG)
+
+*Script:*
+![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/52.PNG)
+
+## Work with file datasets
+When working with a file dataset, you can use the **to_path()** method to return a list of the file paths encapsulated by the dataset:
+
+![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/53.PNG)
+
+### Pass a file dataset to an experiment script
+Just as with a Tabular dataset, there are two ways you can pass a file dataset to a script. However, there are some key differences in the way that the dataset is passed.
+
+### Use a script argument for a file dataset
+You can pass a file dataset as a script argument. Unlike with a tabular dataset, you must specify a mode for the file dataset argument, which can be **as_download** or **as_mount**. This provides an access point that the script can use to read the files in the dataset. In most cases, you should use **as_download**, which copies the files to a temporary location on the compute where the script is being run. However, if you are working with a large amount of data for which there may not be enough storage space on the experiment compute, use **as_mount** to stream the files directly from their source.
+
+*ScriptRunConfig:*
+[](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/54.PNG)
+
+*Script:*
+[](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/55.PNG)
+
+### Use a named input for a file dataset
+You can also pass a file dataset as a *named input*. In this approach, you use the **as_named_input** method of the dataset to specify a name before specifying the access mode. Then in the script, you can retrieve the dataset by name from the run context's **input_datasets** collection and read the files from there. As with tabular datasets, if you use a named input, you still need to include a script argument for the dataset, even though you don’t actually use it to retrieve the dataset.
+
+*ScriptRunConfig:*
+](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/56.PNG)
+
+*Script:*
+](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/57.PNG)
