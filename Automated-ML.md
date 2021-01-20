@@ -98,3 +98,20 @@ Once the automated ML run finishes or even when it's running. You can check the 
 The following navigates through the Details and the Metrics tabs to view the selected model's properties, metrics, and performance charts.
 
 ![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/automatedml9.gif)
+
+### Deploy the best model
+The automated machine learning interface allows you to deploy the best model as a web service in a few steps. Deployment is the integration of the model so it can predict on new data and identify potential areas of opportunity.
+
+For this experiment, deployment to a web service means that the financial institution now has an iterative and scalable web solution for identifying potential fixed term deposit customers.
+
+Check to see if your experiment run is complete. To do so, navigate back to the parent run page by selecting Run 1 at the top of your screen. A Completed status is shown on the top left of the screen.
+
+Once the experiment run is complete, the Details page is populated with a Best model summary section. In this experiment context, VotingEnsemble is considered the best model, based on the AUC_weighted metric.
+
+We deploy this model, but be advised, deployment takes about 20 minutes to complete. The deployment process entails several steps including registering the model, generating resources, and configuring them for the web service.
+
+Select VotingEnsemble to open the model-specific page.
+
+Select the Deploy button in the top-left.
+
+Populate the Deploy a model pane as follows:
