@@ -1,4 +1,4 @@
-# Unregister a Datastore
+# Unregister a Datastore using the web portal
 
 If a datastore is no longer needed or was created by mistake then it should be removed. Removing a datastore in Azure Machine Learning Studio means unregister it.
 
