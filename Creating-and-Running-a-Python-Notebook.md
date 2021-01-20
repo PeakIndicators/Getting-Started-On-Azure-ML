@@ -142,7 +142,7 @@ Your studio contains a Samples folder with notebooks designed to help you explor
 
 ![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/samplenotebooks.PNG)
 
-Also in this tutorial we provide with some python templates. Please check [Jupyter Lab notebook templates](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/tree/main/labs).
+Also in this tutorial we provide with some python templates. Please check [JupyterLab notebook templates](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/tree/main/labs).
 
 ## Use files from Git and version my files
 You can access all Git operations by using a terminal window. All Git files and folders will be stored in your workspace file system. For more details check: [Integrate with Git](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Integrate-with-Git.md).
