@@ -1,4 +1,4 @@
-# Unregister Datasets
+# Unregister Datasets using the web portal
 
 If a dataset is no longer needed or was created by mistake then it should be removed. Removing a dataset in Azure Machine Learning Studio means unregister it.
 
