@@ -47,5 +47,7 @@ Content:
 * [Create a batch webservice](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Deploy-Batch-Inference-Pipeline.md)
 * [Integrate with Git](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Integrate-with-Git.md)
 * How to work with desktop tools and connect to Azure ML
-* [Jupyter Lab notebook templates](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/tree/main/labs)
+* [JupyterLab notebook templates](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/tree/main/labs)
 * [Data for your notebook templates](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/tree/main/labs)
+* How to work with Azure Machine Learning Studio Designer
+* How to work with Azure Machine Learning Studio Automated ML
