@@ -180,7 +180,9 @@ You can pass a file dataset as a script argument. Unlike with a tabular dataset,
 You can also pass a file dataset as a *named input*. In this approach, you use the **as_named_input** method of the dataset to specify a name before specifying the access mode. Then in the script, you can retrieve the dataset by name from the run context's **input_datasets** collection and read the files from there. As with tabular datasets, if you use a named input, you still need to include a script argument for the dataset, even though you don’t actually use it to retrieve the dataset.
 
 *ScriptRunConfig:*
+
 ![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/56.PNG)
 
 *Script:*
+
 ![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/57.PNG)
