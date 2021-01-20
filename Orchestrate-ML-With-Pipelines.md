@@ -155,6 +155,8 @@ To schedule a pipeline to run whenever data changes, you must create a **Schedul
 
 You can use the Azure Machine Learning SDK to perform all of the tasks required to create and operate a machine learning solution in Azure. Rather than perform these tasks individually, you can use pipelines to orchestrate the steps required to prepare data, run training scripts, register models, and other tasks.
 
+In this tutorial we provide some jupyter notebook templates (more detail in: _[Jupyter Lab notebook templates](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/tree/main/labs)_). This example is based on the one provided in order to create a pipeline.
+
 ### Before you start
 
 If you have not already done so, create a [compute instance](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Azure-ML-Studio.md) and ensure you have [cloned the notebooks](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Clone-and-Run-a-Notebook.md) required for this exercise.
