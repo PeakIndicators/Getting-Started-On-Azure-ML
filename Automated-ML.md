@@ -29,7 +29,7 @@ Anyway, independent on the type of model, the steps are aimilar.
 
 2. Select **Automated ML** on the left pane under **Author** section.
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/automatedml1.PNG)
+![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/automatedml1.png)
 
 3. Select +New automated ML run.
 
