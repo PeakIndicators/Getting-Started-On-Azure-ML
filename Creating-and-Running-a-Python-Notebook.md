@@ -1,10 +1,11 @@
 # Creating and Running a Python or R Notebook
 
-There are 3 possible ways of creating and running python notebooks in Azure Machine Learning studio:
+There are few possible ways of creating and running python or R notebooks in Azure Machine Learning studio:
 
-1. Running those directly in the portal
-2. Using the Jupyter option provided on the compute instance
-3. Using the JupyterLab option provided on the compute instance
+1. Running those directly in the portal (this supports both Python and R)
+2. Using the Jupyter option provided on the compute instance (for python only)
+3. Using the JupyterLab option provided on the compute instance (for python only)
+4. Using the RStudio option provided on the compute instance (for R only)
 
 The next sections will explain how to use eaxh of the options described above.
 
@@ -12,7 +13,7 @@ The next sections will explain how to use eaxh of the options described above.
 
 If you have not already done so, create a [compute instance](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Azure-ML-Studio.md)
 
-## Notebooks directly in your Azure Machine Learning studio
+## Notebooks directly in your Azure Machine Learning studio (Python or R)
 In your Azure Machine Learning studio, create a new Jupyter notebook and start working. The newly created notebook is stored in the default studio storage. This notebook can be shared with anyone with access to the studio.
 
 To create a new notebook:
@@ -35,11 +36,24 @@ To create a new notebook:
 
 ![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/create-new-notebook4.PNG)
 
-6. Double click on the file name to open it
+6. Double click on the file name to open it and you can start your code.
 
-You can also upload folders and files, including notebooks, with the tools at the top of the Notebooks page. Notebooks and most text file types display in the preview section. No preview is available for most other file types.
+**Notes**
+  * On the top level you see see the option **Compute** where in order to execute the code you need to have your compute up and running.
+  * Also on the top level you can see the type of language you are going to use, you can choose between Python, R or Python 3.6 - Azure ML (this last one will include Azure ML SDKs.
+  
+ ![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/create-new-notebook5.PNG)
+ 
+_Language Options_
+
+![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/create-new-notebook6.PNG)
 
 
+7. You can also upload folders and files, including notebooks, with the tools at the top of the Notebooks page. 
+
+![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/create-new-notebook7.PNG)
+
+## Notebooks using the Jupyter option provided on the compute instance (for python only)
 
 
 
