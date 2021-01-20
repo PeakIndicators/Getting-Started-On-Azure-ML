@@ -59,7 +59,7 @@ You can access Jupyter lab from 2 options:
 
 ### Using the notebook option from studio
 
-1. While in the notebook pane in studio (the one explained above). You can open JypyterLab editor by selecting it on the Editors option.
+1. While in the notebook pane in studio (the one explained above). You can open JupyterLab editor by selecting it on the Editors option.
 ![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/Jupyterlab1.PNG)
 
 2. Once you click on that option you will be redirected to JupyterLab embebed in Azure ML Studio and which is installed in your compute instance (everything is done by Azure, the user can just select the editor and start working with it). If you haven't done yet you will be prompted to add your credentials.
@@ -73,9 +73,9 @@ You can access Jupyter lab from 2 options:
 
 ### Using the compute instance option from studio
 
-1. On the **Compute instances** tab, select your compute instance and click on JupylerLab 
+1. On the **Compute instances** tab, select your compute instance and click on JupyterLab 
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/Jupyterlab1.PNG)
+![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/Jupyterlab3.PNG)
 
 2. Once you click on that option you will be redirected to JupyterLab embebed in Azure ML Studio and which is installed in your compute instance (everything is done by Azure, the user can just select the editor and start working with it). If you haven't done yet you will be prompted to add your credentials.
 
@@ -93,33 +93,33 @@ You can access Jupyter from 2 options:
 ### Using the notebook option from studio
 
 1. While in the notebook pane in studio (the one explained above). You can open Jypyter editor by selecting it on the Editors option.
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/Jupyter1.PNG)
+![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/jupyter1.PNG)
 
 2. Once you click on that option you will be redirected to Jupyter editor embebed in Azure ML Studio and which is installed in your compute instance (everything is done by Azure, the user can just select the editor and start working with it). If you haven't done yet you will be prompted to add your credentials.
 
 ![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/azure-login-screen.PNG)
 
 3. Once the right credentials are provided you will be redirected to Jupyter Editor. First you need to select the folder where your file is and the double click on the file name in order to start editing it.
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/Jupyter2.PNG)
+![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/jupyter2.PNG)
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/Jupyter4.PNG)
+![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/jupyter4.PNG)
 
 4. You can start developing your code.
 
 ### Using the compute instance option from studio
 
-1. On the **Compute instances** tab, select your compute instance and click on JupylerLab 
+1. On the **Compute instances** tab, select your compute instance and click on Jupyter 
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/Jupyter3.PNG)
+![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/jupyter3.PNG)
 
 2. Once you click on that option you will be redirected to JupyterLab embebed in Azure ML Studio and which is installed in your compute instance (everything is done by Azure, the user can just select the editor and start working with it). If you haven't done yet you will be prompted to add your credentials.
 
 ![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/azure-login-screen.PNG)
 
 3. Once the right credentials are provided you will be redirected to Jupyter Editor. First you need to select the folder where your file is and the double click on the file name in order to start editing it.
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/Jupyter2.PNG)
+![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/jupyter2.PNG)
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/Jupyter4.PNG)
+![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/jupyter4.PNG)
 
 4. You can start developing your code.
 
