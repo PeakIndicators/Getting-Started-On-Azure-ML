@@ -36,9 +36,9 @@ Content:
 * [Create compute instances](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Create-Compute-Instance.md)
 * [Stop a compute instance](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Stop-Compute-Instance.md)
 * [Create a Datastore (Code Free)](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Work-With-Data-in-Azure-ML.md)
-* [Unregister a Datastore (Code Free)](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Unregister-a-datastore.md)
+* [Unregister a Datastore](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Unregister-a-datastore.md)
 * [Create Datasets (Code Free)](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Work-With-Data-in-Azure-ML-Datasets.md)
-* [Unregister Datasets (Code Free)](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Unregister-a-dataset.md)
+* [Unregister Datasets](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Unregister-a-dataset.md)
 * Creating and Running a Notebook
 * [Cloning and Running a Notebook](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Clone-and-Run-a-Notebook.md)
 * [Create an Experiment](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Azure-ML-Experiments.md)
