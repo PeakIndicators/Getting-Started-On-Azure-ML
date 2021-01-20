@@ -10,8 +10,10 @@ To unregister a datastore these are the steps needed  with the Azure Machine Lea
 
 ![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/datastore1.PNG)
 
-3. Select the Datastores you want to remove and click unregister.
+3. Select the Datastores you want to remove and click unregister. A confirmation box will show up, click Unregister.
 
 ![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/unregisterdatastore1.PNG)
+
+![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/unregisterdatastore2.PNG)
 
 The datastore will be removed.
