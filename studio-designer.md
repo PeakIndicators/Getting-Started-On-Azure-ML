@@ -54,7 +54,56 @@ You can set a Default compute target for the entire pipeline, which will tell ev
 
 **Note:** The designer also provides sample datasets for user to experiment. Instead of expanding **Datasets** expand **Sample Datasets** and select the one that best suits the needs.
 
+### Prepare data
+Datasets typically require some preprocessing before analysis. Example: You might have noticed some missing values when you inspected the dataset. 
+The designer has some prebuild fucntions that helps the user to prepare the data. In the module palette to the left of the canvas, expand the **Data Transformation** section and those will be available to use.
 
+The following shows an example on what can be done:
+![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/designer5.gif)
 
+### Train a machine learning model
+Now that you have the modules in place to process the data, you can set up the training modules.
+
+Because you want to predict price, which is a number, you can use a regression algorithm. For this example, you use a linear regression model.
+
+Split the data
+Splitting data is a common task in machine learning. You will split your data into two separate datasets. One dataset will train the model and the other will test how well the model performed.
+
+In the module palette, expand the section Data Transformation and find the Split Data module.
+
+Drag the Split Data module to the pipeline canvas.
+
+Connect the left port of the Clean Missing Data module to the Split Data module.
+
+ Important
+
+Be sure that the left output ports of Clean Missing Data connects to Split Data. The left port contains the the cleaned data. The right port contains the discarted data.
+
+Select the Split Data module.
+
+In the module details pane to the right of the canvas, set the Fraction of rows in the first output dataset to 0.7.
+
+This option splits 70 percent of the data to train the model and 30 percent for testing it. The 70 percent dataset will be accessible through the left output port. The remaining data will be available through the right output port.
+
+In the module details pane to the right of the canvas, select the Comment box, and enter Split the dataset into training set (0.7) and test set (0.3).
+
+Train the model
+Train the model by giving it a dataset that includes the price. The algorithm constructs a model that explains the relationship between the features and the price as presented by the training data.
+
+In the module palette, expand Machine Learning Algorithms.
+
+This option displays several categories of modules that you can use to initialize learning algorithms.
+
+Select Regression > Linear Regression, and drag it to the pipeline canvas.
+
+In the module palette, expand the section Module training, and drag the Train Model module to the canvas.
+
+Connect the output of the Linear Regression module to the left input of the Train Model module.
+
+Connect the training data output (left port) of the Split Data module to the right input of the Train Model module.
+
+ Important
+
+Be sure that the left output ports of Split Data connects to Train Model. The left port contains the the training set. The right port contains the test set.
 
 https://docs.microsoft.com/en-us/azure/machine-learning/tutorial-designer-automobile-price-train-score
