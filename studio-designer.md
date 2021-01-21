@@ -8,7 +8,7 @@ In part one of the tutorial, we will describe how to:
 * Import data.
 * Prepare data.
 * Train a machine learning model.
-* Evaluate a machine learning model.
+* Score and Evaluate a machine learning model.
 * Deploy the model
 
 ### Before you start
@@ -104,6 +104,15 @@ Designer provides around 19 different Machine Learning Algorithms that can be se
 **Note:** 
 Be sure that the left output ports of Split Data connects to Train Model. The left port contains the the training set. The right port contains the test set.
 
+6. Select the **Train Model** module.
+
+7. In the module details pane to the right of the canvas, select **Edit column** selector.
+
+8. In the Label column dialog box, expand the drop-down menu and select Column names.
+
+9. In the text box, enter the column that your model is going to predict.
+
+![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/designer8.gif)
 
 #### Score the model 
 After you train your model by using 70 percent of the data, you can use it to score the other 30 percent to see how well your model functions.
