@@ -157,7 +157,7 @@ You can use the Azure Machine Learning SDK to perform all of the tasks required 
 
 In this tutorial we provide some jupyter notebook templates (more detail in: [Jupyter Lab notebook templates](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/tree/main/labs)). This example is based on the one provided in order to create a pipeline.
 
-After you have created and ran a pipeline a graphical representation of the pipeline experiment will be displayed in the widget as it runs. You can also monitor pipeline runs in the Experiments page. You will be able to view the widget when you run your notebook which includes a link to the Azure MAchine LEarning studio where you will be able to monitor and explore your run. The screenshots below show you how to access this page and what information you should expect to see. 
+After you have created and ran a pipeline a graphical representation of the pipeline experiment will be displayed in the widget as it runs. You can also monitor pipeline runs in the Experiments page. You will be able to view the widget when you run your notebook which includes a link to the Azure Machine LEarning studio where you will be able to monitor and explore your run. The screenshots below show you how to access this page and what information you should expect to see. 
 
 After clicking thak takes you to the Azure Machine Learning studio (provided in the notebook) click **Pipelines**
 
