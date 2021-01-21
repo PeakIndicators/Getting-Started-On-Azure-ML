@@ -151,11 +151,32 @@ To schedule a pipeline to run whenever data changes, you must create a **Schedul
 
 ![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/17.PNG)
 
-## Create a Pipeline
+## Create and run a pipeline
 
 You can use the Azure Machine Learning SDK to perform all of the tasks required to create and operate a machine learning solution in Azure. Rather than perform these tasks individually, you can use pipelines to orchestrate the steps required to prepare data, run training scripts, register models, and other tasks.
 
-In this tutorial we provide some jupyter notebook templates (more detail in: _[Jupyter Lab notebook templates](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/tree/main/labs)_). This example is based on the one provided in order to create a pipeline.
+In this tutorial we provide some jupyter notebook templates (more detail in: [Jupyter Lab notebook templates](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/tree/main/labs)). This example is based on the one provided in order to create a pipeline.
+
+After you have created and ran a pipeline a graphical representation of the pipeline experiment will be displayed in the widget as it runs. You can also monitor pipeline runs in the Experiments page. You will be able to view the widget when you run your notebook which includes a link to the Azure MAchine LEarning studio where you will be able to monitor and explore your run. The screenshots below show you how to access this page and what information you should expect to see. 
+
+After clicking thak takes you to the Azure Machine Learning studio (provided in the notebook) click **Pipelines**
+
+![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/65.PNG)
+
+Click on the run 
+
+![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/66.PNG)
+
+This will take you to the pipeline experiment where you can monitor details of your pipeline including the experiment name, number of steps in the pipelins and logs.
+
+![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/69.PNG)
+
+![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/70.PNG)
+
+An occasion where you may need to check your logs is if your run did not behave as expected. In this case you can use your logs to troubleshoot. 
+
+![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/71.PNG)
+
 
 ### Before you start
 
