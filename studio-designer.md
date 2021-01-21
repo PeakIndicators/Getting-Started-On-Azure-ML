@@ -114,19 +114,27 @@ Be sure that the left output ports of Split Data connects to Train Model. The le
 ![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/designer8.gif)
 
 #### Score the model 
-After you train your model by using 70 percent of the data, you can use it to score the other 30 percent to see how well your model functions.
+After having trained the model by using the value configured in field **Fraction of rows in the first output dataset**, the remaing value can be used for scoring to see how well your model functions.
 
-Enter score model in the search box to find the Score Model module. Drag the module to the pipeline canvas.
+1. Enter score model in the search box to find the **Score Model** module. Drag the module to the pipeline canvas.
 
-Connect the output of the Train Model module to the left input port of Score Model. Connect the test data output (right port) of the Split Data module to the right input port of Score Model.
+2. Connect the output of the **Train Model** module to the left input port of Score Model. Connect the test data output (right port) of the **Split Data** module to the right input port of Score Model.
+
+![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/designer9.gif)
 
 #### Evaluate the model 
-Use the Evaluate Model module to evaluate how well your model scored the test dataset.
+Use the Evaluate Model module to evaluate how well the model scored the test dataset.
 
-Enter evaluate in the search box to find the Evaluate Model module. Drag the module to the pipeline canvas.
+1. Enter evaluate in the search box to find the **Evaluate Model** module. Drag the module to the pipeline canvas.
 
-Connect the output of the Score Model module to the left input of Evaluate Model.
+2. Connect the output of the *Score Model* module to the left input of Evaluate Model.
 
-The final pipeline should look something like this:
+![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/designer10.gif)
+
+
+_The final pipeline should look something like this:_
+
+![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/designer11.PNG)
+
 
 https://docs.microsoft.com/en-us/azure/machine-learning/tutorial-designer-automobile-price-train-score
