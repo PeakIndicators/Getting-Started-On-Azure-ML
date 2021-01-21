@@ -51,7 +51,7 @@ You can set a Default compute target for the entire pipeline, which will tell ev
 
 1. From the left side panel expand **Datasets** and select the dataset you need to work with. Drag it onto the canvas.
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/designer4.GIF)
+![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/designer4.gif)
 
 **Note:** The designer also provides sample datasets for user to experiment. Instead of expanding **Datasets** expand **Sample Datasets** and select the one that best suits the needs.
 
