@@ -90,16 +90,18 @@ Designer provides around 19 different Machine Learning Algorithms that can be se
 
 1. In the module palette, expand Machine Learning Algorithms. This option displays several categories of modules that you can use to initialize learning algorithms.
 
-2. Select the appropriate model. Regression > Linear Regression, and drag it to the pipeline canvas.
+2. Select the appropriate model and drag it to the pipeline canvas.
 
-In the module palette, expand the section Module training, and drag the Train Model module to the canvas.
+3. In the module palette, expand the section Module training and drag the Train Model module to the canvas.
 
-Connect the output of the Linear Regression module to the left input of the Train Model module.
+4. Connect the output of the Machine Learning Algorithm module selected to the left input of the Train Model module.
 
-Connect the training data output (left port) of the Split Data module to the right input of the Train Model module.
+5. Connect the training data output (left port) of the Split Data module to the right input of the Train Model module.
 
- Important
 
+![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/designer7.gif)
+
+**Note:** 
 Be sure that the left output ports of Split Data connects to Train Model. The left port contains the the training set. The right port contains the test set.
 
 
