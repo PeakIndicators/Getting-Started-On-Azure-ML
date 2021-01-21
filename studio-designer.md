@@ -62,11 +62,16 @@ The following shows an example on what can be done:
 ![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/designer5.gif)
 
 ### Train a machine learning model
-Now that you have the modules in place to process the data, you can set up the training modules.
+Now that we have the modules in place to process the data, we can set up the training modules.
 
-Because you want to predict price, which is a number, you can use a regression algorithm. For this example, you use a linear regression model.
+Designer provides around 19 different Machine Learning Algorithms that can be selected. This training steps can be divided into:
 
-Split the data
+* Split the data
+* Train the model
+* Score the model
+* Evaluate the model
+
+#### Split the data
 Splitting data is a common task in machine learning. You will split your data into two separate datasets. One dataset will train the model and the other will test how well the model performed.
 
 In the module palette, expand the section Data Transformation and find the Split Data module.
@@ -87,7 +92,7 @@ This option splits 70 percent of the data to train the model and 30 percent for 
 
 In the module details pane to the right of the canvas, select the Comment box, and enter Split the dataset into training set (0.7) and test set (0.3).
 
-Train the model
+#### Train the model
 Train the model by giving it a dataset that includes the price. The algorithm constructs a model that explains the relationship between the features and the price as presented by the training data.
 
 In the module palette, expand Machine Learning Algorithms.
@@ -105,5 +110,22 @@ Connect the training data output (left port) of the Split Data module to the rig
  Important
 
 Be sure that the left output ports of Split Data connects to Train Model. The left port contains the the training set. The right port contains the test set.
+
+
+#### Score the model 
+After you train your model by using 70 percent of the data, you can use it to score the other 30 percent to see how well your model functions.
+
+Enter score model in the search box to find the Score Model module. Drag the module to the pipeline canvas.
+
+Connect the output of the Train Model module to the left input port of Score Model. Connect the test data output (right port) of the Split Data module to the right input port of Score Model.
+
+#### Evaluate the model 
+Use the Evaluate Model module to evaluate how well your model scored the test dataset.
+
+Enter evaluate in the search box to find the Evaluate Model module. Drag the module to the pipeline canvas.
+
+Connect the output of the Score Model module to the left input of Evaluate Model.
+
+The final pipeline should look something like this:
 
 https://docs.microsoft.com/en-us/azure/machine-learning/tutorial-designer-automobile-price-train-score
