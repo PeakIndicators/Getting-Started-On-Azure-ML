@@ -144,15 +144,15 @@ The pipeline is all setup, we will now submit a pipeline run to train the machin
 
 ![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/designer12.PNG)
 
-2. In the Set up pipeline run dialog box, if you already have created an experiment and want to use it select it from the drop down. If not, then select Create new, enter the Experiment Name (be aware of the naming rules: Name must be between 1 to 250 characters, start with letters or numbers. Valid characters are letters, numbers, “_”, and the “-” character) and select **Submit**.
+2. In the **Set up pipeline run** dialog box, if you already have created an experiment and want to use it, select it from the drop down. If not, then select Create new, enter the Experiment Name (be aware of the naming rules: Name must be between 1 to 250 characters, start with letters or numbers. Valid characters are letters, numbers, “_”, and the “-” character) and select **Submit**.
 
 ![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/designer13.PNG)
 
- Note
+**Note:** Experiments group similar pipeline runs together. If you run a pipeline multiple times, you can select the same experiment for successive runs.
 
-Experiments group similar pipeline runs together. If you run a pipeline multiple times, you can select the same experiment for successive runs.
+You can view run status and details at the top right of the canvas.
 
-For New experiment Name, enter Tutorial-CarPrices.
+If this is the first run, it may take up to 20 minutes for your pipeline to finish running. The default compute settings have a minimum node size of 0, which means that the designer must allocate resources after being idle. Repeated pipeline runs will take less time since the compute resources are already allocated. Additionally, the designer uses cached results for each module to further improve efficiency.
 
 4. Run status and details can be seen at the top right of the canvas.
 
