@@ -64,7 +64,7 @@ The following shows an example on what can be done:
 ### Train a machine learning model
 Now that we have the modules in place to process the data, we can set up the training modules.
 
-Designer provides around 19 different Machine Learning Algorithms that can be selected. This training steps can be divided into:
+This training steps can be divided into:
 
 * Split the data
 * Train the model
@@ -74,32 +74,23 @@ Designer provides around 19 different Machine Learning Algorithms that can be se
 #### Split the data
 Splitting data is a common task in machine learning. You will split your data into two separate datasets. One dataset will train the model and the other will test how well the model performed.
 
-In the module palette, expand the section Data Transformation and find the Split Data module.
+1. In the module palette, expand the section **Data Transformation** and find the **Split Data** module.
+2. Drag the Split Data module to the pipeline canvas. In the module details pane to the right of the canvas, set the desired value on the **Fraction of rows in the first output dataset**.
+3. Connect the previous module to the Split Data module.
 
-Drag the Split Data module to the pipeline canvas.
+![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/designer6.gif)
 
-Connect the left port of the Clean Missing Data module to the Split Data module.
+**Notes:**
+* When using **Clean Missing Data** as the predecessor of the **Split Data** module be sure that the left output ports of Clean Missing Data connects to Split Data. This is because the left port contains the the cleaned data while the right port contains the discarted data.
 
- Important
-
-Be sure that the left output ports of Clean Missing Data connects to Split Data. The left port contains the the cleaned data. The right port contains the discarted data.
-
-Select the Split Data module.
-
-In the module details pane to the right of the canvas, set the Fraction of rows in the first output dataset to 0.7.
-
-This option splits 70 percent of the data to train the model and 30 percent for testing it. The 70 percent dataset will be accessible through the left output port. The remaining data will be available through the right output port.
-
-In the module details pane to the right of the canvas, select the Comment box, and enter Split the dataset into training set (0.7) and test set (0.3).
+* In the example above, on the Fraction of rows in the first output dataset field the value inserted was 0.7, this means it will split 70 percent of the data to train the model and 30 percent for testing it. The 70 percent dataset will be accessible through the left output port. The remaining data will be available through the right output port.
 
 #### Train the model
-Train the model by giving it a dataset that includes the price. The algorithm constructs a model that explains the relationship between the features and the price as presented by the training data.
+Designer provides around 19 different Machine Learning Algorithms that can be selected. 
 
-In the module palette, expand Machine Learning Algorithms.
+1. In the module palette, expand Machine Learning Algorithms. This option displays several categories of modules that you can use to initialize learning algorithms.
 
-This option displays several categories of modules that you can use to initialize learning algorithms.
-
-Select Regression > Linear Regression, and drag it to the pipeline canvas.
+2. Select the appropriate model. Regression > Linear Regression, and drag it to the pipeline canvas.
 
 In the module palette, expand the section Module training, and drag the Train Model module to the canvas.
 
