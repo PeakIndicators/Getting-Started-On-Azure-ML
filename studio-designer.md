@@ -98,7 +98,6 @@ Designer provides around 19 different Machine Learning Algorithms that can be se
 
 5. Connect the training data output (left port) of the Split Data module to the right input of the Train Model module.
 
-
 ![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/designer7.gif)
 
 **Note:** 
