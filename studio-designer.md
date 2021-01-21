@@ -42,10 +42,9 @@ You can set a Default compute target for the entire pipeline, which will tell ev
 
 2. In the Settings pane to the right of the canvas, select **Select compute target**. Select the desired compute cluster and click **Save**.
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/designer3.PNG)
+![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/designer3.gif)
 
  **Note:** The designer can only run training experiments on Azure Machine Learning Compute Clusters other types of compute won't be shown.
-
 
 ### Import data
 
