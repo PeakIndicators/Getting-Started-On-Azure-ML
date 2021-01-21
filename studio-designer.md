@@ -156,6 +156,8 @@ If this is the first run, it may take up to 20 minutes for your pipeline to fini
 
 4. Run status and details can be seen at the top right of the canvas.
 
-If this is the first run, it may take up to 20 minutes for your pipeline to finish running. The default compute settings have a minimum node size of 0, which means that the designer must allocate resources after being idle. Repeated pipeline runs will take less time since the compute resources are already allocated. Additionally, the designer uses cached results for each module to further improve efficiency.
+![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/designer14.PNG)
+
+_If this is the first run, it may take up to 20 minutes for your pipeline to finish running. The default compute settings have a minimum node size of 0, which means that the designer must allocate resources after being idle. Repeated pipeline runs will take less time since the compute resources are already allocated. Additionally, the designer uses cached results for each module to further improve efficiency._
 
 https://docs.microsoft.com/en-us/azure/machine-learning/tutorial-designer-automobile-price-train-score
