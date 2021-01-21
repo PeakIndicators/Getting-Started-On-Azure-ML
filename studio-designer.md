@@ -15,7 +15,7 @@ In part one of the tutorial, we will describe how to:
 
 If you have not already done so, please:
 
-* Create a Compute Cluster, this Automated ML feature won't work with a compute instance, it requires a compute cluster. More details can be seen in: [compute instance](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Azure-ML-Studio.md).
+* Create a Compute Cluster, the Designer won't work with a compute instance, it requires a compute cluster. More details can be seen in: [compute instance](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Azure-ML-Studio.md).
 * Create a Datastore and a Dataset with the data you want to use. For more information see: [Create a Datastore using the web portal](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Work-With-Data-in-Azure-ML.md) and [Create Datasets using the web portal](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Work-With-Data-in-Azure-ML-Datasets.md).
 
 **Note**
@@ -34,28 +34,28 @@ If you do not see the graphical elements mentioned in the steps below, such as b
 ![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/designer2.PNG)
 
 ### Set the default Compute Target
-A pipeline runs on a compute target, which is a compute resource that's attached to your studio.The compute target can be reused in future runs.
+A pipeline runs on a compute target (needs to be a compute cluster), which is a compute resource that's attached to your studio.The compute target can be reused in future runs.
 
 You can set a Default compute target for the entire pipeline, which will tell every module to use the same compute target by default. However, you can specify compute targets on a per-module basis.
 
 1. Next to the pipeline name, select the **Gear icon**![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/gear-icon.png)  at the top of the canvas to open the Settings pane.
 
-2. In the Settings pane to the right of the canvas, select Select compute target.
+2. In the Settings pane to the right of the canvas, select **Select compute target**. Select the desired compute cluster and click **Save**.
 
-3. If you already have an available compute target, you can select it to run this pipeline.
+![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/designer3.PNG)
 
- Note
+ **Note:** The designer can only run training experiments on Azure Machine Learning Compute Clusters other types of compute won't be shown.
 
-The designer can only run training experiments on Azure Machine Learning Compute but other compute targets won't be shown.
 
-Enter a name for the compute resource.
+### Import data
 
-Select Save.
+1. From the left side panel expand **Datasets** and select the dataset you need to work with. Drag it onto the canvas.
 
- Note
+![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/designer4.GIF)
 
-It takes approximately five minutes to create a compute resource. After the resource is created, you can reuse it and skip this wait time for future runs.
+**Note:** The designer also provides sample datasets for user to experiment. Instead of expanding **Datasets** expand **Sample Datasets** and select the one that best suits the needs.
 
-The compute resource autoscales to zero nodes when it's idle to save cost. When you use it again after a delay, you might experience approximately five minutes of wait time while it scales back up.
+
+
 
 https://docs.microsoft.com/en-us/azure/machine-learning/tutorial-designer-automobile-price-train-score
