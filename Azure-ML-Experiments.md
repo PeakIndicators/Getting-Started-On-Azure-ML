@@ -96,6 +96,32 @@ For example, the following code could be used to run an experiment based on a sc
 **!Note:** 
 An implicitly created RunConfiguration object defines the Python environment for the experiment, including the packages available to the script. If your script depends on packages that are not included in the default environment, you must associate the ScriptRunConfig with an Environment object that makes use of a CondaDependencies object to specify the Python packages required. Runtime environments are discussed in more detail later in this course.
 
+## View run Details on Jupyter Notebooks
+
+In Jupyter Notebooks, you can use the RunDetails widget to see a visualization of the run details.
+
+![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/58.PNG)
+
+![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/59.PNG)
+
+## View run Details in Azure Machine Learning studio
+
+The **RunDetails** widget which produces the visualization above includes a link to view run details in Azure Machine Learning studio. Click this to open a new browser tab with the run details (you can also just open Azure Machine Learning studio and find the run on the Experiments page as shown below).
+
+![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/60.PNG)
+
+![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/62.PNG)
+
+When viewing the run in Azure Machine Learning studio, you can explore many details of your run including:
+
+The **Details** tab containing the general properties of the experiment run, and,
+
+[](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/63.PNG)
+
+The **Metrics** tab which enables you to select logged metrics and view them as tables or charts.
+
+[](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/64.PNG)
+
 ## Run Experiments
 
 ### Before you start
