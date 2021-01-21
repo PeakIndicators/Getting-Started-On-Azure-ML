@@ -31,18 +31,18 @@ If you do not see the graphical elements mentioned in the steps below, such as b
 
 3. At the top of the canvas, select the default pipeline name Pipeline-Created-on. Rename it to the name you want to give to your pipeline. The name doesn't need to be unique.
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/designer2.png)
+![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/designer2.PNG)
 
 ### Set the default Compute Target
-A pipeline runs on a compute target, which is a compute resource that's attached to your workspace. After you create a compute target, you can reuse it for future runs.
+A pipeline runs on a compute target, which is a compute resource that's attached to your studio.The compute target can be reused in future runs.
 
 You can set a Default compute target for the entire pipeline, which will tell every module to use the same compute target by default. However, you can specify compute targets on a per-module basis.
 
-Next to the pipeline name, select the Gear icon Screenshot of the gear icon at the top of the canvas to open the Settings pane.
+1. Next to the pipeline name, select the **Gear icon**![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/gear-icon.png)  at the top of the canvas to open the Settings pane.
 
-In the Settings pane to the right of the canvas, select Select compute target.
+2. In the Settings pane to the right of the canvas, select Select compute target.
 
-If you already have an available compute target, you can select it to run this pipeline.
+3. If you already have an available compute target, you can select it to run this pipeline.
 
  Note
 
