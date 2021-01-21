@@ -175,4 +175,6 @@ The Evaluate Model will provide information on how well the trained model perfor
 
 ![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/designer16.PNG)
 
+## Deploy the Model
+
 https://docs.microsoft.com/en-us/azure/machine-learning/tutorial-designer-automobile-price-train-score
