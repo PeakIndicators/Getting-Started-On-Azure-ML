@@ -35,6 +35,17 @@ Alternatively, if you have a reference to the **Run** used to train the model, y
 
 ![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/19.PNG)
 
+To view your registered model navigate to the **Models** page in [Azure Machine Learning studio](https://ml.azure.com/?tid=168c1fe3-a841-49b5-b692-7b3132c0a997&wsid=/subscriptions/52cbf6c7-01f2-4df2-bae9-c80cee4db7eb/resourcegroups/churn-prediction-azure-tutorial/workspaces/churn-machine-learning-ws). Here you will be able view your models.
+
+![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/72.PNG)
+
+Select the model you would like more information on and you will get additional details such as logged metrics, which experiment generated the model, model version and a serialized file containing the model. 
+
+![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/73.PNG)
+
+![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/74.PNG)
+
+
 ## 2. Define an inference configuration
 The model will be deployed as a service that consist of:
 
