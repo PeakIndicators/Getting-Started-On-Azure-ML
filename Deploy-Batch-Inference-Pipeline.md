@@ -48,7 +48,7 @@ After your pipeline has been defined, you can run it and wait for it to complete
 
 ![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/37.PNG)
 
-# Publishing a batch inference pipeline
+## Publishing a batch inference pipeline
 
 You can publish a batch inferencing pipeline as a REST service, as shown in the following example code:
 
