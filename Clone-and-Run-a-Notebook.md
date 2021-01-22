@@ -11,11 +11,11 @@ A lot of data science and machine learning experimentation is performed by runni
 
 3. Enter the following commands shown below to clone a Git repository containing notebooks, data, and other files to your workspace:
 
-` cd Users/`
+` cd Users/<your_username`
 
 ![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/Notebook2.PNG)
 
- `git clone https://github.com/felicity-borg/Getting-Started-On-Azure-ML`
+ `git clone https://github.com/felicity-borg/Getting-Started-On-Azure-ML/labs`
  
 You will then be prompted to insert a username, followed by a password. 
 
