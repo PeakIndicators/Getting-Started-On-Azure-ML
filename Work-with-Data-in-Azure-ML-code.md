@@ -109,7 +109,7 @@ Both of these techniques are shown in the following code:
 ![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/46.PNG)
 
 ## Dataset versioning
-Datasets can be *versioned*, enabling you to track historical versions of datasets that were used in experiments, and reproduce those experiments with data in the same state.
+Datasets can be *versioned*, enabling you to track historical versions of datasets that were used in experiments and reproduce those experiments with data in the same state.
 
 You can create a new version of a dataset by registering it with the same name as a previously registered dataset and specifying the **create_new_version** property:
 
@@ -133,10 +133,13 @@ You can read data directly from a tabular dataset by converting it into a Pandas
 ![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/48.PNG)
 
 ## Pass a tabular dataset to an experiment script
-When you need to access a dataset in an experiment script, you must pass the dataset to the script. There are two ways you can do this.
+When you need to access a dataset in an experiment script, you must pass the dataset to the script. There are two ways you can do this:
+
+* Use a script argument for a tabular dataset
+* Use a named input for a tabular dataset
 
 ### Use a script argument for a tabular dataset
-You can pass a tabular dataset as a script argument. When you take this approach, the argument received by the script is the unique ID for the dataset in your workspace. In the script, you can then get the workspace from the run context and use it to retrieve the dataset by it's ID.
+You can pass a tabular dataset as a script argument. When you take this approach, the argument received by the script is the unique ID for the dataset in your workspace. In the script, you can then get the workspace from the run context and use it to retrieve the dataset by its ID.
 
 *ScriptRunConfig:*
 
@@ -146,8 +149,8 @@ You can pass a tabular dataset as a script argument. When you take this approach
 
 ![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/50.PNG)
 
-## Use a named input for a tabular dataset
-Alternatively, you can pass a tabular dataset as a *named input*. In this approach, you use the **as_named_input** method of the dataset to specify a name for the dataset. Then in the script, you can retrieve the dataset by name from the run context's **input_datasets** collection without needing to retrieve it from the workspace. Note that if you use this approach, you still need to include a script argument for the dataset, even though you don’t actually use it to retrieve the dataset.
+### Use a named input for a tabular dataset
+Alternatively, you can pass a tabular dataset as a *named input*. In this approach, you use the **as_named_input** method of the dataset to specify a name for the dataset. Then in the script, you can retrieve the dataset by name from the run context's **input_datasets** collection without needing to retrieve it from the workspace. Note that, if you use this approach, you still need to include a script argument for the dataset, even though you don’t actually use it to retrieve the dataset.
 
 *ScriptRunConfig:*
 
@@ -163,9 +166,14 @@ When working with a file dataset, you can use the **to_path()** method to return
 ![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/53.PNG)
 
 ### Pass a file dataset to an experiment script
-Just as with a Tabular dataset, there are two ways you can pass a file dataset to a script. However, there are some key differences in the way that the dataset is passed.
+Just as with a Tabular dataset, there are two ways you can pass a file dataset to a script:
 
-### Use a script argument for a file dataset
+* Use a script argument for a file dataset
+* Use a named input for a file dataset
+
+However, there are some key differences in the way that the dataset is passed.
+
+#### Use a script argument for a file dataset
 You can pass a file dataset as a script argument. Unlike with a tabular dataset, you must specify a mode for the file dataset argument, which can be **as_download** or **as_mount**. This provides an access point that the script can use to read the files in the dataset. In most cases, you should use **as_download**, which copies the files to a temporary location on the compute where the script is being run. However, if you are working with a large amount of data for which there may not be enough storage space on the experiment compute, use **as_mount** to stream the files directly from their source.
 
 *ScriptRunConfig:*
@@ -176,7 +184,7 @@ You can pass a file dataset as a script argument. Unlike with a tabular dataset,
 
 ![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/55.PNG)
 
-### Use a named input for a file dataset
+#### Use a named input for a file dataset
 You can also pass a file dataset as a *named input*. In this approach, you use the **as_named_input** method of the dataset to specify a name before specifying the access mode. Then in the script, you can retrieve the dataset by name from the run context's **input_datasets** collection and read the files from there. As with tabular datasets, if you use a named input, you still need to include a script argument for the dataset, even though you don’t actually use it to retrieve the dataset.
 
 *ScriptRunConfig:*
@@ -201,14 +209,14 @@ If you have not already done so, create a [compute instance](https://github.com/
 
 ## Open Jupyter
 
-1. In Azure Machine Learning studio, view the **Compute** page for your workspace; and on the Compute Instances tab, start your compute instance if it is not already running.
+1. In Azure Machine Learning studio, view the **Compute** page for your workspace; On the Compute Instances tab, start your compute instance if it is not already running.
 2. When the compute instance is running, click the **Jupyter** link to open the Jupyter home page in a new browser tab. Be sure to open Jupyter and not JupyterLab.
 
 
 ## Example on how to run experiments in a notebook
 Experiments in Azure Machine Learning need to be initiated from some sort of *control layer*; often a script or program. In this exercise, you’ll use a notebook to control experiments.
 
-1. In the Jupyter home page, browse to the Users/labs folder where you cloned the notebook repository, and open the **Work-with-Data.ipynb** notebook.
+1. In the Jupyter home page, browse to the Users/<username>/labs folder where you cloned the notebook repository, and open the **Work-with-Data.ipynb** notebook.
 
 2. Then read the notes in the notebook, running each code cell in turn.
 
