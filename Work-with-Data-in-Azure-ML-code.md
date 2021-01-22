@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Data is a fundamental element in any machine learning workload, so in this docuemnt, you will learn how to create and manage datastores and datasets in an Azure Machine Learning workspace, and how to use them in model training experiments.
+Data is a fundamental element in any machine learning workload, so in this document, we will show how to create and manage datastores and datasets in an Azure Machine Learning studio using python and how to use them in model training experiments.
 
 ## Learning objectives:
 
@@ -11,7 +11,7 @@ Data is a fundamental element in any machine learning workload, so in this docue
 
 ## Introduction to datastores
 
-In Azure Machine Learning, *datastores* are abstractions for cloud data sources. They encapsulate the information required to connect to data sources. You can access datastores directly in code by using the Azure Machine Learning SDK, and use it to upload or download data.
+In Azure Machine Learning, *datastores* are abstractions for cloud data sources. They encapsulate the information required to connect to data sources. You can access datastores directly in code by using the Azure Machine Learning SDK and use it to upload or download data.
 
 ## Types of Datastore
 
@@ -26,19 +26,19 @@ Azure Machine Learning supports the creation of datastores for multiple kinds of
 
 ## Built-in Datastores
 
-Every workspace has two built-in datastores (an Azure Storage blob container, and an Azure Storage file container) that are used as system storage by Azure Machine Learning. There's also a third datastore that gets added to your workspace if you make use of the open datasets provided as samples (for example, by creating a designer pipeline based on a sample dataset)
+Every studio has two built-in datastores (an Azure Storage blob container and an Azure Storage file container) that are used as system storage by Azure Machine Learning. There's also a third datastore that gets added to your workspace if you make use of the open datasets provided as samples (for example, by creating a designer pipeline based on a sample dataset).
 
-In most machine learning projects, you will likely need to work with data sources of your own - either because you need to store larger volumes of data than the built-in datastores support, or because you need to integrate your machine learning solution with data from existing applications.
+In most machine learning projects, you will likely need to work with data sources of your own - either because you need to store larger volumes of data than the built-in datastores support or because you need to integrate your machine learning solution with data from existing applications.
 
 ## Use datastores
 
-To add a datastore to your workspace, you can register it using the graphical interface in Azure Machine Learning studio as shown on [this page](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Work-With-Data-in-Azure-ML.md), or you can use the Azure Machine Learning SDK. For example, the following code registers an Azure Storage blob container as a datastore named **blob_data**.
+To add a datastore to your workspace, you can register it using the graphical interface in Azure Machine Learning studio as shown on [this page](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Work-With-Data-in-Azure-ML.md) or you can use the Azure Machine Learning SDK. For example, the following code registers an Azure Storage blob container as a datastore named **blob_data**.
 
 ![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/41.PNG)
 
 ### Managing datastores
 
-You can view and manage datastores in Azure Machine Learning Studio, as shown on [this page](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Work-With-Data-in-Azure-ML.md), or you can use the Azure Machine Learning SDK. For example, the following code lists the names of each datastore in the workspace.
+You can view and manage datastores in Azure Machine Learning Studio, as shown on [this page](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Work-With-Data-in-Azure-ML.md) or you can use the Azure Machine Learning SDK. For example, the following code lists the names of each datastore in the workspace.
 
 ![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/42.PNG)
 
