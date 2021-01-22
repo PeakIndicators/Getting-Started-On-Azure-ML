@@ -263,18 +263,34 @@ After deployment finishes, you can view your real-time endpoint by going to the 
 
 4. In the **Deployment** logs tab, you can find the detailed deployment logs of your real-time endpoint.
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/designer23.gif)
+![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/designer25.gif)
 
 
 ### Create a batch inference pipeline
-To depmust first convert the training pipeline into a real-time inference pipeline. This process removes training modules and adds web service inputs and outputs to handle requests.
 
-1. Above the pipeline canvas, select **Create inference pipeline > Real-time inference pipeline**.
+1. Above the pipeline canvas, select **Create inference pipeline > Create batch inference pipeline**.
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/designer17.PNG)
+2. Select **Submit** and use the same compute target and experiment that you used in part one.
 
-Your pipeline should now look like this:
+3. Run status and details can be seen at the top right of the canvas.
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/designer18.PNG)
+### Deploy the pipeline endpoint
+1. Once the run has finished successfully. Select **Deploy** above the canvas.
 
-https://docs.microsoft.com/en-us/azure/machine-learning/tutorial-designer-automobile-price-train-score
+2. Select **Deploy new batch endpoint**, name it and then select the Compute Type. Click **Deploy**.
+Note: The Name field must only consist of lowercase letters, numbers, or dashes, start with a letter, end with a letter or number
+
+![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/designer26.gif)
+
+### View the pipeline endpoint
+After deployment finishes, you can view your pipeline endpoint by going to the Endpoints page.
+
+1. On the **Endpoints** page, select **Pipeline Endpoints** and choose the endpoint.
+
+2. In the **Details** tab, you can see more information such as the REST URI, status, and tags.
+
+3. In the **Consume** tab, you can find security keys and set authentication methods.
+
+4. In the **Deployment** logs tab, you can find the detailed deployment logs of your real-time endpoint.
+
+![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/designer27.gif)
