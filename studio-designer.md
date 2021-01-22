@@ -219,37 +219,39 @@ By default, the Web Service Input will expect the same data schema as the traini
 
 #### Before you start
 
-If you have not already done so, please:
+* You can deploy a model to an Azure Container Instance (ACI) if you select Azure Container Instance for Compute type in the real-time endpoint setting box. Azure Container Instance is more used for testing or development. Use ACI for low-scale CPU-based workloads that require less than 48 GB of RAM.
+* For high-scale CPU-based workloads, the recommendation is to use Azure Kubernetes Service (AKS).
 
-* Create a Compute Cluster, the Designer won't work with a compute instance, it requires a compute cluster. More details can be seen in: [compute instance](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Azure-ML-Studio.md).
-
-You can also deploy to Azure Container Instance (ACI) if you select Azure Container Instance for Compute type in the real-time endpoint setting box. Azure Container Instance is used for testing or development. Use ACI for low-scale CPU-based workloads that require less than 48 GB of RAM.
+In this tutorial and since it's only to guide on the steps needed, we will use an ACI.
 
 #### Deploying
 
-1. Select **Deploy** above the canvas.
+1. Once the run has finished successfully. Select **Deploy** above the canvas.
 
-2. Select **Deploy new real-time endpoint**.
+![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/designer21.PNG)
 
-3. Select the AKS cluster you created.
+2. Select **Deploy new real-time endpoint**, name it and then select the Compute Type. Click **Deploy**.
+Note: The Name field must only consist of lowercase letters, numbers, or dashes, start with a letter, end with a letter or number
+
+![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/designer22.PNG)
 
 You can also change Advanced setting for your real-time endpoint.
 
-|Advanced setting|	Description|
-| ------- |------|
-|Enable Application| Insights diagnostics and data collection	Whether to enable Azure Application Ingishts to collect data from the deployed endpoints. By default: false|
-|Scoring timeout|	A timeout in milliseconds to enforce for scoring calls to the web service. By default: 60000|
-|Auto scale enabled|	Whether to enable autoscaling for the web service. By default: true|
-|Min replicas|	The minimum number of containers to use when autoscaling this web service. By default: 1|
-|Max replicas|	The maximum number of containers to use when autoscaling this web service. By default: 10|
-|Target utilization|	The target utilization (in percent out of 100) that the autoscaler should attempt to maintain for this web service. By default: 70|
-|Refresh period|	How often (in seconds) the autoscaler attempts to scale this web service. By default: 1|
-|CPU reserve capacity|	The number of CPU cores to allocate for this web service. By default: 0.1|
-|Memory reserve capacity|	The amount of memory (in GB) to allocate for this web service. By default: 0.5|
+|Advanced setting|Description|Type of Compute|
+|-------|------|-------|
+|Enable Application|Insights diagnostics and data collection. To enable Azure Application Ingishts to collect data from the deployed endpoints. By default: false|ACI and AKS|
+|Enable SSL|SSL relies on digital certificates, which help with encryption and identity verification.By default: false|ACI|
+|Scoring timeout|	A timeout in milliseconds to enforce for scoring calls to the web service. By default: 60000|AKS|
+|Auto scale enabled|	Whether to enable autoscaling for the web service. By default: true|AKS|
+|Min replicas|	The minimum number of containers to use when autoscaling this web service. By default: 1|AKS|
+|Max replicas|	The maximum number of containers to use when autoscaling this web service. By default: 10|AKS|
+|Target utilization|	The target utilization (in percent out of 100) that the autoscaler should attempt to maintain for this web service. By default: 70|AKS|
+|Refresh period|	How often (in seconds) the autoscaler attempts to scale this web service. By default: 1|AKS|
+|CPU reserve capacity|	The number of CPU cores to allocate for this web service. By default: 0.1|ACI and AKS|
+|Memory reserve capacity|	The amount of memory (in GB) to allocate for this web service. By default: 0.5|ACI and AKS|
 
-4.Select **Deploy**.
-
-A success notification above the canvas appears after deployment finishes. It might take a few minutes.
+4. A success notification above the canvas appears after deployment finishes. It might take a few minutes.
+![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/designer23.PNG)
 
 #### View the real-time endpoint
 After deployment finishes, you can view your real-time endpoint by going to the Endpoints page.
