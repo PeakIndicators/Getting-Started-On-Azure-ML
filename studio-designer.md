@@ -185,7 +185,6 @@ Once the user is happy with the model it can be deployed. In this part of the tu
 * Create a batch inference pipeline.
 
 
-
 ### Create a real-time inference pipeline
 To deploy your pipeline, you must first convert the training pipeline into a real-time inference pipeline. This process removes training modules and adds web service inputs and outputs to handle requests.
 
@@ -264,6 +263,18 @@ After deployment finishes, you can view your real-time endpoint by going to the 
 
 4. In the **Deployment** logs tab, you can find the detailed deployment logs of your real-time endpoint.
 
+![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/designer23.gif)
 
+
+### Create a batch inference pipeline
+To depmust first convert the training pipeline into a real-time inference pipeline. This process removes training modules and adds web service inputs and outputs to handle requests.
+
+1. Above the pipeline canvas, select **Create inference pipeline > Real-time inference pipeline**.
+
+![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/designer17.PNG)
+
+Your pipeline should now look like this:
+
+![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/designer18.PNG)
 
 https://docs.microsoft.com/en-us/azure/machine-learning/tutorial-designer-automobile-price-train-score
