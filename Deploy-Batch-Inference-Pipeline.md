@@ -72,6 +72,8 @@ In this tutorial we provide some jupyter notebook templates (more detail in: [Ju
 
 If you have not already done so, create a [compute instance](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Azure-ML-Studio.md) and ensure you have [Cloned the notebooks](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Clone-and-Run-a-Notebook.md) required for this exercise.
 
+### Additional Information to note as you're working through your notebook
+
 After creating a compute cluster to deploy your model you can view it selecting the **compute** page in [Azure Machine Learning studio](https://ml.azure.com/?tid=168c1fe3-a841-49b5-b692-7b3132c0a997&wsid=/subscriptions/52cbf6c7-01f2-4df2-bae9-c80cee4db7eb/resourcegroups/churn-prediction-azure-tutorial/workspaces/churn-machine-learning-ws) and clicking on **Compute clusters** at the top of the page. 
 
 ![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/75.PNG). 
