@@ -13,7 +13,7 @@ A lot of data science and machine learning experimentation is performed by runni
 
 ` cd Users/<your_username>`
 
- `git clone https://github.com/felicity-borg/Getting-Started-On-Azure-ML/labs`
+ `git clone https://github.com/felicity-borg/Getting-Started-On-Azure-ML`
  
 You will then be prompted to insert a username, followed by a password (These should have been provided to you). 
 
