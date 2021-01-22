@@ -5,11 +5,11 @@ A lot of data science and machine learning experimentation is performed by runni
 1. In Azure Machine Learning studio, view the **Compute** page.
 
 2. Your compute instance must be running. Select **JupyterLab** and then open a terminal session.
-**Note:** This task can also be done using _Jupyter_ or _Terminal_ options that are also available in the Compute Instance. The process is very similar, so we will explain only how to do it in one of them, which in this example it will be _JupyterLab_.
+**Note:** This task can also be done using _Jupyter_ or _Terminal_ options that are also available in the Compute Instance. The process is very similar, so we will explain only how to do it in one of them, which, in this example, will be _JupyterLab_.
 
 ![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/clonenotebook1.gif)
 
-3. Enter the following commands shown below to clone a Git repository containing notebooks, data, and other files to your workspace:
+3. Enter the commands shown below to clone a Git repository containing notebooks, data, and other files to your workspace:
 
 ` cd Users/<your_username>`
 
@@ -24,7 +24,7 @@ You will then be prompted to insert a username, followed by a password (These sh
 ![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/Notebook4.gif)
 
 **Note:** 
-Because JupyterLab git version is not 2.8, we can't clone only the notebooks folder (git, prior to 2.8, doesn't support subfolders cloning). Therefore the entire repository is cloned.
+Because JupyterLab git version is not 2.8, we can't clone only the notebooks folder (git, prior to 2.8, doesn't support subfolders cloning). Therefore, the entire repository is cloned.
 
  ![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/Notebook3.PNG)
  
@@ -43,7 +43,7 @@ Because JupyterLab git version is not 2.8, we can't clone only the notebooks fol
  **Tip:** To run a code cell, select the cell you want to run and then use the ▷ button to run it.
 
 **Note:**
-As stated before, the steps shown above demonstrate how to clone a gitHub repository using **JupyterLab** but once that clone is done the notebooks will be available within Azure Machine Learning Studio in every tool that allows us to access a notebook (more details on the tools: [Creating and Running a Python or R Notebook](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Creating-and-Running-a-Python-Notebook.md)).
+As stated before, the steps shown above demonstrate how to clone a gitHub repository using **JupyterLab** but once that clone is done the notebooks will be available within Azure Machine Learning Studio in every tool that allows access to a notebook (more details on the tools: [Creating and Running a Python or R Notebook](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Creating-and-Running-a-Python-Notebook.md)).
 
-Below, we have an example where we can see that the notebooks are accessible directly in Azure Machine Learning studio:
+Below, we have an example where we can see that, even tought we use JupyterLab to clone the repository, the notebooks are accessible directly in Azure Machine Learning studio:
   ![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/Notebook5.PNG)
