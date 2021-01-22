@@ -24,8 +24,7 @@ You will then be prompted to insert a username, followed by a password (These sh
 ![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/Notebook4.gif)
 
 **Note:** 
-
-Because JupyterLab git version is not 2.8, we can't clone only the notebooks folder (git, prior to 2.8, doesn't support subfolders cloning). Therefore the entire repository was cloned.
+Because JupyterLab git version is not 2.8, we can't clone only the notebooks folder (git, prior to 2.8, doesn't support subfolders cloning). Therefore the entire repository is cloned.
 
  ![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/Notebook3.PNG)
  
@@ -37,9 +36,13 @@ Because JupyterLab git version is not 2.8, we can't clone only the notebooks fol
  
  6. Close the terminal pane, terminating the session.
  
- 7. In the **Users//Getting-Started-On-Azure-ML/labs/**, open the **Getting_Started_with_Azure_ML.ipynb** notebook. Then read the notes and follow the instructions it contains to learn how to connect to your Azure ML workspace, view resources and run cells. 
+ 7. In the **Users/<user_name>/Getting-Started-On-Azure-ML/labs/**, open the **Getting_Started_with_Azure_ML.ipynb** notebook. Then read the notes and follow the instructions it contains to learn how to connect to your Azure ML workspace, view resources and run cells. 
  
-  ![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/Notebook5.PNG)
+  ![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/Notebook4.PNG)
  
  **Tip:** To run a code cell, select the cell you want to run and then use the ▷ button to run it.
 
+**Note:**
+As stated before, the steps shown above demonstrate how to clone a gitHub repository using **JupyterLab** but once that clone is done data will be available within Azure Machine Learning Studio in every tool that allows us to access a notebook (more details on the tools: * [Creating and Running a Python or R Notebook](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Creating-and-Running-a-Python-Notebook.md))
+
+  ![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/Notebook5.PNG)
