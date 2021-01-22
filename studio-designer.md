@@ -263,7 +263,7 @@ After deployment finishes, you can view your real-time endpoint by going to the 
 
 4. In the **Deployment** logs tab, you can find the detailed deployment logs of your real-time endpoint.
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/designer25.gif)
+![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/designer24.gif)
 
 
 ### Create a batch inference pipeline
@@ -274,23 +274,27 @@ After deployment finishes, you can view your real-time endpoint by going to the 
 
 3. Run status and details can be seen at the top right of the canvas.
 
-### Deploy the pipeline endpoint
-1. Once the run has finished successfully. Select **Deploy** above the canvas.
+### Publish the pipeline endpoint
+1. Once the run has finished successfully. Select **Publish** above the canvas.
 
-2. Select **Deploy new batch endpoint**, name it and then select the Compute Type. Click **Deploy**.
-Note: The Name field must only consist of lowercase letters, numbers, or dashes, start with a letter, end with a letter or number
+2. Name the pipeline endpoint and then select **Publish**.
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/designer26.gif)
+3. The status of the publishing can be seen at the top of the canvas.
 
 ### View the pipeline endpoint
-After deployment finishes, you can view your pipeline endpoint by going to the Endpoints page.
+After the publishing finishes, the pipeline endpoint can be viewed by 
 
-1. On the **Endpoints** page, select **Pipeline Endpoints** and choose the endpoint.
+1. On the pipeline canvas, once the process completes successfully click on the link provided.
 
-2. In the **Details** tab, you can see more information such as the REST URI, status, and tags.
+2. On the **Endpoints** page, select **Pipeline Endpoints** and choose the endpoint.
 
-3. In the **Consume** tab, you can find security keys and set authentication methods.
+![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/designer25.gif)
 
-4. In the **Deployment** logs tab, you can find the detailed deployment logs of your real-time endpoint.
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/designer27.gif)
+**NOTE:**
+
+_What is Real-Time Inference?_
+Real-Time Inference is the process of generating machine learning predictions in real time upon request. It is also known as online inference or dynamic inference. Typically, these predictions are generated on a single observation of data at runtime. Predictions generated using real-time inference may be generated at any time of the day.
+
+_What is Batch Inference?_
+Batch inference, or offline inference, is the process of generating predictions on a batch of observations. The batch jobs are typically generated on some recurring schedule (e.g. hourly, daily). These predictions are then stored in a database/storage account and can be made available to developers or end users. Batch inference may sometimes take advantage of big data technologies such as Spark to generate predictions. This allows data scientists and machine learning engineers to take advantage of scalable compute resources to generate many predictions at once.
