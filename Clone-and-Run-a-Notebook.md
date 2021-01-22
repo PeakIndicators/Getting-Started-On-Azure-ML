@@ -5,7 +5,7 @@ A lot of data science and machine learning experimentation is performed by runni
 1. In Azure Machine Learning studio, view the **Compute** page.
 
 2. Your compute instance must be running. Select **JupyterLab** and then open a terminal session.
-**Note:** This task can also be done using Jupyter or the Terminal options also available in the Compute Instance. The process is very similar, so we will explain only how to do it in one of them, which in this example it will be JupyterLab.
+**Note:** This task can also be done using _Jupyter_ or _Terminal_ options that are also available in the Compute Instance. The process is very similar, so we will explain only how to do it in one of them, which in this example it will be _JupyterLab_.
 
 ![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/clonenotebook1.gif)
 
