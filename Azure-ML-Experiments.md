@@ -1,10 +1,10 @@
 # Azure Machine Learning experiments
 
-Like any scientific discipline, data science involves running experiments; typically to explore data or to build and evaluate predictive models. In Azure Machine Learning, an experiment is a named process, usually the running of a script or a pipeline, that can generate metrics and outputs and be tracked in the Azure Machine Learning workspace.
+Like any scientific discipline, data science involves running experiments; typically to explore data or to build and evaluate predictive models. In Azure Machine Learning, an experiment is a named process, usually the running of a script or a pipeline, that can generate metrics and outputs and be tracked in the Azure Machine Learning studio.
 
 ![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/Azure-ML-Experiments.PNG)
 
-An experiment can be run multiple times, with different data, code, or settings; and Azure Machine Learning tracks each run, enabling you to view run history and compare results for each run.
+An experiment can be run multiple times, with different data, code or settings; Azure Machine Learning tracks each run, enabling you to view run history and compare results for each run.
 
 ## The Experiment Run Context
 When you submit an experiment, you use its run context to initialize and end the experiment run that is tracked in Azure Machine Learning, as shown in the following code sample:
@@ -56,13 +56,13 @@ The previous code might produce output similar to this:
 `}` 
 
 ## Experiment Output Files
-In addition to logging metrics, an experiment can generate output files. Often these are trained machine learning models, but you can save any sort of file and make it available as an output of your experiment run. The output files of an experiment are saved in its **outputs** folder.
+In addition to logging metrics, an experiment can generate output files. Often these are trained machine learning models but you can save any sort of file and make it available as an output of your experiment run. The output files of an experiment are saved in its **outputs** folder.
 
-The technique you use to add files to the outputs of an experiment depend on how you're running the experiment. The examples shown so far control the experiment lifecycle inline in your code, and when taking this approach you can upload local files to the run's **outputs** folder by using the **Run** object's **upload_file** method in your experiment code as shown here:
+The technique you use to add files to the outputs of an experiment depend on how you're running the experiment. The examples shown so far, control the experiment lifecycle inline in your code and when taking this approach you can upload local files to the run's **outputs** folder by using the **Run** object's **upload_file** method in your experiment code as shown here:
 
 `run.upload_file(name='outputs/sample.csv', path_or_stream='./sample.csv')`
 
-When running an experiment in a remote compute context (which we'll discuss later in this course), any files written to the **outputs** folder in the compute context are automatically uploaded to the run's **outputs** folder when the run completes.
+When running an experiment in a remote compute context (which we'll discuss later in this tutorial), any files written to the **outputs** folder in the compute context are automatically uploaded to the run's **outputs** folder when the run completes.
 
 Whichever approach you use to run your experiment, you can retrieve a list of output files from the **Run** object like this:
 
@@ -81,7 +81,7 @@ The previous code would produce output similar to this:
 `]`
 
 ## Running a Script as an Experiment
-You can run an experiment inline using the `start_logging` method of the **Experiment** object, but it's more common to encapsulate the experiment logic in a script and run the script as an experiment. The script can be run in any valid compute context, making this a more flexible solution for running experiments as scale.
+You can run an experiment inline using the `start_logging` method of the **Experiment** object but it's more common to encapsulate the experiment logic in a script and run the script as an experiment. The script can be run in any valid compute context, making this a more flexible solution for running experiments as scale.
 
 An experiment script is just a Python code file that contains the code you want to run in the experiment. To access the experiment run context (which is needed to log metrics) the script must import the `azureml.core.Run` class and call its `get_context` method. The script can then use the run context to log metrics, upload files, and complete the experiment, as shown in the following example:
 
@@ -94,11 +94,11 @@ For example, the following code could be used to run an experiment based on a sc
 ![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/4.PNG)
 
 **!Note:** 
-An implicitly created RunConfiguration object defines the Python environment for the experiment, including the packages available to the script. If your script depends on packages that are not included in the default environment, you must associate the ScriptRunConfig with an Environment object that makes use of a CondaDependencies object to specify the Python packages required. Runtime environments are discussed in more detail later in this course.
+An implicitly created RunConfiguration object defines the Python environment for the experiment, including the packages available to the script. If your script depends on packages that are not included in the default environment, you must associate the ScriptRunConfig with an Environment object that makes use of a CondaDependencies object to specify the Python packages required. Runtime environments are discussed in more detail later in this tutorial.
 
 ## View run Details on Jupyter Notebooks
 
-In Jupyter Notebooks, you can use the RunDetails widget to see a visualization of the run details.
+In Jupyter Notebooks, you can use the **RunDetails** widget to see a visualization of the run details.
 
 ![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/58.PNG)
 
@@ -114,7 +114,7 @@ The **RunDetails** widget which produces the visualization above includes a link
 
 When viewing the run in Azure Machine Learning studio, you can explore many details of your run including:
 
-The **Details** tab containing the general properties of the experiment run, and,
+The **Details** tab containing the general properties of the experiment run.
 
 ![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/Experiment_Details.PNG)
 
