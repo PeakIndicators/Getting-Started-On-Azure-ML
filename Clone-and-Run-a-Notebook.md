@@ -13,19 +13,21 @@ A lot of data science and machine learning experimentation is performed by runni
 
 ` cd Users/<your_username>`
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/Notebook2.PNG)
-
  `git clone https://github.com/felicity-borg/Getting-Started-On-Azure-ML/labs`
  
-You will then be prompted to insert a username, followed by a password. 
+You will then be prompted to insert a username, followed by a password (These should have been provided to you). 
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/Notebook3.PNG)
-
-These should have been provided to you. 
+![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/Notebook2.PNG)
  
- 4. When the command has completed, in the **My files** pane, click ↻ to refresh the view and verify that a new **Users/Getting-Started-On-Azure-ML** folder has been created. This folder contains several documents and foldes. Double click the folder **labs**. This should contain multiple **.ipynb** notebook files.
+ 4. When the command has completed, in the **My files** pane, click ↻ to refresh the view and verify that a new **Users/<user_name>/Getting-Started-On-Azure-ML** folder has been created. This folder contains several documents and foldes. Double click the folder **labs**. This should contain multiple **.ipynb** notebook files.
  
 ![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/Notebook4.PNG)
+
+**Note:** 
+
+Because JupyterLab git version is not 2.8, we can't clone only the notebooks folder (git, prior to 2.8, doesn't support subfolders cloning). Therefore the entire repository was cloned.
+
+ ![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/Notebook3.PNG)
  
  5. In the terminal pane, enter the following command to upgrade the Azure Machine Learning SDK and notebook widgets python packages to the latest version (these packages are used in most of the notebooks):
  
