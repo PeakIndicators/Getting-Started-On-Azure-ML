@@ -116,11 +116,11 @@ When viewing the run in Azure Machine Learning studio, you can explore many deta
 
 The **Details** tab containing the general properties of the experiment run, and,
 
-[](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/63.PNG)
+![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/Experiment_Details.PNG)
 
 The **Metrics** tab which enables you to select logged metrics and view them as tables or charts.
 
-[](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/64.PNG)
+![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/Experiment_Metrics.PNG)
 
 ## Run Experiments
 
