@@ -1,8 +1,8 @@
-# Pipelines
+# Azure Machine Learning Pipelines
 
-In Azure Machine learning, you run workloads as experiments that leverage data assets and compute resources. In an enterprise data science process, you'll generally want to separate the overall process into individual tasks, and orchestrate these tasks as pipelines of connected steps. Pipelines are key to implementing an effective Machine Learning Operationalization (ML Ops) solution in Azure. In this documents we will explore how to define and run them. 
+In Azure Machine learning, you run workloads as experiments that leverage data assets and compute resources. In an enterprise data science process, you'll generally want to separate the overall process into individual tasks and orchestrate these tasks as pipelines of connected steps. Pipelines are key to implement an effective Machine Learning Operationalization (ML Ops) solution in Azure. In this documents we will explore how to define and run them. 
 
-**Note:** The term *pipeline* is used extensively in machine learning, often with different meanings. For example, in Scikit-Learn, you can define pipelines that combine data preprocessing transformations with a training algorithm; and in Azure DevOps, you can define a build or release pipeline to perform the build and configuration tasks required to deliver software. The focus here is on Azure Machine Learning pipelines, which encapsulate steps that can be run as an experiment. However, bear in mind that it's perfectly feasible to have an Azure DevOps pipeline with a task that initiates an Azure Machine Learning pipeline, which in turn includes a step that trains a model based on a Scikit-Learn pipeline!
+**Note:** The term *pipeline* is used extensively in machine learning, often with different meanings. For example, in Scikit-Learn, you can define pipelines that combine data preprocessing transformations with a training algorithm; in Azure DevOps, you can define a build or release pipeline to perform the build and configuration tasks required to deliver software. The focus here is on Azure Machine Learning pipelines, which encapsulate steps that can be run as an experiment. However, bear in mind that it's perfectly feasible to have an Azure DevOps pipeline with a task that initiates an Azure Machine Learning pipeline, which in turn includes a step that trains a model based on a Scikit-Learn pipeline!
 
 ## Learning Objectives:
 
@@ -34,7 +34,7 @@ Common kinds of step in an Azure Machine Learning pipeline include:
 
 **Note:** For a full list of supported step types, see [azure.pipeline.steps package documentation](https://aka.ms/AA70rrh).
 
-To create a pipeline, you must first define each step and then create a pipeline that includes the steps. The specific configuration of each step depends on the step type. For example the following code defines two **PythonScriptStep** steps to prepare data, and then train a model.
+To create a pipeline, you must first define each step and then create a pipeline that includes the steps. The specific configuration of each step depends on the step type. For example the following code defines two **PythonScriptStep** steps to prepare data and then train a model.
 
 ![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/5.PNG)
 
@@ -62,14 +62,14 @@ You can view a **PipelineData** object as an intermediary store for data that mu
 To use a **PipelineData** object to pass data between steps, you must:
 
 1. Define a named **PipelineData** object that references a location in a datastore.
-2. Pass the **PipelineData** object as a script argument in steps that run scripts (and include code in those scripts to read or write data)
+2. Pass the **PipelineData** object as a script argument in steps that run scripts (and include code in those scripts to read or write data).
 3. Specify the **PipelineData** object as an input or output for the steps as appropriate.
 
-For example, the following code defines a **PipelineData** object that for the preprocessed data that must be passed between the steps.
+For example, the following code defines a **PipelineData** object that for the preprocessed data must be passed between the steps.
 
 ![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/7.PNG)
 
-In the scripts themselves, you can obtain a reference to the **PipelineData** object from the script argument, and use it like a local folder.
+In the scripts themselves, you can obtain a reference to the **PipelineData** object from the script argument and use it like a local folder.
 
 ![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/8.PNG)
 
@@ -79,7 +79,7 @@ In the scripts themselves, you can obtain a reference to the **PipelineData** ob
 Pipelines with multiple long-running steps can take a significant time to complete. Azure Machine Learning includes some caching and reuse features to reduce this time.
 
 ### Managing step output reuse
-By default, the step output from a previous pipeline run is reused without rerunning the step provided the script, source directory, and other parameters for the step have not changed. Step reuse can reduce the time it takes to run a pipeline, but it can lead to stale results when changes to downstream data sources have not been accounted for.
+By default, the step output from a previous pipeline run is reused without rerunning the step provided the script, source directory and other parameters for the step have not changed. Step reuse can reduce the time it takes to run a pipeline but it can lead to stale results when changes to downstream data sources have not been accounted for.
 
 To control reuse for an individual step, you can set the **allow_reuse** parameter in the step configuration, like this:
 
@@ -95,7 +95,7 @@ When you have multiple steps, you can force all of them to run regardless of ind
 After you have created a pipeline, you can publish it to create a REST endpoint through which the pipeline can be run on demand.
 
 ### Publishing a pipeline
-To publish a pipeline, you can call its publish method, as shown here:
+To publish a pipeline, you can call its publish method as shown here:
 
 ![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/10.PNG)
 
@@ -109,7 +109,7 @@ After the pipeline has been published, you can view it in Azure Machine Learning
 ![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/12.PNG)
 
 ### Using a published pipeline
-To initiate a published endpoint, you make an HTTP request to its REST endpoint, passing an authorization header with a token for a service principal with permission to run the pipeline, and a JSON payload specifying the experiment name. The pipeline is run asynchronously, so the response from a successful REST call includes the run ID. You can use this to track the run in Azure Machine Learning studio.
+To initiate a published endpoint, you make an HTTP request to its REST endpoint, passing an authorization header with a token for a service principal with permission to run the pipeline and a JSON payload specifying the experiment name. The pipeline runs asynchronously, so the response from a successful REST call includes the run ID. You can use this to track the run in Azure Machine Learning studio.
 
 For example, the following Python code makes a REST request to run a pipeline and displays the returned run ID.
 
@@ -130,16 +130,16 @@ For example, you could use the following code to include a parameter for a regul
 
 ### Running a pipeline with a parameter
 
-After you publish a parameterized pipeline, you can pass parameter values in the JSON payload for the REST interface:
+After you publish a parameterized pipeline, you can pass parameter values in the JSON payload for the REST interface.
 
 ![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/15.PNG)
 
 ## Schedule pipelines
 
-After you have published a pipeline, you can initiate it on demand through its REST endpoint, or you can have the pipeline run automatically based on a periodic schedule or in response to data updates.
+After you have published a pipeline, you can initiate it on demand through its REST endpoint or you can have the pipeline run automatically based on a periodic schedule or in response to data updates.
 
 ### Scheduling a pipeline for periodic intervals
-To schedule a pipeline to run at periodic intervals, you must define a **ScheduleRecurrence** that determines the run frequency, and use it to create a **Schedule**.
+To schedule a pipeline to run at periodic intervals, you must define a **ScheduleRecurrence** that determines the run frequency and use it to create a **Schedule**.
 
 For example, the following code schedules a daily run of a published pipeline.
 
@@ -153,17 +153,17 @@ To schedule a pipeline to run whenever data changes, you must create a **Schedul
 
 ## Create and run a pipeline
 
-You can use the Azure Machine Learning SDK to perform all of the tasks required to create and operate a machine learning solution in Azure. Rather than perform these tasks individually, you can use pipelines to orchestrate the steps required to prepare data, run training scripts, register models, and other tasks.
+You can use the Azure Machine Learning SDK to perform all of the tasks required to create and operate a machine learning solution in Azure. Rather than perform these tasks individually, you can use pipelines to orchestrate the steps required to prepare data, run training scripts, register models and other tasks.
 
-In this tutorial we provide some jupyter notebook templates (more detail in: [Jupyter Lab notebook templates](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/tree/main/labs)). This example is based on the one provided in order to create a pipeline.
+In this tutorial, we provide some jupyter notebook templates (more detail in: [Jupyter Lab notebook templates](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/tree/main/labs)). This example is based on the one provided in order to create a pipeline.
 
-After you have created and ran a pipeline a graphical representation of the pipeline experiment will be displayed in the widget as it runs. You can also monitor pipeline runs in the Experiments page. You will be able to view the widget when you run your notebook which includes a link to the Azure Machine LEarning studio where you will be able to monitor and explore your run. The screenshots below show you how to access this page and what information you should expect to see. 
+After you have created and ran a pipeline a graphical representation of the pipeline experiment will be displayed in the widget as it runs. You can also monitor pipeline runs in the **Pipelines** page. You will be able to view the widget when you run your notebook which includes a link to the Azure Machine Learning studio where you will be able to monitor and explore your run. The screenshots below show you how to access this page and what information you should expect to see. 
 
 After clicking thak takes you to the Azure Machine Learning studio (provided in the notebook) click **Pipelines**
 
 ![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/65.PNG)
 
-Click on the run 
+Click on the run. 
 
 ![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/66.PNG)
 
@@ -177,6 +177,7 @@ An occasion where you may need to check your logs is if your run did not behave 
 
 ![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/71.PNG)
 
+## Exercise - Working with Pipelines
 
 ### Before you start
 
@@ -184,12 +185,12 @@ In this tutorial we provide some jupyter notebook templates that you can run (mo
 
 If you have not already done so, create a [compute instance](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Azure-ML-Studio.md) and ensure you have [cloned the notebooks](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Clone-and-Run-a-Notebook.md) required for this exercise.
 
-## Open Jupyter
+### Open Jupyter
 
 1. In Azure Machine Learning studio, view the **Compute** page for your workspace; and on the Compute Instances tab, start your compute instance if it is not already running.
 2. When the compute instance is running, click the **Jupyter** link to open the Jupyter home page in a new browser tab. Be sure to open Jupyter and not JupyterLab.
 
-## Create and publish a pipeline	
+### Create and publish a pipeline	
 In this exercise, the code to create and publish a pipeline is provided in a notebook.	
 
 1. In the Jupyter home page, browse to the Users/<user_name>/labs folder where you cloned the notebook repository, and open the **Create-Pipeline.ipynb** notebook.	
