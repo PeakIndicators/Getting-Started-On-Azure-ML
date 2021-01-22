@@ -64,16 +64,16 @@ To change the default datastore, use the **set_default_datastore()** method:
 
 ## Introduction to datasets
 
-*Datasets* are versioned packaged data objects that can be easily consumed in experiments and pipelines. Datasets are the recommended way to work with data, and are the primary mechanism for advanced Azure Machine Learning capabilities like data labeling and data drift monitoring.
+*Datasets* are versioned packaged data objects that can be easily consumed in experiments and pipelines. Datasets are the recommended way to work with data and are the primary mechanism for advanced Azure Machine Learning capabilities like data labeling and data drift monitoring.
 
 ## Types of dataset
 Datasets are typically based on files in a datastore, though they can also be based on URLs and other sources. You can create the following types of dataset:
 
 * **Tabular:** The data is read from the dataset as a table. You should use this type of dataset when your data is consistently structured and you want to work with it in common tabular data structures, such as Pandas dataframes.
-* **File:** The dataset presents a list of file paths that can be read as though from the file system. Use this type of dataset when your data is unstructured, or when you need to process the data at the file level (for example, to train a convolutional neural network from a set of image files).
+* **File:** The dataset presents a list of file paths that can be read as though from the file system. Use this type of dataset when your data is unstructured or when you need to process the data at the file level (for example, to train a convolutional neural network from a set of image files).
 
 ## Creating and registering datasets
-You can use the visual interface in Azure Machine Learning studio as shown on [this page](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Work-With-Data-in-Azure-ML.md), or the Azure Machine Learning SDK to create datasets from individual files or multiple file paths. The paths can include wildcards (for example, */files/*.csv*) making it possible to encapsulate data from a large number of files in a single dataset.
+You can use the visual interface in Azure Machine Learning studio as shown on [this page](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Work-With-Data-in-Azure-ML.md) or the Azure Machine Learning SDK to create datasets from individual files or multiple file paths. The paths can include wildcards (for example, */files/*.csv*) making it possible to encapsulate data from a large number of files in a single dataset.
 
 After you've created a dataset, you can *register* it in the workspace to make it available for use in experiments and data processing pipelines later.
 
@@ -94,7 +94,7 @@ To create a file dataset using the SDK, use the **from_files** method of the **D
 
 ![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/45.PNG)
 
-The dataset in this example includes all .jpg files in the **data/files/images** path within the default datastore:
+The dataset in this example includes all .jpg files in the **data/files/images** path within the default datastore.
 
 After creating the dataset, the code registers it in the workspace with the name **img_files**.
 
