@@ -137,7 +137,7 @@ _The final pipeline should look something like this:_
 ![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/designer11.PNG)
 
 
-#### Submit the pipeline
+### Submit the pipeline
 The pipeline is all setup, we will now submit a pipeline run to train the machine learning model designed. Any valid pipeline run can be submitted at any point, which can be used to review changes to it pipeline during development.
 
 1. At the top of the canvas, select **Submit**.
@@ -176,5 +176,44 @@ The Evaluate Model will provide information on how well the trained model perfor
 ![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/designer16.PNG)
 
 ## Deploy the Model
+
+Once the user is happy with the model it can be deployed. In this part of the tutorial, we will:
+
+* Create a real-time inference pipeline.
+* Deploy the real-time endpoint.
+* Test the real-time endpoint.
+* Create a batch inference pipeline.
+
+### Create a real-time inference pipeline
+To deploy your pipeline, you must first convert the training pipeline into a real-time inference pipeline. This process removes training modules and adds web service inputs and outputs to handle requests.
+
+1. Above the pipeline canvas, select **Create inference pipeline > Real-time inference pipeline**.
+
+![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/designer17.PNG)
+
+Your pipeline should now look like this:
+
+![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/designer18.PNG)
+
+
+**Note:** When selecting **Create inference pipeline**, several things happen:
+
+* The trained model is stored as a Dataset module in the module palette. You can find it under My Datasets.
+* Training modules like Train Model and Split Data are removed.
+* The saved trained model is added back into the pipeline.
+* Web Service Input and Web Service Output modules are added. These modules show where user data enters the pipeline and where data is returned.
+
+By default, the Web Service Input will expect the same data schema as the training data used to create the predictive pipeline. 
+
+2. Select **Submit**, and use the same compute target and experiment that you used in part one.
+
+![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/designer19.PNG)
+
+3. Run status and details can be seen at the top right of the canvas.
+
+![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/designer20.PNG)
+
+4. Select **Deploy**.
+
 
 https://docs.microsoft.com/en-us/azure/machine-learning/tutorial-designer-automobile-price-train-score
