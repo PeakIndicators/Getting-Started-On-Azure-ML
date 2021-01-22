@@ -184,6 +184,8 @@ Once the user is happy with the model it can be deployed. In this part of the tu
 * Test the real-time endpoint.
 * Create a batch inference pipeline.
 
+
+
 ### Create a real-time inference pipeline
 To deploy your pipeline, you must first convert the training pipeline into a real-time inference pipeline. This process removes training modules and adds web service inputs and outputs to handle requests.
 
@@ -205,7 +207,7 @@ Your pipeline should now look like this:
 
 By default, the Web Service Input will expect the same data schema as the training data used to create the predictive pipeline. 
 
-2. Select **Submit**, and use the same compute target and experiment that you used in part one.
+2. Select **Submit** and use the same compute target and experiment that you used in part one.
 
 ![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/designer19.PNG)
 
@@ -213,7 +215,53 @@ By default, the Web Service Input will expect the same data schema as the traini
 
 ![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/designer20.PNG)
 
-4. Select **Deploy**.
+### Deploy the real-time endpoint
+
+#### Before you start
+
+If you have not already done so, please:
+
+* Create a Compute Cluster, the Designer won't work with a compute instance, it requires a compute cluster. More details can be seen in: [compute instance](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Azure-ML-Studio.md).
+
+You can also deploy to Azure Container Instance (ACI) if you select Azure Container Instance for Compute type in the real-time endpoint setting box. Azure Container Instance is used for testing or development. Use ACI for low-scale CPU-based workloads that require less than 48 GB of RAM.
+
+#### Deploying
+
+1. Select **Deploy** above the canvas.
+
+2. Select **Deploy new real-time endpoint**.
+
+3. Select the AKS cluster you created.
+
+You can also change Advanced setting for your real-time endpoint.
+
+|Advanced setting|	Description|
+| ------- |------|
+|Enable Application| Insights diagnostics and data collection	Whether to enable Azure Application Ingishts to collect data from the deployed endpoints. By default: false|
+|Scoring timeout|	A timeout in milliseconds to enforce for scoring calls to the web service. By default: 60000|
+|Auto scale enabled|	Whether to enable autoscaling for the web service. By default: true|
+|Min replicas|	The minimum number of containers to use when autoscaling this web service. By default: 1|
+|Max replicas|	The maximum number of containers to use when autoscaling this web service. By default: 10|
+|Target utilization|	The target utilization (in percent out of 100) that the autoscaler should attempt to maintain for this web service. By default: 70|
+|Refresh period|	How often (in seconds) the autoscaler attempts to scale this web service. By default: 1|
+|CPU reserve capacity|	The number of CPU cores to allocate for this web service. By default: 0.1|
+|Memory reserve capacity|	The amount of memory (in GB) to allocate for this web service. By default: 0.5|
+
+4.Select **Deploy**.
+
+A success notification above the canvas appears after deployment finishes. It might take a few minutes.
+
+#### View the real-time endpoint
+After deployment finishes, you can view your real-time endpoint by going to the Endpoints page.
+
+1. On the **Endpoints** page, select the endpoint you deployed.
+
+2. In the **Details** tab, you can see more information such as the REST URI, status, and tags.
+
+3. In the **Consume** tab, you can find security keys and set authentication methods.
+
+4. In the **Deployment** logs tab, you can find the detailed deployment logs of your real-time endpoint.
+
 
 
 https://docs.microsoft.com/en-us/azure/machine-learning/tutorial-designer-automobile-price-train-score
