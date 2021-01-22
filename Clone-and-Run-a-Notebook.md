@@ -1,12 +1,13 @@
-# Running a Jupyter notebook and installing Azure Machine Learning SDK
+# Clone and Run a Notebook
 
-A lot of data science and machine learning experimentation is performed by running code in notebooks. Your compute instance includes fully featured Python and R notebook environments (Jupyter and JuypyterLab) that you can use for extensive work; but for basic notebook editing, you can use the built-in Notebooks page in Azure Machine learning studio.
+A lot of data science and machine learning experimentation is performed by running code in notebooks. Your compute instance includes fully featured Python and R notebook environments that you can use for extensive work (Jupyter, JuypyterLab and R Studio, more details in: [Creating and Running a Python or R Notebook](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Creating-and-Running-a-Python-Notebook.md)). But for basic notebook editing, you can use the built-in Notebooks page in Azure Machine learning studio.
 
-1. In Azure Machine Learning studio, view the **Notebooks** page.
+1. In Azure Machine Learning studio, view the **Compute** page.
 
-2. Open a **Terminal**, and ensure its **Compute** is set to your compute instance.
+2. Your compute instance must be running. Select **JupyterLab** and then open a terminal session.
+**Note:** This task can also be done using Jupyter or the Terminal options also available in the Compute Instance. The process is very similar, so we will explain only how to do it in one of them, which in this example it will be JupyterLab.
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/Notebook1.PNG)
+![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/clonenotebook1.gif)
 
 3. Enter the following commands shown below to clone a Git repository containing notebooks, data, and other files to your workspace:
 
