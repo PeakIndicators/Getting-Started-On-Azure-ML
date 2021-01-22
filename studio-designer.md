@@ -22,7 +22,7 @@ If you have not already done so, please:
 If you do not see the graphical elements mentioned in the steps below, such as buttons, you may not have the right level of permissions to studio. Please contact your Azure subscription administrator to verify that you have been granted the correct level of access.
 
 
-### Create a pipeline
+## Create a pipeline
 1. Sign in to [Azure Machine Learning studio](https://ml.azure.com/).
 
 2. Select **Designer** on the left pane under **Author** section and select **Easy-to-use prebuilt modules**.
