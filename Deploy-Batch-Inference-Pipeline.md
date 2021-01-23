@@ -3,9 +3,10 @@
 ## Introduction
 
 In many production scenarios, long-running tasks that operate on large volumes of data are performed as *batch* operations. In machine learning, *batch inferencing* is used to apply a predictive model to multiple cases asynchronously - usually writing the results to a file or database.
+
 ![](https://docs.microsoft.com/en-us/learn/wwl-data-ai/deploy-batch-inference-pipelines-with-azure-machine-learning/media/07-02-batch.png)
 
-In Azure Machine Learning, you can implement batch inferencing solutions by creating a pipeline that includes a step to read the input data, load a registered model, predict labels, and write the results as its output.
+In Azure Machine Learning, you can implement batch inferencing solutions by creating a pipeline that includes a step to read the input data, load a registered model, predict labels and write the results as its output.
 
 ## Learning objectives
 
