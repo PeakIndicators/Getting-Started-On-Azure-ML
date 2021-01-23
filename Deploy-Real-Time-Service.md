@@ -113,7 +113,7 @@ The response from the **run** method is a JSON collection with a prediction for 
 
 ### Using a REST endpoint
 
-In production, most client applications will not include the Azure Machine Learning SDK, and will consume the service through its REST interface. You can determine the endpoint of a deployed service in Azure machine Learning studio, or by retrieving the **scoring_uri** property of the **Webservice** object in the SDK, like this:
+In production, most client applications will not include the Azure Machine Learning SDK, and will consume the service through its REST interface. You can determine the endpoint of a deployed service in Azure machine Learning studio or by retrieving the **scoring_uri** property of the **Webservice** object in the SDK, like this:
 
 ![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/28.PNG)
 
@@ -128,7 +128,7 @@ In production, you will likely want to restrict access to your services by apply
 * **Key:** Requests are authenticated by specifying the key associated with the service.
 * **Token:** Requests are authenticated by providing a JSON Web Token (JWT).
 
-By default, authentication is disabled for ACI services, and set to key-based authentication for AKS services (for which primary and secondary keys are automatically generated). You can optionally configure an AKS service to use token-based authentication (which is not supported for ACI services).
+By default, authentication is disabled for ACI services and set to key-based authentication for AKS services (for which primary and secondary keys are automatically generated). You can optionally configure an AKS service to use token-based authentication (which is not supported for ACI services).
 
 Assuming you have an authenticated session established with the workspace, you can retrieve the keys for a service by using the **get_keys** method of the **WebService** object associated with the service:
 
@@ -142,7 +142,7 @@ To make an authenticated call to the service's REST endpoint, you must include t
 
 ## Troubleshooting service deployment
 
-There are a lot of elements to a real-time service deployment, including the trained model, the runtime environment configuration, the scoring script, the container image, and the container host. Troubleshooting a failed deployment, or an error when consuming a deployed service can be complex.
+There are a lot of elements to a real-time service deployment, including the trained model, the runtime environment configuration, the scoring script, the container image and the container host. Troubleshooting a failed deployment or an error when consuming a deployed service can be complex.
 
 
 ### Check the service state
@@ -156,7 +156,7 @@ For an operational service, the state should be **Healthy**.
 
 ### Review service logs
 
-If a service is not healthy, or you are experiencing errors when using it, you can review its logs:
+If a service is not healthy or you are experiencing errors when using it, you can review its logs:
 
 `print(service.get_logs())`
 
@@ -171,7 +171,7 @@ You can then test the locally deployed service using the SDK:
 
 `print(service.run(input_data = json_data))`
 
-You can then troubleshoot runtime issues by making changes to the scoring file that is referenced in the inference configuration, and reloading the service without redeploying it (something you can only do with a local service):
+You can then troubleshoot runtime issues by making changes to the scoring file that is referenced in the inference configuration and reloading the service without redeploying it (something you can only do with a local service):
 
 `service.reload()`
 
@@ -181,7 +181,7 @@ You can then troubleshoot runtime issues by making changes to the scoring file t
 
 There’s no point in training and registering machine learning models if you don’t plan to make them available for applications to use. In this exercise, you’ll deploy a model as a web service for real-time inferencing.
 
-In this tutorial we provide some jupyter notebook templates (more detail in: _[Jupyter Lab notebook templates](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/tree/main/labs)_). This example is based on the one provided in order to create a Real-time Inference Service.
+In this tutorial we provide some jupyter notebook templates (more detail in: _[Jupyter Lab notebook templates](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/tree/main/labs)_). This exercise is based on the one provided in order to create a Real-time Inference Service.
 
 ### Before you start
 
