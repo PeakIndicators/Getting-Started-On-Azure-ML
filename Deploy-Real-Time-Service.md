@@ -2,7 +2,7 @@
 
 ## Introduction
 
-In machine learning, *inferencing* refers to the use of a trained model to predict labels for new data on which the model has not been trained. Often, the model is deployed as part of a service that enables applications to request immediate, or *real-time*, predictions for individual or small numbers of data observations.
+In machine learning, *inferencing* refers to the use of a trained model to predict labels for new data on which the model has not been trained. Often, the model is deployed as part of a service that enables applications to request immediate or *real-time* predictions for individual or small numbers of data observations.
 
 ![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/Deploy.PNG)
 
@@ -17,9 +17,9 @@ In this module, you will learn how to:
 
 ## Deploying a model as a real-time service
 
-You can deploy a model as a real-time web service to several kinds of compute target, including local compute, an Azure Machine Learning compute instance, an Azure Container Instance (ACI), an Azure Kubernetes Service (AKS) cluster, an Azure Function, or an Internet of Things (IoT) module. Azure Machine Learning uses containers as a deployment mechanism, packaging the model and the code to use it as an image that can be deployed to a container in your chosen compute target.
+You can deploy a model as a real-time web service to several kinds of compute target, including local compute, an Azure Machine Learning compute instance, an Azure Container Instance (ACI), an Azure Kubernetes Service (AKS) cluster, an Azure Function  or an Internet of Things (IoT) module. Azure Machine Learning uses containers as a deployment mechanism, packaging the model and the code to use it as an image that can be deployed to a container in your chosen compute target.
 
-**Note:** Deployment to a local service, a compute instance, or an ACI is a good choice for testing and development. For production, you should deploy to a target that meets the specific performance, scalability, and security needs of your application architecture.
+**Note:** Deployment to a local service, a compute instance or an ACI is a good choice for testing and development. For production, you should deploy to a target that meets the specific performance, scalability and security needs of your application architecture.
 
 To deploy a model as a real-time inferencing service, you must perform the following tasks:
 
@@ -50,7 +50,7 @@ Select the model you would like more information on and you will get additional 
 The model will be deployed as a service that consist of:
 
 * A script to load the model and return predictions for submitted data.
-* An environment in which the script will be run.
+* An environment in which the script will run.
 
 You must therefore define the script and environment for the service.
 
@@ -61,12 +61,12 @@ Create the *entry script* (sometimes referred to as the *scoring script*) for th
 * **init():** Called when the service is initialized.
 * **run(raw_data):** Called when new data is submitted to the service.
 
-Typically, you use the **init** function to load the model from the model registry, and use the **run** function to generate predictions from the input data. The following example script shows this pattern:
+Typically, you use the **init** function to load the model from the model registry and use the **run** function to generate predictions from the input data. The following example script shows this pattern:
 
 ![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/20.PNG)
 
 ### Creating an environment
-Your service requires a Python environment in which to run the entry script, which you can configure using Conda configuration file. An easy way to create this file is to use a **CondaDependencies** class to create a default environment (which includes the **azureml-defaults** package and commonly-used packages like **numpy** and **pandas**), add any other required packages, and then serialize the environment to a string and save it:
+Your service requires a Python environment in which to run the entry script, you can configure using Conda configuration file. An easy way to create this file is to use a **CondaDependencies** class to create a default environment (which includes the **azureml-defaults** package and commonly-used packages like **numpy** and **pandas**), add any other required packages and then serialize the environment to a string and save it:
 
 ![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/21.PNG)
 
@@ -84,7 +84,7 @@ With the compute target created, you can now define the deployment configuration
 
 ![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/24.PNG)
 
-The code to configure an ACI deployment is similar, except that you do not need to explicitly create an ACI compute target, and you must use the **deploy_configuration** class from the **azureml.core.webservice.AciWebservice** namespace. Similarly, you can use the azureml.core.webservice.LocalWebservice namespace to configure a local Docker-based service.
+The code to configure an ACI deployment is similar, except that you do not need to explicitly create an ACI compute target and you must use the **deploy_configuration** class from the **azureml.core.webservice.AciWebservice** namespace. Similarly, you can use the azureml.core.webservice.LocalWebservice namespace to configure a local Docker-based service.
 
 **Note:** To deploy a model to an Azure Function, you do not need to create a deployment configuration. Instead, you need to package the model based on the type of function trigger you want to use. This functionality is in preview at the time of writing. For more details, see [Deploy a machine learning model to Azure Functions](https://aka.ms/AA70rrn) in the Azure Machine Learning documentation.
 
