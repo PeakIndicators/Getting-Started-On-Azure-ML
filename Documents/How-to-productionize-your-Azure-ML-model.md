@@ -38,9 +38,9 @@ The following flow represents a MLOps flow within Azure Machine Learning.
 
 ### Explaining MLOps flow within Azure Machine Learning and Azure DevOps
 
-#### Train, Validate and Deploy the Model
+The idea behing the diagram shown above will be explained in the below sections.
 
-The idea behing the diagram shown above will be explained in this section.
+#### Train, Validate and Deploy the Model
 
 Once the data scientist is happy with the prediction developed in Azure Machine Learning, an Azure DevOps pipeline/release can be created to automate the process of training, registering and deploying the model and this is where the collaboration between DevOps Development Team and Data Science Team begins.
 
@@ -125,15 +125,19 @@ This deployment is an example of deploying a model into an Azure Kubernetes Serv
 
 ![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/devops14.PNG)
 
-**Note:**
+**Notes:**
 * Once again the above represents examples of release pipelines, those can, should and need to be adapted to the organization rules, policies and demands.
+* The flow for train, validate and deploy the within Azure DevOps can be defined as:
+
+![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/devops16.PNG)
 
 #### Monitor the Model
 ![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/devops15.PNG)
 
-Once the model is deployed, you want to be able to collect metrics on the model. You want to ascertain that the model is drifting from its objective and that the inference is useful for the business. This means you capture a lot of metrics and analyze them. Azure Machine Learning enables this tracking of metrics for the model is a very efficient manner. The central model registry becomes the one place where all this hosted.
+Once the model is deployed, the data scientist wants to be able to collect metrics on the model. He/She wants to ascertain that the model is drifting from its objective and that the inference is useful for the business. This means the need of capturing a lot of metrics and analyze them. Azure Machine Learning enables this tracking of metrics for the model is a very efficient manner. The central model registry becomes the one place where all this hosted.
 
-As you collect more metrics and additional data becomes available for training, there may be a need to be able to retrain the model in the hope of improving its accuracy and/or performance. Also, since this is a continuous process of integrations and deployment (CI/CD), there’s a need for this process to be automated. This process of retraining and effective CI/CD of ML models is the biggest strength of Azure Machine Learning.
+<<<<< ADD FELICITY WORK HERE >>>>>>>
 
 #### Retrain the Model
 
+As you collect more metrics and additional data becomes available for training, there may be a need to be able to retrain the model in the hope of improving its accuracy and/or performance. Also, since this is a continuous process of integrations and deployment (CI/CD), there’s a need for this process to be automated. This process of retraining and effective CI/CD of ML models is the biggest strength of Azure Machine Learning.
