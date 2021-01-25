@@ -15,7 +15,7 @@ You can install Anaconda using either the graphical installer (“wizard”) or 
 &nbsp;
 4. Click **Install** to install Anaconda in your *~/opt directory* (recommended):
 
-![](./Images/6.PNG) Installing Anaconda
+![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/A6.PNG) Installing Anaconda
 
 5. OR, click **Change Install Location** to install in another location (this is not recommended).
 
@@ -23,19 +23,19 @@ On the Destination Select screen, select **Install for me only**.
 
 **note**—If you get the error message “You cannot install Anaconda in this location,” reselect Install for me only.
 
-![](./Images/7.PNG) 
+![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/A7.PNG) 
 
 6. Click **continue**.
 &nbsp;
 7. Optional: To install PyCharm for Anaconda, click the link to https://www.anaconda.com/pycharm.
 
-![](./Images/8.PNG) 
+![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/A8.PNG) 
 
 Or to install Anaconda without PyCharm, click **Continue**.
 
 8. A successful installation displays the following screen:
 
-![](./Images/9.PNG) 
+![](.https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/A9.PNG) 
 
 9. [Verify your installation](https://docs.anaconda.com/anaconda/install/verify-install/).
 
