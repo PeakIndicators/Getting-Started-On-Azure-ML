@@ -9,7 +9,7 @@
 ![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/VS1.PNG)
 
 ### Install a Python interpreter
-Along with the Python extension, you need to install a Python interpreter. Which interpreter you use is dependent on your specific needs, as this documentation is primarily written for using Python to build Data Science solutions the document [Getting started with Conda]() details how to install and create your virtual environment with conda. Conda was selected for the purpose of this document as it provides not just a Python interpreter, but many useful libraries and tools for data science.
+Along with the Python extension, you need to install a Python interpreter. Which interpreter you use is dependent on your specific needs, as this documentation is primarily written for using Python to build Data Science solutions the document [Getting started with Conda](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Documents/Starting_with_conda.md) details how to install and create your virtual environment with conda. Conda was selected for the purpose of this document as it provides not just a Python interpreter, but many useful libraries and tools for data science.
 
 ## Verify the Python installation
 
