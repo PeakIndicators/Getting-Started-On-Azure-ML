@@ -65,7 +65,7 @@ With this in mind, the following should be created in the Azure DevOps resource:
 
 ![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/devops4.png)
 
-######_Pipeline 2 - Example_**
+######_Pipeline 2 - Example_
 
 ![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/devops8.PNG)
 
@@ -81,7 +81,7 @@ Once the pipeline is setup it should be executed. The screenshot below shows an 
 
 ![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/devops7.png)
 
-**Note:**
+**Very Important Notes:**
 * The above represent examples of pipelines that can be created. As stated, these are just examples and it really depends on what is agreed to do in Azure DevOps and what is agreed to do in Azure ML. Example: the user might want to train and register the model in an Azure ML notebook and in Azure DevOps he only wants do dowload the model in order to be able to deploy it, if that is the case then the pipeline should only start from task Download the Model onwards.
 * In order to deploy the model the following tasks are mandatory:
    * Download Model
@@ -89,6 +89,9 @@ Once the pipeline is setup it should be executed. The screenshot below shows an 
    * Publish Pipeline Artifact
    The others as said before may depend on what is the Azure ML/ Azure DevOps plan is.
 * The creation of an Azure DevOps Artifact is mandatory since this is what is going to be used in the Deployment.
+* In the _Pipeline 2 - Example_ we cans ee a task related with publishing test results, if this is used, then in each pipeline run in Azure DevOps the test results can be seen:
+
+![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/devops17.PNG)
 
 If these steps are followed, this means the following flow of the diagram have been done:
 
