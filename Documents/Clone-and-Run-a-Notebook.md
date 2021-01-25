@@ -1,6 +1,6 @@
 # Clone and Run a Notebook
 
-A lot of data science and machine learning experimentation is performed by running code in notebooks. Your compute instance includes fully featured Python and R notebook environments that you can use for extensive work (Jupyter, JuypyterLab and R Studio, more details in: [Creating and Running a Python or R Notebook](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Creating-and-Running-a-Python-Notebook.md)). But for basic notebook editing, you can use the built-in Notebooks page in Azure Machine learning studio.
+A lot of data science and machine learning experimentation is performed by running code in notebooks. Your compute instance includes fully featured Python and R notebook environments that you can use for extensive work (Jupyter, JuypyterLab and R Studio, more details in: [Creating and Running a Python or R Notebook](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Documents/Creating-and-Running-a-Python-Notebook.md)). But for basic notebook editing, you can use the built-in Notebooks page in Azure Machine learning studio.
 
 1. In Azure Machine Learning studio, view the **Compute** page.
 
