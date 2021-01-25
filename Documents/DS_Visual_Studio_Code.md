@@ -92,7 +92,9 @@ This problem can be corrected by replacing the question mark with a missing valu
 `sns.pointplot(x="pclass", y="survived", hue="sex", data=data, ax=axs[3])`
 `sns.violinplot(x="survived", y="fare", hue="sex", data=data, ax=axs[4])`
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/32.PNG) **Note**: To better view details on the graphs, you can open them in plot viewer by hovering over the upper left corner of the graph and clicking the button that appears.
+![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/32.PNG) 
+
+**Note**: To better view details on the graphs, you can open them in plot viewer by hovering over the upper left corner of the graph and clicking the button that appears.
 
 8. These graphs are helpful in seeing some of the relationships between survival and the input variables of the data, but it's also possible to use **pandas** to calculate correlations. To do so, all the variables used need to be numeric for the correlation calculation and currently gender is stored as a string. To convert those string values to integers, add and run the following code.
 
