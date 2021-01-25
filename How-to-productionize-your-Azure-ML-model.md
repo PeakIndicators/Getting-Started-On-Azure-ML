@@ -8,7 +8,7 @@ This problem is very similar to what application development teams face with res
 
 ![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/devops1.PNG)
 
-_<span font-size:6;">Source: https://subscription.packtpub.com/book/big_data_and_business_intelligence/9781838550356/1/ch01lvl1sec13/ml-development-life-cycle</span>
+<font size="+6">Source: https://subscription.packtpub.com/book/big_data_and_business_intelligence/9781838550356/1/ch01lvl1sec13/ml-development-life-cycle</font>
 
 This is where the Azure Machine Learning studio glows the most. It presents the most complete and intuitive model lifecycle management experience alongside integrating with Azure DevOps and GitHub.
 
