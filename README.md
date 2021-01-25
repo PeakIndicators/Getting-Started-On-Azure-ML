@@ -53,4 +53,4 @@ Content:
 * [Data for your notebook templates](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/tree/main/labs)
 * [How to work with Azure Machine Learning Studio Designer](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/studio-designer.md)
 * [How to work with Azure Machine Learning Studio Automated ML](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Automated-ML.md)
-* How to productionize your Azure ML model
+* [How to productionize your Azure ML model](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/How-to-productionize-your-Azure-ML-model.md)
