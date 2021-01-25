@@ -24,11 +24,9 @@ After you create a datastore, create a dataset to interact with your data. Datas
 There are two types of datasets, FileDataset and TabularDataset. 
 [FileDatasets](https://docs.microsoft.com/en-us/azure/machine-learning/how-to-create-register-datasets#filedataset) create references to single or multiple files or public URLs. Whereas, [TabularDatasets](https://docs.microsoft.com/en-us/azure/machine-learning/how-to-create-register-datasets#tabulardataset) represent your data in a tabular format.
 
-The following steps and animation show how to create a dataset in [Azure Machine Learning studio](https://ml.azure.com/).
+The following steps and animation show how to create a dataset in Azure Machine Learning studio.
 
 ![](https://docs.microsoft.com/en-us/azure/machine-learning/media/how-to-connect-data-ui/create-dataset-ui.gif)
-
-To create a dataset in the studio:
 
 1. Sign in to the [Azure Machine Learning studio](https://ml.azure.com/).
 
