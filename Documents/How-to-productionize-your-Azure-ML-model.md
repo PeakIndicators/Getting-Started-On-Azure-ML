@@ -52,16 +52,16 @@ With this in mind, the following should be created in the Azure DevOps resource:
 
 3. The following information should be added to the repository (note: the repository can be created outside Azure DevOps and can then be cloned into its). - _Team Responsible t odd the code: Data Science Team_ and  _Team Responsible to clone the repository, if needed: DevOps Development Team_
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/devops3.PNG)
+![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/devops3.png)
 
 **Note**: As you can check, this implies the creation of separate python files for training, scoring, testing and also configuration files. But it really depends on which step the user needs to start the deployment. More details are given below
 
 4.  Once all the necessary code is added to the repository the following pipeline should be created with the following steps: - _Team Responsible: DevOps Development Team_
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/devops4.PNG)
+![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/devops4.png)
 
 Uses the following variables:
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/devops5.PNG)
+![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/devops5.png)
 
 And ran successfully:
 ![mlops4](images/mlops_run.png)
