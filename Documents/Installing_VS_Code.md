@@ -58,9 +58,11 @@ Python is an interpreted language, and in order to run Python code and get Pytho
 
 From within VS Code, select a Python 3 interpreter by opening the **Command Palette (Ctrl+Shift+P)**, start typing the **Python: Select Interpreter** command to search, then select the command. 
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/4.PNG) Open the Command Palette and select Python: Select Interpreter
+![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/4.PNG) 
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/5.PNG) Select the Python Interpreter you want to use for your project. This should be the virtual environment your created with conda. 
+![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/5.PNG) 
+
+Select the Python Interpreter you want to use for your project. This should be the virtual environment your created with conda. 
 
 You can also use the **Select Python Environment** option on the Status Bar if available (it may already show a selected interpreter, too):
 
