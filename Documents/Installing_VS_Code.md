@@ -67,7 +67,7 @@ Select the Python Interpreter you want to use for your project. This should be t
 You can also use the **Select Python Environment** option on the Status Bar if available (it may already show a selected interpreter, too):
 
 ![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/VS6.PNG) 
-&nbsp;
+
 
 The command presents a list of available interpreters that VS Code can find automatically, including virtual environments. If you don't see the desired interpreter, select *Enter interpreter path...* .
 
