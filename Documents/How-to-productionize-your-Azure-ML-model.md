@@ -61,11 +61,11 @@ With this in mind, the following should be created in the Azure DevOps resource:
 
 1.  Once all the necessary code is added to the repository a pipeline should be created with the necessary steps steps: - _Team Responsible: DevOps Development Team_
 
-######_Pipeline 1 - Example_
+###### _Pipeline 1 - Example_
 
 ![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/devops4.png)
 
-######_Pipeline 2 - Example_
+###### _Pipeline 2 - Example_
 
 ![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/devops8.PNG)
 
@@ -106,24 +106,24 @@ This step will execute the **Deploy model** task of the diagram _MLOps flow with
 1. The deployment in Azure DevOps is done using a **Release Pipeline**. - _Team Responsible: DevOps Development Team_
 This release pipeline can have the following structures:
 
-######_Release Pipeline 1 - Example_
+###### _Release Pipeline 1 - Example_
 This is a very simple example where the artifact in only deployed to another environment:
 
 ![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/devops9.png)
 
-######_Release Pipeline 2 - Example_
+###### _Release Pipeline 2 - Example_
 This is a more complex example where the artifact is being deployed to a Pre-Production environment, the after an approval, it goes to a Production environment:
 
 ![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/devops13.PNG)
 
 The deployment tasks are defined as:
 
-######_Release Pipeline 1 - Tasks - Example_
+###### _Release Pipeline 1 - Tasks - Example_
 This deployment is an example of deploying a model into an Azure Container Instance, often used for non-Production environments
 
 ![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/devops10.png)
 
-######_Release Pipeline 2 - Tasks - Example_
+###### _Release Pipeline 2 - Tasks - Example_
 This deployment is an example of deploying a model into an Azure Kubernetes Service, often used for Production environments
 
 ![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/devops14.PNG)
