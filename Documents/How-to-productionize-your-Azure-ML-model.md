@@ -32,9 +32,11 @@ This may sound simple and the most logical way of doing it, but nobody has been 
 
 The following flow represents a MLOps flow within Azure Machine Learning.
 
+<p align="center">
+  <img src="https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/devops2.PNG">
+</p>
 
-
-### MLOps flow within Azure Machine Learning
+### Explaining MLOps flow within Azure Machine Learning
 
 
 
