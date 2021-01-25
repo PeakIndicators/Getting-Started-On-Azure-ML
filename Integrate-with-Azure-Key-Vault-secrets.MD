@@ -26,8 +26,7 @@ azure-common==1.1.25
 These will be configured in the environment created in the next section.
 
 ## Creating an environment
-
-In order to get the secrets information, a remote run needs to be created. This means an environment needs to be set up.
+Do not put the secret value in your Python code as it is insecure to store it in file as cleartext. Instead, obtain the secret value from an environment variable, for example Azure DevOps build secret, a docker environment or even from interactive user input. The example shown in this tutorial is based on using a docker environment in order to obtain the secret value.
 
 1. The first step is to get the workspace where the environment is going to be created:
 ```
@@ -119,14 +118,14 @@ secret_info = client.get_secret(os.environ["AZURE_SECRET_1"], os.environ["AZURE_
 print(secret_info.value)
 
 ```
-You can list secret names using the **list_secrets()** method.
+**Note:** You can list secret names using the **list_secrets()** method.
 
 ## Set secrets
 Has stated before, most organizations have very restrict security policies and therefore the access to Azure Key Vault is very limited. In these cases what happens is a specific team will create the secrets in the Key Vault and give to the ML developers the information needed to invoke those secrets. Meaning only the Get Secrets section is needed.
 
-Anyway we will show an example on how to set secrets directly in Azure Machine Learning Studio.
+However, we will show an example on how to set secrets directly in Azure Machine Learning Studio.
 
-In the Azure Machine Learning, the Keyvault class contains methods for setting secrets. In your local Python session, first obtain a reference to your workspace Key Vault, and then use the set_secret() method to set a secret by name and value. The set_secret method updates the secret value if the name already exists.
+In the Azure Machine Learning, the Keyvault class contains methods for setting secrets. In your local Python session, first obtain a reference to your workspace Key Vault, and then use the **set_secret()** method to set a secret by name and value. The set_secret method updates the secret value if the name already exists.
 
 ```
 from azureml.core import Workspace
@@ -139,7 +138,5 @@ my_secret = os.environ.get("MY_SECRET")
 keyvault = ws.get_default_keyvault()
 keyvault.set_secret(name="mysecret", value = my_secret)
 ```
-
-Do not put the secret value in your Python code as it is insecure to store it in file as cleartext. Instead, obtain the secret value from an environment variable, for example Azure DevOps build secret or from interactive user input.
 
 There is also a batch version, **set_secrets()** that allows you to set multiple secrets at a time.
