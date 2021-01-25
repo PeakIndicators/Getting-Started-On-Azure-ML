@@ -232,7 +232,7 @@ If the activate command generates the message "Activate.ps1 is not digitally sig
 
 ![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/VS24.PNG)
 
-5. Once you are finished, type `deactivate` ( `conda deactivate` if you are using conda as your interpreter) in the terminal window to deactivate the virtual environment.
+5. Once you are finished, type `deactivate` ( type`conda deactivate` if you are using conda as your interpreter) in the terminal window to deactivate the virtual environment.
 
 ### Futher Information
 
