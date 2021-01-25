@@ -72,8 +72,35 @@ For the code above, the team who created the secrets also needs to:
 * Configure the Azure Key Vault secrets access to that Service Principal
 * Provide informationo on the secrets name and version to the ML Developers
 
-## Get secrets
+5. Register the environment in the workspace
+```
+envtest.register(workspace = ws)
+```
 
+6. A final test can be done to check if the environment was properly set.
+```
+from azureml.core import Environment
+
+env = Environment.get(workspace=ws, name="you")
+print(env)
+```
+This will allow the user the check the following information:
+![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/key-vault1.PNG)
+
+```
+envs = Environment.list(workspace=ws)
+
+for env in envs:
+    if env.startswith("your-env-name"):
+        print("Name",env)
+        print("packages", envs[env].python.conda_dependencies.serialize_to_string())
+```
+This will allow the user the check the following information:
+![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/key-vault2.PNG)
+
+
+## Get secrets
+Once the environment is created 
 
 
 ## Set secrets
