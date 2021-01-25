@@ -50,4 +50,4 @@ For most scenarios a compute instance is enough for developing and testing code.
 
 To stop your compute instance please follow the steps provided in:
 
-* [Stop a Compute Instance](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Stop-Compute-Instance.md)
+* [Stop a Compute Instance](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Documents/Stop-Compute-Instance.md)
