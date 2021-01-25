@@ -68,7 +68,7 @@ When you begin using conda, you already have a default environment named base. Y
 
 ### Creating an environment with commands
 
-**Tip**—By default, environments are installed into the `envs` directory in your conda directory. See <a name='Specifying-location-for-environment-1'></a>Specifying a location for an environment
+**Tip**—By default, environments are installed into the `envs` directory in your conda directory. See [Specifying a location for an environment](#Specifying-location-for-environment-1)
 
 Use the terminal or an Anaconda Prompt for the following steps:
 
@@ -118,7 +118,7 @@ To automatically install pip or another program every time a new environment is 
 
 **Tip**—You can add much more to the `conda create` command. For details, run `conda create --help`.
 
-### [Specifying a location for an environment](#Specifying-location-for-environment-1)
+### <a name='Specifying-location-for-environment-1'></a>Specifying a location for an environment
 
 You can control where a conda environment lives by providing a path to a target directory when creating the environment. For example, the following command will create a new environment in a subdirectory of the current working directory called envs:
 
