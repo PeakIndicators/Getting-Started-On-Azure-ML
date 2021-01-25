@@ -248,4 +248,4 @@ There is then much more to explore with Python in Visual Studio Code:
 * [Testing](https://code.visualstudio.com/docs/python/testing) - Configure test environments and discover, run, and debug tests.
 * [Settings reference](https://code.visualstudio.com/docs/python/settings-reference) - Explore the full range of Python-related settings in VS Code.
 
-The next document [Data Science in Visual Studio Code]() is a tutorial demonstrating how you can use Visual Studio Code and common data science libraries to explore a basic data science scenario on a Jupyter notebook. 
+The next document [Data Science in Visual Studio Code](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Documents/DS_Visual_Studio_Code.md) is a tutorial demonstrating how you can use Visual Studio Code and common data science libraries to explore a basic data science scenario on a Jupyter notebook. 
