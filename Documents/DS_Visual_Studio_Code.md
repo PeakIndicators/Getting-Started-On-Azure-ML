@@ -153,7 +153,9 @@ Add and run a cell with the following code to the notebook to split up the data.
 `predict_test = model.predict(X_test)`
 `print(metrics.accuracy_score(y_test, predict_test))`
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/35.PNG) Looking at the result of the test data, you'll see that the trained algorithm had a ~75% success rate at estimating survival.
+![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/35.PNG) 
+
+Looking at the result of the test data, you'll see that the trained algorithm had a ~75% success rate at estimating survival.
 
 ## (Optional) Use a neural network to increase accuracy
 
