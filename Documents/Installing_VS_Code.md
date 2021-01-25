@@ -60,6 +60,8 @@ From within VS Code, select a Python 3 interpreter by opening the **Command Pale
 
 ![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/VS4.PNG) 
 
+Open the Command Palette and select Python: Select Interpreter
+
 ![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/VS5.PNG) 
 
 Select the Python Interpreter you want to use for your project. This should be the virtual environment your created with conda. 
