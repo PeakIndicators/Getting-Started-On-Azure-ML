@@ -26,8 +26,6 @@ There are two types of datasets, FileDataset and TabularDataset.
 
 The following steps and animation show how to create a dataset in Azure Machine Learning studio.
 
-![](https://docs.microsoft.com/en-us/azure/machine-learning/media/how-to-connect-data-ui/create-dataset-ui.gif)
-
 1. Sign in to the [Azure Machine Learning studio](https://ml.azure.com/).
 
 2. Select **Datasets** in the **Assets** section of the left pane.
@@ -83,7 +81,7 @@ You can get a vast variety of summary statistics across your data set to verify 
 
 Specifically, Azure Machine Learning dataset's data profile includes:
 
-**note**—Blank entries appear for features with irrelevant types.
+**Note:** Blank entries appear for features with irrelevant types.
 
 | Statistic |	Description |
 | --------- | ----------- |
