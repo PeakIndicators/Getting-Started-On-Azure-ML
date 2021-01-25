@@ -6,9 +6,9 @@ Conda is a powerful package manager and environment manager that you use with co
 
 
 Ensure that you have already installed Anaconda. click on the relevant link before if you still need to intall it. 
-* [Windows]()
-* [MacOS]()
-* [Linux]()
+* [Windows](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Documents/Anaconda_Windows.md)
+* [MacOS](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Documents/Anaconda_macos.md)
+* [Linux](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Documents/Anaconda_linux.md)
 
 ## Starting conda
 
@@ -16,9 +16,9 @@ Ensure that you have already installed Anaconda. click on the relevant link befo
 
 * from the start menu, search for and open "Anaconda Prompt". 
 
-![](./Images/10.PNG) Anaconda Prompt from the Windows Start menu
+![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/A10.PNG) Anaconda Prompt from the Windows Start menu
 
-![](./Images/2.PNG) Anaconda Promp when opened
+![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/A2.PNG) Anaconda Promp when opened
 
 On Windows, all commands below are typed into the Anaconda Prompt window.
 
