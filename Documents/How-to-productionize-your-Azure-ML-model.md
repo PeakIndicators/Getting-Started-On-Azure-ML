@@ -8,7 +8,9 @@ This problem is very similar to what application development teams face with res
 
 For the development pahse, its life-cycle can be defined as:
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/devops1.PNG)
+<p align="center">
+  <img src="https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/devops1.PNG">
+</p>
 
 ##### _Source: https://subscription.packtpub.com/book/big_data_and_business_intelligence/9781838550356/1/ch01lvl1sec13/ml-development-life-cycle_
 
