@@ -43,7 +43,7 @@ Because JupyterLab git version is not 2.8, we can't clone only the notebooks fol
  **Tip:** To run a code cell, select the cell you want to run and then use the ▷ button to run it.
 
 **Note:**
-As stated before, the steps shown above demonstrate how to clone a gitHub repository using **JupyterLab** but once that clone is done the notebooks will be available within Azure Machine Learning Studio in every tool that allows access to a notebook (more details on the tools: [Creating and Running a Python or R Notebook](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Creating-and-Running-a-Python-Notebook.md)).
+As stated before, the steps shown above demonstrate how to clone a gitHub repository using **JupyterLab** but once that clone is done the notebooks will be available within Azure Machine Learning Studio in every tool that allows access to a notebook (more details on the tools: [Creating and Running a Python or R Notebook](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Documents/Creating-and-Running-a-Python-Notebook.md)).
 
 Below, we have an example where we can see that, even tought we use JupyterLab to clone the repository, the notebooks are accessible directly in Azure Machine Learning studio:
   ![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/Notebook5.PNG)
