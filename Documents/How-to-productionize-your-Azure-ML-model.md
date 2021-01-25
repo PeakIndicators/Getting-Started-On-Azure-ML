@@ -50,24 +50,28 @@ With this in mind, the following should be created in the Azure DevOps resource:
 
 2. Within the Data Science project, a new GIT repository should be created. - _Team Responsible: DevOps Development Team_
 
-3. The following information should be added to the repository (note: the repository can be created outside Azure DevOps and can then be cloned into its). - _Team Responsible t odd the code: Data Science Team_ and  _Team Responsible to clone the repository, if needed: DevOps Development Team_
+3. The following information should be added to the repository (note: the repository can be created outside Azure DevOps and can then be cloned into its). - _Team Responsible to odd the code: Data Science Team_ and  _Team Responsible to clone the repository, if needed: DevOps Development Team_
 
 ![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/devops3.png)
 
 **Note**: As you can check, this implies the creation of separate python files for training, scoring, testing and also configuration files. But it really depends on which step the user needs to start the deployment. More details are given below
 
 4.  Once all the necessary code is added to the repository the following pipeline should be created with the following steps: - _Team Responsible: DevOps Development Team_
+**Note:**
+In this example the following steps are defined: Training, Register and Downloading the model. This is just an example and the user might want to train and register the model in an Azure ML notebook and in Azure DevOps he only wants do dowload the model in order to be able to deploy it, if that is the case then the pipeline should only start from task Download the Model onwards.
 
 ![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/devops4.png)
 
-Uses the following variables:
+And variables can also be added to make the pipeline more clean:
 ![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/devops5.png)
 
-And ran successfully:
-![mlops4](images/mlops_run.png)
+The next step is to run the pipeline. The screenshot below shows an example of a successful running:
+![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/devops6.png)
 
-5. After each execution in order to verify the model, we can access Azure Machine Learning and verify that the model was trained and register: - _Team Responsible t odd the code: Data Science Team_
-![mlops5](images/mlops_run1.png)
+5. After each execution in order to verify the model, we can access Azure Machine Learning and verify that the model was trained and register: - _Team Responsible: Data Science Team_
+![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/devops7.png)
+
+
 
 <u>Releases: Peak DS Int ChurnPrediction</u>
 
