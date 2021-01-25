@@ -11,7 +11,7 @@ The next sections will explain how to use each of the options described above.
 
 ### Before you start
 
-If you have not already done so, create a [compute instance](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Azure-ML-Studio.md).
+If you have not already done so, create a [compute instance](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Documents/Create-Compute-Instance.md).
 
 ## Notebooks directly in your Azure Machine Learning studio (Python or R)
 In your Azure Machine Learning studio, create a new Jupyter notebook and start working. The newly created notebook is stored in the default studio storage. This notebook can be shared with anyone with access to the studio.
