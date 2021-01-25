@@ -35,7 +35,7 @@ Or to install Anaconda without PyCharm, click **Continue**.
 
 8. A successful installation displays the following screen:
 
-![](.https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/A9.PNG) 
+![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/A9.PNG) 
 
 9. [Verify your installation](https://docs.anaconda.com/anaconda/install/verify-install/).
 
