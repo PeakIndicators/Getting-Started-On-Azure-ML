@@ -128,7 +128,7 @@ The **Metrics** tab which enables you to select logged metrics and view them as 
 
 In this tutorial we provide some jupyter notebook templates that you can run (more detail in: [Jupyter Lab notebook templates](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/tree/main/labs)).
 
-If you have not already done so, create a [compute instance](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Documents/Azure-ML-Studio.md) and ensure you have [cloned the notebooks](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Documents/Clone-and-Run-a-Notebook.md) required for this exercise.
+If you have not already done so, create a [compute instance](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Documents/Create-Compute-Instance.md) and ensure you have [cloned the notebooks](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Documents/Clone-and-Run-a-Notebook.md) required for this exercise.
 
 ### Open Jupyter
 
