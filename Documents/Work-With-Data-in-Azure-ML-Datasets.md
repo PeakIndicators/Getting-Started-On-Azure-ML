@@ -1,4 +1,4 @@
-# Connect to data with the Azure Machine Learning studio - Dataset Creation using the web portal
+# Connect to data with the Azure Machine Learning studio - Dataset creation using the web portal
 
 ## Introduction to data connection in Azure Machine Learning Studio
 
