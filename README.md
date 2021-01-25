@@ -40,7 +40,7 @@ Content:
 * [Create Datasets using the web portal](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Documents/Work-With-Data-in-Azure-ML-Datasets.md)
 * [Unregister Datasets using the web portal](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Documents/Unregister-a-dataset.md)
 * [Creating and Running a Python or R Notebook](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Documents/Creating-and-Running-a-Python-Notebook.md)
-* [Cloning and Running a Notebook](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/mainDocuments/Documents//Clone-and-Run-a-Notebook.md)
+* [Cloning and Running a Notebook](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/mainDocuments/Documents/Clone-and-Run-a-Notebook.md)
 * [Work with Datastores and Datasets using code](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Documents/Work-with-Data-in-Azure-ML-code.md)
 * [Create an Experiment](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Documents/Azure-ML-Experiments.md)
 * [Create a Pipeline](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Documents/Orchestrate-ML-With-Pipelines.md)
