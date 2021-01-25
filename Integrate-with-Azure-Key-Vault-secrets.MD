@@ -85,6 +85,7 @@ env = Environment.get(workspace=ws, name="you")
 print(env)
 ```
 This will allow the user the check the following information:
+
 ![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/key-vault1.PNG)
 
 ```
@@ -96,17 +97,34 @@ for env in envs:
         print("packages", envs[env].python.conda_dependencies.serialize_to_string())
 ```
 This will allow the user the check the following information:
+
 ![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/key-vault2.PNG)
 
 
 ## Get secrets
-Once the environment is created 
+Once the environment is created, the secret can be retrieved by using the following code:
 
+```
+import os
+from azure.keyvault.secrets import SecretClient
+from azure.identity import ClientSecretCredential
+
+# Access key vault using the variables defined in the environment
+credential = ClientSecretCredential(os.environ["AZURE_TENANT_ID"], os.environ["AZURE_CLIENT_ID"], os.environ["AZURE_CLIENT_SECRET"])
+client = SecretClient(os.environ["KEY_VAULT_URL"], credential)
+
+# Once connected to the environment, get the secret stored there
+secret_info = client.get_secret(os.environ["AZURE_SECRET_1"], os.environ["AZURE_SECRET_1_VERSION"])
+
+print(secret_info.value)
+
+```
+You can list secret names using the **list_secrets()** method.
 
 ## Set secrets
-Most organizations have very restrict security policies and therefore the access to Azure Key Vault is very limited. In these cases what happens is a specific team will create the secrets in the Key Vault and give to the ML developers the information needed to invoke those secrets. Meaning only the Get Secrets section is needed.
+Has stated before, most organizations have very restrict security policies and therefore the access to Azure Key Vault is very limited. In these cases what happens is a specific team will create the secrets in the Key Vault and give to the ML developers the information needed to invoke those secrets. Meaning only the Get Secrets section is needed.
 
-Anyway we will show an example on how to set secrets directly in Azure Machine Learning Studio
+Anyway we will show an example on how to set secrets directly in Azure Machine Learning Studio.
 
 In the Azure Machine Learning, the Keyvault class contains methods for setting secrets. In your local Python session, first obtain a reference to your workspace Key Vault, and then use the set_secret() method to set a secret by name and value. The set_secret method updates the secret value if the name already exists.
 
@@ -122,6 +140,6 @@ keyvault = ws.get_default_keyvault()
 keyvault.set_secret(name="mysecret", value = my_secret)
 ```
 
-Do not put the secret value in your Python code as it is insecure to store it in file as cleartext. Instead, obtain the secret value from an environment variable, for example Azure DevOps build secret, or from interactive user input.
+Do not put the secret value in your Python code as it is insecure to store it in file as cleartext. Instead, obtain the secret value from an environment variable, for example Azure DevOps build secret or from interactive user input.
 
-You can list secret names using the **list_secrets()** method and there is also a batch version, **set_secrets()** that allows you to set multiple secrets at a time.
+There is also a batch version, **set_secrets()** that allows you to set multiple secrets at a time.
