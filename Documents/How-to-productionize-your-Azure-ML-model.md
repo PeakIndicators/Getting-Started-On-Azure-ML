@@ -109,26 +109,29 @@ This is a very simple example where the artifact in only deployed to another env
 ![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/devops9.png)
 
 ######_Release Pipeline 2 - Example_
-This is a more complex example where the artifact is being deployed to a PreProduction environment, the after an approval it goes to a Production enviroment:
+This is a more complex example where the artifact is being deployed to a Pre-Production environment, the after an approval, it goes to a Production environment:
 
 ![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/devops13.PNG)
-
 
 The deployment tasks are defined as:
 
 ######_Release Pipeline 1 - Tasks - Example_
+This deployment is an example of deploying a model into an Azure Container Instance, often used for non-Production environments
 
 ![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/devops10.png)
 
 ######_Release Pipeline 2 - Tasks - Example_
+This deployment is an example of deploying a model into an Azure Kubernetes Service, often used for Production environments
 
 ![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/devops14.PNG)
 
 **Note:**
-* Once again the above represents an example of a release pipeline
+* Once again the above represents examples of release pipelines, those can should and need to be adapted to the organization rules, policies and needs.
 
 #### Monitor the Model
-Once your model is deployed, you want to be able to collect metrics on the model. You want to ascertain that the model is drifting from its objective and that the inference is useful for the business. This means you capture a lot of metrics and analyze them. Azure Machine Learning enables this tracking of metrics for the model is a very efficient manner. The central model registry becomes the one place where all this hosted.
+
+
+Once the model is deployed, you want to be able to collect metrics on the model. You want to ascertain that the model is drifting from its objective and that the inference is useful for the business. This means you capture a lot of metrics and analyze them. Azure Machine Learning enables this tracking of metrics for the model is a very efficient manner. The central model registry becomes the one place where all this hosted.
 
 As you collect more metrics and additional data becomes available for training, there may be a need to be able to retrain the model in the hope of improving its accuracy and/or performance. Also, since this is a continuous process of integrations and deployment (CI/CD), there’s a need for this process to be automated. This process of retraining and effective CI/CD of ML models is the biggest strength of Azure Machine Learning.
 
