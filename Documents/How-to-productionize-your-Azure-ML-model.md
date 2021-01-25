@@ -142,5 +142,6 @@ Once the model is deployed, the data scientist wants to be able to collect metri
 <<<<< ADD FELICITY WORK HERE >>>>>>>
 
 #### Retrain the Model
+![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/devops18.PNG)
 
 As you collect more metrics and additional data becomes available for training, there may be a need to be able to retrain the model in the hope of improving its accuracy and/or performance. Also, since this is a continuous process of integrations and deployment (CI/CD), there’s a need for this process to be automated. This process of retraining and effective CI/CD of ML models is the biggest strength of Azure Machine Learning.
