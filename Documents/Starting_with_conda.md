@@ -140,19 +140,19 @@ There are a few things to be aware of when placing conda environments outside of
 
 1. Conda can no longer find your environment with the `--name`flag. You’ll generally need to pass the `--prefix` flag along with the environment’s full path to find the environment.
 
-2. Specifying an install path when creating your conda environments makes it so that your command prompt is now prefixed with the active environment’s absolute path rather than the environment’s name
-&nbsp;
+2. Specifying an install path when creating your conda environments makes it so that your command prompt is now prefixed with the active environment’s absolute path rather than the environment’s name.
+
 After activating an environment using its prefix, your prompt will look similar to the following:
 `(/absolute/path/to/envs) $`
-&nbsp;
+
 This can result in long prefixes:
 `(/Users/USER_NAME/research/data-science/PROJECT_NAME/envs) $`
-&nbsp;
+
 To remove this long prefix in your shell prompt, modify the env_prompt setting in your .condarc file:
 `$ conda config --set env_prompt '({name})'`
-&nbsp;
+
 This will edit your `.condarc` file if you already have one or create a `.condarc` file if you do not.
-&nbsp;
+
 Now your command prompt will display the active environment’s generic name, which is the name of the environment's root folder:
 `$ cd project-directory`
 `$ conda activate ./env`
