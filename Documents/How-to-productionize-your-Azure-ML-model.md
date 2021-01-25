@@ -54,7 +54,7 @@ With this in mind, the following should be created in the Azure DevOps resource:
 
 ![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/devops3.png)
 
-**Note**: As you can check, this implies the creation of separate python files for training, scoring, testing and also configuration files. But it really depends on which step the user needs to start the deployment. More details are given below
+**Note**: As we can see, this implies the creation of separate python files for training, scoring, testing and also configuration files. But this depends on what step(s) the user needs in order to start the deployment. More details are given in the sub-sections below.
 
 
 ##### Create a Pipeline to execute ML tasks and save all the relevant information in an Azure DevOps Artifact
