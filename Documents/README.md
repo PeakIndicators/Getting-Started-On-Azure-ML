@@ -21,6 +21,7 @@ Content:
 * [Installing Anaconda on Windows](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Documents/Anaconda_Windows.md)
 * [Installing Anaconda on macOS](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Documents/Anaconda_macos.md)
 * [Installing Anaconda on Linux](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Documents/Anaconda_linux.md)
+* [Getting Started with Anaconda](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Documents/Starting_with_conda.md)
 * [Integrate with Git](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Documents/Integrate-with-Git.md)
 * [Integrate with Azure Key Vault secrets](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Documents/Integrate-with-Azure-Key-Vault-secrets.MD)
 * [How to work with Azure Machine Learning Studio Designer](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Documents/studio-designer.md)
