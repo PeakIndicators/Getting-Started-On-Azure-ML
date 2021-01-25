@@ -61,7 +61,7 @@ Once again if we check Microsoft documentation we can define those task as:
 
 In our guidelines we will start by focusing on the web access and then we will give an overview on the other options.
 
-Web Access: [How to access Azure ML Studio](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Azure-ML-Studio.md)
+Web Access: [How to access Azure ML Studio](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Documents/Azure-ML-Studio.md)
 
 #### Note
 Azure Machine Learning Studio has suffered a branding rename, previouly it was called Azure Machine Learning Workspace and it has been renamed to Azure Machine Learning Studio. Therefore, some Microsoft documentation hasn't been updated yet and it might still refer to Azure Machine Learning Workspace but as we said it's the same resource as Azure Machine Learning Studio.
