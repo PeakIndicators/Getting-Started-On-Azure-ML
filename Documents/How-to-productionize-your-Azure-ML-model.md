@@ -61,19 +61,19 @@ With this in mind, the following should be created in the Azure DevOps resource:
 
 1.  Once all the necessary code is added to the repository a pipeline should be created with the necessary steps steps: - _Team Responsible: DevOps Development Team_
 
-**_Pipeline 1 - Example_**
-
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/devops8.PNG)
-
-**_Pipeline 2 - Example_**
+######_Pipeline 1 - Example_
 
 ![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/devops4.png)
+
+######_Pipeline 2 - Example_**
+
+![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/devops8.PNG)
 
 To each pipeline, variables can also be added to make the pipeline more clean:
 
 ![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/devops5.png)
 
-Once the pipeline is setup it shoud be executed. The screenshot below shows an example of a successful running:
+Once the pipeline is setup it should be executed. The screenshot below shows an example of successful runnings:
 
 ![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/devops6.png)
 
@@ -82,7 +82,7 @@ Once the pipeline is setup it shoud be executed. The screenshot below shows an e
 ![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/devops7.png)
 
 **Note:**
-* The following represent examples of pipelines that can be created. As stated, these are just examples and it really depends on what is agreed to do in Azure DevOps and what is agreed to do in Azure ML. Example: the user might want to train and register the model in an Azure ML notebook and in Azure DevOps he only wants do dowload the model in order to be able to deploy it, if that is the case then the pipeline should only start from task Download the Model onwards.
+* The above represent examples of pipelines that can be created. As stated, these are just examples and it really depends on what is agreed to do in Azure DevOps and what is agreed to do in Azure ML. Example: the user might want to train and register the model in an Azure ML notebook and in Azure DevOps he only wants do dowload the model in order to be able to deploy it, if that is the case then the pipeline should only start from task Download the Model onwards.
 * In order to deploy the model the following tasks are mandatory:
    * Download Model
    * Copy Files to Artifact Staging Directory
@@ -96,18 +96,36 @@ If these steps are followed, this means the following flow of the diagram have b
 
 
 ##### Create a Release Pipeline to deploy the Azure DevOps Artifact created in the previous pipeline
-This step will execute the **deploy model** task of the diagram _MLOps flow within Azure Machine Learning_
+This step will execute the **Deploy model** task of the diagram _MLOps flow within Azure Machine Learning_
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/devops11.PNG)
+![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/devops12.PNG)
 
-The deployment ins Azure DevOps is done using a **Release Pipeline**. This release pipeline has the following structure:
+1. The deployment in Azure DevOps is done using a **Release Pipeline**. - _Team Responsible: DevOps Development Team_
+This release pipeline can have the following structures:
+
+######_Release Pipeline 1 - Example_
+This is a very simple example where the artifact in only deployed to another environment:
 
 ![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/devops9.png)
 
+######_Release Pipeline 2 - Example_
+This is a more complex example where the artifact is being deployed to a PreProduction environment, the after an approval it goes to a Production enviroment:
+
+![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/devops13.PNG)
+
+
 The deployment tasks are defined as:
+
+######_Release Pipeline 1 - Tasks - Example_
 
 ![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/devops10.png)
 
+######_Release Pipeline 2 - Tasks - Example_
+
+![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/devops14.PNG)
+
+**Note:**
+* Once again the above represents an example of a release pipeline
 
 #### Monitor the Model
 Once your model is deployed, you want to be able to collect metrics on the model. You want to ascertain that the model is drifting from its objective and that the inference is useful for the business. This means you capture a lot of metrics and analyze them. Azure Machine Learning enables this tracking of metrics for the model is a very efficient manner. The central model registry becomes the one place where all this hosted.
