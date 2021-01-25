@@ -192,8 +192,6 @@ To install the `matplotlib` package (which also installs `numpy` as a dependency
 
 A best practice among Python developers is to avoid installing packages into a global interpreter environment. You instead use a project-specific `virtual environment` that contains a copy of a global interpreter. Once you activate that environment, any packages you then install are isolated from other environments. Such isolation reduces many complications that can arise from conflicting package versions. As mentioned earlier in this document [Getting started with Conda](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Documents/Starting_with_conda.md) explains how to install and create your virtual environment with conda. If you haven't done this yet and would like to create a `virtual environment` with the required packages using `python` instead of Conda, enter the following commands as appropriate for your operating system:
 
-**Note**: If you need a refresher on why 
-
 1. Create and activate the virtual environment
 
 **Note:** When you create a new virtual environment, you should be prompted by VS Code to set it as the default for your workspace folder. If selected, the environment will automatically be activated when you open a new terminal.
