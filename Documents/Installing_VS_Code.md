@@ -188,9 +188,11 @@ Next, try running the file in the debugger using the "Python: Current file" conf
 
 Unless you're using an Anaconda distribution or have previously installed the `matplotlib` package, you should see the message, `"ModuleNotFoundError: No module named 'matplotlib'"`. Such a message indicates that the required package isn't available in your system.
 
-To install the `matplotlib` package (which also installs `numpy` as a dependency), stop the debugger and use the Command Palette to run `Terminal: Create New Integrated Terminal (Ctrl+Shift+`)`. This command opens a command prompt for your selected interpreter.
+To install the `matplotlib` package (which also installs `numpy` as a dependency), stop the debugger and use the Command Palette to run `Terminal: Create New Integrated Terminal (Ctrl+Shift+`). This command opens a command prompt for your selected interpreter.
 
-A best practice among Python developers is to avoid installing packages into a global interpreter environment. You instead use a project-specific `virtual environment` that contains a copy of a global interpreter. Once you activate that environment, any packages you then install are isolated from other environments. Such isolation reduces many complications that can arise from conflicting package versions. As detailed earlier in this document [Getting started with Conda]() has already detailed how to install and create your virtual environment with conda. If you haven't done this yet and would like to create a `virtual environment` and install the required packages using `python` enter the following commands as appropriate for your operating system:
+A best practice among Python developers is to avoid installing packages into a global interpreter environment. You instead use a project-specific `virtual environment` that contains a copy of a global interpreter. Once you activate that environment, any packages you then install are isolated from other environments. Such isolation reduces many complications that can arise from conflicting package versions. As mentioned earlier in this document [Getting started with Conda](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Documents/Starting_with_conda.md) explains how to install and create your virtual environment with conda. If you haven't done this yet and would like to create a `virtual environment` with the required packages using `python` instead of Conda, enter the following commands as appropriate for your operating system:
+
+**Note**: If you need a refresher on why 
 
 1. Create and activate the virtual environment
 
