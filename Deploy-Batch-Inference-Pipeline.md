@@ -8,7 +8,7 @@ In many production scenarios, long-running tasks that operate on large volumes o
 
 In Azure Machine Learning, you can implement batch inferencing solutions by creating a pipeline that includes a step to read the input data, load a registered model, predict labels and write the results as its output.
 
-## Learning objectives
+## Tutorial objectives
 
 * Publish batch inference pipeline for a trained model.
 * Use a batch inference pipeline to generate predictions.
@@ -89,7 +89,7 @@ After creating a working pipeline, you can publish it and use it as a REST enpoi
 
 ### Open Jupyter
 
-1. In Azure Machine Learning studio, view the **Compute** page for your workspace; and on the **Compute Instances** tab, start your compute instance if it is not already running.
+1. In Azure Machine Learning studio, view the **Compute** page for your workspace and on the **Compute Instances** tab, start your compute instance if it is not already running.
 2. When the compute instance is running, click the **Jupyter** link to open the Jupyter home page in a new browser tab. Be sure to open Jupyter and not JupyterLab.
 
 ### Create a batch inferencing service
