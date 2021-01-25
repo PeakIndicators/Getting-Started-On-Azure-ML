@@ -47,6 +47,9 @@ Content:
 * [Deploy a model as a real-time inferencing service](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Documents/Deploy-Real-Time-Service.md)
 * [Create a batch webservice](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Documents/Deploy-Batch-Inference-Pipeline.md)
 * How to work with desktop tools and connect to Azure ML
+* [Installing Anaconda on Windows](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Documents/Anaconda_Windows.md)
+* [Installing Anaconda on macOS](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Documents/Anaconda_macos.md)
+* [Installing Anaconda on Linux](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Documents/Anaconda_linux.md)
 * [Integrate with Git](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Documents/Integrate-with-Git.md)
 * [Integrate with Azure Key Vault secrets](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Documents/Integrate-with-Azure-Key-Vault-secrets.MD)
 * [JupyterLab notebook templates](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/tree/main/labs)
