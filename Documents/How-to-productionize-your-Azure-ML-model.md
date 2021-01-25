@@ -126,10 +126,10 @@ This deployment is an example of deploying a model into an Azure Kubernetes Serv
 ![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/devops14.PNG)
 
 **Note:**
-* Once again the above represents examples of release pipelines, those can should and need to be adapted to the organization rules, policies and needs.
+* Once again the above represents examples of release pipelines, those can, should and need to be adapted to the organization rules, policies and demands.
 
 #### Monitor the Model
-
+![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/devops15.PNG)
 
 Once the model is deployed, you want to be able to collect metrics on the model. You want to ascertain that the model is drifting from its objective and that the inference is useful for the business. This means you capture a lot of metrics and analyze them. Azure Machine Learning enables this tracking of metrics for the model is a very efficient manner. The central model registry becomes the one place where all this hosted.
 
