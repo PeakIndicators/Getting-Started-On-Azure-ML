@@ -69,11 +69,11 @@ With this in mind, the following should be created in the Azure DevOps resource:
 
 ![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/devops8.PNG)
 
-To each pipeline, variables can also be added which goes along with best practices and makes the pipeline easy to manage:
+Variables can also be added to a pipeline, this is included within the best practices and makes the pipeline easy to manage:
 
 ![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/devops5.png)
 
-Once the pipeline is setup it should be executed. The screenshot below shows an example of successful runnings:
+Once the pipeline is setup, it should be executed. The screenshot below shows an example of successful runnings:
 
 ![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/devops6.png)
 
