@@ -1,7 +1,7 @@
 # Anaconda (conda)
 
 ## Getting started with conda
-Conda is a powerful package manager and environment manager that you use with command line commands at the Anaconda Prompt for Windows, or in a terminal window for macOS or Linux.
+Conda is a powerful package manager and environment manager that you use with command line commands at the Anaconda Prompt for Windows or in a terminal window for macOS or Linux.
 
 ![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/A1.PNG) Anaconda Prompt from the Windows Start menu
 
