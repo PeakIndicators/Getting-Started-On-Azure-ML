@@ -243,7 +243,7 @@ To learn more about the Python language, follow any of the [programming tutorial
 There is then much more to explore with Python in Visual Studio Code:
 
 * [Editing code](https://code.visualstudio.com/docs/python/editing) - Learn about autocomplete, IntelliSense, formatting, and refactoring for Python.
-* [Linting](https://code.visualstudio.com/docs/python/linting) - Enable, configure, and apply a variety of Python linters.
+* [Linting](https://code.visualstudio.com/docs/python/linting) - Enable, configure and apply a variety of Python linters.
 * [Debugging](https://code.visualstudio.com/docs/python/debugging) - Learn to debug Python both locally and remotely.
 * [Testing](https://code.visualstudio.com/docs/python/testing) - Configure test environments and discover, run, and debug tests.
 * [Settings reference](https://code.visualstudio.com/docs/python/settings-reference) - Explore the full range of Python-related settings in VS Code.
