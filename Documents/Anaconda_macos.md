@@ -23,11 +23,11 @@ Installing Anaconda
 
 On the Destination Select screen, select **Install for me only**.
 
-**note**—If you get the error message “You cannot install Anaconda in this location,” reselect Install for me only.
+**Note**—If you get the error message “You cannot install Anaconda in this location,” reselect Install for me only.
 
 ![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/A7.PNG) 
 
-6. Click **continue**.
+6. Click **Continue**.
 &nbsp;
 7. Optional: To install PyCharm for Anaconda, click the link to https://www.anaconda.com/pycharm.
 
