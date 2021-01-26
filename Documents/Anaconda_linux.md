@@ -28,9 +28,9 @@ OR Enter the following to install Anaconda for Python 2.7:
 
 `bash ~/Downloads/Anaconda2-2019.10-Linux-x86_64.sh`
 
-**note**—Include the bash command regardless of whether or not you are using Bash shell.
+**Note**—Include the bash command regardless of whether or not you are using Bash shell.
 
-**note**—If you did not download to your Downloads directory, replace ~/Downloads/ with the path to the file you downloaded.
+**Note**—If you did not download to your Downloads directory, replace ~/Downloads/ with the path to the file you downloaded.
 
 3. The installer prompts *“In order to continue the installation process, please review the license agreement.”* Click **Enter** to view license terms.
 &nbsp;
@@ -38,11 +38,11 @@ OR Enter the following to install Anaconda for Python 2.7:
 &nbsp;
 5. The installer prompts you to click **Enter** to accept the default install location, **CTRL-C** to cancel the installation, or specify an alternate installation directory. If you accept the default install location, the installer displays “PREFIX=/home/<user>/anaconda<2 or 3>” and continues the installation. It may take a few minutes to complete.
 
-**note**—We recommend you accept the default install location. Do not choose the path as /usr for the Anaconda/Miniconda installation.
+**Note**—We recommend you accept the default install location. Do not choose the path as /usr for the Anaconda/Miniconda installation.
 
 6. The installer prompts *“Do you wish the installer to initialize Anaconda3 by running conda init?”* We recommend *“yes”*.
 &nbsp;
-**note**—If you enter *“no”*, then conda will not modify your shell scripts at all. In order to initialize after the installation process is done, first run `source <path to conda>/bin/activate` and then run `conda init`. See [FAQ](https://docs.anaconda.com/anaconda/user-guide/faq/#distribution-faq-linux-path).
+**Note**—If you enter *“no”*, then conda will not modify your shell scripts at all. In order to initialize after the installation process is done, first run `source <path to conda>/bin/activate` and then run `conda init`. See [FAQ](https://docs.anaconda.com/anaconda/user-guide/faq/#distribution-faq-linux-path).
 &nbsp;
 7. The installer finishes and displays “Thank you for installing Anaconda<2 or 3>!"
 &nbsp;
@@ -52,11 +52,11 @@ OR Enter the following to install Anaconda for Python 2.7:
 &nbsp;
 10. To control whether or not each shell session has the base environment activated or not, run `conda config --set auto_activate_base False or True`. To run conda from anywhere without having the base environment activated by default, use `conda config --set auto_activate_base False`. This only works if you have run `conda init` first.
 &nbsp;
-**note**—`conda init` is available in conda versions 4.6.12 and later.
+**Note**—`conda init` is available in conda versions 4.6.12 and later.
 &nbsp;
 11. [Verify your installation.](https://docs.anaconda.com/anaconda/install/verify-install/)
 &nbsp;
-**note**—If you install multiple versions of Anaconda, the system defaults to the most current version as long as you haven’t altered the default install path.
+**Note**—If you install multiple versions of Anaconda, the system defaults to the most current version as long as you haven’t altered the default install path.
 
 ### Problems?
 See [troubleshooting](https://docs.anaconda.com/anaconda/user-guide/troubleshooting/).
