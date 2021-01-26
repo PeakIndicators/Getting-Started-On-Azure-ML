@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/azure%20ML%20logo.png">
+  <img src="Images/azure%20ML%20logo.png">
 </p>
 
 # Getting Started On Azure Machine Learning Studio
