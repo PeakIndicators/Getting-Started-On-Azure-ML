@@ -2,9 +2,9 @@
 
 ## Set up a data science environment
 
-Visual Studio Code and the Python extension provide a great editor for data science scenarios. With native support for Jupyter notebooks combined with Anaconda, it's easy to get started. In this section, you will create a workspace for the tutorial, create an Anaconda environment with the data science modules needed for the tutorial, and create a Jupyter notebook that you'll use for creating a machine learning model.
+Visual Studio Code and the Python extension provides a great editor for data science scenarios. With native support for Jupyter notebooks combined with Anaconda, it's easy to get started. In this section, you will create a workspace for the tutorial, create an Anaconda environment with the data science modules needed for the tutorial and create a Jupyter notebook that you'll use to create a machine learning model.
 
-1. Begin by creating an Anaconda environment for the data science tutorial. Refer to [Getting started with conda](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Documents/Starting_with_conda.md)  for detail on how to install conda. Open an Anaconda command prompt and run `conda create -n myenv python=3.9 pandas jupyter seaborn scikit-learn keras tensorflow` to create an environment named **myenv**. For additional information about creating and managing Anaconda environments, navigate to this [page](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Documents/Starting_with_conda.md).
+1. Begin by creating an Anaconda environment for the data science tutorial. Refer to [Getting started with Conda](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Documents/Starting_with_conda.md) for details on how to install conda. Open an Anaconda command prompt and run `conda create -n myenv python=3.9 pandas jupyter seaborn scikit-learn keras tensorflow` to create an environment named **myenv**. For additional information about creating and managing Anaconda environments, navigate to this [page](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Documents/Starting_with_conda.md).
 
 2. Next, create a folder in a convenient location to serve as your VS Code workspace for the tutorial, name it `hello_ds`.
 
@@ -17,9 +17,11 @@ Visual Studio Code and the Python extension provide a great editor for data scie
 5. The **Python: Select Interpreter** command presents the list of available interpreters that VS Code was able to locate automatically (your list will vary from the one shown below), including virtual environments. If you don't see the desired interpreter, select *Enter interpreter path...* .
 Select the Python Interpreter you want to use for your project. This should be the virtual environment your created with conda, which should include the text 'myenv': conda.
 
-**Note:** Note: When using an Anaconda distribution, the correct interpreter should have the suffix `('envname':conda)`, for example `Python 3.7.3 64-bit ('envname':conda)`.
+**Note:** When using an Anaconda distribution, the correct interpreter should have the suffix `('envname':conda)`, for example `Python 3.7.3 64-bit ('envname':conda)`.
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/VS5.PNG) Select the Python Interpreter you want to use for your project. This should be the virtual environment your created with conda. 
+![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/VS5.PNG) 
+
+Select the Python Interpreter you want to use for your project. This should be the virtual environment your created with conda. 
 
 You can also use the **Select Python Environment** option on the Status Bar if available (it may already show a selected interpreter, too):
 
@@ -37,7 +39,7 @@ You can also use the **Select Python Environment** option on the Status Bar if a
 
 ![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/VS27.PNG) 
 
-8. After your file is created, you should see the open [Jupyter notebook](https://jupyter.org/) in the native notebook editor. For additional information about native Jupyter notebook support, see [this here](https://code.visualstudio.com/docs/python/jupyter-support).
+8. After your file is created, you should see the open [Jupyter notebook](https://jupyter.org/) in the native notebook editor. For additional information about native Jupyter notebook support, see [this page](https://code.visualstudio.com/docs/python/jupyter-support).
 
 ![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/VS28.PNG) 
 
@@ -47,11 +49,11 @@ This tutorial uses the [Titanic dataset](http://biostat.mc.vanderbilt.edu/wiki/p
 
 1. To begin, download the Titanic data from [OpenML.org](https://www.openml.org/d/40945) as a csv file named `data.csv` and save it to the `hello_ds` folder that you created in the previous section.
 
-2. In VS Code, open the `hello_ds` folder and the Jupyter notebook (`hello.ipynb`), by going to **File > Open Folder**.
+2. In VS Code, open the `hello_ds` folder and the Jupyter notebook (`hello.ipynb`) by going to **File > Open Folder**.
 
 ![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/VS29.PNG)
 
-3. Within your Jupyter notebook begin by importing the [pandas](https://pandas.pydata.org/) and [numpy](https://numpy.org/) libraries (These have already been installed when you created the conda virtual environment above.), two common libraries used for manipulating data, and loading the Titanic data into a pandas [DataFrame](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html). To do so, copy the below code into the first cell of the notebook. For additional guidance about working with Jupyter notebooks in VS Code, see the Working with [Jupyter Notebooks](https://code.visualstudio.com/docs/python/jupyter-support) documentation. If you need more information on importing and installing packages refer to Import and Install packages in [here](Getting Started with Python in VS Code).
+3. Within your Jupyter notebook begin by importing the [pandas](https://pandas.pydata.org/) and [numpy](https://numpy.org/) libraries (these have already been installed when you created the conda virtual environment above). These are two common libraries used for manipulating data and loading the Titanic data into a pandas [DataFrame](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html). To do so, copy the below code into the first cell of the notebook. For additional guidance about working with Jupyter notebooks in VS Code, see the [Working with Jupyter Notebooks](https://code.visualstudio.com/docs/python/jupyter-support) documentation. If you need more information on importing and installing packages refer to Import and Install packages in [here](Getting Started with Python in VS Code).
 
 `import pandas as pd`
 `import numpy as np`
@@ -61,19 +63,19 @@ This tutorial uses the [Titanic dataset](http://biostat.mc.vanderbilt.edu/wiki/p
 
 ![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/VS30.PNG)
 
-5. After the cell finishes running, you can view the data that was loaded using the variable explorer and data viewer. First click on the chart icon in the notebook's upper toolbar, then the data viewer icon to the right of the `data` variable. For additional information about the data set, refer to [this document](http://biostat.mc.vanderbilt.edu/wiki/pub/Main/DataSets/titanic3info.txt) about how it was constructed.
+5. After the cell finishes running, you can view the data that was loaded using the variable explorer and data viewer. First click on the chart icon in the notebook's upper toolbar, then the data viewer icon to the right of the `data` variable. For additional information about the data set, refer to [this document](http://biostat.mc.vanderbilt.edu/wiki/pub/Main/DataSets/titanic3info.txt) about how it was build.
 
 ![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main//Images/31.PNG)
 
-You can then use the data viewer to view, sort, and filter the rows of data. After reviewing the data, it can then be helpful to graph some aspects of it to help visualize the relationships between the different variables.
+You can then use the data viewer to view, sort and filter data rows. After reviewing the data, it can then be helpful to graph some aspects of it to help visualize the relationships between the different variables.
 
-6. Before the data can be graphed though, you need to make sure that there aren't any issues with it. If you look at the Titanic csv file, one thing you'll notice is that a question mark ("?") was used to designate cells where data wasn't available.
+6. Before the data can be graphed though, you need to make sure that there aren't any issues with it. If you look at the Titanic .csv file, one thing you'll notice is that a question mark ("?") was used to designate cells where data wasn't available.
 
-While Pandas can read this value into a DataFrame, the result for a column like Age is that its data type will be set to Object instead of a numeric data type, which is problematic for graphing.
+While Pandas can read this value into a DataFrame, the result for a column like Age is that its data type will be set to Object instead of a Numeric data type, which is problematic for graphing.
 
-This problem can be corrected by replacing the question mark with a missing value that pandas is able to understand. Add the following code to the next cell in your notebook to replace the question marks in the **age** and **fare** columns with the [numpy NaN](https://docs.scipy.org/doc/numpy/reference/constants.html?highlight=nan#numpy.nan) value. Notice that we also need to update the column's data type after replacing the values.
+This problem can be rectified by replacing the question mark with a missing value that pandas is able to understand. Add the following code to the next cell in your notebook to replace the question marks in the **age** and **fare** columns with the [numpy NaN](https://docs.scipy.org/doc/numpy/reference/constants.html?highlight=nan#numpy.nan) value. Notice that we also need to update the column's data type after replacing the values.
 
-**Tip**: To add a new cell you can use the insert cell icon that's in the bottom left corner of an existing cell. Alternatively, you can also use the `Esc` to enter command mode, followed by the `B` key.
+**Tip**: To add a new cell you can use the insert cell icon that's in the bottom left corner of an existing cell. Alternatively, you can also use the `Esc` to enter command mode followed by the `B` key.
 
 `data.replace('?', np.nan, inplace= True)`
 `data = data.astype({"age": np.float64, "fare": np.float64})`
@@ -108,7 +110,7 @@ This problem can be corrected by replacing the question mark with a missing valu
 
 10. Looking at the correlation results, you'll notice that some variables like gender have a fairly high correlation to survival, while others like relatives (sibsp = siblings or spouse, parch = parents or children) seem to have little correlation.
 
-Let's hypothesize that **sibsp** and **parch** are related in how they affect survivability, and group them into a new column called "relatives" to see whether the combination of them has a higher correlation to survivability. To do this, you will check if for a given passenger, the number of **sibsp** and **parch** is greater than 0 and, if so, you can then say that they had a relative on board.
+Let's hypothesize that **sibsp** and **parch** are related in how they affect survivability and group them into a new column called "relatives" to see whether the combination of them has a higher correlation to survivability. To do this, you will check if for a given passenger, the number of **sibsp** and **parch** is greater than 0 and, if so, you can then say that they had a relative on board.
 
 Use the following code to create a new variable and column in the dataset called **relatives** and check the correlation again.
 
@@ -125,7 +127,7 @@ Use the following code to create a new variable and column in the dataset called
 **Note**: Although **age** had a low direct correlation, it was kept because it seems reasonable that it might still have correlation in conjunction with other inputs.
 
 ## Train and evaluate a model
-With the dataset ready, you can now begin creating a model. For this section you'll use the [scikit-learn library](https://scikit-learn.org/stable/) to do pre-processing of the dataset, train a classification model to determine survivability on the Titanic, and then use that model with test data to determine its accuracy.
+With the dataset ready, you can now begin creating a model. For this section you'll use the [scikit-learn library](https://scikit-learn.org/stable/) to do pre-processing of the dataset, train a classification model to determine survivability on the Titanic and then use that model with test data to determine its accuracy.
 
 1. A common first step to training a model is to divide up the dataset into training and validation data. This allows you to use a portion of the data to train the model and a portion of the data to test the model. If you used all your data to train the model, you wouldn't have a way to estimate how well it would actually perform against data the model has not yet seen. A benefit of the **scikit-learn** library is that it provides a method specifically for splitting a dataset into **training** and **test** data.
 
