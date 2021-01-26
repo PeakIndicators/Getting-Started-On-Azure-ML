@@ -128,7 +128,7 @@ This deployment is an example of deploying a model into an Azure Container Insta
 ###### _Release Pipeline 2 - Tasks - Example_
 This deployment is an example of deploying a model into an Azure Kubernetes Service, often used for Production environments.
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/devops14.PNG)
+![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/devops14.png)
 
 **Notes:**
 * Once again the above represents examples of release pipelines, those can, should and need to be adapted to the organization rules, policies and demands.
