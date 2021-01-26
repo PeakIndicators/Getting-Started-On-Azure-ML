@@ -45,7 +45,7 @@ You can also use the **Select Python Environment** option on the Status Bar if a
 
 ## Prepare the data
 
-This tutorial uses the [Titanic dataset](https://hbiostat.org/data/repo/titanic3.csv) available on [OpenML.org](https://www.openml.org/d/40945), which is obtained from [Vanderbilt University's Department of Biostatistics](https://biostat.app.vumc.org/wiki/Main/DataSets). The Titanic data provides information about the survival of passengers on the Titanic, as well as characteristics about the passengers such as age and ticket class. Using this data, the tutorial will establish a model for predicting whether a given passenger would have survived the sinking of the Titanic. This section shows how to load and manipulate data in your Jupyter notebook.
+This tutorial uses the Titanic dataset available on [OpenML.org](https://www.openml.org/d/40945), which is obtained from [Vanderbilt University's Department of Biostatistics](https://biostat.app.vumc.org/wiki/Main/DataSets). The Titanic data provides information about the survival of passengers on the Titanic, as well as characteristics about the passengers such as age and ticket class. Using this data, the tutorial will establish a model for predicting whether a given passenger would have survived the sinking of the Titanic. This section shows how to load and manipulate data in your Jupyter notebook.
 
 1. To begin, download the Titanic data from [OpenML.org](https://www.openml.org/d/40945) as a csv file named `data.csv` and save it to the `hello_ds` folder that you created in the previous section.
 
