@@ -1,6 +1,6 @@
 # How to productionize your Azure ML model
 
-Creating a model it's just one part of a Machine Learning pipeline, arguably the easier part. 
+Creating a model it's just one part of a Machine Learning pipeline, arguably the easiest part. 
 To take the model to production and obtain benefits of it is a completely different game. 
 "Productionizing a model" needs to be able to package the models, deploy the models, track and monitor these models in various deployment targets, collects metrics, use these metrics to determine the efficacy of these models and then enable retraining of the models on the basis of these insights and/or new data. To add to it, all this needs a mechanism that can be automated with the right knobs and dials to allow data science teams to be able to keep a tab and not allow the pipeline to go rogue, which could result in considerable business losses, as these data science models are often linked directly to customer actions.
 
