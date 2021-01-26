@@ -34,9 +34,9 @@ If the installation was successful, the output window should show the version of
 ![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/VS10.PNG) 
 
 
-2. Create an empty folder called "hello",
+2. Create an empty folder called "hello".
 &nbsp;
-3. Navigate into it, and,
+3. Navigate into it.
 &nbsp;
 4. Open VS Code (`code`) in that folder (`.`) by entering the following commands:
 
@@ -48,13 +48,13 @@ If the installation was successful, the output window should show the version of
 
 By starting VS Code in a folder, that folder becomes your "workspace". VS Code stores settings that are specific to that workspace in `.vscode/settings.json,` which are separate from user settings that are stored globally.
 
-Alternately, you can run VS Code through the operating system UI, then use **File > Open Folder** to open the project folder.
+Alternatively, you can run VS Code through the operating system UI, then use **File > Open Folder** to open the project folder.
 
 ![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/VS3.PNG) Open File through the operating system UI
 
 ### Select a Python interpreter
 
-Python is an interpreted language, and in order to run Python code and get Python IntelliSense, you must tell VS Code which interpreter to use. In our case this should be the Conda environment we have created earlier. As you get more comfortamble using Python and conda you may have more than one virtual environment. Select the one you want to use for your particular project. 
+Python is an interpreted language and in order to run Python code and get Python IntelliSense, you must tell VS Code which interpreter to use. In our case this should be the Conda environment we have created earlier. As you get more comfortable using Python and conda you may have more than one virtual environment. Select the one you want to use for your particular project. 
 
 From within VS Code, select a Python 3 interpreter by opening the **Command Palette (Ctrl+Shift+P)**, start typing the **Python: Select Interpreter** command to search, then select the command. 
 
@@ -73,7 +73,7 @@ You can also use the **Select Python Environment** option on the Status Bar if a
 
 The command presents a list of available interpreters that VS Code can find automatically, including virtual environments. If you don't see the desired interpreter, select *Enter interpreter path...* .
 
-**Note:** Note: When using an Anaconda distribution, the correct interpreter should have the suffix `('envname':conda)`, for example `Python 3.7.3 64-bit ('envname':conda)`.
+**Note:** When using an Anaconda distribution, the correct interpreter should have the suffix `('envname':conda)`, for example `Python 3.7.3 64-bit ('envname':conda)`.
 
 **Note:** If you select an interpreter without a workspace folder open, VS Code sets `python.pythonPath` in your user settings instead, which sets the default interpreter for VS Code in general. The user setting makes sure you always have a default interpreter for Python projects. The workspace settings lets you override the user setting.
 
@@ -82,7 +82,7 @@ From the File Explorer toolbar, select the **New File** button on the `hello` fo
 
 ![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/VS7.PNG)
 
-Name the file `hello.py`, and it automatically opens in the editor:
+Name the file `hello.py` and it automatically opens in the editor:
 
 ![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/VS8.PNG)
 
