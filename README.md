@@ -31,12 +31,12 @@ We will also re-use some of Microsoft documentation (see: https://docs.microsoft
 
 Content: 
 
-* [What is Azure ML Studio](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Documents/what-is-azure-ml-studio.md)
-* [How to access Azure ML Studio](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Documents/Azure-ML-Studio.md)
-* [Create Compute Instances](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Documents/Create-Compute-Instance.md)
-* [Stop a Compute Instance](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Documents/Stop-Compute-Instance.md)
-* [Create a Datastore using the web portal](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Documents/Work-With-Data-in-Azure-ML.md)
-* [Unregister a Datastore using the web portal](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Documents/Unregister-a-datastore.md)
+* [What is Azure ML Studio](Documents/what-is-azure-ml-studio.md)
+* [How to access Azure ML Studio](Documents/Azure-ML-Studio.md)
+* [Create Compute Instances](Documents/Create-Compute-Instance.md)
+* [Stop a Compute Instance](Documents/Stop-Compute-Instance.md)
+* [Create a Datastore using the web portal](Documents/Work-With-Data-in-Azure-ML.md)
+* [Unregister a Datastore using the web portal](Documents/Unregister-a-datastore.md)
 * [Create Datasets using the web portal](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Documents/Work-With-Data-in-Azure-ML-Datasets.md)
 * [Unregister Datasets using the web portal](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Documents/Unregister-a-dataset.md)
 * [Creating and Running a Python or R Notebook](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Documents/Creating-and-Running-a-Python-Notebook.md)
