@@ -5,7 +5,7 @@ Conda is a powerful package manager and environment manager that you use with co
 
 ![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/A1.PNG) Anaconda Prompt from the Windows Start menu
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/A2.PNG) Anaconda Promp when opened
+![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/A2.PNG) Anaconda Prompt when opened
 
 ## Installing on Windows
 
