@@ -75,7 +75,7 @@ The command presents a list of available interpreters that VS Code can find auto
 
 **Note:** When using an Anaconda distribution, the correct interpreter should have the suffix `('envname':conda)`, for example `Python 3.7.3 64-bit ('envname':conda)`.
 
-**Note:** If you select an interpreter without a workspace folder open, VS Code sets `python.pythonPath` in your user settings instead, which sets the default interpreter for VS Code in general. The user setting makes sure you always have a default interpreter for Python projects. The workspace settings lets you override the user setting.
+**Note:** If you select an interpreter without a workspace folder open, VS Code sets `python.pythonPath` in your user settings instead, which sets the default interpreter for VS Code in general. The user setting makes sure you always have a default interpreter for Python projects. The workspace settings lets you override the user settings.
 
 ### Create a Python Hello World source code file
 From the File Explorer toolbar, select the **New File** button on the `hello` folder:
@@ -103,14 +103,14 @@ IntelliSense and auto-completions work for standard Python modules as well as ot
 
 ![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/VS11.PNG)
 
-Feel free to experiment with IntelliSense some more, but then revert your changes so you have only the `msg` variable and the `print` call, and save the file **(Ctrl+S)**.
+Feel free to experiment with IntelliSense some more, but then revert your changes so you have only the `msg` variable and the `print` call and save the file **(Ctrl+S)**.
 
 ### Run Hello World
 It's simple to run `hello.py` with Python. Just click the **Run Python File in Terminal** play button in the top-right side of the editor.
 
 ![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/VS15.PNG)
 
-The buttons opens a terminal panel in qhich your python interpreter is automatically activated, then runs `python 3 hello.py` (macOS/Linux) or `python hello.py` (Windows):
+The button opens a terminal panel in which your python interpreter is automatically activated, then runs `python 3 hello.py` (macOS/Linux) or `python hello.py` (Windows):
 
 ![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/VS16.PNG)
 
@@ -122,14 +122,14 @@ There are three other ways you can run Python code within VS Code:
 
 * Select one or more lines, then press Shift+Enter or right-click and select **Run Selection/Line in Python Terminal**. This command is convenient for testing just a part of a file.
 
-* From the Command Palette (Ctrl+Shift+P), select the **Python: Start REPL** command to open a REPL terminal for the currently selected Python interpreter. In the REPL, you can then enter and run lines of code one at a time
+* From the Command Palette (Ctrl+Shift+P), select the **Python: Start REPL** command to open a REPL terminal for the currently selected Python interpreter. In the REPL, you can then enter and run lines of code one at a time.
 
 
 ### Configure and run the debugger
 
 Let's now try debugging our simple Hello World program.
 
-First, set a breakpoint on line 2 of `hello.py` by placing the cursor on the print call and pressing F9. Alternately, just click in the editor's left gutter, next to the line numbers. When you set a breakpoint, a red circle appears in the gutter.
+First, set a breakpoint on line 2 of `hello.py` by placing the cursor on the print call and pressing F9. Alternatively, just click in the editor's left gutter, next to the line numbers. When you set a breakpoint, a red circle appears in the gutter.
 
 ![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/VS18.PNG)
 
@@ -141,7 +141,7 @@ Next, to initialize the debugger, press `F5`. Since this is your first time debu
 
 These different configurations are fully explained in Debugging configurations; for now, just select **Python File**, which is the configuration that runs the current file shown in the editor using the currently selected Python interpreter.
 
-The debugger will stop at the first line of the file breakpoint. The current line is indicated with a yellow arrow in the left margin. If you examine the **Local** variables window at this point, you will see now defined msg variable appears in the **Local** pane.
+The debugger will stop at the first line of the file breakpoint. The current line is indicated with a yellow arrow in the left margin. If you examine the **Local** variables window at this point, you will see now the defined msg variable appears in the **Local** pane.
 
 !![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/VS20.PNG)
 
@@ -153,17 +153,17 @@ The Status Bar also changes color (orange in many themes) to indicate that you'r
 
 To continue running the program, select the continue command on the debug toolbar (`F5`). The debugger runs the program to the end.
 
-**Tip** Debugging information can also be seen by hovering over code, such as variables. In the case of msg, hovering over the variable will display the string `Hello worl`d in a box above the variable.
+**Tip** Debugging information can also be seen by hovering over code, such as variables. In the case of msg, hovering over the variable will display the string `Hello world` in a box above the variable.
 
-You can also work with variables in the **Debug Console** (If you don't see it, select **Debug Console** in the lower right area of VS Code, or select it from the ... menu.) Then try entering the following lines, one by one, at the > prompt at the bottom of the console:
+You can also work with variables in the **Debug Console** (If you don't see it, select **Debug Console** in the lower right area of VS Code or select it from the ... menu). Then try entering the following lines, one by one, at the > prompt at the bottom of the console:
 
 ![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/VS22.PNG)
 
-Select the blue **Continue** button on the toolbar again (or press F5) to run the program to completion. "Hello World" appears in the **Python Debug Console** if you switch back to it, and VS Code exits debugging mode once the program is complete.
+Select the blue **Continue** button on the toolbar again (or press F5) to run the program to completion. "Hello World" appears in the **Python Debug Console** if you switch back to it and VS Code exits debugging mode once the program is complete.
 
 If you restart the debugger, the debugger again stops on the first breakpoint.
 
-To stop running a program before it's complete, use the red square stop button on the debug toolbar (`Shift+F5`), or use the **Run > Stop debugging** menu command.
+To stop running a program before it completes, use the red square stop button on the debug toolbar (`Shift+F5`) or use the **Run > Stop debugging** menu command.
 
 For full details, see [Debugging configurations](https://code.visualstudio.com/docs/python/debugging), which includes notes on how to use a specific Python interpreter for debugging.
 
@@ -171,9 +171,9 @@ For full details, see [Debugging configurations](https://code.visualstudio.com/d
 
 ### Install and use packages
 
-Let's now run an example that's a little more interesting. In Python, packages are how you obtain any number of useful code libraries, typically from PyPI. For this example, you use the `matplotlib` and `numpy` packages to create a graphical plot as is commonly done with data science. (Note that `matplotlib` cannot show graphs when running in the Windows Subsystem for Linux as it lacks the necessary UI support.)
+Let's now run an example that's a little more interesting. In Python, packages are how you obtain a number of useful code libraries, typically from PyPI. For this example, you use the `matplotlib` and `numpy` packages to create a graphical plot as it's commonly done with data science. (Note that `matplotlib` cannot show graphs when running in the Windows Subsystem for Linux as it lacks the necessary UI support).
 
-Return to the **Explorer** view (the top-most icon on the left side, which shows files), create a new file called `standardplot.py`, and paste in the following source code:
+Return to the **Explorer** view (the top-most icon on the left side, which shows files), create a new file called `standardplot.py` and paste in the following source code:
 
 `import matplotlib.pyplot as plt`
 `import numpy as np`
@@ -188,7 +188,7 @@ Next, try running the file in the debugger using the "Python: Current file" conf
 
 Unless you're using an Anaconda distribution or have previously installed the `matplotlib` package, you should see the message, `"ModuleNotFoundError: No module named 'matplotlib'"`. Such a message indicates that the required package isn't available in your system.
 
-To install the `matplotlib` package (which also installs `numpy` as a dependency), stop the debugger and use the Command Palette to run `Terminal: Create New Integrated Terminal (Ctrl+Shift+`). This command opens a command prompt for your selected interpreter.
+To install the `matplotlib` package (which also installs `numpy` as a dependency), stop the debugger and use the Command Palette to run `Terminal: Create New Integrated Terminal (Ctrl+Shift+P`). This command opens a command prompt for your selected interpreter.
 
 A best practice among Python developers is to avoid installing packages into a global interpreter environment. You instead use a project-specific `virtual environment` that contains a copy of a global interpreter. Once you activate that environment, any packages you then install are isolated from other environments. Such isolation reduces many complications that can arise from conflicting package versions. As mentioned earlier in this document [Getting started with Conda](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Documents/Starting_with_conda.md) explains how to install and create your virtual environment with conda. If you haven't done this yet and would like to create a `virtual environment` with the required packages using `python` instead of Conda, enter the following commands as appropriate for your operating system:
 
@@ -214,7 +214,7 @@ If the activate command generates the message "Activate.ps1 is not digitally sig
 
 2. Select your new environment by using the **Python: Select Interpreter** command from the **Command Palette**.
 
-3. Install the packages
+3. Install the packages.
 
 `# Don't use with Anaconda distributions because they include matplotlib already.`
 
@@ -228,7 +228,7 @@ If the activate command generates the message "Activate.ps1 is not digitally sig
 `apt-get install python3-tk`
 `python3 -m pip install matplotlib`
 
-4. Rerun the program now (with or without the debugger) and after a few moments a plot window appears with the output:
+4. Re-run the program (with or without the debugger) and after a few moments a plot window appears with the output:
 
 ![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/VS24.PNG)
 
@@ -248,4 +248,4 @@ There is then much more to explore with Python in Visual Studio Code:
 * [Testing](https://code.visualstudio.com/docs/python/testing) - Configure test environments and discover, run, and debug tests.
 * [Settings reference](https://code.visualstudio.com/docs/python/settings-reference) - Explore the full range of Python-related settings in VS Code.
 
-The next document [Data Science in Visual Studio Code](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Documents/DS_Visual_Studio_Code.md) is a tutorial demonstrating how you can use Visual Studio Code and common data science libraries to explore a basic data science scenario on a Jupyter notebook. 
+The next tutorial [Data Science in Visual Studio Code](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Documents/DS_Visual_Studio_Code.md) is a tutorial demonstrating how you can use Visual Studio Code and common data science libraries to explore a basic data science scenario on a Jupyter notebook. 
