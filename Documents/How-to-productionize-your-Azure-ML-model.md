@@ -38,7 +38,7 @@ The following flow represents a MLOps flow within Azure Machine Learning.
 
 ### Explaining MLOps flow within Azure Machine Learning and Azure DevOps
 
-The idea behing the diagram shown above will be explained in the following sections.
+The idea behind the diagram shown above will be explained in the following sections.
 
 #### Train, Validate and Deploy the Model
 
