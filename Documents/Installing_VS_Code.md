@@ -29,7 +29,7 @@ If the installation was successful, the output window should show the version of
 
 ## Start VS Code in a project (workspace) folder
 
-1. Open the conda command prompt,
+1. Open the conda command prompt.
 
 ![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/VS10.PNG) 
 
