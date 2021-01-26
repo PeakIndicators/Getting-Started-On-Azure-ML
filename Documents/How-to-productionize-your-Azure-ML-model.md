@@ -101,12 +101,12 @@ If these steps are followed, this means the following flow of the diagram have b
 
 
 ##### Create a Release Pipeline to deploy the Azure DevOps Artifact created in the previous pipeline
-This step will execute the **Deploy model** task of the diagram _MLOps flow within Azure Machine Learning_
+This step will execute the **Deploy model** task of the diagram _MLOps flow within Azure Machine Learning_.
 
 ![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/devops12.PNG)
 
 1. The deployment in Azure DevOps is done using a **Release Pipeline**. - _Team Responsible: DevOps Development Team_
-This release pipeline can have the following structures:
+This release pipeline might have the following structures (once again there is no right or wrong it really depends on to where the deployment needs to be done):
 
 ###### _Release Pipeline 1 - Example_
 This is a very simple example where the artifact in only deployed to another environment:
@@ -121,25 +121,25 @@ This is a more complex example where the artifact is being deployed to a Pre-Pro
 The deployment tasks are defined as:
 
 ###### _Release Pipeline 1 - Tasks - Example_
-This deployment is an example of deploying a model into an Azure Container Instance, often used for non-Production environments
+This deployment is an example of deploying a model into an Azure Container Instance, often used for non-Production environments.
 
 ![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/devops10.png)
 
 ###### _Release Pipeline 2 - Tasks - Example_
-This deployment is an example of deploying a model into an Azure Kubernetes Service, often used for Production environments
+This deployment is an example of deploying a model into an Azure Kubernetes Service, often used for Production environments.
 
 ![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/devops14.PNG)
 
 **Notes:**
 * Once again the above represents examples of release pipelines, those can, should and need to be adapted to the organization rules, policies and demands.
-* The flow for train, validate and deploy the within Azure DevOps can be defined as:
+* The flow for training, validating and deploying a model within Azure DevOps can be defined as:
 
 ![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/devops16.PNG)
 
 #### Monitor the Model
 ![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/devops15.PNG)
 
-Once the model is deployed, the data scientist wants to be able to collect metrics on the model. He/She wants to ascertain that the model is drifting from its objective and that the inference is useful for the business. This means the need of capturing a lot of metrics and analyze them. Azure Machine Learning enables this tracking of metrics for the model is a very efficient manner. The central model registry becomes the one place where all this hosted.
+Once the model is deployed, the data scientist wants to be able to collect metrics on the model. The user wants to ascertain that the model is drifting from its objective and that the inference is useful for the business. This means the need of capturing a lot of metrics and analyze them. Azure Machine Learning enables this tracking of metrics for the model is a very efficient manner. The central model registry becomes the one place where all this hosted.
 
 <<<<< ADD FELICITY WORK HERE >>>>>>>
 
