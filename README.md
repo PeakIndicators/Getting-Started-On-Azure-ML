@@ -53,6 +53,7 @@ Content:
   * [Getting Started with Anaconda](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Documents/Starting_with_conda.md)
   * [Getting Started with Python in Visual Studio Code](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Documents/Installing_VS_Code.md)
   * [Data Science in Visual Studio Code](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Documents/DS_Visual_Studio_Code.md)
+  * Azure Machine Learning in Visual Studio Code
 * [Integrate with Git](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Documents/Integrate-with-Git.md)
 * [Integrate with Azure Key Vault secrets](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Documents/Integrate-with-Azure-Key-Vault-secrets.MD)
 * [JupyterLab notebook templates](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/tree/main/labs)
