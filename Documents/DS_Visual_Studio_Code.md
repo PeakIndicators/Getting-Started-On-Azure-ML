@@ -63,7 +63,7 @@ This tutorial uses the Titanic dataset available on [OpenML.org](https://www.ope
 
 ![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/VS30.PNG)
 
-5. After the cell finishes running, you can view the data that was loaded using the variable explorer and data viewer. First click on the chart icon in the notebook's upper toolbar, then the data viewer icon to the right of the `data` variable. For additional information about the data set, refer to [this document](http://biostat.mc.vanderbilt.edu/wiki/pub/Main/DataSets/titanic3info.txt) about how it was build.
+5. After the cell finishes running, you can view the data that was loaded using the variable explorer and data viewer. First click on the chart icon in the notebook's upper toolbar, then the data viewer icon to the right of the `data` variable. For additional information about the data set, refer to [this document](https://biostat.app.vumc.org/wiki/pub/Main/DataSets/titanic.html) about how it was build.
 
 ![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main//Images/31.PNG)
 
