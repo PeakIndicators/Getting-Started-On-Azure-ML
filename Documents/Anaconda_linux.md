@@ -7,7 +7,7 @@ Conda is a powerful package manager and environment manager that you use with co
 
 ## Prerequisites
 To use GUI packages with Linux, you will need to install the following extended dependencies for Qt:
-
+|                |                 |
 |----------------|-----------------|
 |Debian|`pt-get install libgl1-mesa-glx libegl1-mesa libxrandr2 libxrandr2 libxss1 libxcursor1 libxcomposite1 libasound2 libxi6 libxtst6`|
 |RedHat| `yum install libXcomposite libXcursor libXi libXtst libXrandr alsa-lib mesa-libEGL libXdamage mesa-libGL libXScrnSaver`|
