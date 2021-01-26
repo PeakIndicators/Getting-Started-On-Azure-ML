@@ -16,7 +16,7 @@ For the development phase, Machine Learning life-cycle can be defined as:
 
 Things are fairly simple (process wise) until we get to the final stage **Integrate and Deploy** and its continous integration with **Validating and Testing the Algorithm**. 
 
-This is where the Azure Machine Learning studio shines the most. It presents the most complete and intuitive model lifecycle management experience alongside integrating with Azure DevOps and GitHub.
+This is where Azure Machine Learning studio shines the most. It presents the most complete and intuitive model lifecycle management experience alongside integrating with Azure DevOps and GitHub.
 
 ## Life-cycle management with Azure Machine Learning and Azure DevOps
 
