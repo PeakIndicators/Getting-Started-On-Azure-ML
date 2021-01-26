@@ -1,6 +1,6 @@
-# Getting Started with Python in VS Code
+# Getting Started with Python in Visual Studio Code
 
-## Install Visual Studio Code and the Python Extension
+## Install Visual Studio (VS) Code and the Python Extension
 
 1. If you have not already done so, install [VS Code](https://code.visualstudio.com/).
 
