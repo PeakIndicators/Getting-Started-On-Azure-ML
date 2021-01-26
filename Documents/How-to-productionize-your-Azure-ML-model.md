@@ -62,12 +62,14 @@ With this in mind, the following should be created in the Azure DevOps resource:
 1.  Once all the necessary code is added to the repository a pipeline should be created with the necessary steps steps: - _Team Responsible: DevOps Development Team_
 
 ###### _Pipeline 1 - Example_
+This is an example where the model is trained, registered and saved in an Azure DevOps Artifact
 
 ![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/devops4.png)
 
 ###### _Pipeline 2 - Example_
+This is another example where, apart from what is done in _Pipeline 1 - Example_ is also do some Data Quality checking, runs some tests and creates Azure ML resources.
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/devops8.PNG)
+![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/devops8.png)
 
 Variables can also be added to a pipeline, this is among the best practices and makes the pipeline easy to manage:
 
