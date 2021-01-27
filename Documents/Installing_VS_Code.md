@@ -6,10 +6,10 @@
 
 2. Next, install the [Python extension for VS Code](https://marketplace.visualstudio.com/items?itemName=ms-python.python) from the Visual Studio Marketplace. For additional details on installing extensions, see [Extension Marketplace](https://code.visualstudio.com/docs/editor/extension-gallery). The Python extension is named **Python** and it's published by Microsoft.
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/VS1.PNG)
+![](../Images/VS1.PNG)
 
 ### Install a Python interpreter
-Along with the Python extension, you need to install a Python interpreter. Which interpreter you use is dependent on your specific needs, as this documentation is primarily written for using Python to build Data Science solutions the document [Getting started with Conda](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Documents/Starting_with_conda.md) details how to install and create your virtual environment with conda. Conda was selected for the purpose of this document as it provides not just a Python interpreter, but many useful libraries and tools for data science.
+Along with the Python extension, you need to install a Python interpreter. Which interpreter you use is dependent on your specific needs, as this documentation is primarily written for using Python to build Data Science solutions the document [Getting started with Conda](../Documents/Starting_with_conda.md) details how to install and create your virtual environment with conda. Conda was selected for the purpose of this document as it provides not just a Python interpreter, but many useful libraries and tools for data science.
 
 ## Verify the Python installation
 
@@ -31,7 +31,7 @@ If the installation was successful, the output window should show the version of
 
 1. Open the conda command prompt.
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/VS10.PNG) 
+![](../Images/VS10.PNG) 
 
 
 2. Create an empty folder called "hello".
@@ -44,13 +44,13 @@ If the installation was successful, the output window should show the version of
 `cd hello`
 `code .`
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/VS2.PNG) 
+![](../Images/VS2.PNG) 
 
 By starting VS Code in a folder, that folder becomes your "workspace". VS Code stores settings that are specific to that workspace in `.vscode/settings.json,` which are separate from user settings that are stored globally.
 
 Alternatively, you can run VS Code through the operating system UI, then use **File > Open Folder** to open the project folder.
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/VS3.PNG) Open File through the operating system UI
+![](../Images/VS3.PNG) Open File through the operating system UI
 
 ### Select a Python interpreter
 
@@ -58,17 +58,17 @@ Python is an interpreted language and in order to run Python code and get Python
 
 From within VS Code, select a Python 3 interpreter by opening the **Command Palette (Ctrl+Shift+P)**, start typing the **Python: Select Interpreter** command to search, then select the command. 
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/VS4.PNG) 
+![](../Images/VS4.PNG) 
 
 Open the Command Palette and select Python: Select Interpreter
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/VS5.PNG) 
+![](../Images/VS5.PNG) 
 
 Select the Python Interpreter you want to use for your project. This should be the virtual environment your created with conda. 
 
 You can also use the **Select Python Environment** option on the Status Bar if available (it may already show a selected interpreter, too):
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/VS6.PNG) 
+![](../Images/VS6.PNG) 
 
 
 The command presents a list of available interpreters that VS Code can find automatically, including virtual environments. If you don't see the desired interpreter, select *Enter interpreter path...* .
@@ -80,11 +80,11 @@ The command presents a list of available interpreters that VS Code can find auto
 ### Create a Python Hello World source code file
 From the File Explorer toolbar, select the **New File** button on the `hello` folder:
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/VS7.PNG)
+![](../Images/VS7.PNG)
 
 Name the file `hello.py` and it automatically opens in the editor:
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/VS8.PNG)
+![](../Images/VS8.PNG)
 
 By using the `.py` file extension, you tell VS Code to interpret this file as a Python program, so that it evaluates the contents with the Python extension and the selected interpreter.
 
@@ -97,28 +97,28 @@ Now that you have a code file in your Workspace, enter the following source code
 
 When you start typing `print`, notice how [IntelliSense](https://code.visualstudio.com/docs/editor/intellisense) presents auto-completion options.
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/VS9.PNG)
+![](../Images/VS9.PNG)
 
 IntelliSense and auto-completions work for standard Python modules as well as other packages you've installed into the environment of the selected Python interpreter. It also provides completions for methods available on object types. For example, because the `msg` variable contains a string, IntelliSense provides string methods when you type `msg.`:
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/VS11.PNG)
+![](../Images/VS11.PNG)
 
 Feel free to experiment with IntelliSense some more, but then revert your changes so you have only the `msg` variable and the `print` call and save the file **(Ctrl+S)**.
 
 ### Run Hello World
 It's simple to run `hello.py` with Python. Just click the **Run Python File in Terminal** play button in the top-right side of the editor.
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/VS15.PNG)
+![](../Images/VS15.PNG)
 
 The button opens a terminal panel in which your python interpreter is automatically activated, then runs `python 3 hello.py` (macOS/Linux) or `python hello.py` (Windows):
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/VS16.PNG)
+![](../Images/VS16.PNG)
 
 There are three other ways you can run Python code within VS Code:
 
 * Right-click anywhere in the editor window and **select Run Python File in Terminal** (which saves the file automatically):
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/VS17.PNG)
+![](../Images/VS17.PNG)
 
 * Select one or more lines, then press Shift+Enter or right-click and select **Run Selection/Line in Python Terminal**. This command is convenient for testing just a part of a file.
 
@@ -131,11 +131,11 @@ Let's now try debugging our simple Hello World program.
 
 First, set a breakpoint on line 2 of `hello.py` by placing the cursor on the print call and pressing F9. Alternatively, just click in the editor's left gutter, next to the line numbers. When you set a breakpoint, a red circle appears in the gutter.
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/VS18.PNG)
+![](../Images/VS18.PNG)
 
 Next, to initialize the debugger, press `F5`. Since this is your first time debugging this file, a configuration menu will open from the Command Palette allowing you to select the type of debug configuration you would like for the opened file.
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/VS19.PNG)
+![](../Images/VS19.PNG)
 
 **Note**: VS Code uses JSON files for all of its various configurations; `launch.json` is the standard name for a file containing debugging configurations.
 
@@ -143,11 +143,11 @@ These different configurations are fully explained in Debugging configurations; 
 
 The debugger will stop at the first line of the file breakpoint. The current line is indicated with a yellow arrow in the left margin. If you examine the **Local** variables window at this point, you will see now the defined msg variable appears in the **Local** pane.
 
-!![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/VS20.PNG)
+!![](../Images/VS20.PNG)
 
 A debug toolbar appears along the top with the following commands from left to right: continue (`F5)`, step over (`F10`), step into (`F11`), step out (`Shift+F11`), restart (`Ctrl+Shift+F5`), and stop (`Shift+F5`).
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/VS21.PNG)
+![](../Images/VS21.PNG)
 
 The Status Bar also changes color (orange in many themes) to indicate that you're in debug mode. The Python Debug Console also appears automatically in the lower right panel to show the commands being run, along with the program output.
 
@@ -157,7 +157,7 @@ To continue running the program, select the continue command on the debug toolba
 
 You can also work with variables in the **Debug Console** (If you don't see it, select **Debug Console** in the lower right area of VS Code or select it from the ... menu). Then try entering the following lines, one by one, at the > prompt at the bottom of the console:
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/VS22.PNG)
+![](../Images/VS22.PNG)
 
 Select the blue **Continue** button on the toolbar again (or press F5) to run the program to completion. "Hello World" appears in the **Python Debug Console** if you switch back to it and VS Code exits debugging mode once the program is complete.
 
@@ -190,13 +190,13 @@ Unless you're using an Anaconda distribution or have previously installed the `m
 
 To install the `matplotlib` package (which also installs `numpy` as a dependency), stop the debugger and use the Command Palette to run `Terminal: Create New Integrated Terminal (Ctrl+Shift+P`). This command opens a command prompt for your selected interpreter.
 
-A best practice among Python developers is to avoid installing packages into a global interpreter environment. You instead use a project-specific `virtual environment` that contains a copy of a global interpreter. Once you activate that environment, any packages you then install are isolated from other environments. Such isolation reduces many complications that can arise from conflicting package versions. As mentioned earlier in this document [Getting started with Conda](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Documents/Starting_with_conda.md) explains how to install and create your virtual environment with conda. If you haven't done this yet and would like to create a `virtual environment` with the required packages using `python` instead of Conda, enter the following commands as appropriate for your operating system:
+A best practice among Python developers is to avoid installing packages into a global interpreter environment. You instead use a project-specific `virtual environment` that contains a copy of a global interpreter. Once you activate that environment, any packages you then install are isolated from other environments. Such isolation reduces many complications that can arise from conflicting package versions. As mentioned earlier in this document [Getting started with Conda](../Documents/Starting_with_conda.md) explains how to install and create your virtual environment with conda. If you haven't done this yet and would like to create a `virtual environment` with the required packages using `python` instead of Conda, enter the following commands as appropriate for your operating system:
 
 1. Create and activate the virtual environment
 
 **Note:** When you create a new virtual environment, you should be prompted by VS Code to set it as the default for your workspace folder. If selected, the environment will automatically be activated when you open a new terminal.
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/VS23.PNG)
+![](../Images/VS23.PNG)
 
 **For Windows**
 
@@ -230,7 +230,7 @@ If the activate command generates the message "Activate.ps1 is not digitally sig
 
 4. Re-run the program (with or without the debugger) and after a few moments a plot window appears with the output:
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/VS24.PNG)
+![](../Images/VS24.PNG)
 
 5. Once you are finished, type `deactivate` ( type`conda deactivate` if you are using conda as your interpreter) in the terminal window to deactivate the virtual environment.
 
@@ -248,4 +248,4 @@ There is then much more to explore with Python in Visual Studio Code:
 * [Testing](https://code.visualstudio.com/docs/python/testing) - Configure test environments and discover, run, and debug tests.
 * [Settings reference](https://code.visualstudio.com/docs/python/settings-reference) - Explore the full range of Python-related settings in VS Code.
 
-The next tutorial [Data Science in Visual Studio Code](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Documents/DS_Visual_Studio_Code.md) is a tutorial demonstrating how you can use Visual Studio Code and common data science libraries to explore a basic data science scenario on a Jupyter notebook. 
+The next tutorial [Data Science in Visual Studio Code](../Documents/DS_Visual_Studio_Code.md) is a tutorial demonstrating how you can use Visual Studio Code and common data science libraries to explore a basic data science scenario on a Jupyter notebook. 
