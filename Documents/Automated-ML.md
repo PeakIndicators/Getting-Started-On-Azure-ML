@@ -15,8 +15,8 @@ In this tutorial, we will guide you on how to do the following tasks:
 
 If you have not already done so, please:
 
-* Create a Compute Cluster, this Automated ML feature won't work with a compute instance, it requires a compute cluster. More details can be seen in: [compute instance](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Documents/Create-Compute-Instance.md).
-* Create a Datastore and a Dataset with the data you want to use. For more information see: [Create a Datastore using the web portal](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Documents/Work-With-Data-in-Azure-ML.md) and [Create Datasets using the web portal](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Documents/Work-With-Data-in-Azure-ML-Datasets.md).
+* Create a Compute Cluster, this Automated ML feature won't work with a compute instance, it requires a compute cluster. More details can be seen in: [compute instance](../Documents/Create-Compute-Instance.md).
+* Create a Datastore and a Dataset with the data you want to use. For more information see: [Create a Datastore using the web portal](../Documents/Work-With-Data-in-Azure-ML.md) and [Create Datasets using the web portal](../Documents/Work-With-Data-in-Azure-ML-Datasets.md).
 
 The steps described below show how to create a simple classification model using automated machine learning in the Azure Machine Learning studio. This classification model predicts if a client will subscribe to a fixed term deposit with a financial institution.
 Another example, using time-series forecasting model, can be seen here: https://docs.microsoft.com/en-us/azure/machine-learning/tutorial-automated-ml-forecast
@@ -29,13 +29,13 @@ Anyway, independent on the type of model, the steps are very similar.
 
 2. Select **Automated ML** on the left pane under **Author** section.
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/automatedml1.png)
+![](../Images/automatedml1.png)
 
 3. Select **+New automated ML** run.
 
 4. A new window will appear where you need to select the dataset you want to work with and then press **Next**.
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/automatedml2.PNG)
+![](../Images/automatedml2.PNG)
 
 5. After loading and configuring the data, the next step is to set up the experiment on the  **Configure Run** section. This setup includes experiment design tasks such as, selecting the size of your compute environment and specifying what column you want to predict. Populate the Configure Run form as follows:
 
@@ -45,14 +45,14 @@ Anyway, independent on the type of model, the steps are very similar.
 
 * Select the compute cluster created for this feature.
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/automatedml3.PNG)
+![](../Images/automatedml3.PNG)
 
 Click **Next**.
 
 6. On the **Task type and settings** form, complete the setup for your automated ML experiment by specifying the machine learning task type and configuration settings. 
 Select the **machine learning task type** and then select *View additional configuration settings* and populate the fields as follows. 
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/automatedml4.PNG)
+![](../Images/automatedml4.PNG)
 
 These settings are to better control the training job. Otherwise, defaults are applied based on experiment selection and data.
 
@@ -65,17 +65,17 @@ These settings are to better control the training job. Otherwise, defaults are a
 |Validation|	Choose a cross-validation type and number of tests.|
 |Concurrency|	The maximum number of parallel iterations executed per iteration|
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/automatedml5.PNG)
+![](../Images/automatedml5.PNG)
 
 Once all the setting are properly filled, select **Save**.
 
 7. Select **View featurization settings**. 
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/automatedml6.PNG)
+![](../Images/automatedml6.PNG)
 
 Configure accordingly.
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/automatedml7.PNG)
+![](../Images/automatedml7.PNG)
 
 Select **Save**.
 
@@ -85,7 +85,7 @@ Select **Save**.
 
 _Preparation takes 10-15 minutes to prepare the experiment run. Once running, it takes 2-3 minutes more for each iteration._
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/automatedml8.PNG)
+![](../Images/automatedml8.PNG)
 
 
 ### Explore automated ML models
@@ -97,7 +97,7 @@ Once the automated ML run finishes or even when it's running. You can check the 
 
 The following navigates through the Details and the Metrics tabs to view the selected model's properties, metrics, and performance charts.
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/automatedml9.gif)
+![](../Images/automatedml9.gif)
 
 ### Deploy the best model
 
@@ -109,11 +109,11 @@ Deploying a model might take about 20 minutes to complete. The deployment proces
 
 1. Select the **best model** to open the model-specific page.
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/automatedml10.PNG)
+![](../Images/automatedml10.PNG)
  
 2. Select the **Deploy** button in the top-left.
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/automatedml11.PNG)
+![](../Images/automatedml11.PNG)
 
 3. Populate the Deploy a model pane with the following:
 
@@ -123,7 +123,7 @@ Deploying a model might take about 20 minutes to complete. The deployment proces
    * Enable authentication - if authentication is required for the web service
    * Use custom deployments - when disables it allows for the default driver file (scoring script) and environment file to be autogenerated.
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/automatedml12.PNG)
+![](../Images/automatedml12.PNG)
 
 4. Select **Deploy**.
 
@@ -131,6 +131,6 @@ A green success message appears at the top of the Run screen, and in the Model s
 
 Once completed, the webservice can also be seen from the **Endpoints** on the left pane under **Assets** section, then **Real-time Endpoints**
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/automatedml13.PNG)
+![](../Images/automatedml13.PNG)
  
 Now we have an operational web service to generate predictions.
