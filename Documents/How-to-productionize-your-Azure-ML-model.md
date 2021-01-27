@@ -167,3 +167,19 @@ A theme of the above steps is that your **retraining should be automated, not ad
 
 ##### Azure Machine Learning designer
 
+This approach can only be used when the model was designed using Azure Machine Learning Designer, more information [here](../Documents/studio-designer.md). 
+This will mean the user will have a published training pipeline and this can be used to retrain the model on new data. To retrain the user can submit runs from a pipeline endpoint from the studio workspace or programmatically.
+
+###### Submit runs by using the studio portal
+Use the following steps to submit a parameterized pipeline endpoint run from the studio portal:
+
+1. Go to the Endpoints page in your studio workspace.
+2. Select the Pipeline endpoints tab. Then, select your pipeline endpoint.
+3. Select the Published pipelines tab. Then, select the pipeline version that you want to run.
+4. Select Submit.
+In the setup dialog box, you can specify the parameters values for the run. For this example, update the data path to train your model using a non-US dataset.
+
+##### Submit runs by using code
+You can find the REST endpoint of a published pipeline in the overview panel. By calling the endpoint, you can retrain the published pipeline.
+
+To make a REST call, you need an OAuth 2.0 bearer-type authentication header. For information about setting up authentication to your workspace and making a parameterized REST call.
