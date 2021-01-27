@@ -6,7 +6,7 @@ One of the benefits of Azure Machine Learning is the ability to create cloud-bas
 
 1. In Azure Machine Learning studio, view the Compute page. This is where you’ll manage compute resources for your data science activities. There are four kinds of compute resource you can create:
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/TypesOfComputeInstances.PNG)
+![](../Images/TypesOfComputeInstances.PNG)
 
 * **Compute instances:** Development workstations that data scientists can use to work with data and models.
 * **Compute clusters:**  Scalable clusters of virtual machines for on-demand processing of experiment code.
@@ -22,7 +22,7 @@ For most scenarios a compute instance is enough for developing and testing code.
 * **Virtual machine type:** Select *CPU* for general use unless you know your code will use GPU (example for training deep learning models
 * **Virtual machine size:** *Standard_DS2_v2* if you want to run AutoML runs and pipeline runs select *Standard_DS3_v2*. Select a compute with higher RAM if you are training on large datasets or want to do real-time inferencing, etc.  
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/NewCompute1.PNG)
+![](../Images/NewCompute1.PNG)
 
 * **Compute name:** *enter a unique name* 
 
@@ -36,13 +36,13 @@ For most scenarios a compute instance is enough for developing and testing code.
     * **Enable virtual network:** Unselected (you would typically use this in an enterprise environment to enhance network security)
     * **Assign to another user:** Unselected (you can use this to assign a compute instance to another data scientist, as stated before, *a compute instance cannot be shared with other users in your workspace—each individual will have to create their own compute instance.*, this option gives the ability of creating a compute instance for someone else but then only that person will be able to use it)
     
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/NewCompute2.PNG)
+![](../Images/NewCompute2.PNG)
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/NewCompute3.PNG)
+![](../Images/NewCompute3.PNG)
   
 3. Wait for the compute instance to start and its status to change to **Running**.
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/NewCompute4.PNG)
+![](../Images/NewCompute4.PNG)
 
 ## Stop Compute Instance
 
@@ -50,4 +50,4 @@ For most scenarios a compute instance is enough for developing and testing code.
 
 To stop your compute instance please follow the steps provided in:
 
-* [Stop a Compute Instance](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Documents/Stop-Compute-Instance.md)
+* [Stop a Compute Instance](../Documents/Stop-Compute-Instance.md)
