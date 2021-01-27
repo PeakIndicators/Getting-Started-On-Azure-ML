@@ -38,7 +38,7 @@ The first thing you have to do to build an application in Azure Machine Learning
 &nbsp;
 4. Select **Create a new resource group**.
 &nbsp;
-5. Name your resource group "TeamWorkspace-rg" and press Enter.
+5. Name your resource group "TeamWorkspace-rg" and press Enter. (In this example we are creating a new Azure Machine Learning Studio in a new resource group, but as stated before an existing studio can be used and the same occurs with an existing resource group).  
 &nbsp;
 6. Choose a location for your workspace. It's recommended to choose a location that is closest to the location you plan to deploy your model. For example, "UK South".
 &nbsp;
@@ -54,7 +54,7 @@ One or more experiments can be created in your workspace to track and analyze in
 
 1. On the Visual Studio Code activity bar, select the **Azure** icon. The Azure Machine Learning view appears.
 
-2. Expand your **subscription** node.
+2. Expand your **Subscription** node.
 
 3. Expand the **TeamWorkspace** node.
 
@@ -66,7 +66,7 @@ One or more experiments can be created in your workspace to track and analyze in
 
 6. Name your experiment "Tutorial-VSCode-MNIST" and press **Enter** to create the new experiment.
 
-Like workspaces, a request is sent to Azure to create an experiment with the provided configurations. After a few minutes, the new experiment appears in the *Experiments* node of your workspace.
+A request is sent to Azure to create an experiment with the provided configurations. After a few minutes, the new experiment appears in the *Experiments* node of your Studio.
 
 ## Configure Compute Targets
 A compute target is the computing resource or environment where you run scripts and deploy trained models. For more information, see the [Azure Machine Learning compute targets documentation](https://docs.microsoft.com/en-us/azure/machine-learning/concept-compute-target).
@@ -75,7 +75,7 @@ To create a compute target:
 
 1. On the Visual Studio Code activity bar, select the **Azure** icon. The Azure Machine Learning view appears.
 &nbsp;
-2. Expand your **subscription** node.
+2. Expand your **Subscription** node.
 &nbsp;
 3. Expand the **TeamWorkspace** node.
 &nbsp;
