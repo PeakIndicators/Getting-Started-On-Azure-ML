@@ -146,4 +146,17 @@ Once the model is deployed, the data scientist wants to be able to collect metri
 #### Retrain the Model
 ![](../Images/devops18.PNG)
 
-As you collect more metrics and additional data becomes available for training, there may be a need to be able to retrain the model in the hope of improving its accuracy and/or performance. Also, since this is a continuous process of integrations and deployment (CI/CD), there’s a need for this process to be automated. This process of retraining and effective CI/CD of ML models is the biggest strength of Azure Machine Learning.
+Often, you'll want to validate your model, update it or even retrain it from scratch, as you receive new information. Sometimes, receiving new data is an expected part of the domain. Other times model performance can degrade in the face of such things as changes to a particular sensor, natural data changes such as seasonal effects or features shifting in their relation to other features.
+
+There is no universal answer to "How do I know if I should retrain?" but Azure ML event and monitoring tools previously discussed are good starting points for automation. 
+
+Once you have decided to retrain, you should:
+
+* Preprocess your data using a repeatable, automated process
+* Train your new model
+* Compare the outputs of your new model to those of your old model
+* Use predefined criteria to choose whether to replace your old model
+
+This process of retraining and effective Continous Integration/Continuous Development of ML models is the biggest strength of Azure Machine Learning.
+
+
