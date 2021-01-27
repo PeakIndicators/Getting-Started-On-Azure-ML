@@ -1,4 +1,4 @@
-# Set up Azure Machine Learning Visual Studio Code extension 
+# Azure Machine Learning in Visual Studio Code
 
 Learn how to install and run scripts using the Azure Machine Learning Visual Studio Code extension.
 
