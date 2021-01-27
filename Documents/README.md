@@ -25,6 +25,7 @@ Content:
   * [Getting Started with Python in Visual Studio Code](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Documents/Installing_VS_Code.md)
   * [Data Science in Visual Studio Code](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Documents/DS_Visual_Studio_Code.md)
   * [Azure Machine Learning in Visual Studio Code](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Documents/VS_Code_Azure_ML_Git.md)
+  * [Train and deploy an image classification TensorFlow model using the Azure Machine Learning Visual Studio Code Extension](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Documents/Train_Deploy_Model_AzureML_VSCode_Extension_GitHub.md)
 * [Integrate with Git](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Documents/Integrate-with-Git.md)
 * [Integrate with Azure Key Vault secrets](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Documents/Integrate-with-Azure-Key-Vault-secrets.MD)
 * [JupyterLab notebook templates](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/tree/main/labs)
