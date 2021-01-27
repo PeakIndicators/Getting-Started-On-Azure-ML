@@ -32,19 +32,19 @@ In most machine learning projects, you will likely need to work with data source
 
 ## Use datastores
 
-To add a datastore to your workspace, you can register it using the graphical interface in Azure Machine Learning studio as shown on [this page](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Documents/Work-With-Data-in-Azure-ML.md) or you can use the Azure Machine Learning SDK. For example, the following code registers an Azure Storage blob container as a datastore named **blob_data**.
+To add a datastore to your workspace, you can register it using the graphical interface in Azure Machine Learning studio as shown on [this page](../Documents/Work-With-Data-in-Azure-ML.md) or you can use the Azure Machine Learning SDK. For example, the following code registers an Azure Storage blob container as a datastore named **blob_data**.
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/41.PNG)
+![](../Images/41.PNG)
 
 ### Managing datastores
 
-You can view and manage datastores in Azure Machine Learning Studio, as shown on [this page](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Documents/Work-With-Data-in-Azure-ML.md) or you can use the Azure Machine Learning SDK. For example, the following code lists the names of each datastore in the workspace.
+You can view and manage datastores in Azure Machine Learning Studio, as shown on [this page](../Documents/Work-With-Data-in-Azure-ML.md) or you can use the Azure Machine Learning SDK. For example, the following code lists the names of each datastore in the workspace.
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/42.PNG)
+![](../Images/42.PNG)
 
 You can get a reference to any datastore by using the Datastore.get() method as shown here:
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/43.PNG)
+![](../Images/43.PNG)
 
 The workspace always includes a *default* datastore (initially, this is the built-in **workspaceblobstore** datastore), which you can retrieve by using the **get_default_datastore()** method of a **Workspace** object, like this:
 
@@ -73,14 +73,14 @@ Datasets are typically based on files in a datastore, though they can also be ba
 * **File:** The dataset presents a list of file paths that can be read as though from the file system. Use this type of dataset when your data is unstructured or when you need to process the data at the file level (for example, to train a convolutional neural network from a set of image files).
 
 ## Creating and registering datasets
-You can use the visual interface in Azure Machine Learning studio as shown on [this page](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Documents/Work-With-Data-in-Azure-ML.md) or the Azure Machine Learning SDK to create datasets from individual files or multiple file paths. The paths can include wildcards (for example, */files/*.csv*) making it possible to encapsulate data from a large number of files in a single dataset.
+You can use the visual interface in Azure Machine Learning studio as shown on [this page](../Documents/Work-With-Data-in-Azure-ML.md) or the Azure Machine Learning SDK to create datasets from individual files or multiple file paths. The paths can include wildcards (for example, */files/*.csv*) making it possible to encapsulate data from a large number of files in a single dataset.
 
 After you've created a dataset, you can *register* it in the workspace to make it available for use in experiments and data processing pipelines later.
 
 ## Creating and registering tabular datasets
 To create a tabular dataset using the SDK, use the **from_delimited_files** method of the **Dataset.Tabular class**, like this:
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/44.PNG)
+![](../Images/44.PNG)
 
 The dataset in this example includes data from two file paths within the default datastore:
 
@@ -92,7 +92,7 @@ After creating the dataset, the code registers it in the workspace with the name
 ## Creating and registering file datasets
 To create a file dataset using the SDK, use the **from_files** method of the **Dataset.File** class, like this:
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/45.PNG)
+![](../Images/45.PNG)
 
 The dataset in this example includes all .jpg files in the **data/files/images** path within the default datastore.
 
@@ -106,14 +106,14 @@ After registering a dataset, you can retrieve it by using any of the following t
 
 Both of these techniques are shown in the following code:
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/46.PNG)
+![](../Images/46.PNG)
 
 ## Dataset versioning
 Datasets can be *versioned*, enabling you to track historical versions of datasets that were used in experiments and reproduce those experiments with data in the same state.
 
 You can create a new version of a dataset by registering it with the same name as a previously registered dataset and specifying the **create_new_version** property:
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/47.PNG)
+![](../Images/47.PNG)
 
 In this example, the .png files in the **images** folder have been added to the definition of the **img_paths** dataset example used in the previous topic.
 
@@ -130,7 +130,7 @@ Datasets are the primary way to pass data to experiments that train models.
 ## Work with tabular datasets
 You can read data directly from a tabular dataset by converting it into a Pandas or Spark dataframe:
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/48.PNG)
+![](../Images/48.PNG)
 
 ## Pass a tabular dataset to an experiment script
 When you need to access a dataset in an experiment script, you must pass the dataset to the script. There are two ways you can do this:
@@ -143,27 +143,27 @@ You can pass a tabular dataset as a script argument. When you take this approach
 
 *ScriptRunConfig:*
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/49.PNG)
+![](../Images/49.PNG)
 
 *Script:*
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/50.PNG)
+![](../Images/50.PNG)
 
 ### Use a named input for a tabular dataset
 Alternatively, you can pass a tabular dataset as a *named input*. In this approach, you use the **as_named_input** method of the dataset to specify a name for the dataset. Then in the script, you can retrieve the dataset by name from the run context's **input_datasets** collection without needing to retrieve it from the workspace. Note that, if you use this approach, you still need to include a script argument for the dataset, even though you don’t actually use it to retrieve the dataset.
 
 *ScriptRunConfig:*
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/51.PNG)
+![](../Images/51.PNG)
 
 *Script:*
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/52.PNG)
+![](../Images/52.PNG)
 
 ## Work with file datasets
 When working with a file dataset, you can use the **to_path()** method to return a list of the file paths encapsulated by the dataset:
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/53.PNG)
+![](../Images/53.PNG)
 
 ### Pass a file dataset to an experiment script
 Just as with a Tabular dataset, there are two ways you can pass a file dataset to a script:
@@ -178,22 +178,22 @@ You can pass a file dataset as a script argument. Unlike with a tabular dataset,
 
 *ScriptRunConfig:*
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/54.PNG)
+![](../Images/54.PNG)
 
 *Script:*
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/55.PNG)
+![](../Images/55.PNG)
 
 #### Use a named input for a file dataset
 You can also pass a file dataset as a *named input*. In this approach, you use the **as_named_input** method of the dataset to specify a name before specifying the access mode. Then in the script, you can retrieve the dataset by name from the run context's **input_datasets** collection and read the files from there. As with tabular datasets, if you use a named input, you still need to include a script argument for the dataset, even though you don’t actually use it to retrieve the dataset.
 
 *ScriptRunConfig:*
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/56.PNG)
+![](../Images/56.PNG)
 
 *Script:*
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/57.PNG)
+![](../Images/57.PNG)
 
 ## Exercise - Work with data
 
@@ -203,9 +203,9 @@ In this exercise, you’ll explore *datastores* and *datasets*, which are the pr
 
 ### Before you start
 
-In this tutorial we provide some jupyter notebook templates (more detail in: [Jupyter Lab notebook templates](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/tree/main/labs)).
+In this tutorial we provide some jupyter notebook templates (more detail in: [Jupyter Lab notebook templates](../labs)).
 
-If you have not already done so, create a [compute instance](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Documents/Create-Compute-Instance.md) and ensure you have [cloned the notebooks](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Documents/Clone-and-Run-a-Notebook.md) required for this exercise.
+If you have not already done so, create a [compute instance](../Documents/Create-Compute-Instance.md) and ensure you have [cloned the notebooks](../Documents/Clone-and-Run-a-Notebook.md) required for this exercise.
 
 ### Open Jupyter
 
@@ -223,5 +223,5 @@ Experiments in Azure Machine Learning need to be initiated from some sort of *co
 3. When you have finished running the code in the notebook, on the **File** menu, click **Close and Halt** to close it and shut down its Python kernel. Then close all Jupyter browser tabs.
 
 ### Clean-up
-If you’re finished working with Azure Machine Learning for now refer to [this page](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Documents/Stop-Compute-Instance.md) to stop your compute instance.  
+If you’re finished working with Azure Machine Learning for now refer to [this page](../Documents/Stop-Compute-Instance.md) to stop your compute instance.  
 
