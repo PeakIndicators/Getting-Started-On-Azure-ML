@@ -4,7 +4,7 @@
 
 In machine learning, *inferencing* refers to the use of a trained model to predict labels for new data on which the model has not been trained. Often, the model is deployed as part of a service that enables applications to request immediate or *real-time* predictions for individual or small numbers of data observations.
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/Deploy.PNG)
+![](../Images/Deploy.PNG)
 
 In Azure Machine learning, you can create real-time inferencing solutions by deploying a model as a service, hosted in a containerized platform such as Azure Kubernetes Services (AKS).
 
@@ -29,21 +29,21 @@ After successfully training a model, you must register it in your Azure Machine 
 
 To register a model from a local file, you can use the **register** method of the **Model** object as shown here:
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/18.PNG)
+![](../Images/18.PNG)
 
 Alternatively, if you have a reference to the **Run** used to train the model, you can use its **register_model** method as shown here:
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/19.PNG)
+![](../Images/19.PNG)
 
 To view your registered model navigate to the **Models** page in [Azure Machine Learning studio](https://ml.azure.com/?tid=168c1fe3-a841-49b5-b692-7b3132c0a997&wsid=/subscriptions/52cbf6c7-01f2-4df2-bae9-c80cee4db7eb/resourcegroups/churn-prediction-azure-tutorial/workspaces/churn-machine-learning-ws). Here you will be able view your models.
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/72.PNG)
+![](../Images/72.PNG)
 
 Select the model you would like more information on and you will get additional details such as logged metrics, which experiment generated the model, model version and a serialized file containing the model. 
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/73.PNG)
+![](../Images/73.PNG)
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/74.PNG)
+![](../Images/74.PNG)
 
 
 ## 2. Define an inference configuration
@@ -63,26 +63,26 @@ Create the *entry script* (sometimes referred to as the *scoring script*) for th
 
 Typically, you use the **init** function to load the model from the model registry and use the **run** function to generate predictions from the input data. The following example script shows this pattern:
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/20.PNG)
+![](../Images/20.PNG)
 
 ### Creating an environment
 Your service requires a Python environment in which to run the entry script, you can configure using Conda configuration file. An easy way to create this file is to use a **CondaDependencies** class to create a default environment (which includes the **azureml-defaults** package and commonly-used packages like **numpy** and **pandas**), add any other required packages and then serialize the environment to a string and save it:
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/21.PNG)
+![](../Images/21.PNG)
 
 ### Combining the script and environment in an InferenceConfig
 After creating the entry script and environment configuration file, you can combine them in an **InferenceConfig** for the service like this:
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/22.PNG)
+![](../Images/22.PNG)
 
 ## 3. Define a deployment configuration
 Now that you have the entry script and environment, you need to configure the compute to which the service will be deployed. If you are deploying to an AKS cluster, you must create the cluster and a compute target for it before deploying:
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/23.PNG)
+![](../Images/23.PNG)
 
 With the compute target created, you can now define the deployment configuration, which sets the target-specific compute specification for the containerized deployment:
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/24.PNG)
+![](../Images/24.PNG)
 
 The code to configure an ACI deployment is similar, except that you do not need to explicitly create an ACI compute target and you must use the **deploy_configuration** class from the **azureml.core.webservice.AciWebservice** namespace. Similarly, you can use the azureml.core.webservice.LocalWebservice namespace to configure a local Docker-based service.
 
@@ -92,7 +92,7 @@ The code to configure an ACI deployment is similar, except that you do not need 
 
 After all of the configuration is prepared, you can deploy the model. The easiest way to do this is to call the **deploy** method of the **Model** class, like this:
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/25.PNG)
+![](../Images/25.PNG)
 
 For ACI or local services, you can omit the **deployment_target parameter** (or set it to **None**).
 
@@ -105,21 +105,21 @@ After deploying a real-time service, you can consume it from client applications
 ### Using the Azure Machine Learning SDK
 For testing, you can use the Azure Machine Learning SDK to call a web service through the run method of a WebService object that references the deployed service. Typically, you send data to the run method in JSON format with the following structure:
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/26.PNG)
+![](../Images/26.PNG)
 
 The response from the **run** method is a JSON collection with a prediction for each case that was submitted in the data. The following code sample calls a service and displays the response:
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/27.PNG)
+![](../Images/27.PNG)
 
 ### Using a REST endpoint
 
 In production, most client applications will not include the Azure Machine Learning SDK, and will consume the service through its REST interface. You can determine the endpoint of a deployed service in Azure machine Learning studio or by retrieving the **scoring_uri** property of the **Webservice** object in the SDK, like this:
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/28.PNG)
+![](../Images/28.PNG)
 
 With the endpoint known, you can use an HTTP POST request with JSON data to call the service. The following example shows how to do this using Python:
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/29.PNG)
+![](../Images/29.PNG)
 
 ### Authentication
 
@@ -138,7 +138,7 @@ For token-based authentication, your client application needs to use service-pri
 
 To make an authenticated call to the service's REST endpoint, you must include the key or token in the request header like this:
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/30.PNG)
+![](../Images/30.PNG)
 
 ## Troubleshooting service deployment
 
@@ -148,7 +148,7 @@ There are a lot of elements to a real-time service deployment, including the tra
 ### Check the service state
 As an initial troubleshooting step, you can check the status of a service by examining its **state**:
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/31.PNG)
+![](../Images/31.PNG)
 
 **Note:** To view the **state** of a service, you must use the compute-specific service type (for example **AksWebservice**) and not a generic **WebService** object.
 
@@ -165,7 +165,7 @@ The logs include detailed information about the provisioning of the service, and
 ### Deploy to a local container
 Deployment and runtime errors can be easier to diagnose by deploying the service as a container in a local Docker instance, like this:
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/32.PNG)
+![](../Images/32.PNG)
 
 You can then test the locally deployed service using the SDK:
 
@@ -183,9 +183,9 @@ There’s no point in training and registering machine learning models if you do
 
 ### Before you start
 
-In this tutorial we provide some jupyter notebook templates that you can run (more detail in: [Jupyter Lab notebook templates](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/tree/main/labs)).
+In this tutorial we provide some jupyter notebook templates that you can run (more detail in: [Jupyter Lab notebook templates](../labs)).
 
-If you have not already done so, create a [compute instance](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Documents/Create-Compute-Instance.md) and ensure you have [cloned the notebooks](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Documents/Clone-and-Run-a-Notebook.md) required for this exercise.
+If you have not already done so, create a [compute instance](../Documents/Create-Compute-Instance.md) and ensure you have [cloned the notebooks](../Documents/Clone-and-Run-a-Notebook.md) required for this exercise.
 
 ### Open Jupyter
 
@@ -203,4 +203,4 @@ In this exercise, the code to deploy a model as a real-time inferencing service 
 3. When you have finished running the code in the notebook, on the **File** menu, click **Close and Halt** to close it and shut down its Python kernel. Then close all Jupyter browser tabs.
 
 ### Clean-up
-If you’re finished working with Azure Machine Learning for now refer to [this page](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Documents/Stop-Compute-Instance.md) to stop your compute instance.  
+If you’re finished working with Azure Machine Learning for now refer to [this page](../Documents/Stop-Compute-Instance.md) to stop your compute instance.  
