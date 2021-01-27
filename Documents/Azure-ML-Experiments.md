@@ -2,14 +2,14 @@
 
 Like any scientific discipline, data science involves running experiments; typically to explore data or to build and evaluate predictive models. In Azure Machine Learning, an experiment is a named process, usually the running of a script or a pipeline, that can generate metrics and outputs and be tracked in the Azure Machine Learning studio.
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/Azure-ML-Experiments.PNG)
+![](../Images/Azure-ML-Experiments.PNG)
 
 An experiment can be run multiple times, with different data, code or settings; Azure Machine Learning tracks each run, enabling you to view run history and compare results for each run.
 
 ## The Experiment Run Context
 When you submit an experiment, you use its run context to initialize and end the experiment run that is tracked in Azure Machine Learning, as shown in the following code sample:
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/1.PNG)
+![](../Images/1.PNG)
 
 ## Logging Metrics and Creating Outputs
 Experiments are most useful when they produce metrics and outputs that can be tracked across runs.
@@ -27,7 +27,7 @@ Every experiment generates log files that include the messages that would be wri
 
 As an example, the following code records the number of observations (records) in a CSV file:
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/2.PNG)
+![](../Images/2.PNG)
 
 ### Retrieving and Viewing Logged Metrics
 You can view the metrics logged by an experiment run in Azure Machine Learning studio or by using the **RunDetails** widget in a notebook, as shown here:
@@ -85,13 +85,13 @@ You can run an experiment inline using the `start_logging` method of the **Exper
 
 An experiment script is just a Python code file that contains the code you want to run in the experiment. To access the experiment run context (which is needed to log metrics) the script must import the `azureml.core.Run` class and call its `get_context` method. The script can then use the run context to log metrics, upload files, and complete the experiment, as shown in the following example:
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/3.PNG)
+![](../Images/3.PNG)
 
 To run a script as an experiment, you must define a *script configuration* that defines the script to be run and the Python environment in which to run it. This is implemented by using a **ScriptRunConfig** object.
 
 For example, the following code could be used to run an experiment based on a script in the **experiment_files** folder (which must also contain any files used by the script, such as the *data.csv* file in previous script code example):
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/4.PNG)
+![](../Images/4.PNG)
 
 **!Note:** 
 An implicitly created RunConfiguration object defines the Python environment for the experiment, including the packages available to the script. If your script depends on packages that are not included in the default environment, you must associate the ScriptRunConfig with an Environment object that makes use of a CondaDependencies object to specify the Python packages required. Runtime environments are discussed in more detail later in this tutorial.
@@ -100,35 +100,35 @@ An implicitly created RunConfiguration object defines the Python environment for
 
 In Jupyter Notebooks, you can use the **RunDetails** widget to see a visualization of the run details.
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/58.PNG)
+![](../Images/58.PNG)
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/59.PNG)
+![](../Images/59.PNG)
 
 ## View run Details in Azure Machine Learning studio
 
 The **RunDetails** widget which produces the visualization above includes a link to view run details in Azure Machine Learning studio. Click this to open a new browser tab with the run details (you can also just open Azure Machine Learning studio and find the run on the Experiments page as shown below).
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/60.PNG)
+![](../Images/60.PNG)
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/62.PNG)
+![](../Images/62.PNG)
 
 When viewing the run in Azure Machine Learning studio, you can explore many details of your run including:
 
 The **Details** tab containing the general properties of the experiment run.
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/Experiment_Details.PNG)
+![](../Images/Experiment_Details.PNG)
 
 The **Metrics** tab which enables you to select logged metrics and view them as tables or charts.
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/Experiment_Metrics.PNG)
+![](../Images/Experiment_Metrics.PNG)
 
 ## Exercise - Run Experiments
 
 ### Before you start
 
-In this tutorial we provide some jupyter notebook templates that you can run (more detail in: [Jupyter Lab notebook templates](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/tree/main/labs)).
+In this tutorial we provide some jupyter notebook templates that you can run (more detail in: [Jupyter Lab notebook templates](../labs)).
 
-If you have not already done so, create a [compute instance](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Documents/Create-Compute-Instance.md) and ensure you have [cloned the notebooks](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Documents/Clone-and-Run-a-Notebook.md) required for this exercise.
+If you have not already done so, create a [compute instance](../Documents/Create-Compute-Instance.md) and ensure you have [cloned the notebooks](../Documents/Clone-and-Run-a-Notebook.md) required for this exercise.
 
 ### Open Jupyter
 
@@ -146,4 +146,4 @@ Experiments in Azure Machine Learning need to be initiated from some sort of *co
 3. When you have finished running the code in the notebook, on the **File** menu, click **Close and Halt** to close it and shut down its Python kernel. Then close all Jupyter browser tabs.
 
 ### Clean-up
-If you’re finished working with Azure Machine Learning for now refer to [this page](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Documents/Stop-Compute-Instance.md) to stop your compute instance.  
+If you’re finished working with Azure Machine Learning for now refer to [this page](../Documents/Stop-Compute-Instance.md) to stop your compute instance.  
