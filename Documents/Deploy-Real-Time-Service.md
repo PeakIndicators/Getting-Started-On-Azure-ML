@@ -43,7 +43,7 @@ Select the model you would like more information on and you will get additional 
 
 ![](../Images/73.PNG)
 
-![](../Images/74.PNG)
+![](../Images/74.png)
 
 
 ## 2. Define an inference configuration
