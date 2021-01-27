@@ -14,14 +14,14 @@ You will:
 * Deploy a model
 
 Before you work through the rest of the tutorial ensure you have:
-* Installed Visual Studio Code and the Python Extension as described [here](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Documents/Installing_VS_Code.md).
-* Installed the Azure Machine Learning Visual Studio Code extension as described [here](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Documents/VS_Code_Azure_ML_Git.md)
+* Installed Visual Studio Code and the Python Extension as described [here](../Documents/Installing_VS_Code.md).
+* Installed the Azure Machine Learning Visual Studio Code extension as described [here](../Documents/VS_Code_Azure_ML_Git.md)
 
 ## Understand the code
 
 The code for this tutorial uses TensorFlow to train an image classification machine learning model that categorizes handwritten digits from 0-9. It does so by creating a neural network that takes the pixel values of 28 px x 28 px image as input and outputs a list of 10 probabilities, one for each of the digits being classified. Below is a sample of what the data looks like.
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/44.PNG)
+![](../Images/44.PNG)
 
 Get the code for this tutorial by downloading and unzipping the [VS Code Tools for AI repository](https://github.com/microsoft/vscode-tools-for-ai/archive/master.zip) anywhere on your computer.
 
@@ -32,7 +32,7 @@ The first thing you have to do to build an application in Azure Machine Learning
 &nbsp;
 2. Right-click your Azure subscription and select **Create Workspace** (if you already have a workspace you want to complete this tutorial on select your workspace and move on to the [next section](#CreateExperiment-1)).
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/VS45.PNG)
+![](../Images/VS45.PNG)
 
 3. By default a name is generated containing the date and time of creation. In the text input box, change the name to "TeamWorkspace" and press **Enter**.
 &nbsp;
@@ -46,7 +46,7 @@ The first thing you have to do to build an application in Azure Machine Learning
 
 At this point, a request to Azure is made to create a new workspace in your account. After a few minutes, the new workspace appears in your subscription node.
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/VS46.PNG)
+![](../Images/VS46.PNG)
 
 ## <a name = 'CreateExperiment-1'></a>Create an experiment
 
@@ -62,7 +62,7 @@ One or more experiments can be created in your workspace to track and analyze in
 
 5. Select **Create Experiment** from the context menu.
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/VS47.PNG)
+![](../Images/VS47.PNG)
 
 6. Name your experiment "Tutorial-VSCode-MNIST" and press **Enter** to create the new experiment.
 
@@ -81,7 +81,7 @@ To create a compute target:
 &nbsp;
 4. Under the workspace node, right-click the **Compute clusters** node and choose **Create Compute**.
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/VS48.PNG)
+![](../Images/VS48.PNG)
 
 5. Select **Azure Machine Learning Compute (AmlCompute)**. Azure Machine Learning Compute is a managed-compute infrastructure that allows the user to easily create a single or multi-node compute that can be used with other users in your workspace.
 
@@ -91,7 +91,7 @@ To create a compute target:
 
 A file appears in VS Code with content similar to the one below:
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/VS49.PNG)
+![](../Images/VS49.PNG)
 
 8. When satisfied with the configuration, open the command palette **(CTRL+SHIFT+P)**.
 
@@ -113,7 +113,7 @@ To create a run configuration:
 3. Expand the **TeamWorkspace > Compute clusters** node.
 &nbsp;
 4. Under the compute node, right-click the **TeamWkspc-com** compute node and choose **Create Run Configuration**.
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/VS50.PNG)
+![](../Images/VS50.PNG)
 &nbsp;
 5. Name your run configuration "MNIST-rc" and press **Enter** to create your run configuration.
 &nbsp;
@@ -127,7 +127,7 @@ To create a run configuration:
 
 A file appears in VS Code with content similar to the one below:
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/VS51.PNG)
+![](../Images/VS51.PNG)
 
 10. Once you're satisfied with your configuration, save it by opening the Command Palette and entering the following command:
 
@@ -162,7 +162,7 @@ To run an Azure Machine Learning experiment:
 4. Right-click the *MNIST* experiment.
 5. Select **Run Experiment**.
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/VS53.PNG)
+![](../Images/VS53.PNG)
 
 When the model is done training, the status label next to the run node updates to "Completed".
 
@@ -180,13 +180,13 @@ To register your model:
 &nbsp;
 4. Get the model outputs generated from training the model. Right-click the Run 1 run node and select **Download outputs**.
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/VS54.PNG)
+![](../Images/VS54.PNG)
 
 5. Choose the directory to save the downloaded outputs to. By default, the outputs are placed in the directory currently opened in Visual Studio Code.
 &nbsp;
 6. Right-click the **Models** node and choose **Register Model**.
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/VS55.PNG)
+![](../Images/VS55.PNG)
 
 7. Name your model "MNIST-TensorFlow-model" and press **Enter**.
 
@@ -196,7 +196,7 @@ To register your model:
 
 A file containing your model configurations appears in Visual Studio Code with similar content to the one below:
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/VS56.PNG)
+![](../Images/VS56.PNG)
 
 10. Once you're satisfied with your configuration, save it by opening the Command Palette and entering the following command:
 
@@ -219,7 +219,7 @@ To deploy a web service as an ACI :
 3. Expand the **TeamWorkspace > Models** node.
 
 4. Right-click the **MNIST-TensorFlow-model** and select **Deploy Service from Registered Model**.
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/VS58.PNG)
+![](../Images/VS58.PNG)
 
 5. Select **Azure Container Instances**.
 
@@ -231,11 +231,10 @@ Provide the dependencies needed to run the script by pressing Enter in the input
 
 A file containing your model configurations appears in Visual Studio Code with similar content to the one below:
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/VS57.PNG)
+![](../Images/VS57.PNG)
 
 9. Once you're satisfied with your configuration, save it by opening the command palette and entering the following command:
 
 `Azure ML: Save and Continue`
 
 At this point, a request is sent to Azure to deploy your web service. This process takes several minutes. Once deployed, the new service appears under the *Endpoints* node.
-
