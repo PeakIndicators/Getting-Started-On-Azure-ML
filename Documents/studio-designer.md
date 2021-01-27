@@ -15,8 +15,8 @@ In part one of the tutorial, we will describe how to:
 
 If you have not already done so, please:
 
-* Create a Compute Cluster, the Designer won't work with a compute instance, it requires a compute cluster. More details can be seen in: [compute instance](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Documents/Create-Compute-Instance.md).
-* Create a Datastore and a Dataset with the data you want to use. For more information see: [Create a Datastore using the web portal](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Documents/Work-With-Data-in-Azure-ML.md) and [Create Datasets using the web portal](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Documents/Work-With-Data-in-Azure-ML-Datasets.md).
+* Create a Compute Cluster, the Designer won't work with a compute instance, it requires a compute cluster. More details can be seen in: [compute instance](../Documents/Create-Compute-Instance.md).
+* Create a Datastore and a Dataset with the data you want to use. For more information see: [Create a Datastore using the web portal](../Documents/Work-With-Data-in-Azure-ML.md) and [Create Datasets using the web portal](../Documents/Work-With-Data-in-Azure-ML-Datasets.md).
 
 **Note**
 If you do not see the graphical elements mentioned in the steps below, such as buttons, you may not have the right level of permissions to studio. Please contact your Azure subscription administrator to verify that you have been granted the correct level of access.
@@ -27,22 +27,22 @@ If you do not see the graphical elements mentioned in the steps below, such as b
 
 2. Select **Designer** on the left pane under **Author** section and select **Easy-to-use prebuilt modules**.
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/designer1.png)
+![](../Images/designer1.png)
 
 3. At the top of the canvas, select the default pipeline name Pipeline-Created-on. Rename it to the name you want to give to your pipeline. The name doesn't need to be unique.
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/designer3.gif)
+![](../Images/designer3.gif)
 
 ### Set the default Compute Target
 A pipeline runs on a compute target (needs to be a compute cluster), which is a compute resource that's attached to your studio.The compute target can be reused in future runs.
 
 You can set a Default compute target for the entire pipeline, which will tell every module to use the same compute target by default. However, you can specify compute targets on a per-module basis.
 
-1. Next to the pipeline name, select the **Gear icon**![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/gear-icon.png)  at the top of the canvas to open the Settings pane.
+1. Next to the pipeline name, select the **Gear icon**![](../Images/gear-icon.png)  at the top of the canvas to open the Settings pane.
 
 2. In the Settings pane to the right of the canvas, select **Select compute target**. Select the desired compute cluster and click **Save**.
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/designer2.PNG)
+![](../Images/designer2.PNG)
 
  **Note:** The designer can only run training experiments on Azure Machine Learning Compute Clusters other types of compute won't be shown.
 
@@ -50,7 +50,7 @@ You can set a Default compute target for the entire pipeline, which will tell ev
 
 1. From the left side panel expand **Datasets** and select the dataset you need to work with. Drag it onto the canvas.
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/designer4.gif)
+![](../Images/designer4.gif)
 
 **Note:** The designer also provides sample datasets for user to experiment. Instead of expanding **Datasets** expand **Sample Datasets** and select the one that best suits the needs.
 
@@ -59,7 +59,7 @@ Datasets typically require some preprocessing before analysis. Example: You migh
 The designer has some prebuild fucntions that helps the user to prepare the data. In the module palette to the left of the canvas, expand the **Data Transformation** section and those will be available to use.
 
 The following shows an example on what can be done:
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/designer5.gif)
+![](../Images/designer5.gif)
 
 ### Train a machine learning model
 Now that we have the modules in place to process the data, we can set up the training modules.
@@ -78,7 +78,7 @@ Splitting data is a common task in machine learning. You will split your data in
 2. Drag the Split Data module to the pipeline canvas. In the module details pane to the right of the canvas, set the desired value on the **Fraction of rows in the first output dataset**.
 3. Connect the previous module to the Split Data module.
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/designer6.gif)
+![](../Images/designer6.gif)
 
 **Notes:**
 * When using **Clean Missing Data** as the predecessor of the **Split Data** module be sure that the left output ports of Clean Missing Data connects to Split Data. This is because the left port contains the the cleaned data while the right port contains the discarted data.
@@ -98,7 +98,7 @@ Designer provides around 19 different Machine Learning Algorithms that can be se
 
 5. Connect the training data output (left port) of the Split Data module to the right input of the Train Model module.
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/designer7.gif)
+![](../Images/designer7.gif)
 
 **Note:** 
 Be sure that the left output ports of Split Data connects to Train Model. The left port contains the the training set. The right port contains the test set.
@@ -111,7 +111,7 @@ Be sure that the left output ports of Split Data connects to Train Model. The le
 
 9. In the text box, enter the column that your model is going to predict.
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/designer8.gif)
+![](../Images/designer8.gif)
 
 #### Score the model 
 After having trained the model by using the value configured in field **Fraction of rows in the first output dataset**, the remaing value can be used for scoring to see how well your model functions.
@@ -120,7 +120,7 @@ After having trained the model by using the value configured in field **Fraction
 
 2. Connect the output of the **Train Model** module to the left input port of Score Model. Connect the test data output (right port) of the **Split Data** module to the right input port of Score Model.
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/designer9.gif)
+![](../Images/designer9.gif)
 
 #### Evaluate the model 
 Use the Evaluate Model module to evaluate how well the model scored the test dataset.
@@ -129,12 +129,12 @@ Use the Evaluate Model module to evaluate how well the model scored the test dat
 
 2. Connect the output of the *Score Model* module to the left input of Evaluate Model.
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/designer10.gif)
+![](../Images/designer10.gif)
 
 
 _The final pipeline should look something like this:_
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/designer11.PNG)
+![](../Images/designer11.PNG)
 
 
 ### Submit the pipeline
@@ -142,11 +142,11 @@ The pipeline is all setup, we will now submit a pipeline run to train the machin
 
 1. At the top of the canvas, select **Submit**.
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/designer12.PNG)
+![](../Images/designer12.PNG)
 
 2. In the **Set up pipeline run** dialog box, if you already have created an experiment and want to use it, select it from the drop down. If not, then select Create new, enter the Experiment Name (be aware of the naming rules: Name must be between 1 to 250 characters, start with letters or numbers. Valid characters are letters, numbers, “_”, and the “-” character) and select **Submit**.
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/designer13.PNG)
+![](../Images/designer13.PNG)
 
 **Note:** Experiments group similar pipeline runs together. If you run a pipeline multiple times, you can select the same experiment for successive runs.
 
@@ -156,7 +156,7 @@ If this is the first run, it may take up to 20 minutes for your pipeline to fini
 
 4. Run status and details can be seen at the top right of the canvas.
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/designer14.PNG)
+![](../Images/designer14.PNG)
 
 _If this is the first run, it may take up to 20 minutes for your pipeline to finish running. The default compute settings have a minimum node size of 0, which means that the designer must allocate resources after being idle. Repeated pipeline runs will take less time since the compute resources are already allocated. Additionally, the designer uses cached results for each module to further improve efficiency._
 
@@ -166,14 +166,14 @@ After the run completes, the results of the pipeline run can be analised. First,
 
 1. Right-click the **Score Model** module, and select **Outpus+Logs** and then **Visualize** to view its output. Here you can see the predicted values and the actual values from the testing data.
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/designer15.gif)
+![](../Images/designer15.gif)
 
 #### Evaluate models
 The Evaluate Model will provide information on how well the trained model performed on the test dataset.
 
 1. Right-click the **Evaluate Model** module and select **metrics** to view its output.
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/designer16.PNG)
+![](../Images/designer16.PNG)
 
 ## Deploy the Model
 
@@ -190,11 +190,11 @@ To deploy your pipeline, you must first convert the training pipeline into a rea
 
 1. Above the pipeline canvas, select **Create inference pipeline > Real-time inference pipeline**.
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/designer17.PNG)
+![](../Images/designer17.PNG)
 
 Your pipeline should now look like this:
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/designer18.PNG)
+![](../Images/designer18.PNG)
 
 
 **Note:** When selecting **Create inference pipeline**, several things happen:
@@ -208,11 +208,11 @@ By default, the Web Service Input will expect the same data schema as the traini
 
 2. Select **Submit** and use the same compute target and experiment that you used in part one.
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/designer19.PNG)
+![](../Images/designer19.PNG)
 
 3. Run status and details can be seen at the top right of the canvas.
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/designer20.PNG)
+![](../Images/designer20.PNG)
 
 ### Deploy the real-time endpoint
 
@@ -227,12 +227,12 @@ In this tutorial and since it's only to guide on the steps needed, we will use a
 
 1. Once the run has finished successfully. Select **Deploy** above the canvas.
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/designer21.PNG)
+![](../Images/designer21.PNG)
 
 2. Select **Deploy new real-time endpoint**, name it and then select the Compute Type. Click **Deploy**.
 Note: The Name field must only consist of lowercase letters, numbers, or dashes, start with a letter, end with a letter or number
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/designer22.PNG)
+![](../Images/designer22.PNG)
 
 You can also change Advanced setting for your real-time endpoint.
 
@@ -250,7 +250,7 @@ You can also change Advanced setting for your real-time endpoint.
 |Memory reserve capacity|	The amount of memory (in GB) to allocate for this web service. By default: 0.5|ACI and AKS|
 
 4. A success notification above the canvas appears after deployment finishes. It might take a few minutes.
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/designer23.PNG)
+![](../Images/designer23.PNG)
 
 #### View the real-time endpoint
 After deployment finishes, you can view your real-time endpoint by going to the Endpoints page.
@@ -263,7 +263,7 @@ After deployment finishes, you can view your real-time endpoint by going to the 
 
 4. In the **Deployment** logs tab, you can find the detailed deployment logs of your real-time endpoint.
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/designer24.gif)
+![](../Images/designer24.gif)
 
 
 ### Create a batch inference pipeline
@@ -288,7 +288,7 @@ After the publishing finishes, the pipeline endpoint can be viewed by
 
 2. On the **Endpoints** page, select **Pipeline Endpoints** and choose the endpoint.
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/designer25.gif)
+![](../Images/designer25.gif)
 
 
 **NOTE:**
