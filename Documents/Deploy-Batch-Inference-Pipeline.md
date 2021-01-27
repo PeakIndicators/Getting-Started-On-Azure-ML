@@ -21,11 +21,11 @@ To use a trained model in a batch inferencing pipeline, you must register it in 
 
 To register a model from a local file, you can use the **register** method of the **Model** object as shown in the following example code:
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/33.PNG)
+![](../Images/33.PNG)
 
 Alternatively, if you have a reference to the **Run** used to train the model, you can use its **register_model** method as shown in the following example code:
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/34.PNG)
+![](../Images/34.PNG)
 
 ## 2. Create a scoring script
 Batch inferencing service requires a scoring script to load the model and use it to predict new values. It must include two functions:
@@ -35,33 +35,33 @@ Batch inferencing service requires a scoring script to load the model and use it
 
 Typically, you use the **init** function to load the model from the model registry, and use the **run** function to generate predictions from each batch of data and return the results. The following example script shows this pattern:
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/35.PNG)
+![](../Images/35.PNG)
 
 ## 3. Create a pipeline with a ParallelRunStep
 
 Azure Machine Learning provides a type of pipeline step specifically for performing parallel batch inferencing. Using the **ParallelRunStep** class, you can read batches of files from a **File** dataset and write the processing output to a **PipelineData** reference. Additionally, you can set the **output_action** setting for the step to "append_row", which will ensure that all instances of the step being run in parallel will collate their results to a single output file named *parallel_run_step.txt.* The following code snippet shows an example of creating a pipeline with a **ParallelRunStep**:
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/36.PNG)
+![](../Images/36.PNG)
 
 ## 4. Run the pipeline and retrieve the step output
 
 After your pipeline has been defined, you can run it and wait for it to complete. Then you can retrieve the **parallel_run_step.txt** file from the output of the step to view the results, as shown in the following code example:
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/37.PNG)
+![](../Images/37.PNG)
 
 ## Publishing a batch inference pipeline
 
 You can publish a batch inferencing pipeline as a REST service, as shown in the following example code:
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/38.PNG)
+![](../Images/38.PNG)
 
 Once published, you can use the service endpoint to initiate a batch inferencing job, as shown in the following example code:
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/39.PNG)
+![](../Images/39.PNG)
 
 You can also schedule the published pipeline to have it run automatically, as shown in the following example code:
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/40.PNG)
+![](../Images/40.PNG)
 
 ## Exercise - Create a Batch Inferencing Service
 
@@ -71,21 +71,21 @@ In this tutorial we provide some jupyter notebook templates (more detail in: [Ju
 
 ### Before you start
 
-If you have not already done so, create a [compute instance](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Documents/Create-Compute-Instance.md) and ensure you have [Cloned the notebooks](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Documents/Clone-and-Run-a-Notebook.md) required for this exercise.
+If you have not already done so, create a [compute instance](../Documents/Create-Compute-Instance.md) and ensure you have [Cloned the notebooks](../Documents/Clone-and-Run-a-Notebook.md) required for this exercise.
 
 ### Additional Information to note as you're working through your notebook
 
 After creating a compute cluster to deploy your model you can view it selecting the **compute** page in [Azure Machine Learning studio](https://ml.azure.com/?tid=168c1fe3-a841-49b5-b692-7b3132c0a997&wsid=/subscriptions/52cbf6c7-01f2-4df2-bae9-c80cee4db7eb/resourcegroups/churn-prediction-azure-tutorial/workspaces/churn-machine-learning-ws) and clicking on **Compute clusters** at the top of the page. 
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/75.PNG). 
+![](../Images/75.PNG). 
 
 Clicking on your compute cluster will show you additional information about your compute cluster including its status and attributes. 
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/76.PNG).
+![](../Images/76.PNG).
 
 After creating a working pipeline, you can publish it and use it as a REST enpoint to run it from an application. You can view you endpoint by navigating to [Azure Machine Learning studio](https://ml.azure.com/?tid=168c1fe3-a841-49b5-b692-7b3132c0a997&wsid=/subscriptions/52cbf6c7-01f2-4df2-bae9-c80cee4db7eb/resourcegroups/churn-prediction-azure-tutorial/workspaces/churn-machine-learning-ws) and clicking on **Endpoints** on the sidebar. 
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/77.PNG).
+![](../Images/77.PNG).
 
 ### Open Jupyter
 
@@ -100,4 +100,4 @@ In this exercise, the code to deploy a model as a batch inferencing service is p
 3. When you have finished running the code in the notebook, on the **File** menu, click **Close and Halt** to close it and shut down its Python kernel. Then close all Jupyter browser tabs.
 
 ### Clean-up
-If you’re finished working with Azure Machine Learning for now refer to [this page](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Documents/Stop-Compute-Instance.md) to stop your compute instance.  
+If you’re finished working with Azure Machine Learning for now refer to [this page](../Documents/Stop-Compute-Instance.md) to stop your compute instance.  
