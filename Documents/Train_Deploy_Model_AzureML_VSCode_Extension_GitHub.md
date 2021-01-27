@@ -7,7 +7,7 @@ You will:
 * Understand the code
 * Create a workspace
 * Create an experiment
-* Configure Computer Targets
+* Configure computer targets
 * Run a configuration file
 * Train a model
 * Register a model
@@ -26,11 +26,11 @@ The code for this tutorial uses TensorFlow to train an image classification mach
 Get the code for this tutorial by downloading and unzipping the [VS Code Tools for AI repository](https://github.com/microsoft/vscode-tools-for-ai/archive/master.zip) anywhere on your computer.
 
 ## Create a workspace
-The first thing you have to do to build an application in Azure Machine Learning is to create a workspace. A workspace contains the resources to train models as well as the trained models themselves. For more information, see [what is a workspace](https://docs.microsoft.com/en-us/azure/machine-learning/concept-workspace).
+The first thing you have to do to build an application in Azure Machine Learning is to create a workspace. A workspace is basically an instance of an Azure Machine Learning Studio, it contains the resources to train models as well as the trained models themselves. For more information, see [What is Azure ML Studio](../Documents/what-is-azure-ml-studio.md).
 
 1. On the Visual Studio Code activity bar, select the Azure icon to open the Azure Machine Learning view.
 &nbsp;
-2. Right-click your Azure subscription and select **Create Workspace** (if you already have a workspace you want to complete this tutorial on select your workspace and move on to the [next section](#CreateExperiment-1)).
+2. Right-click your Azure subscription and select **Create Workspace** (if you already have a workspace, which means an Azure Machine Learning Studio instance, that you want to complete this tutorial on, select it and move on to the [next section](#CreateExperiment-1)).
 
 ![](../Images/VS45.PNG)
 
