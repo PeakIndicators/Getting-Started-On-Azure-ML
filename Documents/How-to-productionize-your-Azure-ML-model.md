@@ -146,7 +146,7 @@ Once the model is deployed, the data scientist wants to be able to collect metri
 #### Retrain the Model
 ![](../Images/devops18.PNG)
 
-Often, you'll want to validate your model, update it or even retrain it from scratch, as you receive new information. Sometimes, receiving new data is an expected part of the domain. Other times model performance can degrade in the face of such things as changes to a particular sensor, natural data changes such as seasonal effects or features shifting in their relation to other features.
+Often, you'll want to validate your model, update it or even retrain it from scratch, as you receive new information. Sometimes, receiving new data is an expected part of the domain. Other times, as discussed in [Detect data drift on datasets](Documents/Dataset-Monitor.md), model performance can degrade in the face of such things as changes to a particular sensor, natural data changes such as seasonal effects or features shifting in their relation to other features.
 
 There is no universal answer to "How do I know if I should retrain?" but Azure ML event and monitoring tools previously discussed are good starting points for automation. 
 
