@@ -85,7 +85,7 @@ print(env)
 ```
 This will allow the user the check the following information:
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/key-vault1.PNG)
+![](../Images/key-vault1.PNG)
 
 ```
 envs = Environment.list(workspace=ws)
@@ -97,7 +97,7 @@ for env in envs:
 ```
 This will allow the user the check the following information:
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/key-vault2.PNG)
+![](../Images/key-vault2.PNG)
 
 
 ## Get secrets
