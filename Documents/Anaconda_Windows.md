@@ -3,9 +3,9 @@
 ## Getting started with conda
 Conda is a powerful package manager and environment manager that you use with command line commands at the Anaconda Prompt for Windows or in a terminal window for macOS or Linux.
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/A1.PNG) Anaconda Prompt from the Windows Start menu
+![](../Images/A1.PNG) Anaconda Prompt from the Windows Start menu
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/A2.PNG) Anaconda Prompt when opened
+![](../Images/A2.PNG) Anaconda Prompt when opened
 
 ## Installing on Windows
 
@@ -30,7 +30,7 @@ Conda is a powerful package manager and environment manager that you use with co
 
 **Note**—Do not install as Administrator unless admin privileges are required.
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/A3.PNG) Installing Anaconda
+![](../Images/A3.PNG) Installing Anaconda
 
 7) Choose whether to add Anaconda to your PATH environment variable. Adding Anaconda to the PATH environment variable is not recommended since this can interfere with other software. Instead, use Anaconda software by opening Anaconda Navigator or the Anaconda Prompt from the Start Menu as shown in the images above. 
 &nbsp;
@@ -42,13 +42,13 @@ Conda is a powerful package manager and environment manager that you use with co
 &nbsp;
 11) Optional: To install PyCharm for Anaconda, click on the link to https://www.anaconda.com/pycharm. 
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/A4.PNG) 
+![](../Images/A4.PNG) 
 
 Or to install Anaconda without PyCharm, click **Next**.
 
 12) After a successful installation you will see the *“Thanks for installing Anaconda”* dialog box:
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/A5.PNG) 
+![](../Images/A5.PNG) 
 
 13) If you wish to read more about Anaconda and how to get started with Anaconda, check the boxes *“Anaconda Individual Edition Tutorial”* and *“Learn more about Anaconda”*. Click **Finish**.
 &nbsp;
