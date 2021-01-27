@@ -25,6 +25,10 @@ The code for this tutorial uses TensorFlow to train an image classification mach
 
 Get the code for this tutorial by downloading and unzipping the [VS Code Tools for AI repository](https://github.com/microsoft/vscode-tools-for-ai/archive/master.zip) anywhere on your computer.
 
+The guidelines of this tutorial are based on the following assumption:
+
+* Even thought resources can be reused, for the examples below, we will be creating a new Azure Machine Learning Studio and all its resources in a new Resource Group
+
 ## Create a workspace
 The first thing you have to do to build an application in Azure Machine Learning is to create a workspace. A workspace is basically an instance of an Azure Machine Learning Studio, it contains the resources to train models as well as the trained models themselves. For more information, see [What is Azure ML Studio](../Documents/what-is-azure-ml-studio.md).
 
@@ -38,7 +42,7 @@ The first thing you have to do to build an application in Azure Machine Learning
 &nbsp;
 4. Select **Create a new resource group**.
 &nbsp;
-5. Name your resource group "TeamWorkspace-rg" and press Enter. (In this example we are creating a new Azure Machine Learning Studio in a new resource group, but as stated before an existing studio can be used and the same occurs with an existing resource group).  
+5. Name your resource group "TeamWorkspace-rg" and press Enter.  
 &nbsp;
 6. Choose a location for your workspace. It's recommended to choose a location that is closest to the location you plan to deploy your model. For example, "UK South".
 &nbsp;
@@ -69,7 +73,7 @@ One or more experiments can be created in your workspace to track and analyze in
 A request is sent to Azure to create an experiment with the provided configurations. After a few minutes, the new experiment appears in the *Experiments* node of your Studio.
 
 ## Configure Compute Targets
-A compute target is the computing resource or environment where you run scripts and deploy trained models. For more information, see the [Azure Machine Learning compute targets documentation](https://docs.microsoft.com/en-us/azure/machine-learning/concept-compute-target).
+A compute target is the computing resource or environment where you run scripts and deploy trained models. For more information, see the [Create Compute Instances](Documents/Create-Compute-Instance.md).
 
 To create a compute target:
 
