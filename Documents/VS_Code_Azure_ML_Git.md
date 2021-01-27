@@ -4,8 +4,8 @@ Learn how to install and run scripts using the Azure Machine Learning Visual Stu
 
 In this tutorial, you learn the following tasks:
 
-* Install the Azure Machine Learning Visual Studio Code extension
-* Sign into your Azure account from Visual Studio Code
+* Install the Azure Machine Learning Visual Studio Code extension.
+* Sign into your Azure account from Visual Studio Code.
 * Use the Azure Machine Learning extension to run a sample script.
 
 ## Prerequisites 
@@ -14,7 +14,7 @@ Before following this document ensure you have installed Visual Studio Code and 
 
 ## Install the Azure Machine Learning Visual Studio Code extension
 
-1. Open Visual Studio Code
+1. Open Visual Studio Code.
 &nbsp;
 2. Select **Extensions** icon from the **Activity Bar** to open the Extensions view.
 &nbsp;
@@ -43,21 +43,21 @@ Now that you have signed into Azure with your account credentials, use the steps
 &nbsp;
 4. Select the **Run Experiment** icon at the top of the Azure Machine Learning View.
 ![](../Images/VS40.PNG)
-5. When the Command Palette expands, follow the prompts.
+5. When the **Command Palette** expands, follow the prompts:
     * Select your Azure subscription.
     * From the list of environments, select **Conda dependencies file**.
     * Press **Enter** to browse the Conda dependencies file. This file contains the dependencies required to run your script. In this case, the dependencies file is the `env.yml` file inside the `mnist-vscode-docs-sample` directory.
     * Press **Enter** to browse the training script file. This is the file that contains code to a machine learning model that categorize images of handwritten digits. In this case, the script to train the model is the `train.py` file inside the `mnist-vscode-docs-sample` directory.
 &nbsp;
-6. At this point, a configuration file similar to the one below appears in the text editor. The configuration contains the information required to run the training job—similarly to how we have a file that contains the code to train the model— and any Python dependencies specified in the previous step.
+6. At this point, a configuration file similar to the one below appears in the text editor. The configuration contains the information required to run the training job—similarly to how we have a file that contains the code to train the model — and any Python dependencies specified in the previous step.
 
 ![](../Images/VS41.PNG)
 
-7. Once you're satisfied with your configuration, submit your experiment by opening the Command Palette and entering the following command:
+7. Once you're satisfied with your configuration, submit your experiment by opening the **Command Palette** and entering the following command:
 
 `Azure ML: Submit Experiment`
 
-This sends the `train.py` and configuration file to your Azure Machine Learning workspace. The training job is then started on a compute resource in Azure.
+This sends the `train.py` and configuration file to your Azure Machine Learning workspace. The training job is then started on the user's compute resource in Azure (which needs to be up and running).
 
 ## Track the progress of the training script
 Running your script can take several minutes. To track its progress:
