@@ -139,7 +139,7 @@ A file appears in VS Code with content similar to the one below:
 
 A file called `MNIST-rc.runconfig` appears in VS Code with content similar to the one below:
 
-![](./Images/VS52.PNG)
+![](../Images/VS52.PNG)
 
 13. Once you're satisfied with your configuration, save it by opening the Command Palette and entering the following command:
 
@@ -174,7 +174,7 @@ To register your model:
 
 1. On the Visual Studio Code activity bar, select the **Azure** icon. The Azure Machine Learning view appears.
 &nbsp;
-2. Expand your **subscription** node.
+2. Expand your **Subscription** node.
 &nbsp;
 3. Expand the **TeamWorkspace > Experiments > MNIST** node.
 &nbsp;
@@ -214,7 +214,7 @@ To deploy a web service as an ACI :
 
 1. On the Visual Studio Code activity bar, select the **Azure** icon. The Azure Machine Learning view appears.
 
-2. Expand your **subscription** node.
+2. Expand your **Subscription** node.
 
 3. Expand the **TeamWorkspace > Models** node.
 
