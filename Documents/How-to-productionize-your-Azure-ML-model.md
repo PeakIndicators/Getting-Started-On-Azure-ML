@@ -9,7 +9,7 @@ This problem is very similar to what application development teams face with res
 For the development phase, Machine Learning life-cycle can be defined as:
 
 <p align="center">
-  <img src="https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/devops1.PNG">
+  <img src="../Images/devops1.PNG">
 </p>
 
 ##### _Source: https://subscription.packtpub.com/book/big_data_and_business_intelligence/9781838550356/1/ch01lvl1sec13/ml-development-life-cycle_
@@ -33,7 +33,7 @@ This may sound simple and the most logical way of doing it, but nobody has been 
 The following flow represents a MLOps flow within Azure Machine Learning.
 
 <p align="center">
-  <img src="https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/devops2.PNG">
+  <img src="../Images/devops2.PNG">
 </p>
 
 ### Explaining MLOps flow within Azure Machine Learning and Azure DevOps
@@ -52,7 +52,7 @@ With this in mind, the following should be created in the Azure DevOps resource:
 
 3. The following information should be added to the repository (note: the repository can be created outside Azure DevOps and can then be cloned into it). - _Team Responsible to odd the code: Data Science Team_ and  _Team Responsible to clone the repository, if needed: DevOps Development Team_
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/devops3.png)
+![](../Images/devops3.png)
 
 **Note**: As we can see, this implies the creation of separate python files for training, scoring, testing and also configuration files. But this depends on what step(s) the user requires in order to start the deployment. More details are given in the sub-sections below.
 
@@ -64,24 +64,24 @@ With this in mind, the following should be created in the Azure DevOps resource:
 ###### _Pipeline 1 - Example_
 This is an example where the model is trained, registered and saved in an Azure DevOps Artifact.
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/devops4.png)
+![](../Images/devops4.png)
 
 ###### _Pipeline 2 - Example_
 This is another example where, apart from what is done in _Pipeline 1 - Example_, some other tasks were added: Data Quality checking, testing and creating Azure ML resources.
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/devops8.png)
+![](../Images/devops8.png)
 
 Variables can also be added to a pipeline, this is among the best practices and makes the pipeline easy to manage:
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/devops5.png)
+![](../Images/devops5.png)
 
 Once the pipeline is setup, it should be executed. The screenshot below shows examples of successful runnings:
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/devops6.png)
+![](../Images/devops6.png)
 
 2. If the model registration is done in Azure DevOps, after each execution in order to verify the model, we can access Azure Machine Learning and verify that the model was trained and register: - _Team Responsible: Data Science Team_
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/devops7.png)
+![](../Images/devops7.png)
 
 **Very Important Notes:**
 * The above represent examples of pipelines that can be created. As stated, these are just examples and it really depends on what it's agreed/defined to do in Azure DevOps and what is agreed/defined to do in Azure ML. _Example:_ the user might want to train and register the model in an Azure ML notebook and in Azure DevOps he only wants to download the model in order to be able to deploy it, if that is the case then the pipeline should only start from _Download the Model_ task onwards.
@@ -93,17 +93,17 @@ Once the pipeline is setup, it should be executed. The screenshot below shows ex
 * The creation of an Azure DevOps Artifact is mandatory since this is what is going to be used in the Deployment.
 * In the _Pipeline 2 - Example_ we cans see a task related with publishing test results, if this is used, then in each pipeline run in Azure DevOps the test results can be seen:
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/devops17.PNG)
+![](../Images/devops17.PNG)
 
 If these steps are followed, this means the following flow of the diagram have been done:
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/devops11.PNG)
+![](../Images/devops11.PNG)
 
 
 ##### Create a Release Pipeline to deploy the Azure DevOps Artifact created in the previous pipeline
 This step will execute the **Deploy model** task of the diagram _MLOps flow within Azure Machine Learning_.
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/devops12.PNG)
+![](../Images/devops12.PNG)
 
 1. The deployment in Azure DevOps is done using a **Release Pipeline**. - _Team Responsible: DevOps Development Team_
 This release pipeline might have the following structures (once again there is no right or wrong it really depends on to where the deployment needs to be done):
@@ -111,39 +111,39 @@ This release pipeline might have the following structures (once again there is n
 ###### _Release Pipeline 1 - Example_
 This is a very simple example where the artifact in only deployed to another environment:
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/devops9.png)
+![](../Images/devops9.png)
 
 ###### _Release Pipeline 2 - Example_
 This is a more complex example where the artifact is being deployed to a Pre-Production environment, the after an approval, it goes to a Production environment:
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/devops13.PNG)
+![](../Images/devops13.PNG)
 
 The deployment tasks are defined as:
 
 ###### _Release Pipeline 1 - Tasks - Example_
 This deployment is an example of deploying a model into an Azure Container Instance, often used for non-Production environments.
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/devops10.png)
+![](../Images/devops10.png)
 
 ###### _Release Pipeline 2 - Tasks - Example_
 This deployment is an example of deploying a model into an Azure Kubernetes Service, often used for Production environments.
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/devops14.png)
+![](../Images/devops14.png)
 
 **Notes:**
 * Once again the above represents examples of release pipelines, those can, should and need to be adapted to the organization rules, policies and demands.
 * The flow for training, validating and deploying a model within Azure DevOps can be defined as:
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/devops16.PNG)
+![](../Images/devops16.PNG)
 
 #### Monitor the Model
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/devops15.PNG)
+![](../Images/devops15.PNG)
 
 Once the model is deployed, the data scientist wants to be able to collect metrics on the model. The user wants to ascertain that the model is drifting from its objective and that the inference is useful for the business. This means the need of capturing a lot of metrics and analyze them. Azure Machine Learning enables this tracking of metrics for the model is a very efficient manner. The central model registry becomes the one place where all this hosted.
 
 <<<<< ADD FELICITY WORK HERE >>>>>>>
 
 #### Retrain the Model
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/devops18.PNG)
+![](../Images/devops18.PNG)
 
 As you collect more metrics and additional data becomes available for training, there may be a need to be able to retrain the model in the hope of improving its accuracy and/or performance. Also, since this is a continuous process of integrations and deployment (CI/CD), there’s a need for this process to be automated. This process of retraining and effective CI/CD of ML models is the biggest strength of Azure Machine Learning.
