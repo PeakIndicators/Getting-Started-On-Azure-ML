@@ -44,6 +44,8 @@ For most scenarios a compute instance is enough for developing and testing code.
 
 ![](../Images/NewCompute4.PNG)
 
+**Note:** Creating a Compute Cluster or an Inference Cluster is a very similar process, therefore there isn't the need to specify those in this tutorial. The concepts are similar to the Compute Instance shown above.
+
 ## Stop Compute Instance
 
 **When you are done with using your compute instance for now shut down your compute instance to avoid incurring unnecessary charges in your Azure subscription.**
