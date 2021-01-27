@@ -212,7 +212,7 @@ In Visual Studio Code, you can deploy your model as a web service to:
 
 * Azure Container Instances (ACI).
 * Azure Kubernetes Service (AKS).
-You don't need to create an ACI container to test in advance, because ACI containers are created as needed. However, you do need to configure AKS clusters in advance. For more information on deployment options, see [deploy models with Azure Machine Learning](https://docs.microsoft.com/en-us/azure/machine-learning/how-to-deploy-and-where).
+You don't need to create an ACI container to test in advance, because ACI containers are created as needed. However, you do need to configure AKS clusters in advance. For more information on deployment options, see [Deploy a model as a real-time inferencing service](../Documents/Deploy-Real-Time-Service.md), [Create a batch webservice](../Documents/Deploy-Batch-Inference-Pipeline.md) and [Create Compute Instances](../Documents/Create-Compute-Instance.md).
 
 To deploy a web service as an ACI :
 
