@@ -4,7 +4,7 @@
 
 Visual Studio Code and the Python extension provides a great editor for data science scenarios. With native support for Jupyter notebooks combined with Anaconda, it's easy to get started. In this section, you will create a workspace for the tutorial, create an Anaconda environment with the data science modules needed for the tutorial and create a Jupyter notebook that you'll use to create a machine learning model.
 
-1. Begin by creating an Anaconda environment for the data science tutorial. Refer to [Getting started with Conda](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Documents/Starting_with_conda.md) for details on how to install conda. Open an Anaconda command prompt and run `conda create -n myenv python=3.9 pandas jupyter seaborn scikit-learn keras tensorflow` to create an environment named **myenv**. For additional information about creating and managing Anaconda environments, navigate to this [page](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Documents/Starting_with_conda.md).
+1. Begin by creating an Anaconda environment for the data science tutorial. Refer to [Getting started with Conda](../Documents/Starting_with_conda.md) for details on how to install conda. Open an Anaconda command prompt and run `conda create -n myenv python=3.9 pandas jupyter seaborn scikit-learn keras tensorflow` to create an environment named **myenv**. For additional information about creating and managing Anaconda environments, navigate to this [page](../Documents/Starting_with_conda.md).
 
 2. Next, create a folder in a convenient location to serve as your VS Code workspace for the tutorial, name it `hello_ds`.
 
@@ -12,36 +12,36 @@ Visual Studio Code and the Python extension provides a great editor for data sci
 
 4. Once VS Code launches, open the Command Palette **(View > Command Palette** or `Ctrl+Shift+P`). Then select the **Python: Select Interpreter command**:
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/VS25.PNG)
+![](../Images/VS25.PNG)
 
 5. The **Python: Select Interpreter** command presents the list of available interpreters that VS Code was able to locate automatically (your list will vary from the one shown below), including virtual environments. If you don't see the desired interpreter, select *Enter interpreter path...* .
 Select the Python Interpreter you want to use for your project. This should be the virtual environment your created with conda, which should include the text 'myenv': conda.
 
 **Note:** When using an Anaconda distribution, the correct interpreter should have the suffix `('envname':conda)`, for example `Python 3.7.3 64-bit ('envname':conda)`.
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/VS5.PNG) 
+![](../Images/VS5.PNG) 
 
 Select the Python Interpreter you want to use for your project. This should be the virtual environment your created with conda. 
 
 You can also use the **Select Python Environment** option on the Status Bar if available (it may already show a selected interpreter, too):
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/VS6.PNG) 
+![](../Images/VS6.PNG) 
 &nbsp;
 
 6. With the environment and VS Code setup, the final step is to create the Jupyter notebook that will be used for the tutorial. Open the Command Palette (`Ctrl+Shift+P`) and select **Jupyter: Create New Blank Jupyter Notebook**.
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/VS26.PNG) 
+![](../Images/VS26.PNG) 
 
 
 **Note:** Alternatively, from the VS Code File Explorer, you can use the New File icon to create a Notebook file named `hello.ipynb`.
 
 7. Use the Save icon on the main notebook toolbar to save the notebook with the filename `hello`.
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/VS27.PNG) 
+![](../Images/VS27.PNG) 
 
 8. After your file is created, you should see the open [Jupyter notebook](https://jupyter.org/) in the native notebook editor. For additional information about native Jupyter notebook support, see [this page](https://code.visualstudio.com/docs/python/jupyter-support).
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/VS28.PNG) 
+![](../Images/VS28.PNG) 
 
 ## Prepare the data
 
@@ -51,7 +51,7 @@ This tutorial uses the Titanic dataset available on [OpenML.org](https://www.ope
 
 2. In VS Code, open the `hello_ds` folder and the Jupyter notebook (`hello.ipynb`) by going to **File > Open Folder**.
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/VS29.PNG)
+![](../Images/VS29.PNG)
 
 3. Within your Jupyter notebook begin by importing the [pandas](https://pandas.pydata.org/) and [numpy](https://numpy.org/) libraries (these have already been installed when you created the conda virtual environment above). These are two common libraries used for manipulating data and loading the Titanic data into a pandas [DataFrame](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html). To do so, copy the below code into the first cell of the notebook. For additional guidance about working with Jupyter notebooks in VS Code, see the [Working with Jupyter Notebooks](https://code.visualstudio.com/docs/python/jupyter-support) documentation. If you need more information on importing and installing packages refer to Import and Install packages in [here](Getting Started with Python in VS Code).
 
@@ -61,11 +61,11 @@ This tutorial uses the Titanic dataset available on [OpenML.org](https://www.ope
 
 4. Now, run the cell using the Run cell icon or the `Shift+Enter` shortcut.
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/VS30.PNG)
+![](../Images/VS30.PNG)
 
 5. After the cell finishes running, you can view the data that was loaded using the variable explorer and data viewer. First click on the chart icon in the notebook's upper toolbar, then the data viewer icon to the right of the `data` variable. For additional information about the data set, refer to [this document](https://biostat.app.vumc.org/wiki/pub/Main/DataSets/titanic.html) about how it was build.
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main//Images/31.PNG)
+![](..//Images/31.PNG)
 
 You can then use the data viewer to view, sort and filter data rows. After reviewing the data, it can then be helpful to graph some aspects of it to help visualize the relationships between the different variables.
 
@@ -94,7 +94,7 @@ This problem can be rectified by replacing the question mark with a missing valu
 `sns.pointplot(x="pclass", y="survived", hue="sex", data=data, ax=axs[3])`
 `sns.violinplot(x="survived", y="fare", hue="sex", data=data, ax=axs[4])`
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/32.PNG) 
+![](../Images/32.PNG) 
 
 **Note**: To better view details on the graphs, you can open them in plot viewer by hovering over the upper left corner of the graph and clicking the button that appears.
 
@@ -106,7 +106,7 @@ This problem can be rectified by replacing the question mark with a missing valu
 
 `data.corr().abs()[["survived"]]`
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/33.PNG)
+![](../Images/33.PNG)
 
 10. Looking at the correlation results, you'll notice that some variables like gender have a fairly high correlation to survival, while others like relatives (sibsp = siblings or spouse, parch = parents or children) seem to have little correlation.
 
@@ -118,7 +118,7 @@ Use the following code to create a new variable and column in the dataset called
 `data['relatives'] = data.apply (lambda row: int((row['sibsp'] + row['parch']) > 0), axis=1)`
 `data.corr().abs()[["survived"]]`
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/34.PNG)
+![](../Images/34.PNG)
 
 11. You'll notice that in fact when looked at from the standpoint of whether a person had relatives, versus how many relatives, there is a higher correlation with survival. With this information in hand, you can now drop from the dataset the low value **sibsp** and **parch** columns, as well as any rows that had **NaN** values, to end up with a dataset that can be used for training a model.
 
@@ -155,7 +155,7 @@ Add and run a cell with the following code to the notebook to split up the data.
 `predict_test = model.predict(X_test)`
 `print(metrics.accuracy_score(y_test, predict_test))`
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/35.PNG) 
+![](../Images/35.PNG) 
 
 Looking at the result of the test data, you'll see that the trained algorithm had a ~75% success rate at estimating survival.
 
@@ -186,7 +186,7 @@ You can also look at the summary of the model you built with this line of code:
 
 `model.summary()`
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/6.PNG)
+![](../Images/6.PNG)
 
 3. Once the model is created, it needs to be compiled. As part of this, you need to define what type of optimizer will be used, how loss will be calculated, and what metric should be optimized for. Add the following code to build and train the model. You'll notice that after training the accuracy is ~80%.
 
@@ -195,14 +195,13 @@ You can also look at the summary of the model you built with this line of code:
 `model.compile(optimizer="adam", loss='binary_crossentropy', metrics=['accuracy'])`
 `model.fit(X_train, y_train, batch_size=32, epochs=50)`
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/37.PNG)
+![](../Images/37.PNG)
 
 4. With the model built and trained its now time to see how it performs against the test data.
 
 `y_pred = model.predict_classes(X_test)`
 `print(metrics.accuracy_score(y_test, y_pred))`
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/38.PNG)
+![](../Images/38.PNG)
 
 Similar to the training, you'll notice that you were able to get close to 80% accuracy in predicting survival of passengers. This result was better than the 75% accuracy from the Naive Bayes Classifier tried previously.
-
