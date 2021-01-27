@@ -10,7 +10,7 @@ In this tutorial, you learn the following tasks:
 
 ## Prerequisites 
 
-Before following this document ensure you have installed Visual Studio Code and the Python Extension. Refer to [this page](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Documents/Installing_VS_Code.md) if you haven't done it already. 
+Before following this document ensure you have installed Visual Studio Code and the Python Extension. Refer to [this page](../Documents/Installing_VS_Code.md) if you haven't done it already. 
 
 ## Install the Azure Machine Learning Visual Studio Code extension
 
@@ -21,7 +21,7 @@ Before following this document ensure you have installed Visual Studio Code and 
 3. In the Extensions view, search for "Azure Machine Learning".
 &nbsp;
 4. Select **Install**.
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/VS39.PNG)
+![](../Images/VS39.PNG)
 
 *Note—The rest of the steps in this tutorial have been tested with version 0.6.8 of the extension.*
 
@@ -42,7 +42,7 @@ Now that you have signed into Azure with your account credentials, use the steps
 3. Select the **Azure** icon in the Activity Bar.
 &nbsp;
 4. Select the **Run Experiment** icon at the top of the Azure Machine Learning View.
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/VS40.PNG)
+![](../Images/VS40.PNG)
 5. When the Command Palette expands, follow the prompts.
     * Select your Azure subscription.
     * From the list of environments, select **Conda dependencies file**.
@@ -51,7 +51,7 @@ Now that you have signed into Azure with your account credentials, use the steps
 &nbsp;
 6. At this point, a configuration file similar to the one below appears in the text editor. The configuration contains the information required to run the training job—similarly to how we have a file that contains the code to train the model— and any Python dependencies specified in the previous step.
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/VS41.PNG)
+![](../Images/VS41.PNG)
 
 7. Once you're satisfied with your configuration, submit your experiment by opening the Command Palette and entering the following command:
 
@@ -70,18 +70,17 @@ Running your script can take several minutes. To track its progress:
 
 4. All of the runs for the experiment are listed, as well as their status. To get the most recent status, click the refresh icon at the top of the Azure Machine Learning View.
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/VS42.PNG)
+![](../Images/VS42.PNG)
 
 ## Download the trained model
 When the experiment run is complete, the output is a trained model. To download the outputs locally:
 
 1. Right-click the most recent run and select **Download Outputs**.
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/VS43.PNG)
+![](../Images/VS43.PNG)
 
 2. Select a location where to save the outputs to.
 
 3. A folder with the name of your run is downloaded locally. Navigate to it.
 
 4. The model files are inside the `outputs/outputs/model` directory.
-
