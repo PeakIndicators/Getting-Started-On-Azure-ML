@@ -36,11 +36,11 @@ Common kinds of step in an Azure Machine Learning pipeline include:
 
 To create a pipeline, you must first define each step and then create a pipeline that includes the steps. The specific configuration of each step depends on the step type. For example the following code defines two **PythonScriptStep** steps to prepare data and then train a model.
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/5.PNG)
+![](../Images/5.PNG)
 
 After defining the steps, you can assign them to a pipeline, and run it as an experiment:
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/6.PNG)
+![](../Images/6.PNG)
 
 ## Pass data between pipeline steps
 
@@ -55,7 +55,7 @@ The **PipelineData** object is a special kind of **DataReference** that:
 
 You can view a **PipelineData** object as an intermediary store for data that must be passed from a step to a subsequent step.
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/Pipeline-Steps.PNG)
+![](../Images/Pipeline-Steps.PNG)
 
 ### PipelineData step inputs and outputs
 
@@ -67,11 +67,11 @@ To use a **PipelineData** object to pass data between steps, you must:
 
 For example, the following code defines a **PipelineData** object that for the preprocessed data must be passed between the steps.
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/7.PNG)
+![](../Images/7.PNG)
 
 In the scripts themselves, you can obtain a reference to the **PipelineData** object from the script argument and use it like a local folder.
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/8.PNG)
+![](../Images/8.PNG)
 
 
 ## Reuse pipeline steps
@@ -83,7 +83,7 @@ By default, the step output from a previous pipeline run is reused without rerun
 
 To control reuse for an individual step, you can set the **allow_reuse** parameter in the step configuration, like this:
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/9.PNG)
+![](../Images/9.PNG)
 
 ### Forcing all steps to run
 When you have multiple steps, you can force all of them to run regardless of individual reuse configuration by setting the **regenerate_outputs** parameter when submitting the pipeline experiment:
@@ -97,23 +97,23 @@ After you have created a pipeline, you can publish it to create a REST endpoint 
 ### Publishing a pipeline
 To publish a pipeline, you can call its publish method as shown here:
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/10.PNG)
+![](../Images/10.PNG)
 
 Alternatively, you can call the **publish** method on a successful run of the pipeline:
 
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/11.PNG)
+![](../Images/11.PNG)
 
 After the pipeline has been published, you can view it in Azure Machine Learning studio. You can also determine the URI of its endpoint like this:
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/12.PNG)
+![](../Images/12.PNG)
 
 ### Using a published pipeline
 To initiate a published endpoint, you make an HTTP request to its REST endpoint, passing an authorization header with a token for a service principal with permission to run the pipeline and a JSON payload specifying the experiment name. The pipeline runs asynchronously, so the response from a successful REST call includes the run ID. You can use this to track the run in Azure Machine Learning studio.
 
 For example, the following Python code makes a REST request to run a pipeline and displays the returned run ID.
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/13.PNG)
+![](../Images/13.PNG)
 
 ## Use pipeline parameters
 
@@ -124,7 +124,7 @@ To define parameters for a pipeline, create a **PipelineParameter** object for e
 
 For example, you could use the following code to include a parameter for a regularization rate in the script used by an estimator:
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/14.PNG)
+![](../Images/14.PNG)
 
 **Note: You must define parameters for a pipeline before publishing it.**
 
@@ -132,7 +132,7 @@ For example, you could use the following code to include a parameter for a regul
 
 After you publish a parameterized pipeline, you can pass parameter values in the JSON payload for the REST interface.
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/15.PNG)
+![](../Images/15.PNG)
 
 ## Schedule pipelines
 
@@ -144,12 +144,12 @@ To schedule a pipeline to run at periodic intervals, you must define a **Schedul
 For example, the following code schedules a daily run of a published pipeline.
 
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/16.PNG)
+![](../Images/16.PNG)
 
 ### Triggering a pipeline run on data changes
 To schedule a pipeline to run whenever data changes, you must create a **Schedule** that monitors a specified path on a datastore, like this:
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/17.PNG)
+![](../Images/17.PNG)
 
 ## Create and run a pipeline
 
@@ -161,29 +161,29 @@ After you have created and ran a pipeline a graphical representation of the pipe
 
 After clicking thak takes you to the Azure Machine Learning studio (provided in the notebook) click **Pipelines**
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/65.PNG)
+![](../Images/65.PNG)
 
 Click on the run. 
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/66.PNG)
+![](../Images/66.PNG)
 
 This will take you to the pipeline experiment where you can monitor details of your pipeline including the experiment name, number of steps in the pipelins and logs.
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/69.PNG)
+![](../Images/69.PNG)
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/70.PNG)
+![](../Images/70.PNG)
 
 An occasion where you may need to check your logs is if your run did not behave as expected. In this case you can use your logs to troubleshoot. 
 
-![](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Images/71.PNG)
+![](../Images/71.PNG)
 
 ## Exercise - Working with Pipelines
 
 ### Before you start
 
-In this tutorial we provide some jupyter notebook templates that you can run (more detail in: [Jupyter Lab notebook templates](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/tree/main/labs)).
+In this tutorial we provide some jupyter notebook templates that you can run (more detail in: [Jupyter Lab notebook templates](../labs)).
 
-If you have not already done so, create a [compute instance](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Documents/Create-Compute-Instance.md) and ensure you have [cloned the notebooks](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Documents/Clone-and-Run-a-Notebook.md) required for this exercise.
+If you have not already done so, create a [compute instance](../Documents/Create-Compute-Instance.md) and ensure you have [cloned the notebooks](../Documents/Clone-and-Run-a-Notebook.md) required for this exercise.
 
 ### Open Jupyter
 
@@ -200,4 +200,4 @@ In this exercise, the code to create and publish a pipeline is provided in a not
 3. When you have finished running the code in the notebook, on the **File** menu, click **Close and Halt** to close it and shut down its Python kernel. Then close all Jupyter browser tabs.
 
 ### Clean-up
-If you’re finished working with Azure Machine Learning for now refer to [this page](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Documents/Stop-Compute-Instance.md) to stop your compute instance. 
+If you’re finished working with Azure Machine Learning for now refer to [this page](../Documents/Stop-Compute-Instance.md) to stop your compute instance. 
