@@ -46,7 +46,7 @@ Content:
 * [Create a Pipeline](Documents/Orchestrate-ML-With-Pipelines.md)
 * [Deploy a model as a real-time inferencing service](Documents/Deploy-Real-Time-Service.md)
 * [Create a batch webservice](Documents/Deploy-Batch-Inference-Pipeline.md)
-* Dataset Monitors
+* [Dataset Monitors](Documents/Dataset-Monitors.md)
 * How to work with desktop tools and connect to Azure ML:
   * [Installing Anaconda on Windows](Documents/Anaconda_Windows.md)
   * [Installing Anaconda on macOS](Documents/Anaconda_macos.md)
