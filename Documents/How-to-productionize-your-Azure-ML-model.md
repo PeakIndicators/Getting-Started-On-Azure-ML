@@ -159,8 +159,11 @@ Once you have decided to retrain, you should:
 
 This process of retraining and effective Continous Integration/Continuous Development of ML models is the biggest strength of Azure Machine Learning.
 
-A theme of the above steps is that your retraining should be automated, not ad hoc. Azure ML provides different ways of achieving this automation. In this tutorial we will explain the following:
+A theme of the above steps is that your **retraining should be automated, not ad hoc**. Azure ML provides different ways of achieving this automation. In this tutorial we will explain the following:
 
-* Azure Machine Learning pipelines are a good answer for creating workflows relating to data preparation, training, validation, and deployment. 
-* Retrain models with Azure Machine Learning designer to see how pipelines and the Azure Machine Learning designer fit into a retraining scenario.
-* Azure DevOps Pipelines with Azure CLI
+* Azure Machine Learning designer - Retrain models with Azure Machine Learning designer to see how pipelines and the Azure Machine Learning designer fit into a retraining scenario.
+* Azure Machine Learning pipelines - these are a good answer for creating workflows relating to data preparation, training validation, and deployment. 
+* Azure DevOps Retraining Pipelines with Azure CLI
+
+##### Azure Machine Learning designer
+
