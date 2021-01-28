@@ -203,6 +203,7 @@ Step 2 - **Publish the pipeline**
 **Note:** More details on how to work with Azure ML Designer can be seen in [How to work with Azure Machine Learning Studio Designer](../Documents/studio-designer.md)
 
 Step 3 - **Retrain the Model by submitting a new running**
+
 Use the following steps to submit a parameterized pipeline endpoint run from the studio portal:
 
 1. Go to the **Endpoints** page in your studio workspace.
