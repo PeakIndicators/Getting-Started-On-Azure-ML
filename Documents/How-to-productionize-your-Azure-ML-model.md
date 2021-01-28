@@ -220,4 +220,42 @@ Use the following steps to submit a parameterized pipeline endpoint run from the
 ##### Submit runs by using code
 You can find the REST endpoint of a published pipeline in the overview panel. By calling the endpoint, you can retrain the published pipeline.
 
-To make a REST call, you need an OAuth 2.0 bearer-type authentication header. For information about setting up authentication to your workspace and making a parameterized REST call.
+To make a REST call, you need an OAuth 2.0 bearer-type authentication header. The following example uses interactive authentication (for illustration purposes), but for most production scenarios that require automated or headless authentication.
+
+Service principal authentication involves creating an App Registration in Azure Active Directory. First, you generate a client secret and then you grant your service principal role access to your machine learning workspace. Use the ServicePrincipalAuthentication class to manage your authentication flow. These tasks should be done or at least approved by your Azure Architecture Administrator Team.
+
+Both **InteractiveLoginAuthentication** and **ServicePrincipalAuthentication** inherit from AbstractAuthentication. In both cases, use the **get_authentication_header()** function in the same way to fetch the header:
+
+``
+from azureml.core.authentication import InteractiveLoginAuthentication
+
+interactive_auth = InteractiveLoginAuthentication()
+auth_header = interactive_auth.get_authentication_header()
+``
+
+Get the REST URL from the endpoint property of the published pipeline object. You can also find the REST URL in your workspace in Azure Machine Learning studio.
+Build an HTTP POST request to the endpoint. Specify your authentication header in the request. Add a JSON payload object that has the experiment name.
+Make the request to trigger the run. Include code to access the Id key from the response dictionary to get the value of the run ID.
+
+``
+import requests
+
+rest_endpoint = published_pipeline.endpoint
+response = requests.post(rest_endpoint, 
+                         headers=auth_header, 
+                         json={"ExperimentName": "Tutorial-Batch-Scoring",
+                               "ParameterAssignments": {"process_count_per_node": 6}})
+run_id = response.json()["Id"]
+``
+
+Use the run ID to monitor the status of the new run. The new run takes another 10-15 min to finish.
+The new run will look similar to the pipeline you ran earlier in the tutorial. You can choose not to view the full output.
+
+``
+from azureml.pipeline.core.run import PipelineRun
+from azureml.widgets import RunDetails
+
+published_pipeline_run = PipelineRun(ws.experiments["Tutorial-Batch-Scoring"], run_id)
+RunDetails(published_pipeline_run).show()
+``
+
