@@ -4,6 +4,7 @@ To integrate code in Jupyterlab notebooks in GIT the recommended approach by Mic
 The steps required to do this is shown and documented below. 
 
 ![](../Images/Dev10.PNG)
+
 *Process used to integrate the code in GIT*
 
 **GIT Clone — clone the repo to your Azure ML JupyterLab**
@@ -33,7 +34,7 @@ Make sure you have done the following before following this document:
 
     * Use the following: https://portal.azure.com/#home to access the Azure Portal.
     
-    * Select your **Workspace** 
+    * Select your **Azure Machine Leanrning Workspace** 
     
     ![](../Images/Dev13.PNG)
     
