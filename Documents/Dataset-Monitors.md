@@ -204,15 +204,16 @@ Allows the user to verify how the dataset differs from the target dataset in the
 
 * Drift magnitude by features
 
-This will provide insights into the change in the selected feature's distribution, as well as other statistics, over time.
+Over time, this option provides awareness of the changes in the selected feature's distribution, as well as other statistics.
 
-The target dataset is also profiled over time. The statistical distance between the baseline distribution of each feature is compared with the target dataset's over time. Conceptually, this is similar to the data drift magnitude. However this statistical distance is for an individual feature rather than all features. Min, max, and mean are also available.
+The target dataset is also profiled over time. The statistical distance between the baseline distribution of each feature is compared with the target dataset's over time. 
+This is similar to the data drift magnitude. The difference is that, this statistical distance is for an individual feature while the data drift magnitude is for all features. Min, max and mean are also available.
 
-In the Azure Machine Learning studio, click on a bar in the graph to see the the feature level details for that date. By default, you see the baseline dataset's distribution and the most recent run's distribution of the same feature.
+1. Click on a bar in the graph to see the the feature level details for that date. By default, you see the baseline dataset's distribution and the most recent run's distribution of the same feature.
 
 ![](../Images/datadrift8.gif)
 
-These metrics can also be retrieved in the Python SDK through the `get_metrics()` method on a `DataDriftDetector` object.
+These metrics can also be retrieved in Python through the `get_metrics()` method on a `DataDriftDetector` object.
 
 _Feature Details_
 
@@ -236,13 +237,13 @@ On the chart, select a single date to compare the feature distribution between t
 ![](../Images/datadrift17.gif)
 
 ## Metrics, alerts, and events
-Metrics can be queried in the Azure Application Insights resource associated with your machine learning workspace. You have access to all features of Application Insights including set up for custom alert rules and action groups to trigger an action such as, an Email/SMS/Push/Voice or Azure Function. Refer to the complete [Azure Application Insights](https://docs.microsoft.com/en-gb/azure/azure-monitor/app/app-insights-overview) documentation for details.
+Metrics can be queried in the Azure Application Insights resource associated with your machine learning studio. You have access to all features of Application Insights including set up for custom alert rules and action groups to trigger an action such as, an Email/SMS/Push/Voice or Azure Function. Refer to the complete [Azure Application Insights](https://docs.microsoft.com/en-gb/azure/azure-monitor/app/app-insights-overview) documentation for details.
 
-1. To get started, navigate to the Azure portal and select your workspace's Overview page. The associated Application Insights resource is on the far right:
+1. To get started, navigate to the Azure portal and select your studio's Overview page. The associated Application Insights resource is on the right:
 
 ![](../Images/datadrift10.png)
 
-2. Select Logs (Analytics) under Monitoring on the left pane:
+2. Select **Logs (Analytics)** under **Monitoring** on the left pane:
 
 ![](../Images/datadrift11.png)
 
@@ -250,16 +251,18 @@ Metrics can be queried in the Azure Application Insights resource associated wit
 
 ![](../Images/datadrift12.png)
 
-4. After identifying metrics to set up alert rules, create a new alert rule:
+**Logs (Analytics)** uses **Kusto query language**, more details can be seen [here](https://docs.microsoft.com/en-us/services-hub/health/log_analytics_query_language).
+
+4. After identifying metrics to set up alert rules, create a new **alert rule**:
 
 ![](../Images/datadrift13.png)
 
-5. An existing action group can be used or a new one can be created to define the action to be taken when the set conditions are met.
+5. An existing **action group** can be used or a new one can be created to define the action to be taken when the set conditions are met.
 
 ![](../Images/datadrift14.png)
 
 ## Limitations and known issues for data drift monitors
 
-Limitations and known issues for data drift monitors can be seen in the [Detect data drift on datasets troubleshooting]https://docs.microsoft.com/en-gb/azure/machine-learning/how-to-monitor-datasets?tabs=azure-studio#troubleshooting page.
+Limitations and known issues for data drift monitors can be seen in the [Detect data drift on datasets troubleshooting](https://docs.microsoft.com/en-gb/azure/machine-learning/how-to-monitor-datasets?tabs=azure-studio#troubleshooting) page.
 
 ##### _Source: https://docs.microsoft.com/en-gb/azure/machine-learning/how-to-monitor-datasets?tabs=python_
