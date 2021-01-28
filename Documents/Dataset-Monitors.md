@@ -165,20 +165,23 @@ _Creating a Dataset Monitor using Azure Machine Learning Studio Create Dataset U
 
 * Monitor settings. These settings are for the scheduled dataset monitor pipeline, which will be created.
 
-|-----------|----------|---------|---------|
-|Setting	|Description	|Tips	|Changeable|
-Name	Name of the dataset monitor.		No
-Features	List of features that will be analyzed for data drift over time.	Set to a model's output feature(s) to measure concept drift. Don't include features that naturally drift over time (month, year, index, etc.). You can backfill and existing data drift monitor after adjusting the list of features.	Yes
-Compute target	Azure Machine Learning compute target to run the dataset monitor jobs.		Yes
-Enable	Enable or disable the schedule on the dataset monitor pipeline	Disable the schedule to analyze historical data with the backfill setting. It can be enabled after the dataset monitor is created.	Yes
-Frequency	The frequency that will be used to schedule the pipeline job and analyze historical data if running a backfill. Options include daily, weekly, or monthly.	Each run compares data in the target dataset according to the frequency:
-Daily: Compare most recent complete day in target dataset with baseline
-Weekly: Compare most recent complete week (Monday - Sunday) in target dataset with baseline
-Monthly: Compare most recent complete month in target dataset with baseline
-No
-Latency	Time, in hours, it takes for data to arrive in the dataset. For instance, if it takes three days for data to arrive in the SQL DB the dataset encapsulates, set the latency to 72.	Cannot be changed after the dataset monitor is created	No
-Email addresses	Email addresses for alerting based on breach of the data drift percentage threshold.	Emails are sent through Azure Monitor.	Yes
-Threshold	Data drift percentage threshold for email alerting.	Further alerts and events can be set on many other metrics in the workspace's associated Application Insights resource.	Yes
+![](../Images/datadrift15.png)
+
+|-----------|----------|---------|
+|Setting	|Description	|Comments|
+|Name|	Name of the dataset monitor. Can only contain letters, numbers, dashes, underscore and start with a letter or number and must be under 36 characters.|Can't be changed after the monitor has been created|
+|Features|	List of features that will be analyzed for data drift over time.|Can be changed after the monitor has been created|
+|Compute target|	Azure Machine Learning compute target to run the dataset monitor jobs.|Can be changed after the monitor has been created|
+|Enable|	Enable or disable the schedule on the dataset monitor pipeline|Disable the schedule to analyze historical data with the backfill setting. It can be enabled after the dataset monitor is created.	Can be changed after the monitor has been created|
+|Frequency|	The frequency that will be used to schedule the pipeline job and analyze historical data if running a backfill.|Options include day, week or month.	Each run compares data in the target dataset according to the frequency:
+* Day: Compare most recent complete day in target dataset with baseline
+* Week: Compare most recent complete week (Monday - Sunday) in target dataset with baseline
+* Month: Compare most recent complete month in target dataset with baseline
+Can't be changed after the monitor has been created|
+|Latency	|Time, in hours, it takes for data to arrive in the dataset.| For instance, if it takes three days for data to arrive in the SQL DB the dataset encapsulates, set the latency to 72.	Cannot be changed after the dataset monitor is created. Can't be changed after the monitor has been created|
+|Email addresses|	Email addresses for alerting based on breach of the data drift percentage threshold.	|Emails are sent through Azure Monitor.	Can be changed after the monitor has been created|
+|Threshold|	Data drift percentage threshold for email alerting.|	Further alerts and events can be set on many other metrics in the workspace's associated Application Insights resource.	Can be changed after the monitor has been created|
+
 After finishing the wizard, the resulting dataset monitor will appear in the list. Select it to go to that monitor's details page.
 
 Understand data drift results
