@@ -3,7 +3,7 @@
 To integrate code in Jupyterlab notebooks in GIT the recommended approach by Microsoft is to use a GIT command-line. 
 The steps requird to do this is shown and documented below. 
 
-![](./DevOps_Git_Images/Dev10.PNG)
+![](https://github.com/PeakIndicatorsHub/Getting-Started-On-Azure-ML/blob/main/Images/Dev10.PNG)
 *Process used to integrate the code in GIT*
 
 **GIT Clone—clone the repo to your Azure ML JupyterLab**
@@ -20,23 +20,23 @@ Make sure you have done the following before following this document:
 
 1. From your web browser, Sign in to your organization, `(https://dev.azure.com/{yourorganization})`, open the team project and select **Repos > Files**. 
 
-![](./DevOps_Git_Images/Dev11.PNG)
+![](https://github.com/PeakIndicatorsHub/Getting-Started-On-Azure-ML/blob/main/Images/Dev11.PNG)
 
 2. Select **Clone** in the upper-right corner of the **Files** window. Then copy the clone URL, and password—you will need both in the following step. 
 
-![](./DevOps_Git_Images/Dev15.PNG)
+![](https://github.com/PeakIndicatorsHub/Getting-Started-On-Azure-ML/blob/main/Images/Dev15.PNG)
 
-![](./DevOps_Git_Images/Dev16.PNG)
+![](https://github.com/PeakIndicatorsHub/Getting-Started-On-Azure-ML/blob/main/Images/Dev16.PNG)
 
 
 3. Access Azure ML JupyterLab and open a terminal Session. 
     * Use the following: https://portal.azure.com/#home to access the Azure Portal.
     
     * Select your **Workspace** 
-    ![](./DevOps_Git_Images/Dev13.PNG)
+    ![](https://github.com/PeakIndicatorsHub/Getting-Started-On-Azure-ML/blob/main/Images/Dev13.PNG)
     
     * Select **Launch Studio**
-    ![](./DevOps_Git_Images/Dev14.PNG)
+    ![](https://github.com/PeakIndicatorsHub/Getting-Started-On-Azure-ML/blob/main/Images/Dev14.PNG)
 
     * View the **Compute** page
 
