@@ -64,10 +64,9 @@ In most cases, your _Data Science Team_ will provide the files and resources nee
 * Deployment environment (deploymentConfig.yml): Defines the resources and compute needed for the deployment environment.
 * Deployment environment (inferenceConfig.yml): Defines the packages needed to run and score the model in the deployment environment.
 
-Some of these files are directly used when developing a model. For example, the train.py and score.py files. However the data scientist may be programmatically creating the run configuration and environment settings. If so, they can create the .runconfig and training environment files, by using RunConfiguration.save(). Or, default run configuration files can be created for all compute targets already in the workspace by running the following command:
+Some of these files are directly used when developing a model. For example, the train.py and score.py files. However the data scientist may be programmatically creating the run configuration and environment settings. If so, they can create the .runconfig and training environment files, by using RunConfiguration.save(). Or, default run configuration files can be created for all compute targets already in the workspace by running the following command using Azure CLI Powershell:
 
 `
-#Azure CLI
 az ml folder attach --experiment-name myexp -w myws -g mygroup
 `
 
