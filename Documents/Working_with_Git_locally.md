@@ -76,7 +76,7 @@ As an example lets create a new text file called `test`
 * type `test`, then press **(CTRL+SHIFT+S)** and save it 
 **Note	—** always save **(CTRL+S)** before you **stage** and **commit** changes. 
 
-![](https://github.com/PeakIndicatorsHub/Getting-Started-On-Azure-ML/blob/main/Images/Dev23.PNG)
+![](https://github.com/PeakIndicatorsHub/Getting-Started-On-Azure-ML/blob/main/Images/Dev26.PNG)
 
 The **Source Control** symbol should now show a change.
 
