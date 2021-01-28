@@ -167,8 +167,8 @@ _Creating a Dataset Monitor using Azure Machine Learning Studio Create Dataset U
 
 ![](../Images/datadrift15.png)
 
-|-----------|----------|---------|
 |Setting	|Description	|Comments|
+|-----------|----------|---------|
 |Name|	Name of the dataset monitor. Can only contain letters, numbers, dashes, underscore and start with a letter or number and must be under 36 characters.|Can't be changed after the monitor has been created|
 |Features|	List of features that will be analyzed for data drift over time.|Can be changed after the monitor has been created|
 |Compute target|	Azure Machine Learning compute target to run the dataset monitor jobs.|Can be changed after the monitor has been created|
