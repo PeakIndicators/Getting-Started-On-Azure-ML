@@ -12,7 +12,7 @@ To work with a Git repo, you need to clone the repo you will be working on for t
 ## <a name = 'Prerequisites-1'></a>Prerequisites
 
 Make sure you have done the following before following this document:
-* [created a project and Git repo in Azure DevOps](Documents/Create_project_Azure_DevOps.md).
+* [Created a project and Git repo in Azure DevOps](Documents/Create_project_Azure_DevOps.md).
 * [Accessed Azure Machine Learning Studio](Documents/Azure-ML-Studio.md).
 * [Created a Compute Instance](Documents/Create-Compute-Instance.md).
 * [Created and run a Python or R notebook](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Documents/Creating-and-Running-a-Python-Notebook.md)
