@@ -183,7 +183,58 @@ After finishing the wizard, the resulting dataset monitor will appear in the lis
 ![](../Images/datadrift16.gif)
 
 #### Understand data drift results
+On the monitor's detail page shown above you can check the drift results. 
+The details displays 3 main sections:
 
+* Summary Section
+
+![](../Images/datadrift6.png)
+
+|Metric	|Description|
+|---------|-----------------|
+|Drift magnitude|	A percentage of drift between the baseline and target dataset over time. 0 indicates identical datasets and 100 indicates the Azure Machine Learning data drift model can completely tell the two datasets apart.|
+|Top drifting features|	Shows the features from the dataset that have drifted the most and are therefore contributing the most to the Drift Magnitude metric.|
+|Threshold|	Data Drift magnitude beyond the set threshold will trigger alerts. This can be configured in the monitor settings.|
+
+* Drift magnitude trend
+
+![](../Images/datadrift7.png)
+
+Allows the user to verify how the dataset differs from the target dataset in the specified time period. The closer to 100%, the more the two datasets differ.
+
+* Drift magnitude by features
+
+This will provide insights into the change in the selected feature's distribution, as well as other statistics, over time.
+
+The target dataset is also profiled over time. The statistical distance between the baseline distribution of each feature is compared with the target dataset's over time. Conceptually, this is similar to the data drift magnitude. However this statistical distance is for an individual feature rather than all features. Min, max, and mean are also available.
+
+In the Azure Machine Learning studio, click on a bar in the graph to see the the feature level details for that date. By default, you see the baseline dataset's distribution and the most recent run's distribution of the same feature.
+
+![](../Images/datadrift8.gif)
+
+_Feature Details_
+Scroll down to view details for each individual feature. Select the metric you want to view and use the dropdowns in the chart to select the feature.
+
+![](../Images/datadrift9.gif)
+
+Metrics Available:
+
+Metrics in the chart depend on the type of feature.
+
+   * Numeric features:
+      * Wasserstein distance
+      * Mean value
+      * Min value	
+      * Max value
+   * Categorical features
+      * Euclidian distance
+      * Unique values
+
+On the chart, select a single date to compare the feature distribution between the target and this date for the displayed feature. For numeric features, this shows two probability distributions. If the feature is numeric, a bar chart is shown.
+
+![](../Images/datadrift17.gif)
+
+## Metrics, alerts, and events
 
 
 ##### _Source: https://docs.microsoft.com/en-gb/azure/machine-learning/how-to-monitor-datasets?tabs=python_
