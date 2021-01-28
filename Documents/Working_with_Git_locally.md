@@ -18,17 +18,17 @@ This document will detail how to:
 
 ## Clone the repo to your computer
 
-1. From your web browser, Sign in to your organization, `(https://dev.azure.com/{yourorganization})`, open the team project and select **Repos > Files**. 
+1. From your web browser, sign in to your organization, `(https://dev.azure.com/{yourorganization})`, open the team project and select **Repos > Files**. 
 
 ![](../Images/Dev11.PNG)
 
-2. Select **Clone** in the upper-right corner of the **Files** window. Then copy the clone URL, and password—you will need both in the following step. 
+2. Select **Clone** in the upper-right corner of the **Files** window. Then copy the clone URL and password (you will need both in the following step). 
 
 ![](../Images/Dev15.PNG)
 
 ![](../Images/Dev16.PNG)
 
-3. Open the Git command Window 
+3. Open the Git command Window. 
 
 ![](../Images/Dev17.PNG)
 
