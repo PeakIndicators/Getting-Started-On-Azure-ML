@@ -68,6 +68,7 @@ Some of these files are directly used when developing a model. For example, the 
 
 `
 #Azure CLI
+
 az ml folder attach --experiment-name myexp -w myws -g mygroup
 `
 
@@ -255,6 +256,7 @@ Build an HTTP POST request to the endpoint. Specify your authentication header i
 Make the request to trigger the run. Include code to access the Id key from the response dictionary to get the value of the run ID.
 
 `
+
 import requests
 
 rest_endpoint = published_pipeline.endpoint
@@ -263,6 +265,7 @@ response = requests.post(rest_endpoint,
                          json={"ExperimentName": "Tutorial-Batch-Scoring",
                                "ParameterAssignments": {"process_count_per_node": 6}})
 run_id = response.json()["Id"]
+
 `
 
 Use the run ID to monitor the status of the new run. The new run takes another 10-15 min to finish.
