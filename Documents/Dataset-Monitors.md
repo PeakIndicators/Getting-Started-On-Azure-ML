@@ -168,137 +168,19 @@ _Creating a Dataset Monitor using Azure Machine Learning Studio Create Dataset U
 ![](../Images/datadrift15.png)
 
 |Setting	|Description	|Comments|
-|-----------|----------|---------|
-|Name|	Name of the dataset monitor. Can only contain letters, numbers, dashes, underscore and start with a letter or number and must be under 36 characters.|Can't be changed after the monitor has been created|
+|-----------|------------------|---------|
+|Name|	Name of the dataset monitor. Can only contain letters, numbers, dashes, underscore and start with a letter or number. Must be under 36 characters.|Can't be changed after the monitor has been created|
 |Features|	List of features that will be analyzed for data drift over time.|Can be changed after the monitor has been created|
-|Compute target|	Azure Machine Learning compute target to run the dataset monitor jobs.|Can be changed after the monitor has been created|
+|Compute target|	Azure Machine Learning compute target to run the dataset monitor jobs. Needs to be a Compute Cluster.|Can be changed after the monitor has been created|
 |Enable|	Enable or disable the schedule on the dataset monitor pipeline|Disable the schedule to analyze historical data with the backfill setting. It can be enabled after the dataset monitor is created.	Can be changed after the monitor has been created|
 |Frequency|	The frequency that will be used to schedule the pipeline job and analyze historical data if running a backfill.|Options include day, week or month.	Each run compares data in the target dataset according to the frequency: _Day: Compare most recent complete day in target dataset with baseline_;  _Week: Compare most recent complete week (Monday - Sunday) in target dataset with baseline;_ _Month: Compare most recent complete month in target dataset with baseline_. Can't be changed after the monitor has been created|
-|Latency	|Time, in hours, it takes for data to arrive in the dataset.| For instance, if it takes three days for data to arrive in the SQL DB the dataset encapsulates, set the latency to 72.	Cannot be changed after the dataset monitor is created. Can't be changed after the monitor has been created|
+|Latency	|Time, in hours, it takes for data to arrive in the dataset.| For instance, if it takes three days for data to arrive, set the latency to 72.	Can't be changed after the dataset monitor is created.|
 |Email addresses|	Email addresses for alerting based on breach of the data drift percentage threshold.	|Emails are sent through Azure Monitor.	Can be changed after the monitor has been created|
-|Threshold|	Data drift percentage threshold for email alerting.|	Further alerts and events can be set on many other metrics in the workspace's associated Application Insights resource.	Can be changed after the monitor has been created|
+|Threshold|	Data drift percentage threshold for email alerting.|	Further alerts and events can be set on many other metrics in the Studio's associated Application Insights resource.	Can be changed after the monitor has been created|
 
 After finishing the wizard, the resulting dataset monitor will appear in the list. Select it to go to that monitor's details page.
 
-Understand data drift results
-This section shows you the results of monitoring a dataset, found in the Datasets / Dataset monitors page in Azure studio. You can update the settings as well as analyze existing data for a specific time period on this page.
-
-Start with the top-level insights into the magnitude of data drift and a highlight of features to be further investigated.
-
-Drift overview
-
-UNDERSTAND DATA DRIFT RESULTS
-Metric	Description
-Data drift magnitude	A percentage of drift between the baseline and target dataset over time. Ranging from 0 to 100, 0 indicates identical datasets and 100 indicates the Azure Machine Learning data drift model can completely tell the two datasets apart. Noise in the precise percentage measured is expected due to machine learning techniques being used to generate this magnitude.
-Top drifting features	Shows the features from the dataset that have drifted the most and are therefore contributing the most to the Drift Magnitude metric. Due to covariate shift, the underlying distribution of a feature does not necessarily need to change to have relatively high feature importance.
-Threshold	Data Drift magnitude beyond the set threshold will trigger alerts. This can be configured in the monitor settings.
-Drift magnitude trend
-See how the dataset differs from the target dataset in the specified time period. The closer to 100%, the more the two datasets differ.
-
-Drift magnitude trend
-
-Drift magnitude by features
-This section contains feature-level insights into the change in the selected feature's distribution, as well as other statistics, over time.
-
-The target dataset is also profiled over time. The statistical distance between the baseline distribution of each feature is compared with the target dataset's over time. Conceptually, this is similar to the data drift magnitude. However this statistical distance is for an individual feature rather than all features. Min, max, and mean are also available.
-
-In the Azure Machine Learning studio, click on a bar in the graph to see the the feature level details for that date. By default, you see the baseline dataset's distribution and the most recent run's distribution of the same feature.
-
-Drift magnitude by features
-
-These metrics can also be retrieved in the Python SDK through the get_metrics() method on a DataDriftDetector object.
-
-Feature details
-Finally, scroll down to view details for each individual feature. Use the dropdowns above the chart to select the feature, and additionally select the metric you want to view.
-
-Numeric feature graph and comparison
-
-Metrics in the chart depend on the type of feature.
-
-Numeric features
-
-TABLE 5
-Metric	Description
-Wasserstein distance	Minimum amount of work to transform baseline distribution into the target distribution.
-Mean value	Average value of the feature.
-Min value	Minimum value of the feature.
-Max value	Maximum value of the feature.
-Categorical features
-
-TABLE 6
-Metric	Description
-Euclidian distance     	  Computed for categorical columns. Euclidean distance is computed on two vectors, generated from empirical distribution of the same categorical column from two datasets. 0 indicates there is no difference in the empirical distributions.  The more it deviates from 0, the more this column has drifted. Trends can be observed from a time series plot of this metric and can be helpful in uncovering a drifting feature.  
-Unique values	Number of unique values (cardinality) of the feature.
-On this chart, select a single date to compare the feature distribution between the target and this date for the displayed feature. For numeric features, this shows two probability distributions. If the feature is numeric, a bar chart is shown.
-
-Select a date to compare to target
-
-Metrics, alerts, and events
-Metrics can be queried in the Azure Application Insights resource associated with your machine learning workspace. You have access to all features of Application Insights including set up for custom alert rules and action groups to trigger an action such as, an Email/SMS/Push/Voice or Azure Function. Refer to the complete Application Insights documentation for details.
-
-To get started, navigate to the Azure portal and select your workspace's Overview page. The associated Application Insights resource is on the far right:
-
-Azure portal overview
-
-Select Logs (Analytics) under Monitoring on the left pane:
-
-Application insights overview
-
-The dataset monitor metrics are stored as customMetrics. You can write and run a query after setting up a dataset monitor to view them:
-
-Log analytics query
-
-After identifying metrics to set up alert rules, create a new alert rule:
-
-New alert rule
-
-You can use an existing action group, or create a new one to define the action to be taken when the set conditions are met:
-
-New action group
-
-Troubleshooting
-Limitations and known issues for data drift monitors:
-
-The time range when analyzing historical data is limited to 31 intervals of the monitor's frequency setting.
-
-Limitation of 200 features, unless a feature list is not specified (all features used).
-
-Compute size must be large enough to handle the data.
-
-Ensure your dataset has data within the start and end date for a given monitor run.
-
-Dataset monitors will only work on datasets that contain 50 rows or more.
-
-Columns, or features, in the dataset are classified as categorical or numeric based on the conditions in the following table. If the feature does not meet these conditions - for instance, a column of type string with >100 unique values - the feature is dropped from our data drift algorithm, but is still profiled.
-
-TABLE 7
-Feature type	Data type	Condition	Limitations
-Categorical	string, bool, int, float	The number of unique values in the feature is less than 100 and less than 5% of the number of rows.	Null is treated as its own category.
-Numerical	int, float	The values in the feature are of a numerical data type and do not meet the condition for a categorical feature.	Feature dropped if >15% of values are null.
-When you have created a data drift monitor but cannot see data on the Dataset monitors page in Azure Machine Learning studio, try the following.
-
-Check if you have selected the right date range at the top of the page.
-On the Dataset Monitors tab, select the experiment link to check run status. This link is on the far right of the table.
-If run completed successfully, check driver logs to see how many metrics has been generated or if there's any warning messages. Find driver logs in the Output + logs tab after you click on an experiment.
-If the SDK backfill() function does not generate the expected output, it may be due to an authentication issue. When you create the compute to pass into this function, do not use Run.get_context().experiment.workspace.compute_targets. Instead, use ServicePrincipalAuthentication such as the following to create the compute that you pass into that backfill() function:
-
-Python
-
-Copy
-auth = ServicePrincipalAuthentication(
-        tenant_id=tenant_id,
-        service_principal_id=app_id,
-        service_principal_password=client_secret
-        )
-ws = Workspace.get("xxx", auth=auth, subscription_id="xxx", resource_group"xxx")
-compute = ws.compute_targets.get("xxx")
-From the Model Data Collector, it can take up to (but usually less than) 10 minutes for data to arrive in your blob storage account. In a script or Notebook, wait 10 minutes to ensure cells below will run.
-
-Python
-
-Copy
-import time
-time.sleep(600)
+![](../Images/datadrift16.gif)
 
 
 ##### _Source: https://docs.microsoft.com/en-gb/azure/machine-learning/how-to-monitor-datasets?tabs=python_
