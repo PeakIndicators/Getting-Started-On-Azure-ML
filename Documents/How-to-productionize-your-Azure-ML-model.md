@@ -171,13 +171,50 @@ This approach can only be used when the model was designed using Azure Machine L
 This will mean the user will have a published training pipeline and this can be used to retrain the model on new data. To retrain the user can submit runs from a pipeline endpoint from the studio workspace or programmatically.
 
 ###### Submit runs by using the studio portal
+The idea is to re-run and publish the pipeline using a new set of data. To achieve this, the first step is to change the pipeline in order to create a pipeline parameter which will contain the new file path and name. Once the pipeline parameter has been created and added to the pipeline, it needs to be published and then the pipeline can be executed with this new set of data for further analysis.
+
+Step 1 - **Create a pipeline parameter**
+Pipeline parameters are used to build versatile pipelines which can be resubmitted later with varying parameter values. Some common scenarios are updating datasets or some hyper-parameters for retraining. Create pipeline parameters to dynamically set variables at runtime.
+
+Pipeline parameters can be added to data source or module parameters in a pipeline. When the pipeline is resubmitted, the values of these parameters can be specified.
+
+For this example, we will change the training data path from a fixed value to a parameter, so that ythe model can be retrained on different set of data. Other module parameters can be added according to the use case.
+
+1. Select the **Import Data** module.
+**Note:** This example uses the Import Data module to access data in a registered datastore. However, you can follow similar steps if you use alternative data access patterns.
+2. In the module detail pane, to the right of the canvas, select your data source.
+3. Enter the path to your data. You can also select **Browse path** to browse your file tree.
+4. Mouseover the **Path** field, and select the ellipses above the **Path** field that appear.
+5. Select **Add to pipeline parameter**.
+6. Provide a parameter name and a default value.
+7. Select **Save**.
+8. **Submit** the pipeline run.
+
+![](../Images/devops19.gif)
+
+Step 2 - **Publish the pipeline**
+
+1. Select **Publish** above the designer canvas.
+2. Select or create a pipeline endpoint.
+3. Select **Publish**.
+
+![](../Images/devops20.PNG)
+
+**Note:** More details on how to work with Azure ML Designer can be seen in [How to work with Azure Machine Learning Studio Designer](../Documents/studio-designer.md)
+
+Step 3 - **Retrain the Model by submitting a new running**
 Use the following steps to submit a parameterized pipeline endpoint run from the studio portal:
 
-1. Go to the Endpoints page in your studio workspace.
-2. Select the Pipeline endpoints tab. Then, select your pipeline endpoint.
-3. Select the Published pipelines tab. Then, select the pipeline version that you want to run.
-4. Select Submit.
-In the setup dialog box, you can specify the parameters values for the run. For this example, update the data path to train your model using a non-US dataset.
+1. Go to the **Endpoints** page in your studio workspace.
+2. Select the **Pipeline endpoints** tab. Then, select your pipeline endpoint.
+3. Select the **Published pipelines** tab. Then, select the pipeline version that you want to run.
+4. Select **Submit**.
+
+![](../Images/devops21.gif)
+
+5. In the setup dialog box, you can specify the parameters values for the run. 
+
+![](../Images/devops22.png)
 
 ##### Submit runs by using code
 You can find the REST endpoint of a published pipeline in the overview panel. By calling the endpoint, you can retrain the published pipeline.
