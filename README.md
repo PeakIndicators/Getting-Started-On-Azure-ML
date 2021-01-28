@@ -59,6 +59,7 @@ Content:
 * Integrate with Git
   * [Create a project in Azure DevOps and establish a Git repo for source code](Documents/Create_project_Azure_DevOps.md)
   * [Integrating AzureML notebooks with Git](Documents/Integrating_AzureML_notebooks_with%20Git.md)
+  * [Working with Git locally](Documents/Working_with_Git_locally.md)
 * [Integrate with Azure Key Vault secrets](Documents/Integrate-with-Azure-Key-Vault-secrets.MD)
 * [JupyterLab notebook templates](labs)
 * [Data for your notebook templates](labs)
