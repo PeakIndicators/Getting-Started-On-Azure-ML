@@ -66,10 +66,10 @@ In most cases, your _Data Science Team_ will provide the files and resources nee
 
 Some of these files are directly used when developing a model. For example, the train.py and score.py files. However the data scientist may be programmatically creating the run configuration and environment settings. If so, they can create the .runconfig and training environment files, by using RunConfiguration.save(). Or, default run configuration files can be created for all compute targets already in the workspace by running the following command:
 
-``
+`
 #Azure CLI
 az ml folder attach --experiment-name myexp -w myws -g mygroup
-``
+`
 
 The files created by this command are stored in the .azureml directory of the Storage Account associated with the Azure Machine Learning Studio resource..
 
@@ -243,21 +243,18 @@ Service principal authentication involves creating an App Registration in Azure 
 
 Both **InteractiveLoginAuthentication** and **ServicePrincipalAuthentication** inherit from AbstractAuthentication. In both cases, use the **get_authentication_header()** function in the same way to fetch the header:
 
-``
-
+`
 from azureml.core.authentication import InteractiveLoginAuthentication
 
 interactive_auth = InteractiveLoginAuthentication()
 auth_header = interactive_auth.get_authentication_header()
-
-``
+`
 
 Get the REST URL from the endpoint property of the published pipeline object. You can also find the REST URL in your workspace in Azure Machine Learning studio.
 Build an HTTP POST request to the endpoint. Specify your authentication header in the request. Add a JSON payload object that has the experiment name.
 Make the request to trigger the run. Include code to access the Id key from the response dictionary to get the value of the run ID.
 
-``
-
+`
 import requests
 
 rest_endpoint = published_pipeline.endpoint
@@ -266,21 +263,18 @@ response = requests.post(rest_endpoint,
                          json={"ExperimentName": "Tutorial-Batch-Scoring",
                                "ParameterAssignments": {"process_count_per_node": 6}})
 run_id = response.json()["Id"]
-
-``
+`
 
 Use the run ID to monitor the status of the new run. The new run takes another 10-15 min to finish.
 The new run will look similar to the pipeline you ran earlier in the tutorial. You can choose not to view the full output.
 
-``
-
+`
 from azureml.pipeline.core.run import PipelineRun
 from azureml.widgets import RunDetails
 
 published_pipeline_run = PipelineRun(ws.experiments["Tutorial-Batch-Scoring"], run_id)
 RunDetails(published_pipeline_run).show()
-
-``
+`
 
 #### Azure DevOps Retraining Pipelines with Azure CLI
 
