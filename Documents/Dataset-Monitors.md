@@ -182,5 +182,8 @@ After finishing the wizard, the resulting dataset monitor will appear in the lis
 
 ![](../Images/datadrift16.gif)
 
+#### Understand data drift results
+
+
 
 ##### _Source: https://docs.microsoft.com/en-gb/azure/machine-learning/how-to-monitor-datasets?tabs=python_
