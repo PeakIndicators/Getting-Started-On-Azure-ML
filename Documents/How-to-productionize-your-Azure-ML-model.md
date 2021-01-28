@@ -242,11 +242,10 @@ Service principal authentication involves creating an App Registration in Azure 
 
 Both **InteractiveLoginAuthentication** and **ServicePrincipalAuthentication** inherit from AbstractAuthentication. In both cases, use the **get_authentication_header()** function in the same way to fetch the header:
 
-`
-from azureml.core.authentication import InteractiveLoginAuthentication
-interactive_auth = InteractiveLoginAuthentication()
-auth_header = interactive_auth.get_authentication_header()
-`
+
+`from azureml.core.authentication import InteractiveLoginAuthentication`
+`interactive_auth = InteractiveLoginAuthentication()`
+`auth_header = interactive_auth.get_authentication_header()`
 
 Get the REST URL from the endpoint property of the published pipeline object. You can also find the REST URL in your workspace in Azure Machine Learning studio.
 Build an HTTP POST request to the endpoint. Specify your authentication header in the request. Add a JSON payload object that has the experiment name.
