@@ -19,6 +19,7 @@ You can manage and structure each project to support your business needs. Each p
 3. Enter your password and select **Sign in**.
 
 ![](../Images/Dev4.PNG)
+
 4. To get started with Azure DevOps, select **Continue**.
 
 ![](../Images/Dev5.PNG)
