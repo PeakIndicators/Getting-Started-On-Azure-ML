@@ -30,17 +30,17 @@ This document will detail how to:
 
 3. Open the Git command Window 
 
-![](./DevOps_Git_Images/Dev17.PNG)
+![](https://github.com/PeakIndicatorsHub/Getting-Started-On-Azure-ML/blob/main/Images/Dev17.PNG)
 
 4. Browse to the folder where you want the code from the repo stored on your local computer. 
 
 In the example below I am navigating to a folder named Documents, follwed by the sub-folders Projects and Example. This means that when I give the command to clone, Git will clone my remote repo to this folder. 
 
-![](./DevOps_Git_Images/Dev18.PNG)
+![](https://github.com/PeakIndicatorsHub/Getting-Started-On-Azure-ML/blob/main/Images/Dev18.PNG)
 
 5. Run `git clone` followed by the path copied from the Clone URL in the previous section, as shown in the example below:
 
-![](./DevOps_Git_Images/Dev19.PNG)
+![](https://github.com/PeakIndicatorsHub/Getting-Started-On-Azure-ML/blob/main/Images/Dev19.PNG)
 
 Next it will ask for a password, paste the password you copied above and press **Enter**. Git downloads a copy of the code, including all commits and branches from the repo, into a new folder for you to work with.
 
@@ -56,19 +56,19 @@ Switch your directory to the repository that you cloned. For e.g.
 
 1. Open a new instance of VS Code
 
-![](./DevOps_Git_Images/Dev20.PNG)
+![](https://github.com/PeakIndicatorsHub/Getting-Started-On-Azure-ML/blob/main/Images/Dev20.PNG)
 
 2. Open one of the files or folder from your repo
 
-![](./DevOps_Git_Images/Dev21.PNG)
+![](https://github.com/PeakIndicatorsHub/Getting-Started-On-Azure-ML/blob/main/Images/Dev21.PNG)
 
 Below I have opened a clone of the repo containing all the documents I have created for this course on getting started in the world of Python and Azure ML.
 
-![](./DevOps_Git_Images/Dev22.PNG)
+![](https://github.com/PeakIndicatorsHub/Getting-Started-On-Azure-ML/blob/main/Images/Dev22.PNG)
 
 The **Source Control** symbol with "2" next to it shows changed that have been made to the repo. In this case I have added two images since I have created the clone. 
 
-![](./DevOps_Git_Images/Dev23.PNG)
+![](https://github.com/PeakIndicatorsHub/Getting-Started-On-Azure-ML/blob/main/Images/Dev23.PNG)
 
 As an example lets create a new text file called `test`
 
@@ -76,7 +76,7 @@ As an example lets create a new text file called `test`
 * type `test`, then press **(CTRL+SHIFT+S)** and save it 
 **Note	—** always save **(CTRL+S)** before you **stage** and **commit** changes. 
 
-![](./DevOps_Git_Images/Dev23.PNG)
+![](https://github.com/PeakIndicatorsHub/Getting-Started-On-Azure-ML/blob/main/Images/Dev23.PNG)
 
 The **Source Control** symbol should now show a change.
 
@@ -86,24 +86,24 @@ The **Source Control** symbol should now show a change.
 
 * Type **(CTRL+SHIFT+P)** and start typing `push`
 
-![](./DevOps_Git_Images/Dev27.PNG)
+![](https://github.com/PeakIndicatorsHub/Getting-Started-On-Azure-ML/blob/main/Images/Dev27.PNG)
 
 * Select `Git: Push to....` and the remote repo you have cloned it from should come up. 
-![](./DevOps_Git_Images/Dev28.PNG)
+![](https://github.com/PeakIndicatorsHub/Getting-Started-On-Azure-ML/blob/main/Images/Dev28.PNG)
 
 Once pushed your changes should appear in your remote repo, which in your case should be the Git repo you have created in Azure DevOps. 
 
 When you navigate to your Azure DevOps Git repo and look at your **History** you should see something similar to the below:
 
-![](./DevOps_Git_Images/Dev31.PNG) *Changes to your repo should show your commit message, log details and whether the change was successful*
+![](https://github.com/PeakIndicatorsHub/Getting-Started-On-Azure-ML/blob/main/Images/Dev31.PNG) *Changes to your repo should show your commit message, log details and whether the change was successful*
 
 You can also confirm your remote repo by navigating to **Source Control** and selecting **Remotes**. At the top you should be able to view your Azure DevOps Git repo. In our case we have cloned all the documentation from our GitHub repo. 
 
-![](./DevOps_Git_Images/Dev29.PNG)
+![](https://github.com/PeakIndicatorsHub/Getting-Started-On-Azure-ML/blob/main/Images/Dev29.PNG)
 
 If you click on the entries you can also view changes made to the file. This is useful if you want to view changes you or colleagues have made.
 
-![](./DevOps_Git_Images/Dev30.PNG)
+![](https://github.com/PeakIndicatorsHub/Getting-Started-On-Azure-ML/blob/main/Images/Dev30.PNG)
 
 
 
