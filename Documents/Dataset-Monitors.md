@@ -43,16 +43,13 @@ The first step to define a Dataset Monitor is to define:
 The monitor will compare the baseline and target datasets.
 
 #### Create target dataset
-The target dataset needs the timeseries trait set on it by specifying the timestamp column either from a column in the data or a virtual column derived from the path pattern of the files. Create the dataset with a timestamp through the Python SDK or Azure Machine Learning studio. A column representing a "timestamp" must be specified to add timeseries trait to the dataset. If your data is partitioned into folder structure with time info, such as '{yyyy/MM/dd}', create a virtual column through the path pattern setting and set it as the "partition timestamp" to improve the importance of time series functionality.
+The target dataset needs the timeseries trait set on it by specifying the timestamp column either from a column in the data or a virtual column derived from the path pattern of the files. 
 
-Python
-Studio
+_Creating a target Dataset using Azure Machine Learning Studio Notebooks with Python_
 
 The Dataset class with_timestamp_columns() method defines the time stamp column for the dataset.
 
-Python
-
-Copy
+```
 from azureml.core import Workspace, Dataset, Datastore
 
 # get workspace object
@@ -75,9 +72,10 @@ dset = dset.with_timestamp_columns('date')
 
 # register the dataset as the target dataset
 dset = dset.register(ws, 'target')
- Tip
+```
 
-For a full example of using the timeseries trait of datasets, see the example notebook or the datasets SDK documentation.
+_Creating a Target Dataset using Azure Machine Learning Studio_
+
 
 Create dataset monitor
 Create a dataset monitor to detect and alert to data drift on a new dataset. Use either the Python SDK or Azure Machine Learning studio.
