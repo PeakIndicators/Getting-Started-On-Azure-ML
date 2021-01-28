@@ -80,7 +80,7 @@ If you create your dataset using Azure Machine Learning studio, ensure the path 
 
 In the following example, all data under the subfolder NoaaIsdFlorida/2019 is taken and the partition format specifies the timestamp's year, month, and day.
 
-![](../Images/datadrift1.PNG)
+![](../Images/datadrift1.png)
 
 In the **Schema** settings, specify the timestamp column from a virtual or real column in the specified dataset:
 
@@ -144,7 +144,42 @@ monitor = monitor.enable_schedule()
 
 _Creating a Dataset Monitor using Azure Machine Learning Studio Create Dataset UI_
 
+1. Sign in to the [Azure Machine Learning studio](https://ml.azure.com/).
 
+2. Select **Datasets** in the **Assets** section of the left pane.
+
+![](../Images/dataset1.PNG)
+
+3. Select **Dataset monitors** and click on the **+ Create monitor**
+
+![](../Images/datadrift4.png)
+
+4. Continue through the wizard by clicking Next.
+
+![](../Images/datadrift5.png)
+
+
+* Select target dataset. The target dataset is a tabular dataset with timestamp column specified which will be analyzed for data drift. The target dataset must have features in common with the baseline dataset, and should be a timeseries dataset, which new data is appended to. Historical data in the target dataset can be analyzed, or new data can be monitored.
+
+* Select baseline dataset. Select the tabular dataset to be used as the baseline for comparison of the target dataset over time. The baseline dataset must have features in common with the target dataset. Select a time range to use a slice of the target dataset, or specify a separate dataset to use as the baseline.
+
+* Monitor settings. These settings are for the scheduled dataset monitor pipeline, which will be created.
+
+|-----------|----------|---------|---------|
+|Setting	|Description	|Tips	|Changeable|
+Name	Name of the dataset monitor.		No
+Features	List of features that will be analyzed for data drift over time.	Set to a model's output feature(s) to measure concept drift. Don't include features that naturally drift over time (month, year, index, etc.). You can backfill and existing data drift monitor after adjusting the list of features.	Yes
+Compute target	Azure Machine Learning compute target to run the dataset monitor jobs.		Yes
+Enable	Enable or disable the schedule on the dataset monitor pipeline	Disable the schedule to analyze historical data with the backfill setting. It can be enabled after the dataset monitor is created.	Yes
+Frequency	The frequency that will be used to schedule the pipeline job and analyze historical data if running a backfill. Options include daily, weekly, or monthly.	Each run compares data in the target dataset according to the frequency:
+Daily: Compare most recent complete day in target dataset with baseline
+Weekly: Compare most recent complete week (Monday - Sunday) in target dataset with baseline
+Monthly: Compare most recent complete month in target dataset with baseline
+No
+Latency	Time, in hours, it takes for data to arrive in the dataset. For instance, if it takes three days for data to arrive in the SQL DB the dataset encapsulates, set the latency to 72.	Cannot be changed after the dataset monitor is created	No
+Email addresses	Email addresses for alerting based on breach of the data drift percentage threshold.	Emails are sent through Azure Monitor.	Yes
+Threshold	Data drift percentage threshold for email alerting.	Further alerts and events can be set on many other metrics in the workspace's associated Application Insights resource.	Yes
+After finishing the wizard, the resulting dataset monitor will appear in the list. Select it to go to that monitor's details page.
 
 Understand data drift results
 This section shows you the results of monitoring a dataset, found in the Datasets / Dataset monitors page in Azure studio. You can update the settings as well as analyze existing data for a specific time period on this page.
