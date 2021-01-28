@@ -157,15 +157,14 @@ Once you have decided to retrain, you should:
 * Compare the outputs of your new model to those of your old model
 * Use predefined criteria to choose whether to replace your old model
 
-This process of retraining and effective Continous Integration/Continuous Development of ML models is the biggest strength of Azure Machine Learning.
+This process of retraining and effective Continous Integration/Continuous Development (CI/CD) of ML models is the biggest strength of Azure Machine Learning.
 
 A theme of the above steps is that your **retraining should be automated, not ad hoc**. Azure ML provides different ways of achieving this automation. In this tutorial we will explain the following:
 
-* Azure Machine Learning designer - Retrain models with Azure Machine Learning designer to see how pipelines and the Azure Machine Learning designer fit into a retraining scenario.
-* Azure Machine Learning pipelines - these are a good answer for creating workflows relating to data preparation, training validation, and deployment. 
-* Azure DevOps Retraining Pipelines with Azure CLI
+* Azure Machine Learning Designer - Retrain models with Azure Machine Learning Designer to see how pipelines and the Azure Machine Learning designer fit into a retraining scenario.
+* Azure DevOps Retraining Pipelines with Azure CLI - Retrain models using Azure Pipelines using Azure CLI and python notebooks. It's the most common approach and allows automation and CI/CD
 
-##### Azure Machine Learning designer
+##### Azure Machine Learning Designer
 
 This approach can only be used when the model was designed using Azure Machine Learning Designer, more information [here](../Documents/studio-designer.md). 
 This will mean the user will have a published training pipeline and this can be used to retrain the model on new data. To retrain the user can submit runs from a pipeline endpoint from the studio workspace or programmatically.
@@ -258,4 +257,7 @@ from azureml.widgets import RunDetails
 published_pipeline_run = PipelineRun(ws.experiments["Tutorial-Batch-Scoring"], run_id)
 RunDetails(published_pipeline_run).show()
 ``
+
+#### Azure DevOps Retraining Pipelines with Azure CLI
+
 
