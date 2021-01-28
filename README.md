@@ -58,6 +58,7 @@ Content:
   * [Train and deploy an image classification TensorFlow model using the Azure Machine Learning Visual Studio Code Extension](Documents/Train_Deploy_Model_AzureML_VSCode_Extension_GitHub.md)
 * [Integrate with Git](Documents/Integrate-with-Git.md)
   * [Create a project in Azure DevOps and establish a Giut repo for source code](Documents/Create_project_Azure_DevOps.md)
+  * [Integrating AzureML notebooks with Git](Documents/Integrating_AzureML_notebooks_with%20Git.md)
 * [Integrate with Azure Key Vault secrets](Documents/Integrate-with-Azure-Key-Vault-secrets.MD)
 * [JupyterLab notebook templates](labs)
 * [Data for your notebook templates](labs)
