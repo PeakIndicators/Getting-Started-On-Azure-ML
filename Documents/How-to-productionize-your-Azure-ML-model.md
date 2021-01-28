@@ -181,7 +181,7 @@ A theme of the above steps is that your **retraining should be automated, not ad
 * Azure Machine Learning Designer - Retrain models with Azure Machine Learning Designer to see how pipelines and the Azure Machine Learning designer fit into a retraining scenario.
 * Azure DevOps Retraining Pipelines with Azure CLI - Retrain models using Azure Pipelines using Azure CLI and python notebooks. It's the most common approach and allows automation and CI/CD
 
-##### Azure Machine Learning Designer
+##### Azure Machine Learning Designer - Data Science Team
 
 This approach can only be used when the model was designed using Azure Machine Learning Designer, more information [here](../Documents/studio-designer.md). 
 This will mean the user will have a published training pipeline and this can be used to retrain the model on new data. To retrain the user can submit runs from a pipeline endpoint from the studio workspace or programmatically.
@@ -276,8 +276,28 @@ The new run will look similar to the pipeline you ran earlier in the tutorial. Y
 `published_pipeline_run = PipelineRun(ws.experiments["Tutorial-Batch-Scoring"], run_id)`
 
 `RunDetails(published_pipeline_run).show()`
-`
-
-#### Azure DevOps Retraining Pipelines with Azure CLI
 
 
+#### Azure DevOps Retraining Pipelines with Azure CLI - Data Science Team and DevOps Development Team
+Retraining the model using Azure ML Designer doesn't provide an automated way of doing but only involves the Data Science Team for the retrain itself.
+Creating an Azure DevOps pipeline allows automation but involves once again the collaboration between the Data Science Team and the DevOps Development Team.
+
+##### Create a Pipeline to execute retraining ML tasks and save all the relevant information in an Azure DevOps Artifact
+
+1. All the necessary retraining python code needs to be added to the repository - Team Responsible: Data Science Team
+
+2. A pipeline should be created with the necessary steps steps: - Team Responsible: DevOps Development Team
+
+###### Pipeline - Example
+This is an example of a pipeline to retrain a model:
+
+![](../Images/devops23.PNG)
+
+##### Determine the best model
+In your python scripts, you may want to log metrics so that you can determine the "best" model (this is the recommended approach for Production environments).
+
+For example, you have a model that is already deployed and has an accuracy of 90. You train a new model based on new checkins to the repo and the accuracy is only 80, so you don't want to deploy it. You can use a metric such as this to build automation logic, as you can directly rank different models. In other cases, you may have several metrics that are used to indicate the "best" model. In this case, choosing the best model requires human judgment.
+
+Depending on what "best" looks like for your scenario, you may need to create or re-use an existing release pipeline where someone must inspect the metrics to determine if the model should be deployed. For more details on how to create a release pipeline please check section _Create a Release Pipeline to deploy the Azure DevOps Artifact created in the previous pipeline_ from this page.
+
+**Note:** To log metrics during training, use the Run class.
