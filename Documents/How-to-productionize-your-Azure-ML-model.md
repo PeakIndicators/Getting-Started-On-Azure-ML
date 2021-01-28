@@ -68,7 +68,6 @@ Some of these files are directly used when developing a model. For example, the 
 
 `
 #Azure CLI
-
 az ml folder attach --experiment-name myexp -w myws -g mygroup
 `
 
