@@ -74,21 +74,31 @@ dset = dset.with_timestamp_columns('date')
 dset = dset.register(ws, 'target')
 ```
 
-_Creating a Target Dataset using Azure Machine Learning Studio_
+_Creating a Target Dataset using Azure Machine Learning Studio Create Dataset UI_
+
+If you create your dataset using Azure Machine Learning studio, ensure the path to your data contains timestamp information, include all subfolders with data, and set the partition format.
+
+In the following example, all data under the subfolder NoaaIsdFlorida/2019 is taken and the partition format specifies the timestamp's year, month, and day.
+
+![](../Images/datadrift1.PNG)
+
+In the **Schema** settings, specify the timestamp column from a virtual or real column in the specified dataset:
+
+![](../Images/datadrift2.png)
+
+If your data is partitioned by date, as is the case here, you can also specify the partition_timestamp.
+
+![](../Images/datadrift3.png)
+
+More details on how to create a Dataset using Azure ML Studio Web Portal can be seen [here](../Documents/Work-With-Data-in-Azure-ML-Datasets.md)
 
 
-Create dataset monitor
-Create a dataset monitor to detect and alert to data drift on a new dataset. Use either the Python SDK or Azure Machine Learning studio.
+#### Create dataset monitor
+Create a dataset monitor to detect and alert to data drift on a new dataset.
 
-Python
-Studio
-See the Python SDK reference documentation on data drift for full details.
+_Creating a Dataset Monitor using Azure Machine Learning Studio Notebooks with Python_
 
-The following example shows how to create a dataset monitor using the Python SDK
-
-Python
-
-Copy
+```
 from azureml.core import Workspace, Dataset
 from azureml.datadrift import DataDriftDetector
 from datetime import datetime
@@ -130,9 +140,11 @@ monitor = monitor.disable_schedule()
 
 # enable the pipeline schedule for the data drift detector
 monitor = monitor.enable_schedule()
- Tip
+```
 
-For a full example of setting up a timeseries dataset and data drift detector, see our example notebook.
+_Creating a Dataset Monitor using Azure Machine Learning Studio Create Dataset UI_
+
+
 
 Understand data drift results
 This section shows you the results of monitoring a dataset, found in the Datasets / Dataset monitors page in Azure studio. You can update the settings as well as analyze existing data for a specific time period on this page.
