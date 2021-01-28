@@ -29,6 +29,7 @@ Content:
 * [Integrate with Git](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Documents/Integrate-with-Git.md)
   * [Create a project in Azure DevOps and establish a Git repo for source code](Create_project_Azure_DevOps.md)
   * [Integrating AzureML notebooks with Git](https://github.com/PeakIndicatorsHub/Getting-Started-On-Azure-ML/blob/main/Documents/Integrating_AzureML_notebooks_with%20Git.md)
+  * [Working with Git locally](https://github.com/PeakIndicatorsHub/Getting-Started-On-Azure-ML/blob/main/Documents/Working_with_Git_locally.md)
 * [Integrate with Azure Key Vault secrets](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/blob/main/Documents/Integrate-with-Azure-Key-Vault-secrets.MD)
 * [JupyterLab notebook templates](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/tree/main/labs)
 * [Data for your notebook templates](https://github.com/felicity-borg/Getting-Started-On-Azure-ML/tree/main/labs)
