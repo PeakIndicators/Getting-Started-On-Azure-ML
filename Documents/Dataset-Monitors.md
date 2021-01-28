@@ -34,15 +34,15 @@ Dataset monitors depend on the following Azure services.
 |Application insights|	Drift emits metrics to Application Insights belonging to the machine learning workspace.|
 |Azure blob storage|	Drift emits metrics in json format to Azure blob storage.|
 
+### Baseline and target datasets
+The first step to define a Dataset Monitor is to define:
 
-Baseline and target datasets
-You monitor Azure machine learning datasets for data drift. When you create a dataset monitor, you will reference your:
+* Baseline dataset - usually the training dataset for a model.
+* Target dataset - usually model input data - is compared over time to your baseline dataset. This comparison means that your target dataset must have a timestamp column specified.
 
-Baseline dataset - usually the training dataset for a model.
-Target dataset - usually model input data - is compared over time to your baseline dataset. This comparison means that your target dataset must have a timestamp column specified.
 The monitor will compare the baseline and target datasets.
 
-Create target dataset
+#### Create target dataset
 The target dataset needs the timeseries trait set on it by specifying the timestamp column either from a column in the data or a virtual column derived from the path pattern of the files. Create the dataset with a timestamp through the Python SDK or Azure Machine Learning studio. A column representing a "timestamp" must be specified to add timeseries trait to the dataset. If your data is partitioned into folder structure with time info, such as '{yyyy/MM/dd}', create a virtual column through the path pattern setting and set it as the "partition timestamp" to improve the importance of time series functionality.
 
 Python
