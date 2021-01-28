@@ -54,8 +54,26 @@ With this in mind, the following should be created in the Azure DevOps resource:
 
 ![](../Images/devops3.png)
 
-**Note**: As we can see, this implies the creation of separate python files for training, scoring, testing and also configuration files. But this depends on what step(s) the user requires in order to start the deployment. More details are given in the sub-sections below.
+**Note**: 
+In most cases, your _Data Science Team_ will provide the files and resources needed to train the machine learning model. As an example, data scientists would provide these files:
 
+* Training script (train.py): The training script contains logic specific to the model that you're training.
+* Scoring file (score.py): When the model is deployed as a web service, the scoring file receives data from clients and scores it against the model. The output is then returned to the client.
+* RunConfig settings (sklearn.runconfig): Defines how the training script is run on the compute target that is used for training.
+* Training environment (myenv.yml): Defines the packages needed to run the training script.
+* Deployment environment (deploymentConfig.yml): Defines the resources and compute needed for the deployment environment.
+* Deployment environment (inferenceConfig.yml): Defines the packages needed to run and score the model in the deployment environment.
+
+Some of these files are directly used when developing a model. For example, the train.py and score.py files. However the data scientist may be programmatically creating the run configuration and environment settings. If so, they can create the .runconfig and training environment files, by using RunConfiguration.save(). Or, default run configuration files can be created for all compute targets already in the workspace by running the following command:
+
+``
+#Azure CLI
+az ml folder attach --experiment-name myexp -w myws -g mygroup
+``
+
+The files created by this command are stored in the .azureml directory of the Storage Account associated with the Azure Machine Learning Studio resource..
+
+As we can see, this implies the creation of separate python files for training, scoring, testing and also configuration files. But this depends on what step(s) the user requires in order to start the deployment. More details are given in the sub-sections below.
 
 ##### Create a Pipeline to execute ML tasks and save all the relevant information in an Azure DevOps Artifact
 
