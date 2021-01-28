@@ -12,20 +12,20 @@ You can manage and structure each project to support your business needs. Each p
 
 1) Select the sign-up link for [Azure DevOps](https://azure.microsoft.com/services/devops/).
 
-2. Enter your email address, phone number, or Skype ID for your Microsoft account. If you're a Visual Studio subscriber and you get Azure DevOps as a benefit, use the Microsoft account associated with your subscription. Select **Next**.
+2. Enter your email address, phone number or Skype ID for your Microsoft account. If you're a Visual Studio subscriber and you get Azure DevOps as a benefit, use the Microsoft account associated with your subscription. Select **Next**.
 
-![](https://github.com/PeakIndicatorsHub/Getting-Started-On-Azure-ML/blob/main/Images/Dev3.PNG)
+![](../Images/Dev3.PNG)
 
 3. Enter your password and select **Sign in**.
 
-![](https://github.com/PeakIndicatorsHub/Getting-Started-On-Azure-ML/blob/main/Images/Dev4.PNG)
+![](../Images/Dev4.PNG)
 4. To get started with Azure DevOps, select **Continue**.
 
-![](https://github.com/PeakIndicatorsHub/Getting-Started-On-Azure-ML/blob/main/Images/Dev5.PNG)
+![](../Images/Dev5.PNG)
 
 An organization is created based on the account you used to sign in. Sign in to your organization at any time, `(https://dev.azure.com/{yourorganization})`. According to Microsoft an organization is used to connect groups of related projects, helping to scale up an enterprise.
 
-You can rename and delete your organization, or change the organization location. To learn more, see the following articles:
+You can rename and delete your organization or change its location. To learn more, see the following articles:
 
 * [Rename an organization](https://docs.microsoft.com/en-us/azure/devops/organizations/accounts/rename-organization?view=azure-devops)
 * [Change the location of your organization](https://docs.microsoft.com/en-us/azure/devops/organizations/accounts/change-organization-location?view=azure-devops)
@@ -37,14 +37,14 @@ If you signed in with an existing Microsoft account, your next step is to [Creat
 
 1. Sign in to your organization (https://dev.azure.com/{yourorganization}), and then open the project that you want to rename. If you click on an organization on the left side of the page you will see your newly created project on the right under the heading **Projects**.
 
-![](https://github.com/PeakIndicatorsHub/Getting-Started-On-Azure-ML/blob/main/Images/Dev1.PNG)
+![](../Images/Dev1.PNG)
 
 2. Select **Project settings > Overview**, and then enter a new **Name**, **Description** and select **Save**.
 
-![](https://github.com/PeakIndicatorsHub/Getting-Started-On-Azure-ML/blob/main/Images/Dev2.1.PNG)
+![](../Images/Dev2.1.PNG)
 
 
-**Note	—**Your project name can't contain special characters, such as `/ : \ ~ & % ; @ ' " ? < > | # $ * } { , + = [ ]`, can't begin with an underscore, can't begin or end with a period, and must be 64 or fewer characters. Enter an optional description. Choose the visibility, initial source control type, and work item process. You can also change the default setting on **Visibility** and [Process](https://docs.microsoft.com/en-us/azure/devops/boards/work-items/guidance/choose-process?view=azure-devops). Leave the **Process** as **Agile** but if you want to learn more about this see [here](https://docs.microsoft.com/en-us/azure/devops/boards/work-items/guidance/choose-process?view=azure-devops)
+**Note	—**Your project name can't contain special characters, such as `/ : \ ~ & % ; @ ' " ? < > | # $ * } { , + = [ ]`, can't begin with an underscore, can't begin or end with a period and must be 64 or fewer characters. Enter an optional description. Choose the visibility, initial source control type and work item process. You can also change the default setting on **Visibility** and [Process](https://docs.microsoft.com/en-us/azure/devops/boards/work-items/guidance/choose-process?view=azure-devops). Leave the **Process** as **Agile** but if you want to learn more about this see [here](https://docs.microsoft.com/en-us/azure/devops/boards/work-items/guidance/choose-process?view=azure-devops)
 
 Select visibility of either public or private. When you choose public visibility, anyone on the internet can view your project. With private visibility, only people who you give access to can view your project. For more information about public projects, see [Create a public project in your organization](https://docs.microsoft.com/en-us/azure/devops/organizations/public/create-public-project?view=azure-devops). If the **Public** option isn't available, you need to change the policy.
 
@@ -52,15 +52,15 @@ Select visibility of either public or private. When you choose public visibility
 
 Give team members access to your organization by adding their email addresses or GitHub usernames to your organization. For GitHub user invitations, ensure you've [enabled the policy, Invite GitHub users](https://docs.microsoft.com/en-us/azure/devops/user-guide/sign-up-invite-teammates?view=azure-devops#enable-github-invitations) in **Organization settings > Policies tab**.
 
-1. If you haven't already, Sign in to your organization `(https://dev.azure.com/{yourorganization})`.
+1. If you haven't already, sign in to your organization `(https://dev.azure.com/{yourorganization})`.
 
 2. Select the toggle at the bottom for Organization settings Organization settings.
 
-![](https://github.com/PeakIndicatorsHub/Getting-Started-On-Azure-ML/blob/main/Images/Dev8.PNG)
+![](../Images/Dev8.PNG)
 
 3. Select **Users > Add new users**.
 
-![](https://github.com/PeakIndicatorsHub/Getting-Started-On-Azure-ML/blob/main/Images/Dev9.PNG)
+![](../Images/Dev9.PNG)
 
 4. Enter the following information:
 
@@ -75,19 +75,14 @@ For more information about managing users and organization access, see [Add orga
 
 ## Add a repository to your project
 
-From the admin context of the web portal, you can add additional repositories to a project. We are going to be adding a Git (distriubuted) repository for our data science work. Keep in mind that you can create many Git repositories. 
+From the admin context of the web portal, you can add additional repositories to a project. We are going to be adding a Git (distriubuted) repository for our data science work. Keep in mind that you can create as many Git repositories as you need. 
 
 1. Select **New repository**.
 
-![](https://github.com/PeakIndicatorsHub/Getting-Started-On-Azure-ML/blob/main/Images/Dev6.PNG)
+![](../Images/Dev6.PNG)
 
 2. Name the repository and select **Create**.
 
-![](https://github.com/PeakIndicatorsHub/Getting-Started-On-Azure-ML/blob/main/Images/Dev7.PNG)
+![](../Images/Dev7.PNG)
 
 You have now created a project, added users to your project amd added a Git repo to store and version control your work.
-
-
-
-
-
