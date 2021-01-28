@@ -45,13 +45,13 @@ If you signed in with an existing Microsoft account, your next step is to [Creat
 ![](../Images/Dev2.1.PNG)
 
 
-**Note	—**Your project name can't contain special characters, such as `/ : \ ~ & % ; @ ' " ? < > | # $ * } { , + = [ ]`, can't begin with an underscore, can't begin or end with a period and must be 64 or fewer characters. Enter an optional description. Choose the visibility, initial source control type and work item process. You can also change the default setting on **Visibility** and [Process](https://docs.microsoft.com/en-us/azure/devops/boards/work-items/guidance/choose-process?view=azure-devops). Leave the **Process** as **Agile** but if you want to learn more about this see [here](https://docs.microsoft.com/en-us/azure/devops/boards/work-items/guidance/choose-process?view=azure-devops)
+**Note	—**Your project name can't contain special characters, such as `/ : \ ~ & % ; @ ' " ? < > | # $ * } { , + = [ ]`, can't begin with an underscore, can't begin or end with a period and must be 64 or fewer characters. Enter an optional description. Choose the visibility, initial source control type and work item process. You can also change the default setting on **Visibility** and [Process](https://docs.microsoft.com/en-us/azure/devops/boards/work-items/guidance/choose-process?view=azure-devops). Leave the **Process** as **Agile** but if you want to learn more about this see [here](https://docs.microsoft.com/en-us/azure/devops/boards/work-items/guidance/choose-process?view=azure-devops).
 
 Select visibility of either public or private. When you choose public visibility, anyone on the internet can view your project. With private visibility, only people who you give access to can view your project. For more information about public projects, see [Create a public project in your organization](https://docs.microsoft.com/en-us/azure/devops/organizations/public/create-public-project?view=azure-devops). If the **Public** option isn't available, you need to change the policy.
 
 ### Invite team members
 
-Give team members access to your organization by adding their email addresses or GitHub usernames to your organization. For GitHub user invitations, ensure you've [enabled the policy, Invite GitHub users](https://docs.microsoft.com/en-us/azure/devops/user-guide/sign-up-invite-teammates?view=azure-devops#enable-github-invitations) in **Organization settings > Policies tab**.
+Give team members access to your organization by adding their email addresses or GitHub usernames to your organization. For GitHub user invitations, ensure you've enabled the policy [Invite GitHub users](https://docs.microsoft.com/en-us/azure/devops/user-guide/sign-up-invite-teammates?view=azure-devops#enable-github-invitations) in **Organization settings > Policies tab**.
 
 1. If you haven't already, sign in to your organization `(https://dev.azure.com/{yourorganization})`.
 
