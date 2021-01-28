@@ -244,10 +244,12 @@ Service principal authentication involves creating an App Registration in Azure 
 Both **InteractiveLoginAuthentication** and **ServicePrincipalAuthentication** inherit from AbstractAuthentication. In both cases, use the **get_authentication_header()** function in the same way to fetch the header:
 
 ``
+
 from azureml.core.authentication import InteractiveLoginAuthentication
 
 interactive_auth = InteractiveLoginAuthentication()
 auth_header = interactive_auth.get_authentication_header()
+
 ``
 
 Get the REST URL from the endpoint property of the published pipeline object. You can also find the REST URL in your workspace in Azure Machine Learning studio.
@@ -255,6 +257,7 @@ Build an HTTP POST request to the endpoint. Specify your authentication header i
 Make the request to trigger the run. Include code to access the Id key from the response dictionary to get the value of the run ID.
 
 ``
+
 import requests
 
 rest_endpoint = published_pipeline.endpoint
@@ -263,17 +266,20 @@ response = requests.post(rest_endpoint,
                          json={"ExperimentName": "Tutorial-Batch-Scoring",
                                "ParameterAssignments": {"process_count_per_node": 6}})
 run_id = response.json()["Id"]
+
 ``
 
 Use the run ID to monitor the status of the new run. The new run takes another 10-15 min to finish.
 The new run will look similar to the pipeline you ran earlier in the tutorial. You can choose not to view the full output.
 
 ``
+
 from azureml.pipeline.core.run import PipelineRun
 from azureml.widgets import RunDetails
 
 published_pipeline_run = PipelineRun(ws.experiments["Tutorial-Batch-Scoring"], run_id)
 RunDetails(published_pipeline_run).show()
+
 ``
 
 #### Azure DevOps Retraining Pipelines with Azure CLI
