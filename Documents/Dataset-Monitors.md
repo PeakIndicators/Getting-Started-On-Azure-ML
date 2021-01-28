@@ -212,14 +212,15 @@ In the Azure Machine Learning studio, click on a bar in the graph to see the the
 
 ![](../Images/datadrift8.gif)
 
+These metrics can also be retrieved in the Python SDK through the `get_metrics()` method on a `DataDriftDetector` object.
+
 _Feature Details_
+
 Scroll down to view details for each individual feature. Select the metric you want to view and use the dropdowns in the chart to select the feature.
 
 ![](../Images/datadrift9.gif)
 
 Metrics Available:
-
-Metrics in the chart depend on the type of feature.
 
    * Numeric features:
       * Wasserstein distance
@@ -235,6 +236,30 @@ On the chart, select a single date to compare the feature distribution between t
 ![](../Images/datadrift17.gif)
 
 ## Metrics, alerts, and events
+Metrics can be queried in the Azure Application Insights resource associated with your machine learning workspace. You have access to all features of Application Insights including set up for custom alert rules and action groups to trigger an action such as, an Email/SMS/Push/Voice or Azure Function. Refer to the complete [Azure Application Insights](https://docs.microsoft.com/en-gb/azure/azure-monitor/app/app-insights-overview) documentation for details.
 
+1. To get started, navigate to the Azure portal and select your workspace's Overview page. The associated Application Insights resource is on the far right:
+
+![](../Images/datadrift10.png)
+
+2. Select Logs (Analytics) under Monitoring on the left pane:
+
+![](../Images/datadrift11.png)
+
+3. The dataset monitor metrics are stored as **customMetrics**, therefore select **Schema --> Active --> customMetrics** and write and run a query:
+
+![](../Images/datadrift12.png)
+
+4. After identifying metrics to set up alert rules, create a new alert rule:
+
+![](../Images/datadrift13.png)
+
+5. An existing action group can be used or a new one can be created to define the action to be taken when the set conditions are met.
+
+![](../Images/datadrift14.png)
+
+## Limitations and known issues for data drift monitors
+
+Limitations and known issues for data drift monitors can be seen in the [Detect data drift on datasets troubleshooting]https://docs.microsoft.com/en-gb/azure/machine-learning/how-to-monitor-datasets?tabs=azure-studio#troubleshooting page.
 
 ##### _Source: https://docs.microsoft.com/en-gb/azure/machine-learning/how-to-monitor-datasets?tabs=python_
