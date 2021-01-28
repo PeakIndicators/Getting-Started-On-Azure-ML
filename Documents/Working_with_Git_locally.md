@@ -44,21 +44,17 @@ In the example below I am navigating to a folder named Documents, follwed by the
 
 Next it will ask for a password, paste the password you copied above and press **Enter**. Git downloads a copy of the code, including all commits and branches from the repo, into a new folder for you to work with.
 
-Switch your directory to the repository that you cloned. For e.g.
-
-`cd Next it will ask for a password, paste the password you copied above and press Enter. Git downloads a copy of the code, including all commits and branches from the repo, into a new folder for you to work with.
-
 Switch your directory to the repository that you cloned. For e.g. 
 
 `cd ./Getting-Started-On-Azure-ML`
 
 ## Open the repo in VS Code
 
-1. Open a new instance of VS Code
+1. Open a new instance of VS Code.
 
 ![](../Images/Dev20.PNG)
 
-2. Open one of the files or folder from your repo
+2. Open one of the files or folder from your repo.
 
 ![](../Images/Dev21.PNG)
 
@@ -84,11 +80,12 @@ The **Source Control** symbol should now show a change.
 
 * Type a message and then select the **tick** symbol to **Commit** the change.
 
-* Type **(CTRL+SHIFT+P)** and start typing `push`
+* Type **(CTRL+SHIFT+P)** and start typing `push`.
 
 ![](../Images/Dev27.PNG)
 
 * Select `Git: Push to....` and the remote repo you have cloned it from should come up. 
+
 ![](../Images/Dev28.PNG)
 
 Once pushed your changes should appear in your remote repo, which in your case should be the Git repo you have created in Azure DevOps. 
@@ -101,6 +98,6 @@ You can also confirm your remote repo by navigating to **Source Control** and se
 
 ![](../Images/Dev29.PNG)
 
-If you click on the entries you can also view changes made to the file. This is useful if you want to view changes you or colleagues have made.
+If you click on the entries you can also view changes made to the file. This is useful if you want to view changes you or your colleagues have made.
 
 ![](../Images/Dev30.PNG)
