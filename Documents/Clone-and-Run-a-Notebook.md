@@ -9,14 +9,19 @@ A lot of data science and machine learning experimentation is performed by runni
 
 ![](../Images/clonenotebook1.gif)
 
-3. Enter the commands shown below to clone a Git repository containing notebooks, data, and other files to your workspace:
+3. Double click on the `Users` folder and **right click** anywhere inside the folder to create a new folder with `your_username`
+
+![](../Images/82.PNG)
+
+Enter the commands shown below to clone a Git repository containing notebooks, data, and other files to your workspace:
 
 ` cd Users/<your_username>`
 
+![](./Images/83.PNG)
+
  `git clone https://github.com/PeakIndicatorsHub/Getting-Started-On-Azure-ML`
  
-
-![](../Images/Edited_Notebook2.PNG)
+![](../Images/84.PNG)
  
  4. When the command has completed, in the **My files** pane, click ↻ to refresh the view and verify that a new **Users/<user_name>/Getting-Started-On-Azure-ML** folder has been created. This folder contains several documents and folders. Double click the folder **labs**. This should contain multiple **.ipynb** notebook files.
  
