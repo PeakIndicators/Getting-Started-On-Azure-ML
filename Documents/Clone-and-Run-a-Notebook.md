@@ -15,11 +15,10 @@ A lot of data science and machine learning experimentation is performed by runni
 
  `git clone https://github.com/PeakIndicatorsHub/Getting-Started-On-Azure-ML`
  
-You will then be prompted to insert a username, followed by a password (These should have been provided to you). 
 
-![](../Images/Notebook2.PNG)
+![](../Images/Edited_Notebook2.PNG)
  
- 4. When the command has completed, in the **My files** pane, click ↻ to refresh the view and verify that a new **Users/<user_name>/Getting-Started-On-Azure-ML** folder has been created. This folder contains several documents and foldes. Double click the folder **labs**. This should contain multiple **.ipynb** notebook files.
+ 4. When the command has completed, in the **My files** pane, click ↻ to refresh the view and verify that a new **Users/<user_name>/Getting-Started-On-Azure-ML** folder has been created. This folder contains several documents and folders. Double click the folder **labs**. This should contain multiple **.ipynb** notebook files.
  
 ![](../Images/Notebook4.gif)
 
