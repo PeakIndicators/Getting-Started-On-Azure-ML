@@ -64,9 +64,8 @@ For example, the following query returns the timestamp and customDimensions.Cont
 
 This query returns the logged data as a table:
 
-|       |       |
-|-------|-------|
 |timestamp|customDimensions_content|
+|-------|-------|
 |01/02/2020...	|Data:[[1, 2, 2.5, 3.1], [0, 1, 1,7, 2.1]] - Predictions:[0 1]|
 |01/02/2020...	|Data:[[3, 2, 1.7, 2.0]] - Predictions:[0]|
 
