@@ -60,7 +60,7 @@ To analyze captured log data, you can use the Log Analytics query interface for 
 
 For example, the following query returns the timestamp and customDimensions.Content fields from log traces that have a message field value of STDOUT (indicating the data is in the standard output log) and a customDimensions.["Service Name"] field value of *my-svc*:
 
-![](..Images/80.PNG)
+![](../Images/80.PNG)
 
 This query returns the logged data as a table:
 
