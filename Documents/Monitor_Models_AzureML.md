@@ -4,7 +4,7 @@ After a machine learning model has been deployed into production, it's important
 
 ## Introduction
 
-Application Insights is an application performance management service in Microsoft Azure that enables the capture, storage and analysis of telemetry data from applications.
+Application Insights is an application performance management service in Microsoft Azure that enables the capture, storage and analysis of telemetry data from applications. Refer to the complete [Azure Application Insights](https://docs.microsoft.com/en-gb/azure/azure-monitor/app/app-insights-overview) documentation for details.
 
 ![](../Images/78.PNG)
 
@@ -56,7 +56,7 @@ To capture telemetry data for Application insights, you can write any values to 
 Azure Machine Learning creates a custom dimension in the Application Insights data model for the output you write.
 
 ### View logged data and query logs in Application Insights
-To analyze captured log data, you can use the Log Analytics query interface for Application Insights in the Azure portal. This interface supports a SQL-like query syntax that you can use to extract fields from logged data, including custom dimensions created by your Azure Machine Learning service.
+To analyze captured log data, you can use the Log Analytics query interface for Application Insights in the Azure portal. This interface supports a SQL-like query syntax that you can use to extract fields from logged data, including custom dimensions created by your Azure Machine Learning service. This SQL-like query syntax uses **Kusto query language**, more details can be seen [here](https://docs.microsoft.com/en-us/services-hub/health/log_analytics_query_language).
 
 To view logged data:
 
@@ -97,9 +97,8 @@ As an example of querying logs using Python on Jupyterlab, the query below retur
 
 This query returns the logged data as a table:
 
-|       |       |
-|-------|-------|
 |timestamp|customDimensions_content|
+|-------|-------|
 |01/02/2020...	|Data:[[1, 2, 2.5, 3.1], [0, 1, 1,7, 2.1]] - Predictions:[0 1]|
 |01/02/2020...	|Data:[[3, 2, 1.7, 2.0]] - Predictions:[0]|
 
