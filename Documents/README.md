@@ -20,7 +20,7 @@ Content:
 * Work with Data in AzureML
   * [Work with Datastores and Datasets using code](Work-with-Data-in-Azure-ML-code.md)
 
-* Lab Exercises and and docuementation on working with Compute in AzureML
+* Lab Exercises and and documentation on working with Compute in AzureML
   * [Create Compute Instances](Create-Compute-Instance.md)
   * [Stop a Compute Instance](Stop-Compute-Instance.md)
   * [Creating and Running a Python or R Notebook](Creating-and-Running-a-Python-Notebook.md)
@@ -38,12 +38,12 @@ Content:
    * [How to productionize your Azure ML model](How-to-productionize-your-Azure-ML-model.md)
     
 * How to work with desktop tools and connect to Azure ML:
-  * Install Python and create a a virtul environment to manage your work:
+  * Install Python and create a a virtual environment to manage your work:
     * [Installing Anaconda on Windows](Anaconda_Windows.md)
     * [Installing Anaconda on macOS](Anaconda_macos.md)
     * [Installing Anaconda on Linux](Anaconda_linux.md)
     * [Getting Started with Anaconda](Starting_with_conda.md)
-  * Install Visaul Studio Code and practise using it to build and debug your Pyton code:
+  * Install Visual Studio Code and practise using it to build and debug your Pyton code:
     * [Getting Started with Python in Visual Studio Code](Installing_VS_Code.md)
     * [Data Science in Visual Studio Code](DS_Visual_Studio_Code.md)
   * Connect your Visual Studio Code with AzureML:
