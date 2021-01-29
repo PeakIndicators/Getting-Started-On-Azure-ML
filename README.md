@@ -49,7 +49,7 @@ Content:
 * Work with Data in AzureML
   * [Work with Datastores and Datasets using code](Documents/Work-with-Data-in-Azure-ML-code.md)
 
-* Lab Exercises and and docuementation on working with Compute in AzureML
+* Lab Exercises and and documentation on working with Compute in AzureML
   * [Create Compute Instances](Documents/Create-Compute-Instance.md)
   * [Stop a Compute Instance](Documents/Stop-Compute-Instance.md)
   * [Creating and Running a Python or R Notebook](Documents/Creating-and-Running-a-Python-Notebook.md)
