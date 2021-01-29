@@ -34,7 +34,7 @@ Content:
   * [Working with Git locally](Working_with_Git_locally.md)
 * [Integrate with Azure Key Vault secrets](Integrate-with-Azure-Key-Vault-secrets.MD)
 * [JupyterLab notebook templates](../labs)
-* [Data for your notebook templates](../../labs/data)
+* [Data for your notebook templates](../labs/data)
 * [How to work with Azure Machine Learning Studio Designer](studio-designer.md)
 * [How to work with Azure Machine Learning Studio Automated ML](Automated-ML.md)
 * [How to productionize your Azure ML model](How-to-productionize-your-Azure-ML-model.md)
