@@ -49,7 +49,8 @@ Application Insights automatically captures any information written to the stand
 ### Write log data
 To capture telemetry data for Application insights, you can write any values to the standard output log in the scoring script for your service by using a `print` statement, as shown in the following example:
 
-![](https://github.com/PeakIndicatorsHub/Getting-Started-On-Azure-ML/blob/main/Images/79.PNG) Azure Machine Learning creates a custom dimension in the Application Insights data model for the output you write.
+![](https://github.com/PeakIndicatorsHub/Getting-Started-On-Azure-ML/blob/main/Images/79.PNG) 
+Azure Machine Learning creates a custom dimension in the Application Insights data model for the output you write.
 
 ### Query logs in Application Insights
 To analyze captured log data, you can use the Log Analytics query interface for Application Insights in the Azure portal. This interface supports a SQL-like query syntax that you can use to extract fields from logged data, including custom dimensions created by your Azure Machine Learning service.
