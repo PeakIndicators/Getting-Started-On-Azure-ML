@@ -27,7 +27,7 @@ Content:
   * [Getting Started with Python in Visual Studio Code](Installing_VS_Code.md)
   * [Data Science in Visual Studio Code](DS_Visual_Studio_Code.md)
   * [Azure Machine Learning in Visual Studio Code](VS_Code_Azure_ML_Git.md)
-  * [Train and deploy an image classification TensorFlow model using the Azure Machine Learning Visual Studio Code Extension (Train_Deploy_Model_AzureML_VSCode_Extension_GitHub.md)
+  * [Train and deploy an image classification TensorFlow model using the Azure Machine Learning Visual Studio Code Extension(Train_Deploy_Model_AzureML_VSCode_Extension_GitHub.md)
 * Integrate with Git
   * [Create a project in Azure DevOps and establish a Git repo for source code](Create_project_Azure_DevOps.md)
   * [Integrating AzureML notebooks with Git](Integrating_AzureML_notebooks_with%20Git.md)
