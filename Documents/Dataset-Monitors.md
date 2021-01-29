@@ -90,7 +90,7 @@ If your data is partitioned by date, as is the case here, you can also specify t
 
 ![](../Images/datadrift3.png)
 
-More details on how to create a Dataset using Azure ML Studio Web Portal can be seen [here](../Documents/Work-With-Data-in-Azure-ML-Datasets.md)
+More details on how to create a Dataset using Azure ML Studio Web Portal can be seen [here](../Documents/Work-With-Data-in-Azure-ML-Datasets.md).
 
 
 #### Create dataset monitor
