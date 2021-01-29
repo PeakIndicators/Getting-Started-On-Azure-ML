@@ -46,6 +46,7 @@ Content:
 * [Create a Pipeline](Documents/Orchestrate-ML-With-Pipelines.md)
 * [Deploy a model as a real-time inferencing service](Documents/Deploy-Real-Time-Service.md)
 * [Create a batch webservice](Documents/Deploy-Batch-Inference-Pipeline.md)
+* [Monitor models with Azure Machine Learning](https://github.com/PeakIndicatorsHub/Getting-Started-On-Azure-ML/blob/main/Documents/Monitor_Models_AzureML.md)
 * [Detect data drift on datasets](Documents/Dataset-Monitors.md)
 * How to work with desktop tools and connect to Azure ML:
   * [Installing Anaconda on Windows](Documents/Anaconda_Windows.md)
