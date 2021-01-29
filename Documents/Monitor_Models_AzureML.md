@@ -86,7 +86,7 @@ To view logged data:
 
 ![](../Images/89.PNG)
 
-** View the results. At first there may be none, because an ACI web service can take as long as five minutes to send the telemetry to Application Insights. 
+* View the results. At first there may be none, because an ACI web service can take as long as five minutes to send the telemetry to Application Insights. 
 Wait a few minutes and re-run the query until you see the logged data and predictions simialarly to what is shown below
 
 ![](../Images/90.PNG)
