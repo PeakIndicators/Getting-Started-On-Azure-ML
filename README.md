@@ -67,12 +67,12 @@ Content:
    * [How to productionize your Azure ML model](Documents/How-to-productionize-your-Azure-ML-model.md)
     
 * How to work with desktop tools and connect to Azure ML:
-  * Install Python and create a a virtul environment to manage your work:
+  * Install Python and create a a virtual environment to manage your work:
     * [Installing Anaconda on Windows](Documents/Anaconda_Windows.md)
     * [Installing Anaconda on macOS](Documents/Anaconda_macos.md)
     * [Installing Anaconda on Linux](Documents/Anaconda_linux.md)
     * [Getting Started with Anaconda](Documents/Starting_with_conda.md)
-  * Install Visaul Studio Code and practise using it to build and debug your Pyton code:
+  * Install Visual Studio Code and practise using it to build and debug your Pyton code:
     * [Getting Started with Python in Visual Studio Code](Documents/Installing_VS_Code.md)
     * [Data Science in Visual Studio Code](Documents/DS_Visual_Studio_Code.md)
   * Connect your Visual Studio Code with AzureML:
