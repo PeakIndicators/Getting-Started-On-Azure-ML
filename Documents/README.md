@@ -33,7 +33,7 @@ Content:
   * [Integrating AzureML notebooks with Git](Integrating_AzureML_notebooks_with%20Git.md)
   * [Working with Git locally](Working_with_Git_locally.md)
 * [Integrate with Azure Key Vault secrets](Integrate-with-Azure-Key-Vault-secrets.MD)
-* [JupyterLab notebook templates](../Getting-Started-On-Azure-ML/tree/main/labs)
+* [JupyterLab notebook templates](../labs)
 * [Data for your notebook templates](../../labs/data)
 * [How to work with Azure Machine Learning Studio Designer](studio-designer.md)
 * [How to work with Azure Machine Learning Studio Automated ML](Automated-ML.md)
