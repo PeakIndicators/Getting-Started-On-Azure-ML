@@ -33,19 +33,19 @@ The guidelines of this tutorial are based on the following assumption:
 The first thing you have to do to build an application in Azure Machine Learning is to create a workspace. A workspace is basically an instance of an Azure Machine Learning Studio, it contains the resources to train models as well as the trained models themselves. For more information, see [What is Azure ML Studio](../Documents/what-is-azure-ml-studio.md).
 
 1. On the Visual Studio Code activity bar, select the Azure icon to open the Azure Machine Learning view.
-&nbsp;
+
 2. Right-click your Azure subscription and select **Create Workspace** (if you already have a workspace, which means an Azure Machine Learning Studio instance, that you want to complete this tutorial on, select it and move on to the [next section](#CreateExperiment-1)).
 
 ![](../Images/VS45.PNG)
 
 3. By default a name is generated containing the date and time of creation. In the text input box, change the name to "TeamWorkspace" and press **Enter**.
-&nbsp;
+
 4. Select **Create a new resource group**.
-&nbsp;
+
 5. Name your resource group "TeamWorkspace-rg" and press Enter.  
-&nbsp;
+
 6. Choose a location for your workspace. It's recommended to choose a location that is closest to the location you plan to deploy your model. For example, "UK South".
-&nbsp;
+
 7. When prompted to select the type of workspace, choose **basic**.
 
 At this point, a request to Azure is made to create a new workspace in your account. After a few minutes, the new workspace appears in your subscription node.
