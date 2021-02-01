@@ -52,5 +52,9 @@ To define a search space for hyperparameter tuning, create a dictionary with the
                   
                    param_space = {
                                     '--batch_size': choice(16, 32, 64), 
-                                     '--learning_rate': normal(10, 3)
+                                    '--learning_rate': normal(10, 3)
                                  }
+                                 
+                                 
+## Configuring sampling
+
