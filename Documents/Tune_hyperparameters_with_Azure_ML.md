@@ -48,12 +48,12 @@ Some hyperparameters are *continuous* - in other words you can use any value alo
 #### Defining a search space
 To define a search space for hyperparameter tuning, create a dictionary with the appropriate parameter expression for each named hyperparameter. For example, the following search space indicates that the **batch_size** hyperparameter can have the value 16, 32, or 64, and the **learning_rate** hyperparameter can have any value from a normal distribution with a mean of 10 and a standard deviation of 3.
 
-`from azureml.train.hyperdrive import choice, normal`
+  `from azureml.train.hyperdrive import choice, normal`
 
-`param_space = {`
+   `param_space = {`
 
-                  `'--batch_size': choice(16, 32, 64),`
+                    `'--batch_size': choice(16, 32, 64),`
                   
-                  `'--learning_rate': normal(10, 3)`
+                    `'--learning_rate': normal(10, 3)`
                   
-                  `}`
+                   `}`
