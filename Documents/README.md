@@ -36,6 +36,7 @@ Content:
    * [Detect data drift on datasets](Dataset-Monitors.md)
    * [Integrate with Azure Key Vault secrets](Integrate-with-Azure-Key-Vault-secrets.MD)
    * [How to productionize your Azure ML model](How-to-productionize-your-Azure-ML-model.md)
+   * [Tune hyperparameters with Azure ML](Tune_hyperparameters_with_Azure_ML.md)
     
 * How to work with desktop tools and connect to Azure ML:
   * Install Python and create a a virtual environment to manage your work:
