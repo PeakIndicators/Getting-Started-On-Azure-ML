@@ -78,11 +78,11 @@ A compute target is the computing resource or environment where you run scripts 
 To create a compute target:
 
 1. On the Visual Studio Code activity bar, select the **Azure** icon. The Azure Machine Learning view appears.
-&nbsp;
+
 2. Expand your **Subscription** node.
-&nbsp;
+
 3. Expand the **TeamWorkspace** node.
-&nbsp;
+
 4. Under the workspace node, right-click the **Compute clusters** node and choose **Create Compute**.
 
 ![](../Images/VS48.PNG)
@@ -111,22 +111,22 @@ When you submit a training run to a compute target, you also submit the configur
 To create a run configuration:
 
 1. On the Visual Studio Code activity bar, select the **Azure** icon. The Azure Machine Learning view appears.
-&nbsp;
+
 2. Expand your **subscription node**.
-&nbsp;
+
 3. Expand the **TeamWorkspace > Compute clusters** node.
-&nbsp;
+
 4. Under the compute node, right-click the **TeamWkspc-com** compute node and choose **Create Run Configuration**.
 ![](../Images/VS50.PNG)
-&nbsp;
+
 5. Name your run configuration "MNIST-rc" and press **Enter** to create your run configuration.
-&nbsp;
+
 6. Then, select **Create new Azure ML Environment**. Environments define the dependencies required to run your scripts.
-&nbsp;
+
 7. Name your environment "MNIST-env" and press **Enter**.
-&nbsp;
+
 8. Select **Conda dependencies file** from the list.
-&nbsp;
+
 9. Press **Enter** to browse the Conda dependencies file. In this case, the dependencies file is the `env.yml` file inside the `vscode-tools-for-ai/mnist-vscode-docs-sample` directory.
 
 A file appears in VS Code with content similar to the one below:
@@ -158,12 +158,13 @@ During the training process, a TensorFlow model is created by processing the tra
 To run an Azure Machine Learning experiment:
 
 1. On the Visual Studio Code activity bar, select the **Azure** icon. The Azure Machine Learning view appears.
-&nbsp;
+
 2. Expand your *subscription* node.
-&nbsp;
+
 3. Expand the **TeamWorkspace > Experiments** node.
-&nbsp;
+
 4. Right-click the *MNIST* experiment.
+
 5. Select **Run Experiment**.
 
 ![](../Images/VS53.PNG)
@@ -177,17 +178,17 @@ Now that you've trained your model, you can register it in your workspace.
 To register your model:
 
 1. On the Visual Studio Code activity bar, select the **Azure** icon. The Azure Machine Learning view appears.
-&nbsp;
+
 2. Expand your **Subscription** node.
-&nbsp;
+
 3. Expand the **TeamWorkspace > Experiments > MNIST** node.
-&nbsp;
+
 4. Get the model outputs generated from training the model. Right-click the Run 1 run node and select **Download outputs**.
 
 ![](../Images/VS54.PNG)
 
 5. Choose the directory to save the downloaded outputs to. By default, the outputs are placed in the directory currently opened in Visual Studio Code.
-&nbsp;
+
 6. Right-click the **Models** node and choose **Register Model**.
 
 ![](../Images/VS55.PNG)
