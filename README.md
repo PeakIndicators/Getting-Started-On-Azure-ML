@@ -61,10 +61,12 @@ Content:
    * [Create a Pipeline](Documents/Orchestrate-ML-With-Pipelines.md)
    * [Deploy a model as a real-time inferencing service](Documents/Deploy-Real-Time-Service.md)
    * [Create a batch webservice](Documents/Deploy-Batch-Inference-Pipeline.md)
+   * [Tune hyperparameters with Azure ML](Documents/Tune_hyperparameters_with_Azure_ML.md)
    * [Monitor models with Azure Machine Learning](Documents/Monitor_Models_AzureML.md)
    * [Detect data drift on datasets](Documents/Dataset-Monitors.md)
    * [Integrate with Azure Key Vault secrets](Documents/Integrate-with-Azure-Key-Vault-secrets.MD)
    * [How to productionize your Azure ML model](Documents/How-to-productionize-your-Azure-ML-model.md)
+   
     
 * How to work with desktop tools and connect to Azure ML:
   * Install Python and create a a virtual environment to manage your work:
