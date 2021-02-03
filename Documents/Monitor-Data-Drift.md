@@ -104,8 +104,6 @@ The [Dataset](https://docs.microsoft.com/en-us/python/api/azureml-core/azureml.d
      # register the dataset as the target dataset
      dset = dset.register(ws, 'target')
      
-**Tip:** For a full example of using the timeseries trait of datasets, see the [example notebook](https://github.com/Azure/MachineLearningNotebooks/blob/master/how-to-use-azureml/work-with-data/datasets-tutorial/timeseries-datasets/tabular-timeseries-dataset-filtering.ipynb or the [datasets SDK documentation](https://docs.microsoft.com/en-us/python/api/azureml-core/azureml.data.tabulardataset?preserve-view=true&view=azure-ml-py#&preserve-view=truewith-timestamp-columns-timestamp-none--partition-timestamp-none--validate-false----kwargs-).
-
 #### Create dataset monitor
 
 **Note:** 
