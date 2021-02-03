@@ -74,21 +74,89 @@ To monitor data drift you monitor Azure Machine learning datasets. When you crea
 
 The monitor will compare the baseline and target datasets.
 
+#### Create target dataset
+
+The target dataset needs the `timeseries` trait set on it by specifying the timestamp column either from a column in the data or a virtual column derived from the path pattern of the files. Create the dataset with a timestamp through the Python SDK—as will be shown in the practical notebook at the end of this document, or [Azure Machine Learning studio](https://docs.microsoft.com/en-us/azure/machine-learning/how-to-monitor-datasets?tabs=python#studio-dataset). A column representing a "timestamp" must be specified to add `timeseries` trait to the dataset. If your data is partitioned into folder structure with time info, such as '{yyyy/MM/dd}', create a virtual column through the path pattern setting and set it as the "partition timestamp" to improve the importance of time series functionality.
+
+The [Dataset](https://docs.microsoft.com/en-us/python/api/azureml-core/azureml.data.tabulardataset?preserve-view=true&view=azure-ml-py#&preserve-view=truewith-timestamp-columns-timestamp-none--partition-timestamp-none--validate-false----kwargs-) class [with_timestamp_columns()](https://docs.microsoft.com/en-us/python/api/azureml-core/azureml.data.tabulardataset?preserve-view=true&view=azure-ml-py#&preserve-view=truewith-timestamp-columns-timestamp-none--partition-timestamp-none--validate-false----kwargs-) method defines the time stamp column for the dataset.
+
+    from azureml.core import Workspace, Dataset, Datastore
+
+     # get workspace object
+     ws = Workspace.from_config()
+
+     # get datastore object 
+     dstore = Datastore.get(ws, 'your datastore name')
+
+     # specify datastore paths
+     dstore_paths = [(dstore, 'weather/*/*/*/*/data.parquet')]
+
+     # specify partition format
+     partition_format = 'weather/{state}/{date:yyyy/MM/dd}/data.parquet'
+
+     # create the Tabular dataset with 'state' and 'date' as virtual columns 
+     dset = Dataset.Tabular.from_parquet_files(path=dstore_paths, partition_format=partition_format)
+
+     # assign the timestamp attribute to a real or virtual column in the dataset
+     dset = dset.with_timestamp_columns('date')
+
+     # register the dataset as the target dataset
+     dset = dset.register(ws, 'target')
+     
+**Tip:** For a full example of using the timeseries trait of datasets, see the [example notebook](https://github.com/Azure/MachineLearningNotebooks/blob/master/how-to-use-azureml/work-with-data/datasets-tutorial/timeseries-datasets/tabular-timeseries-dataset-filtering.ipynb or the [datasets SDK documentation](https://docs.microsoft.com/en-us/python/api/azureml-core/azureml.data.tabulardataset?preserve-view=true&view=azure-ml-py#&preserve-view=truewith-timestamp-columns-timestamp-none--partition-timestamp-none--validate-false----kwargs-).
+
+#### Create dataset monitor
+
 **Note:** 
-You can configure a deployed service to collect new data submitted to the model for inferencing, which is saved in Azure blob storage and can be used as a target dataset for data drift monitoring. See [Collect data from models in production](https://aka.ms/AA70zg8) in the Azure Machine Learning documentation for more information. This has been explored prior to the creation of this document to see if it could be added as an additional document and practical example. The *azureml-monitoring* module required to enable data collection, however, at the time of writing (03/02/21), this module is still in [preview](https://pypi.org/project/azureml-monitoring/). 
+You can configure a deployed service to collect new data submitted to the model for inferencing, which is saved in Azure blob storage and can be used as a target dataset for data drift monitoring. See [Collect data from models in production](https://aka.ms/AA70zg8) in the Azure Machine Learning documentation for more information. This has been explored prior to the creation of this document to see if it could be added as an additional document and practical example. The **azureml-monitoring** module required to enable data collection, however, at the time of writing (03/02/21), this module is still in [preview](https://pypi.org/project/azureml-monitoring/). 
 
-After creating these datasets, you can define a *dataset* monitor to detect data drift and trigger alerts if the rate of drift exceeds a specified threshold. You can create dataset monitors using the visual interface in Azure Machine Learning studio, or by using the **DataDriftDetector** class in the Azure Machine Learning SDK as shown in the following example code:
+After creating these datasets, you can define a *dataset* monitor to detect data drift and trigger alerts if the rate of drift exceeds a specified threshold. You can create dataset monitors using the visual interface in Azure Machine Learning studio, or by using the **DataDriftDetector** class in the Azure Machine Learning SDK as shown in the code below. This can also be craeted on [Azure Machine Learning studio](https://docs.microsoft.com/en-us/azure/machine-learning/how-to-monitor-datasets?tabs=python#studio-monitor).
+*Python example*: See the [Python SDK reference documentation on data drift](https://docs.microsoft.com/en-us/python/api/azureml-datadrift/azureml.datadrift) for full details.
 
+The following example shows how to create a dataset monitor using the Python SDK
+
+     from azureml.core import Workspace, Dataset
      from azureml.datadrift import DataDriftDetector
+     from datetime import datetime
 
-     monitor = DataDriftDetector.create_from_datasets(workspace=ws,
-                                               name='dataset-drift-detector',
-                                               baseline_data_set=train_ds,
-                                               target_data_set=new_data_ds,
-                                               compute_target='aml-cluster',
-                                               frequency='Week',
-                                               feature_list=['age','height', 'bmi'],
-                                               latency=24)
+     # get the workspace object
+     ws = Workspace.from_config()
+
+     # get the target dataset
+     dset = Dataset.get_by_name(ws, 'target')
+
+     # set the baseline dataset
+     baseline = target.time_before(datetime(2019, 2, 1))
+
+     # set up feature list
+     features = ['latitude', 'longitude', 'elevation', 'windAngle', 'windSpeed', 'temperature', 'snowDepth', 'stationName', 'countryOrRegion']
+
+     # set up data drift detector
+     monitor = DataDriftDetector.create_from_datasets(ws, 'drift-monitor', baseline, target, 
+                                                      compute_target='cpu-cluster', 
+                                                      frequency='Week', 
+                                                      feature_list=None, 
+                                                      drift_threshold=.6, 
+                                                      latency=24)
+
+     # get data drift detector by name
+     monitor = DataDriftDetector.get_by_name(ws, 'drift-monitor')
+
+     # update data drift detector
+     monitor = monitor.update(feature_list=features)
+
+     # run a backfill for January through May
+     backfill1 = monitor.backfill(datetime(2019, 1, 1), datetime(2019, 5, 1))
+
+     # run a backfill for May through today
+     backfill1 = monitor.backfill(datetime(2019, 5, 1), datetime.today())
+
+     # disable the pipeline schedule for the data drift detector
+     monitor = monitor.disable_schedule()
+
+     # enable the pipeline schedule for the data drift detector
+     monitor = monitor.enable_schedule()
+
 
 After creating the dataset monitor, you can *backfill* to immediately compare the baseline dataset to existing data in the target dataset, as shown in the following example, which backfills the monitor based on weekly changes in data for the previous six weeks:
 
@@ -118,6 +186,56 @@ You can define a **threshold** for data drift magnitude above which you want to 
                                                     frequency='Week', latency=2,
                                                     drift_threshold=.3,
                                                      alert_configuration=alert_email)
+                                                     
+### Understand data drift results:
+
+This section shows you how to examine and visualise the data drift metrics in Azure Machine Learning Studio. You can update the settings as well as analyze existing data for a specific time period on this page.
+
+Analysing data drift in Azure Machine Learning Studio is still in preview, you can also analyse data drift in Python SDK notebooks as show in the practical notebook for this tutorial.
+
+![](../Images/Monitor11.PNG) Example of analysing data drift in JupyterLab notebook
+
+To visualize the data drift metrics follow these steps:
+
+1. Navigate to [Azure Machine Learning Studio](https://ml.azure.com/?tid=168c1fe3-a841-49b5-b692-7b3132c0a997&wsid=/subscriptions/52cbf6c7-01f2-4df2-bae9-c80cee4db7eb/resourcegroups/churn-prediction-azure-tutorial/workspaces/churn-machine-learning-ws).
+2. On the **Datasets** page, view the **Dataset monitors** tab.
+![](../Images/Monitor1.PNG)
+3. Click the data drift monitor you want to view.
+![](../Images/Monitor2.PNG)
+
+| Metric | Description |
+| ------ | ----------- |
+| Data drift magnitude | A percentage of drift between the baseline and target dataset over time. Ranging from 0 to 100, 0 indicates identical datasets and 100 indicates the Azure Machine Learning data drift model can completely tell the two datasets apart. Noise in the precise percentage measured is expected due to machine learning techniques being used to generate this magnitude. |
+| Top drifting features | Shows the features from the dataset that have drifted the most and are therefore contributing the most to the Drift Magnitude metric. Due to covariate shift, the underlying distribution of a feature does not necessarily need to change to have relatively high feature importance. |
+| Threshold | Data Drift magnitude beyond the set threshold will trigger alerts. This can be configured in the monitor settings. |
+
+4. Select the date range over which you want to view data drift metrics (if the column chart does not show multiple weeks of data, wait a minute or so and click Refresh).
+
+5. Examine the charts in the Drift overview section at the top, which show overall drift magnitude and the drift contribution per feature.
+### Drift magnitude trend
+See how the dataset differs from the target dataset in the specified time period. The closer to 100%, the more the two datasets differ.
+
+The target dataset is also profiled over time. The statistical distance between the baseline distribution of each feature is compared with the target dataset's over time. Conceptually, this is similar to the data drift magnitude. However this statistical distance is for an individual feature rather than all features. Min, max, and mean are also available.
+
+![](../Images/Monitor3.PNG)
+
+These metrics can also be retrieved in the Python SDK through the `get_metrics()` method on a `DataDriftDetector` object.
+
+### Feature details
+6. Explore the charts in the Feature detail section at the bottom, which enable you to see various measures of drift for individual features.
+
+Scroll down to view details for each individual feature. Use the dropdowns above the chart to select the feature, and additionally select the metric you want to view.
+
+In the Azure Machine Learning studio, click on a bar in the graph to see the the feature level details for that date. By default, you see the baseline dataset's distribution and the most recent run's distribution of the same feature.
+![](../Images/Monitor.gif)
+
+![](../Images/Monitor6.PNG)
+![](../Images/Monitor7.PNG)
+![](../Images/Monitor8.PNG)
+![](../Images/Monitor9.PNG)
+
+
+
                                                                                                           
 ## Exercise - Monitor data drift
 
