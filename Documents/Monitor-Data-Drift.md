@@ -27,6 +27,5 @@ To monitor data drift using registered datasets, you need to register two datase
 * A *baseline* dataset - usually the original training data.
 * A *target* dataset that will be compared to the baseline based on time intervals. This dataset requires a column for each feature you want to compare, and a timestamp column so the rate of data drift can be measured.
 
-**Note:**  Note
-
-You can configure a deployed service to collect new data submitted to the model for inferencing, which is saved in Azure blob storage and can be used as a target dataset for data drift monitoring. See [Collect data from models in production](https://aka.ms/AA70zg8) in the Azure Machine Learning documentation for more information. This has been explored prior to the creation of this document to see if it could be added as an additional document and practical example. The *azureml-monitoring* module required to enable data collection, however, at the time of writing this module is still in [preview](https://pypi.org/project/azureml-monitoring/) (03/02/21).   
+**Note:** 
+You can configure a deployed service to collect new data submitted to the model for inferencing, which is saved in Azure blob storage and can be used as a target dataset for data drift monitoring. See [Collect data from models in production](https://aka.ms/AA70zg8) in the Azure Machine Learning documentation for more information. This has been explored prior to the creation of this document to see if it could be added as an additional document and practical example. The *azureml-monitoring* module required to enable data collection, however, at the time of writing (03/02/21), this module is still in [preview](https://pypi.org/project/azureml-monitoring/).   
