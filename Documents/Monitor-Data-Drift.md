@@ -17,6 +17,7 @@ Data drift is one of the top reasons model accuracy degrades over time. For mach
 * Create a data drift monitor. 
 * Schedule data drift monitoring. 
 * View data drift monitoring results.
+* Metrics, alerts, and events.
 
 ## Causes of data drift
 
@@ -255,7 +256,33 @@ Metrics in the chart depend on the type of feature.
 On this chart, select a single date to compare the feature distribution between the target and this date for the displayed feature. For numeric features, this shows two probability distributions. If the feature is numeric, a bar chart is shown.
 
 ![](../Images/Monitor2.gif)
-                                                                                                          
+
+### Metrics, alerts, and events
+
+Metrics can be queried in the [Azure Application Insights](https://docs.microsoft.com/en-us/azure/azure-monitor/app/app-insights-overview) resource associated with your machine learning workspace. You have access to all features of Application Insights including set up for custom alert rules and action groups to trigger an action such as, an Email/SMS/Push/Voice or Azure Function. Refer to the complete Application Insights documentation for details.
+
+To get started, navigate to the [Azure portal](https://portal.azure.com/) and select your workspace's **Overview** page. The associated Application Insights resource is on the far right:
+
+![](../Images/Monitor12.PNG)
+
+Select Logs (Analytics) under Monitoring on the left pane:
+
+![](../Images/Monitor13.PNG)
+
+The dataset monitor metrics are stored as `customMetrics`. You can write and run a query after setting up a dataset monitor to view them:
+
+![](../Images/Monitor14.PNG)
+
+After identifying metrics to set up alert rules, create a new alert rule:
+
+![](../Images/Monitor15.PNG)
+
+You can use an existing action group, or create a new one to define the action to be taken when the set conditions are met:
+
+![](../Images/Monitor16.PNG)
+
+If you need support troubleshooting see [here](https://docs.microsoft.com/en-us/azure/machine-learning/how-to-monitor-datasets?tabs=python#troubleshooting)
+
 ## Exercise - Monitor data drift
 
 ### Before you start
