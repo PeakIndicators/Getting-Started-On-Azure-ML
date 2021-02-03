@@ -72,4 +72,29 @@ You can define a **threshold** for data drift magnitude above which you want to 
                                                     drift_threshold=.3,
                                                      alert_configuration=alert_email)
                                                                                                           
-## 
+## Exercise - Monitor data drift
+
+### Before you start
+
+In this tutorial we provide some jupyter notebook templates that you can run (more detail in: [Jupyter Lab notebook templates](../labs)).
+
+If you have not already done so, create a [compute instance](../Documents/Create-Compute-Instance.md) and ensure you have [cloned the notebooks](../Documents/Clone-and-Run-a-Notebook.md) required for this exercise.
+
+### Open Jupyter
+
+1. In Azure Machine Learning studio, view the **Compute** page for your workspace; and on the Compute Instances tab, start your compute instance if it is not already running.
+2. When the compute instance is running, click the **Jupyter** link to open the Jupyter home page in a new browser tab. Be sure to open Jupyter and not JupyterLab.
+
+### Monitor data drift for a dataset
+In this exercise, the code to monitor data drift is provided in a notebook.
+
+1. In the Jupyter home page, browse to the Users/<user_name>/labs folder where you cloned the notebook repository, and open the **Monitoring-Data-Drift.ipynb** notebook.
+
+2. Then read the notes in the notebook, running each code cell in turn.
+
+3. When you have finished running the code in the notebook, on the **File** menu, click **Close and Halt** to close it and shut down its Python kernel. Then close all Jupyter browser tabs.
+
+### Clean-up
+If you’re finished working with Azure Machine Learning for now refer to [this page](../Documents/Stop-Compute-Instance.md) to stop your compute instance. 
+
+
