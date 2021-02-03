@@ -1,17 +1,17 @@
 # Monitor data drift with Azure Machine Learning 
 
 ## Introduction
-### what is data drift?
+### What is data drift?
 You typically train a machine learning model using a historical dataset that is representative of the new data that your model will receive for inferencing. However, over time there may be trends that change the profile of the data, making your model less accurate.
 
-For example, suppose a model is trained to predict the expected gas mileage of an automobile based on the number of cylinders, engine size, weight, and other features. Over time, as car manufacturing and engine technologies advance, the typical fuel-efficiency of vehicles might improve dramatically; making the predictions made by the model trained on older data less accurate.
+For example, suppose a model is trained to predict the expected gas mileage of an automobile based on the number of cylinders, engine size, weight and other features. Over time, as car manufacturing and engine technologies advance, the typical fuel-efficiency of vehicles might improve dramatically; making the predictions made by the model trained on older data less accurate.
 
 ![](../Images/Monitor10.PNG)
 
-This change in data profiles between training and inferencing is known as data drift, and it can be a significant issue for predictive models used in production. 
-Data drift is one of the top reasons model accuracy degrades over time. For machine learning models, data drift is the change in model input data that leads to model performance degradation. It is therefore important to be able to monitor and detect data drift over time, and retrain models as required to maintain predictive accuracy.
+This change in data profiles between training and inferencing is known as data drift and it can be a significant issue for predictive models used in production. 
+Data drift is one of the top reasons model accuracy degrades over time. For machine learning models, data drift is the change in model input data that leads to model performance degradation. It is therefore important, to be able to monitor and detect data drift over time and retrain models as required to maintain predictive accuracy.
 
-## Learning Objectives
+## Tutorial Objectives
 
 * Causes of data drift
 * Create a data drift monitor. 
