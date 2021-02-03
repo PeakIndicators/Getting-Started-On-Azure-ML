@@ -234,8 +234,27 @@ In the Azure Machine Learning studio, click on a bar in the graph to see the the
 ![](../Images/Monitor8.PNG)
 ![](../Images/Monitor9.PNG)
 
+Metrics in the chart depend on the type of feature.
 
+* Numeric features
 
+| Metric |	Description |
+| ------ | ------------ |
+| Wasserstein distance | Minimum amount of work to transform baseline distribution into the target distribution. |
+| Mean value | Average value of the feature. |
+| Min value | Minimum value of the feature. |
+| Max value | Maximum value of the feature. |
+
+* Categorical features
+
+| Metric | Description |
+| ------ | ----------- |
+| Euclidian distance  |  Computed for categorical columns. Euclidean distance is computed on two vectors, generated from empirical distribution of the same categorical column from two datasets. 0 indicates there is no difference in the empirical distributions.  The more it deviates from 0, the more this column has drifted. Trends can be observed from a time series plot of this metric and can be helpful in uncovering a drifting feature. |
+| Unique values	| Number of unique values (cardinality) of the feature. |
+
+On this chart, select a single date to compare the feature distribution between the target and this date for the displayed feature. For numeric features, this shows two probability distributions. If the feature is numeric, a bar chart is shown.
+
+![](../Images/Monitor2.gif)
                                                                                                           
 ## Exercise - Monitor data drift
 
