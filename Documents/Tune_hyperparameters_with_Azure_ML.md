@@ -58,3 +58,50 @@ To define a search space for hyperparameter tuning, create a dictionary with the
                                  
 ## Configuring sampling
 
+The specific values used in a hyperparameter tuning run depend on the type of *sampling* used.
+
+### Grid sampling
+Grid sampling can only be employed when all hyperparameters are discrete, and is used to try every possible combination of parameters in the search space.
+
+For example, in the following code example, grid sampling is used to try every possible combination of discrete *batch_size* and *learning_rate* value:
+
+    from azureml.train.hyperdrive import GridParameterSampling, choice
+
+    param_space = {
+                    '--batch_size': choice(16, 32, 64),
+                    '--learning_rate': choice(0.01, 0.1, 1.0)
+                   }
+
+    param_sampling = GridParameterSampling(param_space)
+    
+### Random sampling
+Random sampling is used to randomly select a value for each hyperparameter, which can be a mix of discrete and continuous values as shown in the following code example:
+
+      from azureml.train.hyperdrive import RandomParameterSampling, choice, normal
+
+      param_space = {
+                      '--batch_size': choice(16, 32, 64),
+                      '--learning_rate': normal(10, 3)
+                    }
+
+      param_sampling = RandomParameterSampling(param_space)
+      
+### Bayesian sampling
+Bayesian sampling chooses hyperparameter values based on the Bayesian optimization algorithm, which tries to select parameter combinations that will result in improved performance from the previous selection. The following code example shows how to configure Bayesian sampling: 
+
+      from azureml.train.hyperdrive import BayesianParameterSampling, choice, uniform
+
+      param_space = {
+                      '--batch_size': choice(16, 32, 64),
+                      '--learning_rate': uniform(0.5, 0.1)
+                    }
+
+        param_sampling = BayesianParameterSampling(param_space)
+
+You can only use Bayesian sampling with **choice**, **uniform**, and **quniform** parameter expressions, and you can't combine it with an early-termination policy.
+
+## Configuring early termination
+
+With a sufficiently large hyperparameter search space, it could take many iterations (child runs) to try every possible combination. Typically, you set a maximum number of iterations, but this could still result in a large number of runs that don't result in a better model than a combination that has already been tried.
+
+To help prevent wasting time, you can set an early termination policy that abandons runs that are unlikely to produce a better result than previously completed runs. The policy is evaluated at an evaluation_interval you specify, based on each time the target performance metric is logged. You can also set a delay_evaluation parameter to avoid evaluating the policy until a minimum number of iterations have been completed.
