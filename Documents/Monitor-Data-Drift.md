@@ -192,6 +192,8 @@ This section is meant to show you how to examine and visualise the data drift me
 
 Analysing data drift in Azure Machine Learning Studio is still in preview, you can also analyse data drift in Python SDK notebooks as show in the practical notebook for this tutorial.
 
+Metrics such as those for measuring data drift contribution by features can be retrieved in Python through the `get_metrics()` method on a `DataDriftDetector` object. 
+
 ![](../Images/Monitor11.PNG) Example of analysing data drift in JupyterLab notebook
 
 To visualize the data drift metrics using Azure Machine Learning Studio Web Portal follow the steps described in [Understand data drift results](../Documents/Dataset-Monitors.md#Understand-data-drift-results).
