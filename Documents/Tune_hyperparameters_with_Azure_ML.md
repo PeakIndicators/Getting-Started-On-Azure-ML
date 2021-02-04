@@ -227,4 +227,32 @@ To retrieve the best performing run, you can use the following code:
        
       best_run = hyperdrive_run.get_best_run_by_primary_metric()
       
-      
+## Exercise  - Tune hyperparameters
+
+Hyperparameters are variables that affect how a model is trained, but which can’t be derived from the training data. Choosing the optimal hyperparameter values for model training can be difficult, and usually involves a great deal of trial and error.
+
+In this exercise, you’ll use Azure Machine Learning to tune hyperparameters by performing multiple training runs in parallel.
+
+### Before you start
+
+If you have not already done so, create a [compute instance](../Documents/Create-Compute-Instance.md) and ensure you have [Cloned the notebooks](../Documents/Clone-and-Run-a-Notebook.md) required for this exercise.
+
+### Additional Information to note as you're working through your notebook
+
+After creating a compute cluster to deploy your model you can view it selecting the **compute** page in [Azure Machine Learning studio](https://ml.azure.com/?tid=168c1fe3-a841-49b5-b692-7b3132c0a997&wsid=/subscriptions/52cbf6c7-01f2-4df2-bae9-c80cee4db7eb/resourcegroups/churn-prediction-azure-tutorial/workspaces/churn-machine-learning-ws) and clicking on **Compute clusters** at the top of the page. 
+
+### Open Jupyter
+
+1. In Azure Machine Learning studio, view the **Compute** page for your workspace and on the **Compute Instances** tab, start your compute instance if it is not already running.
+2. When the compute instance is running, click the **Jupyter** link to open the Jupyter home page in a new browser tab. Be sure to open Jupyter and not JupyterLab.
+
+### Run a hyperparameter tuning experiment
+In this exercise, the code to run a hyperparameter tuning experiment is provided in a notebook.
+
+1. In the Jupyter home page, browse to the Users/<user_name>/labs folder where you cloned the notebook repository, and open the **Tune-Hyperparameters.ipynb** notebook.
+2. Then read the notes in the notebook, running each code cell in turn.
+3. When you have finished running the code in the notebook, on the **File** menu, click **Close and Halt** to close it and shut down its Python kernel. Then close all Jupyter browser tabs.
+
+### Clean-up
+If you’re finished working with Azure Machine Learning for now refer to [this page](../Documents/Stop-Compute-Instance.md) to stop your compute instance.  
+
