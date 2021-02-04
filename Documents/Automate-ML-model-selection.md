@@ -170,8 +170,8 @@ After creating a compute cluster to deploy your model you can view it selecting 
 1. In Azure Machine Learning studio, view the **Compute** page for your workspace and on the **Compute Instances** tab, start your compute instance if it is not already running.
 2. When the compute instance is running, click the **Jupyter** link to open the Jupyter home page in a new browser tab. Be sure to open Jupyter and not JupyterLab.
 
-### Run a hyperparameter tuning experiment
-In this exercise, the code to run a hyperparameter tuning experiment is provided in a notebook.
+### Use the SDK to run an automated machine learning experiment
+In this exercise, the code to run an automated machine learning experiment is provided in a notebook.
 
 1. In the Jupyter home page, browse to the Users/<user_name>/labs folder where you cloned the notebook repository, and open the **Use-Automated-Machine-Learning.ipynb** notebook.
 2. Then read the notes in the notebook, running each code cell in turn.
