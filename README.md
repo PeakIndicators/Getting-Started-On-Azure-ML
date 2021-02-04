@@ -63,8 +63,8 @@ Content:
    * [Create a batch webservice](Documents/Deploy-Batch-Inference-Pipeline.md)
    * [Tune hyperparameters with Azure ML](Documents/Tune_hyperparameters_with_Azure_ML.md)
    * [Monitor models with Azure Machine Learning](Documents/Monitor_Models_AzureML.md)
-   * [Detect data drift on datasets](Documents/Dataset-Monitors.md)
-   * [Monitor data drift](Documents/Monitor-Data-Drift.md)
+   * [Monitor data drift on datasets using the Web Portal](Documents/Dataset-Monitors.md)
+   * [Monitor data drift on datasets with Python](Documents/Monitor-Data-Drift.md)
    * [Integrate with Azure Key Vault secrets](Documents/Integrate-with-Azure-Key-Vault-secrets.MD)
    * [How to productionize your Azure ML model](Documents/How-to-productionize-your-Azure-ML-model.md)
    
