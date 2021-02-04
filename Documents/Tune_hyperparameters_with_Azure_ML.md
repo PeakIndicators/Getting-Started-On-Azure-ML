@@ -16,7 +16,7 @@ Hyperparameter tuning is accomplished by training the multiple models, using the
 
 In Azure Machine Learning, you achieve this through an experiment that consists of a *hyperdrive* run, which initiates a child run for each hyperparameter combination to be tested. Each child run uses a training script with parameterized hyperparameter values to train a model and logs the target performance metric achieved by the trained model.
 
-## Tutorial Objectives:
+## Learning Objectives:
 
 * Define a hyperparameter search space.
 * Configure hyperparameter sampling.
