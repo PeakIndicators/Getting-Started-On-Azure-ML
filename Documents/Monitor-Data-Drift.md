@@ -186,15 +186,15 @@ You can define a **threshold** for data drift magnitude above which you want to 
                                                     drift_threshold=.3,
                                                      alert_configuration=alert_email)
                                                      
-### Understand data drift results:
+### Understand data drift results
 
-This section shows you how to examine and visualise the data drift metrics in Azure Machine Learning Studio. You can update the settings as well as analyze existing data for a specific time period on this page.
+This section is meant to show you how to examine and visualise the data drift metrics in Azure Machine Learning Studio. You can update the settings as well as analyze existing data for a specific time period on this page.
 
 Analysing data drift in Azure Machine Learning Studio is still in preview, you can also analyse data drift in Python SDK notebooks as show in the practical notebook for this tutorial.
 
 ![](../Images/Monitor11.PNG) Example of analysing data drift in JupyterLab notebook
 
-To visualize the data drift metrics follow the steps described in [Understand data drift results](../Documents/Dataset-Monitors.md#Understand-data-drift-results)
+To visualize the data drift metrics using Azure Machine Learning Studio Web Portal follow the steps described in [Understand data drift results](../Documents/Dataset-Monitors.md#Understand-data-drift-results).
 
 ##### _Source: https://docs.microsoft.com/en-gb/azure/machine-learning/how-to-monitor-datasets?tabs=python
 
