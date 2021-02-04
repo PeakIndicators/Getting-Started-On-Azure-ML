@@ -34,6 +34,7 @@ Content:
    * [Create a batch webservice](Deploy-Batch-Inference-Pipeline.md)
    * [Automate machine learning model selection with Azure Machine Learning](Automate-ML-model-selection.md)
    * [Tune hyperparameters with Azure ML](Tune_hyperparameters_with_Azure_ML.md)
+   * [Automate machine learning model selection with Azure Machine Learning](Automate-ML-model-selection.md)
    * [Monitor models with Azure Machine Learning](Monitor_Models_AzureML.md)
    * [Detect data drift on datasets](Dataset-Monitors.md)
    * [Monitor data drift](Monitor-Data-Drift.md)
