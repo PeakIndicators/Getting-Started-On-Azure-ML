@@ -57,3 +57,141 @@ For a regression model, there are no classes so the local importance values simp
 
 ## Using explainers
 
+You can use the Azure Machine Learning SDK to create explainers for models, even if they were not trained using an Azure Machine Learning experiment.
+
+### Creating an explainer
+
+To interpret a local model, you must install the **azureml-interpret** package and use it to create an explainer. There are multiple types of explainer, including:
+
+* **MimicExplainer** - An explainer that creates a *global surrogate model* that approximates your trained model and can be used to generate explanations. This explainable model must have the same kind of architecture as your trained model (for example, linear or tree-based).
+* **TabularExplainer** - An explainer that acts as a wrapper around various SHAP explainer algorithms, automatically choosing the one that is most appropriate for your model architecture.
+* **PFIExplainer** - a *Permutation Feature Importance* explainer that analyzes feature importance by shuffling feature values and measuring the impact on prediction performance.
+
+The following code example shows how to create an instance of each of these explainer types for a hypothetical model named **loan_model**:
+
+      # MimicExplainer
+      from interpret.ext.blackbox import MimicExplainer
+      from interpret.ext.glassbox import DecisionTreeExplainableModel
+
+      mim_explainer = MimicExplainer(model=loan_model,
+                                  initialization_examples=X_test,
+                                  explainable_model = DecisionTreeExplainableModel,
+                                  features=['loan_amount','income','age','marital_status'], 
+                                  classes=['reject', 'approve'])
+                             
+
+      # TabularExplainer
+      from interpret.ext.blackbox import TabularExplainer
+
+      tab_explainer = TabularExplainer(model=loan_model,
+                                  initialization_examples=X_test,
+                                  features=['loan_amount','income','age','marital_status'],
+                                  classes=['reject', 'approve'])
+
+
+      # PFIExplainer
+      from interpret.ext.blackbox import PFIExplainer
+
+      pfi_explainer = PFIExplainer(model = loan_model,
+                                  features=['loan_amount','income','age','marital_status'],
+                                  classes=['reject', 'approve'])
+                                  
+### Explaining global feature importance
+To retrieve global importance values for the features in your mode, you can call the **explain_global()** method of your explainer to get a global explanation, and then use the **get_feature_importance_dict()** method to get a dictionary of the feature importance values. The following code example shows how to retrieve global feature importance: 
+
+        # MimicExplainer
+      global_mim_explanation = mim_explainer.explain_global(X_train)
+      global_mim_feature_importance = global_mim_explanation.get_feature_importance_dict()
+
+
+      # TabularExplainer
+      global_tab_explanation = tab_explainer.explain_global(X_train)
+      global_tab_feature_importance = global_tab_explanation.get_feature_importance_dict()
+
+
+      # PFIExplainer
+      global_pfi_explanation = pfi_explainer.explain_global(X_train, y_train)
+      global_pfi_feature_importance = global_pfi_explanation.get_feature_importance_dict()
+      
+**Note:** The code is the same for MimicExplainer and TabularExplainer. The PFIExplainer requires the actual labels that correspond to the test features.
+
+### Explaining local feature importance
+
+To retrieve local feature importance from a **MimicExplainer** or a **TabularExplainer**, you must call the **explain_local()** method of your explainer, specifying the subset of cases you want to explain. Then you can use the **get_ranked_local_names()** and **get_ranked_local_values()** methods to retrieve dictionaries of the feature names and importance values, ranked by importance. The following code example shows how to retrieve local feature importance:
+
+      # MimicExplainer
+      local_mim_explanation = mim_explainer.explain_local(X_test[0:5])
+      local_mim_features = local_mim_explanation.get_ranked_local_names()
+      local_mim_importance = local_mim_explanation.get_ranked_local_values()
+
+
+      # TabularExplainer
+      local_tab_explanation = tab_explainer.explain_local(X_test[0:5])
+      local_tab_features = local_tab_explanation.get_ranked_local_names()
+      local_tab_importance = local_tab_explanation.get_ranked_local_values()
+      
+**Note:** The code is the same for MimicExplainer and TabularExplainer. The PFIExplainer doesn't support local feature importance explanations.
+
+## Creating explanations
+
+When you use an estimator or a script to train a model in an Azure Machine Learning experiment, you can create an explainer and upload the explanation it generates to the run for later analysis.
+
+### Creating an explanation in the experiment script
+To create an explanation in the experiment script, you'll need to ensure that the **azureml-interpret** and **azureml-contrib-interpret** packages are installed in the run environment. Then you can use these to create an explanation from your trained model and upload it to the run outputs. The following code example shows how code to generate and upload a model explanation can be incorporated into an experiment script.
+
+      # Import Azure ML run library
+      from azureml.core.run import Run
+      from azureml.contrib.interpret.explanation.explanation_client import ExplanationClient
+      from interpret.ext.blackbox import TabularExplainer
+      # other imports as required
+
+      # Get the experiment run context
+      run = Run.get_context()
+
+      # code to train model goes here
+
+      # Get explanation
+      explainer = TabularExplainer(model, X_train, features=features, classes=labels)
+      explanation = explainer.explain_global(X_test)
+
+      # Get an Explanation Client and upload the explanation
+      explain_client = ExplanationClient.from_run(run)
+      explain_client.upload_model_explanation(explanation, comment='Tabular Explanation')
+
+      # Complete the run
+      run.complete()
+
+### Viewing the explanation
+You can view the explanation you created for your model in the **Explanations** tab for the run in Azure Machine learning studio.
+
+You can also use the **ExplanationClient** object to download the explanation in Python.
+
+      from azureml.contrib.interpret.explanation.explanation_client import ExplanationClient
+
+      client = ExplanationClient.from_run_id(workspace=ws,
+                                            experiment_name=experiment.experiment_name, 
+                                            run_id=run.id)
+      explanation = client.download_model_explanation()
+      feature_importances = explanation.get_feature_importance_dict()
+      
+## Visualizing explanations
+
+Model explanations in Azure Machine Learning studio include multiple visualizations that you can use to explore feature importance.
+
+**Note:** Visualizations are only available for experiment runs that were configured to generate and upload explanations. When using automated machine learning, only the run producing the best model has explanations generated by default.
+
+### Visualizing global feature importance
+The first visualization on the **Explanations** tab for a run shows global feature importance.
+
+![](../Images/Explainer3.PNG)
+
+You can use the slider to show only the top N features.
+
+### Visualizing summary importance
+Switching to the **Summary Importance** visualization shows the distribution of individual importance values for each feature across the test dataset.
+
+![](../Images/Explainer4.PNG)
+You can view the features as a *swarm* plot (shown above), a *box* plot, or a *violin* plot.
+
+
+
