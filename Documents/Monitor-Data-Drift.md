@@ -194,92 +194,7 @@ Analysing data drift in Azure Machine Learning Studio is still in preview, you c
 
 ![](../Images/Monitor11.PNG) Example of analysing data drift in JupyterLab notebook
 
-To visualize the data drift metrics follow these steps:
-
-1. Navigate to [Azure Machine Learning Studio](https://ml.azure.com/?tid=168c1fe3-a841-49b5-b692-7b3132c0a997&wsid=/subscriptions/52cbf6c7-01f2-4df2-bae9-c80cee4db7eb/resourcegroups/churn-prediction-azure-tutorial/workspaces/churn-machine-learning-ws).
-2. On the **Datasets** page, view the **Dataset monitors** tab.
-![](../Images/Monitor1.PNG)
-3. Click the data drift monitor you want to view.
-![](../Images/Monitor2.PNG)
-
-| Metric | Description |
-| ------ | ----------- |
-| Data drift magnitude | A percentage of drift between the baseline and target dataset over time. Ranging from 0 to 100, 0 indicates identical datasets and 100 indicates the Azure Machine Learning data drift model can completely tell the two datasets apart. Noise in the precise percentage measured is expected due to machine learning techniques being used to generate this magnitude. |
-| Top drifting features | Shows the features from the dataset that have drifted the most and are therefore contributing the most to the Drift Magnitude metric. Due to covariate shift, the underlying distribution of a feature does not necessarily need to change to have relatively high feature importance. |
-| Threshold | Data Drift magnitude beyond the set threshold will trigger alerts. This can be configured in the monitor settings. |
-
-4. Select the date range over which you want to view data drift metrics (if the column chart does not show multiple weeks of data, wait a minute or so and click Refresh).
-
-5. Examine the charts in the Drift overview section at the top, which show overall drift magnitude and the drift contribution per feature.
-### Drift magnitude trend
-See how the dataset differs from the target dataset in the specified time period. The closer to 100%, the more the two datasets differ.
-
-The target dataset is also profiled over time. The statistical distance between the baseline distribution of each feature is compared with the target dataset's over time. Conceptually, this is similar to the data drift magnitude. However this statistical distance is for an individual feature rather than all features. Min, max, and mean are also available.
-
-![](../Images/Monitor3.PNG)
-
-These metrics can also be retrieved in the Python SDK through the `get_metrics()` method on a `DataDriftDetector` object.
-
-### Feature details
-6. Explore the charts in the Feature detail section at the bottom, which enable you to see various measures of drift for individual features.
-
-Scroll down to view details for each individual feature. Use the dropdowns above the chart to select the feature, and additionally select the metric you want to view.
-
-In the Azure Machine Learning studio, click on a bar in the graph to see the the feature level details for that date. By default, you see the baseline dataset's distribution and the most recent run's distribution of the same feature.
-![](../Images/Monitor.gif)
-
-![](../Images/Monitor6.PNG)
-![](../Images/Monitor7.PNG)
-![](../Images/Monitor8.PNG)
-![](../Images/Monitor9.PNG)
-
-Metrics in the chart depend on the type of feature.
-
-* Numeric features
-
-| Metric |	Description |
-| ------ | ------------ |
-| Wasserstein distance | Minimum amount of work to transform baseline distribution into the target distribution. |
-| Mean value | Average value of the feature. |
-| Min value | Minimum value of the feature. |
-| Max value | Maximum value of the feature. |
-
-* Categorical features
-
-| Metric | Description |
-| ------ | ----------- |
-| Euclidian distance  |  Computed for categorical columns. Euclidean distance is computed on two vectors, generated from empirical distribution of the same categorical column from two datasets. 0 indicates there is no difference in the empirical distributions.  The more it deviates from 0, the more this column has drifted. Trends can be observed from a time series plot of this metric and can be helpful in uncovering a drifting feature. |
-| Unique values	| Number of unique values (cardinality) of the feature. |
-
-On this chart, select a single date to compare the feature distribution between the target and this date for the displayed feature. For numeric features, this shows two probability distributions. If the feature is numeric, a bar chart is shown.
-
-![](../Images/Monitor2.gif)
-
-### Metrics, alerts, and events
-
-Metrics can be queried in the [Azure Application Insights](https://docs.microsoft.com/en-us/azure/azure-monitor/app/app-insights-overview) resource associated with your machine learning workspace. You have access to all features of Application Insights including set up for custom alert rules and action groups to trigger an action such as, an Email/SMS/Push/Voice or Azure Function. Refer to the complete Application Insights documentation for details.
-
-To get started, navigate to the [Azure portal](https://portal.azure.com/) and select your workspace's **Overview** page. The associated Application Insights resource is on the far right:
-
-![](../Images/Monitor12.PNG)
-
-Select Logs (Analytics) under Monitoring on the left pane:
-
-![](../Images/Monitor13.PNG)
-
-The dataset monitor metrics are stored as `customMetrics`. You can write and run a query after setting up a dataset monitor to view them:
-
-![](../Images/Monitor14.PNG)
-
-After identifying metrics to set up alert rules, create a new alert rule:
-
-![](../Images/Monitor15.PNG)
-
-You can use an existing action group, or create a new one to define the action to be taken when the set conditions are met:
-
-![](../Images/Monitor16.PNG)
-
-If you need support troubleshooting see [here](https://docs.microsoft.com/en-us/azure/machine-learning/how-to-monitor-datasets?tabs=python#troubleshooting)
+To visualize the data drift metrics follow the steps described in [Understand data drift results](../Documents/Dataset-Monitors.md#Understand-data-drift-results)
 
 ##### _Source: https://docs.microsoft.com/en-gb/azure/machine-learning/how-to-monitor-datasets?tabs=python
 
@@ -289,7 +204,7 @@ If you need support troubleshooting see [here](https://docs.microsoft.com/en-us/
 
 In this tutorial we provide some jupyter notebook templates that you can run (more detail in: [Jupyter Lab notebook templates](../labs)).
 
-If you have not already done so, create a [compute instance](../Documents/Create-Compute-Instance.md) and ensure you have [cloned the notebooks](../Documents/Clone-and-Run-a-Notebook.md) required for this exercise.
+If you have not already done so, create a [Compute Instance](../Documents/Create-Compute-Instance.md) and ensure you have [Cloned the notebooks](../Documents/Clone-and-Run-a-Notebook.md) required for this exercise.
 
 ### Open Jupyter
 
