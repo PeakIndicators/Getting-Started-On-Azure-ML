@@ -191,7 +191,13 @@ You can use the slider to show only the top N features.
 Switching to the **Summary Importance** visualization shows the distribution of individual importance values for each feature across the test dataset.
 
 ![](../Images/Explainer4.PNG)
+
 You can view the features as a *swarm* plot (shown above), a *box* plot, or a *violin* plot.
+
+### Visualizing local feature importance
+Selecting an individual data point shows the local feature importance for the case to which the data point belongs.
+
+![](../Images/Explainer5.PNG)
 
 
 
