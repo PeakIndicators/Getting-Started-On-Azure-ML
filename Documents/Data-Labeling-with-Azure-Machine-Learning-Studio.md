@@ -38,6 +38,23 @@ Now that you have access to the data you want to have labeled, create your label
 
 ![](../Images/DataLabeling2.PNG)
 
-2 - At the top of the page, select Projects and then select + Add project.
+2 - At the top of the page, select Projects and then select **+ Add project**. 
+
+If it's the first time you are adding a project then instead of **+ Add project** you need to select **Create**.
+
+![](../Images/DataLabeling3.PNG)
+
+![](../Images/DataLabeling4.PNG)
+
+Use the following input for the Project details form:
+
+|Field|	Description|
+|------|----------|
+|Project name|	Give your project a name. Here we'll use tutorial-cats-n-dogs.|
+|Labeling task type|	Select Image Classification Multi-class.|
+
+Select **Next** to continue creating the project.
+
+![](../Images/DataLabeling5.PNG)
 
 *Source: https://docs.microsoft.com/en-gb/azure/machine-learning/tutorial-labeling*
