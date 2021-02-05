@@ -14,7 +14,7 @@ In this tutorial we will explain you how to:
 
 2 - Select your subscription and the workspace you created.
 
-3 - Create a datastore (follow the steps described in [Create Datastores](../Documents/Work-With-Data-in-Azure-ML.md#Create-Datastores))
+3 - Create a datastore (follow the steps described in [Create Datastores](../Documents/Work-With-Data-in-Azure-ML.md#Create-Datastores)).
 
 And fill with the following settings:
 
@@ -28,5 +28,16 @@ And fill with the following settings:
 |Account key|	?sv=2019-02-02&ss=bfqt&srt=sco&sp=rl&se=2025-03-25T04:51:17Z&st=2020-03-24T20:51:17Z&spr=https&sig=7D7SdkQidGT6pURQ9R4SUzWGxZ%2BHlNPCstoSRRVg8OY%3D|
 
 **Note:** This example is taken from a [Microsoft Tutorial](https://docs.microsoft.com/en-gb/azure/machine-learning/tutorial-labeling#start-a-labeling-project), it uses images of cats and dogs. Since each image is either a cat or a dog, this will be a multi-class labeling project.
+
+![](../Images/DataLabeling1.PNG)
+
+## Create a labeling project
+Now that you have access to the data you want to have labeled, create your labeling project.
+
+1 - Select **Data Labeling** on the left pane under Manage.
+
+![](../Images/DataLabeling2.PNG)
+
+2 - At the top of the page, select Projects and then select + Add project.
 
 *Source: https://docs.microsoft.com/en-gb/azure/machine-learning/tutorial-labeling*
