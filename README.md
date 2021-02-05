@@ -39,7 +39,7 @@ Content:
   * [Unregister a Datastore using the web portal](Documents/Unregister-a-datastore.md)
   * [Create Datasets using the web portal](Documents/Work-With-Data-in-Azure-ML-Datasets.md)
   * [Unregister Datasets using the web portal](Documents/Unregister-a-dataset.md)
-  * Data Labeling with Azure Machine Learning Studio
+  * [Data Labeling with Azure Machine Learning Studio](Documents/Data-Labeling-with-Azure-Machine-Learning-Studio.md)
   * [How to work with Azure Machine Learning Studio Designer](Documents/studio-designer.md)
   * [How to work with Azure Machine Learning Studio Automated ML](Documents/Automated-ML.md)
   
