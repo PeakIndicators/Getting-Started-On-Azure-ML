@@ -34,7 +34,7 @@ Every studio has two built-in datastores (an Azure Storage blob container, and a
 In most machine learning projects, you will likely need to work with data sources of your own - either because you need to store larger volumes of data than the built-in datastores support or because you need to integrate your machine learning solution with data from existing applications.
 
   
- ## Create datastores
+ ## <a name = 'Create-Datastores'></a> Create datastores
 
  To create a new datastore in a few steps with the Azure Machine Learning studio:
  
