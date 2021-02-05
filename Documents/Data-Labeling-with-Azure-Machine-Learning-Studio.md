@@ -97,4 +97,24 @@ Finally, select **Create project**.
 
 ![](../Images/DataLabeling10.PNG)
 
+## Start a labeling
+Since we've configured a data labeling project we can know start to add labels to the data.
+
+1 - Select **Label data edit** link for the project you want to start labeling.
+
+![](../Images/DataLabeling11.PNG)
+
+2 - Read the instructions, then select Tasks.
+
+3 - Select a thumbnail image on the right to display the number of images you wish to label in one go. You must label all these images before you can move on. Only switch layouts when you have a fresh page of unlabeled data. Switching layouts clears the page's in-progress tagging work.
+
+4 - Select one or more images, then select a tag to apply to the selection. The tag appears below the image. Continue to select and tag all images on the page. To select all the displayed images simultaneously, select Select all. Select at least one image to apply a tag.
+
+5 - Once all the images on the page are tagged, select Submit to submit these labels.
+
+![](../Images/DataLabeling12.gif)
+
+
+
+
 *Source: https://docs.microsoft.com/en-gb/azure/machine-learning/tutorial-labeling*
