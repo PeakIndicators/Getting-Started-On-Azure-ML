@@ -56,7 +56,7 @@ For example, suppose the loan approval model exhibits an overall recall metric o
 
 To find out, we group the data based on the sensitive feature *(Age)* and measure the predictive performance metric *(recall)* for those groups. Then we can compare the metric scores to determine the disparity between them.
 
-![](..Images/Unfairness3.PNG)
+![](../Images/Unfairness3.PNG)
 
 Let's say that we find that the recall for validation cases where the applicant is 25 or younger is 0.50, and recall for cases where the applicant is over 25 is 0.83. In other words, the model correctly identified 50% of the people in the 25 or younger age group who successfully repaid a loan (and therefore misclassified 50% of them as loan defaulters), but found 83% of loan repayers in the older age group (misclassifying only 17% of them). The disparity in prediction performance between the groups is 33%, with the model predicting significantly more false negatives for the younger age group.
 
@@ -99,7 +99,7 @@ It's often easier to compare metrics visually, so Fairlearn provides an interact
 
 ![](../Images/Unfairness3.PNG)
 
-![](..Images/Unfairness4.PNG)
+![](../Images/Unfairness4.PNG)
 
 ### Integration with Azure Machine Learning
 Fairlearn integrates with Azure Machine Learning by enabling you to run an experiment in which the dashboard metrics are uploaded to your Azure Machine Learning workspace. This enables you to share the dashboard in Azure Machine Learning studio so that your data science team can track and compare disparity metrics for models registered in the workspace.
