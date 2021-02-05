@@ -97,9 +97,9 @@ For example, in a binary classification model for loan repayment prediction, whe
 ### Visualizing metrics in a dashboard
 It's often easier to compare metrics visually, so Fairlearn provides an interactive dashboard widget that you can use in a notebook to display group metrics for a model. The widget enables you to choose a sensitive feature and performance metric to compare, and then calculates and visualizes the metrics and disparity, like this:
 
-![](..Images/Unfairness3.PNG)
+![](../Images/Unfairness3.PNG)
 
-![](..Images/Unfairness3.PNG)
+![](..Images/Unfairness4.PNG)
 
 ### Integration with Azure Machine Learning
 Fairlearn integrates with Azure Machine Learning by enabling you to run an experiment in which the dashboard metrics are uploaded to your Azure Machine Learning workspace. This enables you to share the dashboard in Azure Machine Learning studio so that your data science team can track and compare disparity metrics for models registered in the workspace.
