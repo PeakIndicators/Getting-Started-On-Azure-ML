@@ -210,7 +210,7 @@ If you have not already done so, create a [Compute Instance](../Documents/Create
 
 ### Open Jupyter
 
-1. In Azure Machine Learning studio, view the **Compute** page for your workspace; and on the Compute Instances tab, start your compute instance if it is not already running.
+1. In Azure Machine Learning studio, view the **Compute** page for your workspace and on the Compute Instances tab, start your compute instance if it is not already running.
 2. When the compute instance is running, click the **Jupyter** link to open the Jupyter home page in a new browser tab. Be sure to open Jupyter and not JupyterLab.
 
 ### Monitor data drift for a dataset
