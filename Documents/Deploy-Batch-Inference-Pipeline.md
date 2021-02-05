@@ -75,7 +75,7 @@ If you have not already done so, create a [compute instance](../Documents/Create
 
 ### Additional Information to note as you're working through your notebook
 
-After creating a compute cluster to deploy your model you can view it selecting the **compute** page in [Azure Machine Learning studio](https://ml.azure.com/?tid=168c1fe3-a841-49b5-b692-7b3132c0a997&wsid=/subscriptions/52cbf6c7-01f2-4df2-bae9-c80cee4db7eb/resourcegroups/churn-prediction-azure-tutorial/workspaces/churn-machine-learning-ws) and clicking on **Compute clusters** at the top of the page. 
+After creating a compute cluster to deploy your model you can view it selecting the **compute** page in [Azure Machine Learning studio](https://ml.azure.com/) and clicking on **Compute clusters** at the top of the page. 
 
 ![](../Images/75.PNG). 
 
@@ -83,7 +83,7 @@ Clicking on your compute cluster will show you additional information about your
 
 ![](../Images/76.PNG).
 
-After creating a working pipeline, you can publish it and use it as a REST enpoint to run it from an application. You can view you endpoint by navigating to [Azure Machine Learning studio](https://ml.azure.com/?tid=168c1fe3-a841-49b5-b692-7b3132c0a997&wsid=/subscriptions/52cbf6c7-01f2-4df2-bae9-c80cee4db7eb/resourcegroups/churn-prediction-azure-tutorial/workspaces/churn-machine-learning-ws) and clicking on **Endpoints** on the sidebar. 
+After creating a working pipeline, you can publish it and use it as a REST enpoint to run it from an application. You can view you endpoint by navigating to [Azure Machine Learning studio](https://ml.azure.com/) and clicking on **Endpoints** on the sidebar. 
 
 ![](../Images/77.PNG).
 
@@ -95,7 +95,7 @@ After creating a working pipeline, you can publish it and use it as a REST enpoi
 ### Create a batch inferencing service
 In this exercise, the code to deploy a model as a batch inferencing service is provided in a notebook.
 
-1. In the Jupyter home page, browse to the Users/<user_name>/labs folder where you cloned the notebook repository, and open the **Create-Batch-Inferencing-Service.ipynb** notebook.
+1. In the Jupyter home page, browse to the Users/<user_name>/labs folder where you cloned the notebook repository and open the **Create-Batch-Inferencing-Service.ipynb** notebook.
 2. Then read the notes in the notebook, running each code cell in turn.
 3. When you have finished running the code in the notebook, on the **File** menu, click **Close and Halt** to close it and shut down its Python kernel. Then close all Jupyter browser tabs.
 
