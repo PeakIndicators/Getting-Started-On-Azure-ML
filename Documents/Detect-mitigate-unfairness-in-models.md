@@ -127,7 +127,42 @@ The choice of parity constraint depends on the technique being used and the spec
 * **Error rate parity**: Use this constraint with any of the reduction-based mitigation algorithms (**Exponentiated Gradient** and **Grid Search**) to ensure that the error for each sensitive feature group does not deviate from the overall error rate by more than a specified amount.
 * **Bounded group loss**: Use this constraint with any of the reduction-based mitigation algorithms to restrict the loss for each sensitive feature group in a *regression* model.
 
+## Training and evaluating mitigated models
+A common approach to mitigation is to use one of the algorithms and constraints to train multiple models, and then compare their performance, selection rate, and disparity metrics to find the optimal model for your needs. Often, the choice of the model involves a trade-off between raw predictive performance and fairness - based on your definition of fairness for a given scenario. Generally, fairness is measured by a reduction in the disparity of feature selection (for example, ensuring that an equal proportion of members from each gender group is approved for a bank loan) or by a reduction in the disparity of performance metric (for example, ensuring that a model is equally accurate at identifying repayers and defaulters in each age group).
+
+Fairlearn enables you to train mitigated models and visualize them using the dashboard, like this.
+
+![](../Images/Unfairness5.PNG)
+
+You can select an individual model in the scatterplot to see its details, enabling you to explore the options and select the best model for your fairness requirements.
 
 
+### Integration with Azure Machine Learning
+Just as when analyzing an individual model, you can register all of the models found during your mitigation testing and upload the dashboard metrics to Azure Machine Learning.
+
+## Exercise - Use Fairlearn with Azure Machine Learning
+
+Now it's your chance to detect and mitigate unfairness in a model.
+
+In this exercise, you will:
+
+* Use the Fairlearn package with Azure Machine Learning to evaluate prediction performance disparity.
+* Use the Fairlearn package with Azure Machine Learning to mitigate unfairness.
+
+### Detect and Mitigate Unfairness
+Machine learning models can often encapsulate unintentional bias that results in unfairness. For example, a machine learning model that predicts whether or not a patient should be tested for diabetes may predict more accurately for some age groups than others, with the result that a subsection of the patient population is either deprived of appropriate preventative health checks or subjected to unnecessary clinical testing.
+
+### Before you start
+
+In this tutorial we provide some jupyter notebook templates that you can run (more detail in: [Jupyter Lab notebook templates](../labs)).
+
+If you have not already done so, create a [compute instance](../Documents/Create-Compute-Instance.md) and ensure you have [cloned the notebooks](../Documents/Clone-and-Run-a-Notebook.md) required for this exercise.
+
+### Open Jupyter
+
+1. In Azure Machine Learning studio, view the **Compute** page for your workspace; and on the Compute Instances tab, start your compute instance if it is not already running.
+2. When the compute instance is running, click the **Jupyter** link to open the Jupyter home page in a new browser tab. Be sure to open Jupyter and not JupyterLab.
 
 
+### Clean-up
+If you’re finished working with Azure Machine Learning for now refer to [this page](../Documents/Stop-Compute-Instance.md) to stop your compute instance. 
