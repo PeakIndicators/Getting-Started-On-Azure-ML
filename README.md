@@ -64,6 +64,7 @@ Content:
    * [Tune hyperparameters with Azure ML](Documents/Tune_hyperparameters_with_Azure_ML.md)
    * [Automate machine learning model selection with Azure Machine Learning](Documents/Automate-ML-model-selection.md)
    * [Explain machine learning models with Azure Machine Learning](Documents/Explain-machine-learning-models-with-AzureML.md)
+   * [Detect and mitigate unfairness in models with Azure Machine Learning](Documents/Detect-mitigate-unfairness-in-models.md
    * [Monitor models with Azure Machine Learning](Documents/Monitor_Models_AzureML.md)
    * [Monitor data drift on datasets using the Web Portal](Documents/Dataset-Monitors.md)
    * [Monitor data drift on datasets with Python](Documents/Monitor-Data-Drift.md)
