@@ -180,3 +180,4 @@ In this exercise, the code to run an automated machine learning experiment is pr
 ### Clean-up
 If you’re finished working with Azure Machine Learning for now refer to [this page](../Documents/Stop-Compute-Instance.md) to stop your compute instance.           
           
+*Source: https://docs.microsoft.com/en-us/*learn/modules/automate-model-selection-with-azure-automl/*
