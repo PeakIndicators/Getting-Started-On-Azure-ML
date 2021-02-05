@@ -216,7 +216,7 @@ If you have not already done so, create a [Compute Instance](../Documents/Create
 ### Monitor data drift for a dataset
 In this exercise, the code to monitor data drift is provided in a notebook.
 
-1. In the Jupyter home page, browse to the Users/<user_name>/labs folder where you cloned the notebook repository, and open the **Monitoring-Data-Drift.ipynb** notebook.
+1. In the Jupyter home page, browse to the Users/<user_name>/labs folder where you cloned the notebook repository and open the **Monitoring-Data-Drift.ipynb** notebook.
 
 2. Then read the notes in the notebook, running each code cell in turn.
 
