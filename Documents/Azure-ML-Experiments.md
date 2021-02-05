@@ -132,14 +132,14 @@ If you have not already done so, create a [compute instance](../Documents/Create
 
 ### Open Jupyter
 
-1. In Azure Machine Learning studio, view the **Compute** page for your workspace; and on the Compute Instances tab, start your compute instance if it is not already running.
+1. In Azure Machine Learning studio, view the **Compute** page for your workspace and on the Compute Instances tab, start your compute instance if it is not already running.
 2. When the compute instance is running, click the **Jupyter** link to open the Jupyter home page in a new browser tab. Be sure to open Jupyter and not JupyterLab.
 
 
 ### Example on how to run experiments in a notebook
 Experiments in Azure Machine Learning need to be initiated from some sort of *control layer*; often a script or program. In this exercise, you’ll use a notebook to control experiments.
 
-1. In the Jupyter home page, browse to the Users/<user_name>/labs folder where you cloned the notebook repository, and open the **Run-Experiments.ipynb** notebook.
+1. In the Jupyter home page, browse to the Users/<user_name>/labs folder where you cloned the notebook repository and open the **Run-Experiments.ipynb** notebook.
 
 2. Then read the notes in the notebook, running each code cell in turn.
 
