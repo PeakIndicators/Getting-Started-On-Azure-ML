@@ -231,3 +231,5 @@ In this exercise, the code to interpret models is provided in a notebook.
 
 ### Clean-up
 If you’re finished working with Azure Machine Learning for now refer to [this page](../Documents/Stop-Compute-Instance.md) to stop your compute instance. 
+
+*Source: https://docs.microsoft.com/en-us/learn/modules/explain-machine-learning-models-with-azure-machine-learning/*
