@@ -6,7 +6,7 @@
 
 Azure Machine Learning includes support for automated machine learning through a visual interface in Azure Machine Learning studio for *Enterprise* edition workspaces only. You can use the Azure Machine Learning SDK to run automated machine learning experiments in either *Basic* or *Enterprise* edition workspaces.
 
-## Learning Objectives
+## Tutorial Objectives
 
 * Use Azure Machine Learning's automated machine learning capabilities to determine the best performing algorithm for your data.
 * Use automated machine learning to preprocess data for training.
@@ -14,7 +14,7 @@ Azure Machine Learning includes support for automated machine learning through a
 
 ## Automated machine learning tasks and algorithms
 
-You can use automated machine learning in Azure Machine Learning to train models for the following types of machine learning task:
+You can use automated machine learning in Azure Machine Learning to train models for the following types of machine learning tasks:
 
 * Classification
 * Regression
@@ -57,17 +57,17 @@ Azure Machine Learning includes support for numerous commonly used algorithms fo
 More Information: For a full list of supported algorithms, see [How to define a machine learning task](https://aka.ms/AA70rrr).
 
 ### Restrict algorithm selection
-By default, automated machine learning will randomly select from the full range of algorithms for the specified task. You can choose to block individual algorithms from being selected; which can be useful if you know that your data is not suited to a particular type of algorithm, or you have to comply with a policy that restricts the type of machine learning algorithms you can use in your organization.
+By default, automated machine learning will randomly select from the full range of algorithms for the specified task. You can choose to block individual algorithms from being selected; which can be useful if you know that your data is not suited to a particular type of algorithm or you have to comply with a policy that restricts the type of machine learning algorithms you can use in your organization.
 
 ## Preprocessing and featurization
 
-As well as trying a selection of algorithms, automated machine learning can apply preprocessing transformations to your data; improving the performance of the model.
+As well as trying a selection of algorithms, automated machine learning can apply preprocessing transformations to your data, improving the performance of the model.
 
 ### Scaling and normalization
 Automated machine learning applies scaling and normalization to numeric data automatically, helping prevent any large-scale features from dominating training. During an automated machine learning experiment, multiple scaling or normalization techniques will be applied.
 
 ### Optional featurization
-You can choose to have automated machine learning apply preprocessing transformations, such as:
+You can choose to have automated machine learning applying preprocessing transformations, such as:
 
 * Missing value imputation to eliminate nulls in the training dataset.
 
@@ -83,7 +83,7 @@ More Information: For more information about the preprocessing support in automa
 
 ## Running automated machine learning experiments
 
-To run an automated machine learning experiment, you can either use the user interface in Azure Machine Learning studio, or submit an experiment using the SDK.
+To run an automated machine learning experiment, you can either use the user interface in Azure Machine Learning studio (more details in [How to work with Azure Machine Learning Studio Automated ML](Documents/Automated-ML.md)) or submit an experiment using the SDK.
 
 ### Configure an automated machine learning experiment
 The user interface provides an intuitive way to select options for your automated machine learning experiment. When using the SDK, you have greater flexibility, and you can set experiment options using the **AutoMLConfig** class, as shown in the following example.
