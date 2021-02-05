@@ -50,11 +50,51 @@ Use the following input for the Project details form:
 
 |Field|	Description|
 |------|----------|
-|Project name|	Give your project a name. Here we'll use tutorial-cats-n-dogs.|
+|Project name|	Give your project a name. Here we'll use multi-class-cats-n-dogs.|
 |Labeling task type|	Select Image Classification Multi-class.|
 
 Select **Next** to continue creating the project.
 
 ![](../Images/DataLabeling5.PNG)
+
+3 - On the **Select or create a dataset** form, select the second choice: **+ Create a dataset**, then select the link **From datastore**.
+
+Use the following input for the Create dataset from datastore form:
+
+* On the Basic info form, add a name. Add a description if you wish. Then select Next.
+* On the Datastore selection form, select Previously created datastore, then click on the datastore name and select Select datastore.
+* On the next page, verify that the currently selected datastore is correct. If not, select Previously created datastore and repeat the prior step.
+* Next, still on the Datastore selection form, select **Browse** and then select MultiClass - DogsCats. Select **Save** to use /MultiClass - DogsCats as the path.
+* Select Next to confirm details and then **Create** to create the dataset.
+* Select the circle next to the dataset name in the list, for example cat-n-dogs.
+* Select **Next** to continue creating the project.
+
+![](../Images/DataLabeling6.gif)
+
+4 - On the **Incremental refresh** form select _Enable incremental refresh_ If you plan to add new images to your dataset, incremental refresh will find these new images and add them to your project. When you enable this feature, the project will periodically check for new images. 
+
+For the purposr of this tutorial we will leave this feature unchecked.
+
+Select **Next** to continue.
+
+![](../Images/DataLabeling7.PNG)
+
+5 - On the **Label classes** form, type a label name, then select **+Add label** to type the next label. For this example, the labels are Cat, Dog and Uncertain.
+
+Select **Next** when all the labels have been added.
+
+![](../Images/DataLabeling8.PNG)
+
+6 - On the **Labeling instructions** form (optional), you can provide a link to a website that provides detailed instructions for your labelers. We'll leave it blank for this tutorial. You can also add a short description of the task directly on the form. Type Labeling tutorial - Cats & Dogs.
+
+Select **Next**.
+
+![](../Images/DataLabeling9.PNG)
+
+7 - In the **ML assisted labeling** section (also optional), leave the checkbox unchecked. ML assisted labeling requires more data than what we will be using in this tutorial.
+
+Finally, select **Create project**.
+
+![](../Images/DataLabeling10.PNG)
 
 *Source: https://docs.microsoft.com/en-gb/azure/machine-learning/tutorial-labeling*
