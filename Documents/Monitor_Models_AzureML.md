@@ -118,7 +118,7 @@ If you have not already done so, create a [compute instance](../Documents/Create
 ### Use Application Insights to monitor a real-time service
 In this exercise, the code to configure application insights for a deployed predictive service is provided in a notebook.
 
-1. In the Jupyter home page, browse to the Users/<user_name>/labs folder where you cloned the notebook repository, and open the **Monitor_a_Model.ipynb** notebook.
+1. In the Jupyter home page, browse to the Users/<user_name>/labs folder where you cloned the notebook repository and open the **Monitor_a_Model.ipynb** notebook.
 
 2. Then read the notes in the notebook, running each code cell in turn.
 
