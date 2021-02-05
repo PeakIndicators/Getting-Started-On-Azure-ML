@@ -115,6 +115,40 @@ Since we've configured a data labeling project we can know start to add labels t
 ![](../Images/DataLabeling12.gif)
 
 
+## Complete the project
+Once all the labeling is done another co-worker may want to review the work of the labeler.
 
+### Review labeled data
+
+1 - In Machine Learning studio, select **Data labeling** on the left-hand side to find your project.
+
+2 - Select the **project name** link.
+
+The Dashboard shows you the progress of your project.
+
+At the top of the page, select **Data**.
+
+On the left side, select *Labeled data* to see your tagged images.
+
+5 - When you disagree with a label, select the image and then select **Reject** at the bottom of the page. The tags will be removed and the image is put back in the queue of unlabeled images.
+
+![](../Images/DataLabeling13.gif)
+
+### Export labeled data
+Label data can be exported for Machine Learning experimentation at any time. Users often export multiple times and train different models, rather than wait for all the images to be labeled.
+
+Image labels can be exported in [COCO format](https://cocodataset.org/#format-data) or as an Azure Machine Learning dataset. The dataset format makes it easy to use for training in Azure Machine Learning.
+
+1 - In Machine Learning studio, select **Data labeling** on the left-hand side to find your project.
+
+2 - Select the **project name** link.
+
+3 - Select **Export** and choose _Export as Azure ML Dataset_.
+
+The status of the export appears just below the Export button.
+
+4 - Once the labels are successfully exported, select Datasets on the left side to view the results.
+
+![](../Images/DataLabeling14.gif)
 
 *Source: https://docs.microsoft.com/en-gb/azure/machine-learning/tutorial-labeling*
