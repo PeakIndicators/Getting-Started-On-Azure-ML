@@ -35,7 +35,7 @@ Content:
    * [Tune hyperparameters with Azure ML](Tune_hyperparameters_with_Azure_ML.md)
    * [Automate machine learning model selection with Azure Machine Learning](Automate-ML-model-selection.md)
    * [Explain machine learning models with Azure Machine Learning](Explain-machine-learning-models-with-AzureML.md)
-   * [Detect and mitigate unfairness in models with Azure Machine Learning](Detect-mitigate-unfairness-in-models.md
+   * [Detect and mitigate unfairness in models with Azure Machine Learning](Detect-mitigate-unfairness-in-models.md)
    * [Monitor models with Azure Machine Learning](Monitor_Models_AzureML.md)
    * [Detect data drift on datasets](Dataset-Monitors.md)
    * [Monitor data drift](Monitor-Data-Drift.md)
