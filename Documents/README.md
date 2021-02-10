@@ -40,7 +40,10 @@ Content:
    * [Detect data drift on datasets](Dataset-Monitors.md)
    * [Monitor data drift](Monitor-Data-Drift.md)
    * [Integrate with Azure Key Vault secrets](Integrate-with-Azure-Key-Vault-secrets.MD)
-   * [How to productionize your Azure ML model](How-to-productionize-your-Azure-ML-model.md)
+   * How to productionize your Azure ML model:
+     * [Deploy your model to a new environment](Documents/How-to-productionize-your-Azure-ML-model.md)
+     * [Monitor the Model](Documents/monitor-model-productionize.md)
+     * [Retrain the Model](Documents/retrain-model-productionize.md)
    
     
 * How to work with desktop tools and connect to Azure ML:
