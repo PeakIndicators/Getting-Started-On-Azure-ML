@@ -24,6 +24,8 @@ In this tutorial we are going to focus on different ways of deploying the result
 
 * Scenario 1 - Model was build using studio designer (more details in []) and now it needs to be deployed as a webservice (real-time or batch).
 
+* Scenario 2 - Model was build using studio notebooks and now it needs to be deployed as a webservice (real-time or batch).
+
 * Scenario 3 - Model was build using studio notebooks and now its results needs to be stored in a daily basis in a data lake file or database table.
 
 ## Scenario 1 - Model was build using studio designer (more details in []) and now it needs to be deployed as a webservice (real-time or batch).
