@@ -198,7 +198,7 @@ Metrics such as those for measuring data drift contribution by features can be r
 
 To visualize the data drift metrics using Azure Machine Learning Studio Web Portal follow the steps described in [Understand data drift results](../Documents/Dataset-Monitors.md#Understand-data-drift-results).
 
-##### _Source: https://docs.microsoft.com/en-gb/azure/machine-learning/how-to-monitor-datasets?tabs=python
+##### Source: https://docs.microsoft.com/en-gb/azure/machine-learning/how-to-monitor-datasets?tabs=python
 
 ## Exercise - Monitor data drift
 
