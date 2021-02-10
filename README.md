@@ -70,7 +70,7 @@ Content:
    * [Monitor data drift on datasets using the Web Portal](Documents/Dataset-Monitors.md)
    * [Monitor data drift on datasets with Python](Documents/Monitor-Data-Drift.md)
    * [Integrate with Azure Key Vault secrets](Documents/Integrate-with-Azure-Key-Vault-secrets.MD)
-   * How to productionize your Azure ML model
+   * How to productionize your Azure ML model:
      * [Deploy your model to a new environment](Documents/How-to-productionize-your-Azure-ML-model.md)
      * [Monitor the Model](Documents/monitor-model-productionize.md)
      * [Retrain the Model](Documents/retrain-model-productionize.md)
