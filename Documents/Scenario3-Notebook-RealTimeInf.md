@@ -3,11 +3,13 @@
 For this scenario this tutorial will explain 2 different options:
 
 * Option 1: Life-cycle management with Azure Machine Learning and Azure DevOps Repos 
+
   This option consists of the following flow:
   
 <<<Insert image here>>>
   
 * Option 2: Life-cycle management with Azure Machine Learning, Azure DevOps Repos and Azure DevOps Pipelines
+
   This option consists of the following flow:
 
 <p align="center">
