@@ -52,7 +52,7 @@ Here are the pros and cons of batch inference:
 If we search on the internet a lot of the Azure ML guidance focuses on real time inference (Azure MLOps is one example). This is good when the need is to deliver real time predictions, but not so good when it comes to control costs or return predictions with the lowest latency possible. After all, running a model on a server all the time can be quite expensive, while running it every now and then is definitely cheaper. Batched predictions can be cached and returned almost instantly, too.
 
 In order to balance things out, in this tutorial we are going to focus on different ways of deploying the results of a data science use case based on different scenarios:
-Click on each scenario to understand how it works
+Click on each scenario to understand how it works:
 
 * [Scenario 1](../Documents/Scenario1-Designer-RealTimeInf.md) - Model was build using studio designer and it needs to be deployed as a real-time inference in another environment.
 
