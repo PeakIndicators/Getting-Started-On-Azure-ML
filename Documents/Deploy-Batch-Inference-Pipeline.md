@@ -16,7 +16,7 @@ In Azure Machine Learning, you can implement batch inferencing solutions by crea
 ## Creating a batch inference pipeline
 To create a batch inferencing pipeline, perform the following tasks:
 
-### 1. Register a model
+## 1. Register a model
 To use a trained model in a batch inferencing pipeline, you must register it in your Azure Machine Learning workspace.
 
 To register a model from a local file, you can use the **register** method of the **Model** object as shown in the following example code:
