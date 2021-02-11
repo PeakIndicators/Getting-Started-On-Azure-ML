@@ -18,9 +18,41 @@ Things are fairly simple (process wise) until we get to the final stage **Integr
 
 This is where Azure Machine Learning studio shines the most. It presents the most complete and intuitive model lifecycle management experience alongside integrating with Azure DevOps and also with GitHub.
 
+Now the big question is what is the best way to run a machine learning model in production. There are 2 options: 
+ * Using real-time inference
+ * Using batch inference 
+
+In a real-time inference the model is up and running continuously on a server, usually exposed as a WebService, generating real time predictions whenever it's invoked. In contrast, in batch inference the idea is to only run the model from time to time, generating all possible predictions in a batch, removing the need to have your model up all the time.
+
 **The decision on which deployment solution to follow depends on how the use case results should be delivered.*
 
-In this tutorial we are going to focus on different ways of deploying the results of a data science use case based on different scenarios:
+[Machine Learning Crash]Course(https://developers.google.com/machine-learning/crash-course/static-vs-dynamic-inference/video-lecture) provided by Google has some interesting information regarding advantages and disadvantages, we quote a couple below:
+
+Here are the pros and cons of real time inference:
+
+> Pro: Can make a prediction on any new item as it comes in — great for long tail.
+
+> Con: Compute intensive, latency sensitive—may limit model complexity.
+
+> Con: Monitoring needs are more intensive.
+
+Here are the pros and cons of batch inference:
+
+> Pro: Don’t need to worry much about cost of inference.
+
+> Pro: Can likely use batch quota or some giant MapReduce.
+
+> Pro: Can do post-verification of predictions before pushing.
+
+> Con: Can only predict things we know about — bad for long tail.
+
+> Con: Update latency is likely measured in hours or days.
+
+
+If we search on the internet a lot of the Azure ML guidance focuses on real time inference (Azure MLOps is one example). This is good when the need is to deliver real time predictions, but not so good when it comes to control costs or return predictions with the lowest latency possible. After all, running a model on a server all the time can be quite expensive, while running it every now and then is definitely cheaper. Batched predictions can be cached and returned almost instantly, too.
+
+In order to balance things out, in this tutorial we are going to focus on different ways of deploying the results of a data science use case based on different scenarios:
+Click on the scenario and you will
 
 * Scenario 1 - Model was build using studio designer and it needs to be deployed as a real-time inference in another environment.
 
@@ -28,7 +60,7 @@ In this tutorial we are going to focus on different ways of deploying the result
 
 * Scenario 3 - Model was build using studio notebooks and now it needs to be deployed as a real time webservice.
 
-* Scenario 4 - Model was build using studio notebooks and now its results needs to be stored in a daily basis in a data lake file or database table.
+* Scenario 4 - Model was build using studio notebooks and now its results needs to be deployed as a batch inference (stored in a specific shedule in a data lake file or database table).
 
 ## Scenario 1 - Model was build using studio designer and it needs to be deployed as a real-time inference in another environment.
 
@@ -184,6 +216,6 @@ This deployment is an example of deploying a model into an Azure Kubernetes Serv
 
 ![](../Images/devops16.PNG)
 
-## Scenario 4 - Model was build using studio notebooks and now its results needs to be stored in a daily basis in a data lake file or database table.
+## Scenario 4 - Model was build using studio notebooks and now its results needs to be deployed as a batch inference (stored in a specific shedule in a data lake file or database table).
 
-WIP
+Source: https://vladiliescu.net/deploying-models-with-azure-ml-pipelines/
