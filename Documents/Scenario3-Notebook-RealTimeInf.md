@@ -128,7 +128,7 @@ If these steps are followed, this means the following flow of the diagram have b
 
 This can be achieved from 3 different ways:
 
-#### <a name = 'Release-Pipeline'></a> Option 1: Create a Release Pipeline to deploy the Azure DevOps Artifact created in the previous pipeline as a real-time inference
+### <a name = 'Release-Pipeline'></a> Option 1: Create a Release Pipeline to deploy the Azure DevOps Artifact created in the previous pipeline as a real-time inference
 This step will execute the **Deploy model** task of the diagram _MLOps flow within Azure Machine Learning_.
 
 ![](../Images/devops12.PNG)
@@ -164,12 +164,12 @@ This deployment is an example of deploying a model into an Azure Kubernetes Serv
 
 ![](../Images/devops16.PNG)
 
-#### <a name = 'RealTime-Pipeline-notebook'></a>Option 2: Deploy a real-time inference with Azure Machine Learning notebooks
+### <a name = 'RealTime-Pipeline-notebook'></a>Option 2: Deploy a real-time inference with Azure Machine Learning notebooks
 
 Instead of deploying the model using Azure DevOps Pipelines, the same can be achieved by running a notebook in Azure ML. More details can be seen in 
 [Deploy real-time machine learning services with Azure Machine Learning](../Documents/Deploy-Real-Time-Service.md).
 
-#### <a name = 'RealTime-Pipeline-webPortal'></a>Option 3: Deploy a real-time inference with Azure Machine Learning web portal
+### <a name = 'RealTime-Pipeline-webPortal'></a>Option 3: Deploy a real-time inference with Azure Machine Learning web portal
 
 This step has the following assumptions:
 
