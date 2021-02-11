@@ -3,7 +3,14 @@
 For this scenario we will explain 2 different approaches:
 
 * Life-cycle management with Azure Machine Learning and Azure DevOps Repos 
+
+<<<Insert image here>>>
+  
 * Life-cycle management with Azure Machine Learning, Azure DevOps Repos and Azure DevOps Pipelines
+
+<p align="center">
+  <img src="../Images/devops2.PNG">
+</p>
 
 ## Life-cycle management with Azure Machine Learning and Azure DevOps Repos 
 
@@ -11,19 +18,26 @@ This life cycle is based on the following tasks:
 
 _Development Stage_
 
-Step 1 - The notebook is developed and tested in a "dev" environment, the code should be build using the Azure Pipelines concept that can be seen in [Create Pipelines](../Documents/Orchestrate-ML-With-Pipelines.md) and the deployment code should also follow the instructions that can be seen here [Deploy real-time machine learning services with Azure Machine Learning](../Documents/Deploy-Real-Time-Service.md)
+**Step 1** - The notebook is developed and tested in a "dev" environment, the code should be build using the Azure ML Pipelines concept and the deployment code should be build as a real-time inference.
 
-<<<<<<<< Explain which steps >>>>>>>>>>>>>>>
+For the Azure ML Pipeline development more information can be seen in [Create Pipelines](../Documents/Orchestrate-ML-With-Pipelines.md) but be aware that only these 2 steps are needed:
+   * Create an Azure Machine Learning pipeline.
+   * Publish an Azure Machine Learning pipeline.
+ **Note: Schedule an Azure Machine Learning pipeline is not needed at this stage since this is just a development environment.**
+ 
+ For the deployment development more information can be seen in [Deploy real-time machine learning services with Azure Machine Learning](../Documents/Deploy-Real-Time-Service.md#Deploy-RTinf), once again only section _Deploying a model as a real-time service_ is needed. 
 
-Step 2 - Once all the code is properly tested, it should be archived in a git repository. In this tutorial, we are considering Azure DevOps Repos as the Git Repository but others can be used. For more details on how to do this step can be found in [Integrating Azure ML notebooks with Git](../Documents/Integrating_AzureML_notebooks_with%20Git.md).
+**Step 2** - Once all the code is properly tested, it should be archived in a git repository. In this tutorial, we are considering Azure DevOps Repos as the Git Repository but others can be used. More details on how to do this step can be found in [Integrating Azure ML notebooks with Git](../Documents/Integrating_AzureML_notebooks_with%20Git.md).
 
 _Migrate to another environment stage_
 
-Step 3 - The migration of the code to a new environment is a very simple task, it consists of cloning the repository from previous Step 2, into the new environment. More details can be seen in [Clone and Run a Notebook](Documents/Clone-and-Run-a-Notebook.md). 
+Step 3 - The migration of the code to a new environment is a very simple task, it consists of cloning the repository from the previous step (Step 2) into the new environment. More details on how to do this can be seen in [Clone and Run a Notebook](Documents/Clone-and-Run-a-Notebook.md). 
 
 _Deploy the model as a real time inference in the new environment_
 
-Step 4 - Once the code as been added to the new environment
+Step 4 - Once the code as been added to the new environment, then all the code should be executed. This will create the model and will deploy it into a real time inference.
+
+**Note: This example considers that all the code will be migrated from one enviroment to the other and it will be executed in the destination environment (which is will be the final one). Another option might be to download the model created in the "dev" environment, then upload the model in the new environment using the web portal Register Model option and then only execute the notebook that deploys the model.**
 
 
 ## Life-cycle management with Azure Machine Learning, Azure DevOps Repos and Azure DevOps Pipelines
@@ -38,7 +52,7 @@ Once these tasks are done, then a tight collaboration between the DevOps develop
 
 This may sound simple and the most logical way of doing it, but nobody has been able to bring MLOps to life with such close-knit integration into the whole process. Azure Machine Learning does an amazing job of it enabling data science teams to become immensely productive.
 
-The following flow represents a MLOps flow within Azure Machine Learning.
+The following flow (also presented at the begining of this page) is a good representation of the MLOps flow within Azure Machine Learning.
 
 <p align="center">
   <img src="../Images/devops2.PNG">
@@ -126,7 +140,7 @@ If these steps are followed, this means the following flow of the diagram have b
 
 ### <a name = 'Deploy-real-time-inf'></a>Deploy the model into a real time inference
 
-This can be achieved from 3 different ways:
+In this tutorial we explain 3 different options of deploying a model into a real time inference:
 
 ### <a name = 'Release-Pipeline'></a> Option 1: Create a Release Pipeline to deploy the Azure DevOps Artifact created in the previous pipeline as a real-time inference
 This step will execute the **Deploy model** task of the diagram _MLOps flow within Azure Machine Learning_.
