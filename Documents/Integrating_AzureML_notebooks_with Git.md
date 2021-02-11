@@ -49,7 +49,15 @@ Make sure you have done the following before following this document:
 ![](../Images/Dev.gif)
     
 If you need a more detailed reminder on how to how to open a JupyterLab see  [Prerequisites](#Prerequisites-1).
-Once you have opened a terminal on JupyterLab switch your directory to where you want to clone your repo and run `git clone` followed by the path copied from the Clone URL in the previous section, as shown in the following example:
+Once you have opened a terminal on JupyterLab switch your directory to where you want to clone your repo. This should be your own personal folder. See the screenshot below to see how you can locate and change your directory. 
+
+![](../Images/0.0.PNG)
+
+After following the instructions to get a list of available directories enter: 
+
+`cd your_directory'
+
+and run `git clone` followed by the path copied from the Clone URL in the previous section, as shown in the following example:
 
 `git clone https://dev.azure.com/fabrikam-fiber/MyFirstProject/_git/`
 
@@ -58,7 +66,7 @@ Git downloads a copy of the code, including all commits and branches from the re
 
 4. Switch your directory to the repository that you cloned. For e.g. 
 
-`cd fabrikam-fiber`
+`cd your_directory`
 
 ## Work with the code
 
