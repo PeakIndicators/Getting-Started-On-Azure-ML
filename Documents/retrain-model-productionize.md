@@ -136,6 +136,6 @@ In your python scripts, you may want to log metrics so that you can determine th
 
 For example, you have a model that is already deployed and has an accuracy of 90. You train a new model based on new checkins to the repo and the accuracy is only 80, so you don't want to deploy it. You can use a metric such as this to build automation logic, as you can directly rank different models. In other cases, you may have several metrics that are used to indicate the "best" model. In this case, choosing the best model requires human judgment.
 
-Depending on what "best" looks like for your scenario, you may need to create or re-use an existing release pipeline where someone must inspect the metrics to determine if the model should be deployed. For more details on how to create a release pipeline please check section [Create a Release Pipeline](../Documents/Scenario3-Notebook-RealTimeInf.md#Release-Pipeline) from this page.
+Depending on what "best" looks like for your scenario, you may need to create or re-use an existing release pipeline where someone must inspect the metrics to determine if the model should be deployed. For more details on how to create a release pipeline please check section [Create a Release Pipeline](../Documents/Scenario3-Notebook-RealTimeInf.md#Deploy-real-time-inf) from this page.
 
 **Note:** To log metrics during training, use the Run class.
