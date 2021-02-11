@@ -1,6 +1,32 @@
-# Scenario 3 - Model was build using studio notebooks and now it needs to be deployed as a real time webservice.
+# Scenario 3 - Model was build using studio notebooks and now it needs to be deployed as a real time inference
 
-## Life-cycle management with Azure Machine Learning and Azure DevOps
+For this scenario we will explain 2 different approaches:
+
+* Life-cycle management with Azure Machine Learning and Azure DevOps Repos 
+* Life-cycle management with Azure Machine Learning, Azure DevOps Repos and Azure DevOps Pipelines
+
+## Life-cycle management with Azure Machine Learning and Azure DevOps Repos 
+
+This life cycle is based on the following tasks:
+
+_Development Stage_
+
+Step 1 - The notebook is developed and tested in a "dev" environment, the code should be build using the Azure Pipelines concept that can be seen in [Create Pipelines](../Documents/Orchestrate-ML-With-Pipelines.md) and the deployment code should also follow the instructions that can be seen here [Deploy real-time machine learning services with Azure Machine Learning](../Documents/Deploy-Real-Time-Service.md)
+
+<<<<<<<< Explain which steps >>>>>>>>>>>>>>>
+
+Step 2 - Once all the code is properly tested, it should be archived in a git repository. In this tutorial, we are considering Azure DevOps Repos as the Git Repository but others can be used. For more details on how to do this step can be found in [Integrating Azure ML notebooks with Git](../Documents/Integrating_AzureML_notebooks_with%20Git.md).
+
+_Migrate to another environment stage_
+
+Step 3 - The migration of the code to a new environment is a very simple task, it consists of cloning the repository from previous Step 2, into the new environment. More details can be seen in [Clone and Run a Notebook](Documents/Clone-and-Run-a-Notebook.md). 
+
+_Deploy the model as a real time inference in the new environment_
+
+Step 4 - Once the code as been added to the new environment
+
+
+## Life-cycle management with Azure Machine Learning, Azure DevOps Repos and Azure DevOps Pipelines
 
 1. The first task is to be able to version control the models. Now, the code generated, like the Python notebooks or scripts can be easily versioned controlled in GitHub/DevOps repositories and this is the recommended approach, but in addition to the notebooks and scripts you also need a way to version control the models, which are different entities than the python files. This is important as data scientists may create multiple versions of the model and very easily lose track of these in search of better accuracy or performance. Azure Machine Learning provides a central model registry, which forms the foundation of the lifecycle management process. This repository enables version control of models, it stores model metrics, it allows for one-click deployment and even tracks all deployments of the models so that you can restrict usage, in case the model becomes stale or its efficacy is no longer acceptable. Having this model registry is key as it also helps trigger other activities in the lifecycle when new changes appear or metrics cross a threshold.
 
@@ -18,11 +44,11 @@ The following flow represents a MLOps flow within Azure Machine Learning.
   <img src="../Images/devops2.PNG">
 </p>
 
-### Explaining MLOps flow within Azure Machine Learning and Azure DevOps
+## Explaining MLOps flow within Azure Machine Learning and Azure DevOps
 
 The idea behind the diagram shown above will be explained in the following sections.
 
-#### Train, Validate and Deploy the Model
+### Train, Validate and Deploy the Model
 
 Once the data scientist is happy with the prediction developed in Azure Machine Learning, an Azure DevOps pipeline/release can be created to automate the process of training, registering and deploying the model and this is where the collaboration between DevOps Development Team and Data Science Team begins.
 
@@ -56,16 +82,16 @@ The files created by this command are stored in the .azureml directory of the St
 
 As we can see, this implies the creation of separate python files for training, scoring, testing and also configuration files. But this depends on what step(s) the user requires in order to start the deployment. More details are given in the sub-sections below.
 
-##### Create a Pipeline to execute ML tasks and save all the relevant information in an Azure DevOps Artifact
+#### Create a Pipeline to execute ML tasks and save all the relevant information in an Azure DevOps Artifact
 
 1.  Once all the necessary code is added to the repository a pipeline should be created with the necessary steps steps: - _Team Responsible: DevOps Development Team_
 
-###### _Pipeline 1 - Example_
+##### _Pipeline 1 - Example_
 This is an example where the model is trained, registered and saved in an Azure DevOps Artifact.
 
 ![](../Images/devops4.png)
 
-###### _Pipeline 2 - Example_
+##### _Pipeline 2 - Example_
 This is another example where, apart from what is done in _Pipeline 1 - Example_, some other tasks were added: Data Quality checking, testing and creating Azure ML resources.
 
 ![](../Images/devops8.png)
@@ -98,6 +124,9 @@ If these steps are followed, this means the following flow of the diagram have b
 
 ![](../Images/devops11.PNG)
 
+#### <a name = 'Deploy-real-time-inf'></a>Deploy the model into a real time inference
+
+This can be achieved from 3 different ways:
 
 ##### <a name = 'Release-Pipeline'></a> Create a Release Pipeline to deploy the Azure DevOps Artifact created in the previous pipeline
 This step will execute the **Deploy model** task of the diagram _MLOps flow within Azure Machine Learning_.
@@ -134,3 +163,12 @@ This deployment is an example of deploying a model into an Azure Kubernetes Serv
 * The flow for training, validating and deploying a model within Azure DevOps can be defined as:
 
 ![](../Images/devops16.PNG)
+
+##### <a name = 'RealTime-Pipeline-notebook'></a> Deploy real-time machine learning services with Azure Machine Learning notebooks
+
+Instead of deploying the model using Azure DevOps Pipelines, the same can be achieved by running a notebook in Azure ML. More details can be seen in 
+[Deploy real-time machine learning services with Azure Machine Learning](../Documents/Deploy-Real-Time-Service.md).
+
+##### <a name = 'RealTime-Pipeline-webPortal'></a> Deploy real-time machine learning services with Azure Machine Learning web portal
+
+
