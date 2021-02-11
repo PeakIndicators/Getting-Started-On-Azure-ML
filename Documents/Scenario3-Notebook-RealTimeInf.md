@@ -82,16 +82,16 @@ The files created by this command are stored in the .azureml directory of the St
 
 As we can see, this implies the creation of separate python files for training, scoring, testing and also configuration files. But this depends on what step(s) the user requires in order to start the deployment. More details are given in the sub-sections below.
 
-####  <a name = 'Create-Pipeline'></a> Create a Pipeline to execute ML tasks and save all the relevant information in an Azure DevOps Artifact
+###  <a name = 'Create-Pipeline'></a> Create a Pipeline to execute ML tasks and save all the relevant information in an Azure DevOps Artifact
 
 1.  Once all the necessary code is added to the repository a pipeline should be created with the necessary steps steps: - _Team Responsible: DevOps Development Team_
 
-##### _Pipeline 1 - Example_
+#### _Pipeline 1 - Example_
 This is an example where the model is trained, registered and saved in an Azure DevOps Artifact.
 
 ![](../Images/devops4.png)
 
-##### _Pipeline 2 - Example_
+#### _Pipeline 2 - Example_
 This is another example where, apart from what is done in _Pipeline 1 - Example_, some other tasks were added: Data Quality checking, testing and creating Azure ML resources.
 
 ![](../Images/devops8.png)
@@ -124,11 +124,11 @@ If these steps are followed, this means the following flow of the diagram have b
 
 ![](../Images/devops11.PNG)
 
-#### <a name = 'Deploy-real-time-inf'></a>Deploy the model into a real time inference
+### <a name = 'Deploy-real-time-inf'></a>Deploy the model into a real time inference
 
 This can be achieved from 3 different ways:
 
-##### <a name = 'Release-Pipeline'></a> Option 1: Create a Release Pipeline to deploy the Azure DevOps Artifact created in the previous pipeline as a real-time inference
+#### <a name = 'Release-Pipeline'></a> Option 1: Create a Release Pipeline to deploy the Azure DevOps Artifact created in the previous pipeline as a real-time inference
 This step will execute the **Deploy model** task of the diagram _MLOps flow within Azure Machine Learning_.
 
 ![](../Images/devops12.PNG)
@@ -136,24 +136,24 @@ This step will execute the **Deploy model** task of the diagram _MLOps flow with
 1. The deployment in Azure DevOps is done using a **Release Pipeline**. - _Team Responsible: DevOps Development Team_
 This release pipeline might have the following structures (once again there is no right or wrong it really depends on to where the deployment needs to be done):
 
-###### _Release Pipeline 1 - Example_
+##### _Release Pipeline 1 - Example_
 This is a very simple example where the artifact in only deployed to another environment:
 
 ![](../Images/devops9.png)
 
-###### _Release Pipeline 2 - Example_
+##### _Release Pipeline 2 - Example_
 This is a more complex example where the artifact is being deployed to a Pre-Production environment, the after an approval, it goes to a Production environment:
 
 ![](../Images/devops13.PNG)
 
 The deployment tasks are defined as:
 
-###### _Release Pipeline 1 - Tasks - Example_
+##### _Release Pipeline 1 - Tasks - Example_
 This deployment is an example of deploying a model into an Azure Container Instance, often used for non-Production environments.
 
 ![](../Images/devops10.png)
 
-###### _Release Pipeline 2 - Tasks - Example_
+##### _Release Pipeline 2 - Tasks - Example_
 This deployment is an example of deploying a model into an Azure Kubernetes Service, often used for Production environments.
 
 ![](../Images/devops14.png)
@@ -164,12 +164,12 @@ This deployment is an example of deploying a model into an Azure Kubernetes Serv
 
 ![](../Images/devops16.PNG)
 
-##### <a name = 'RealTime-Pipeline-notebook'></a>Option 2: Deploy a real-time inference with Azure Machine Learning notebooks
+#### <a name = 'RealTime-Pipeline-notebook'></a>Option 2: Deploy a real-time inference with Azure Machine Learning notebooks
 
 Instead of deploying the model using Azure DevOps Pipelines, the same can be achieved by running a notebook in Azure ML. More details can be seen in 
 [Deploy real-time machine learning services with Azure Machine Learning](../Documents/Deploy-Real-Time-Service.md).
 
-##### <a name = 'RealTime-Pipeline-webPortal'></a>Option 3: Deploy a real-time inference with Azure Machine Learning web portal
+#### <a name = 'RealTime-Pipeline-webPortal'></a>Option 3: Deploy a real-time inference with Azure Machine Learning web portal
 
 This step has the following assumptions:
 
