@@ -1,18 +1,20 @@
 # Scenario 3 - Model was build using studio notebooks and now it needs to be deployed as a real time inference
 
-For this scenario we will explain 2 different approaches:
+For this scenario this tutorial will explain 2 different options:
 
-* Life-cycle management with Azure Machine Learning and Azure DevOps Repos 
-
+* Option 1: Life-cycle management with Azure Machine Learning and Azure DevOps Repos 
+  This option consists of the following flow:
+  
 <<<Insert image here>>>
   
-* Life-cycle management with Azure Machine Learning, Azure DevOps Repos and Azure DevOps Pipelines
+* Option 2: Life-cycle management with Azure Machine Learning, Azure DevOps Repos and Azure DevOps Pipelines
+  This option consists of the following flow:
 
 <p align="center">
   <img src="../Images/devops2.PNG">
 </p>
 
-## Life-cycle management with Azure Machine Learning and Azure DevOps Repos 
+## Option 1: Life-cycle management with Azure Machine Learning and Azure DevOps Repos 
 
 This life cycle is based on the following tasks:
 
@@ -31,16 +33,16 @@ For the Azure ML Pipeline development more information can be seen in [Create Pi
 
 _Migrate to another environment stage_
 
-Step 3 - The migration of the code to a new environment is a very simple task, it consists of cloning the repository from the previous step (Step 2) into the new environment. More details on how to do this can be seen in [Clone and Run a Notebook](Documents/Clone-and-Run-a-Notebook.md). 
+**Step 3** - The migration of the code to a new environment is a very simple task, it consists of cloning the repository from the previous step (Step 2) into the new environment. More details on how to do this can be seen in [Clone and Run a Notebook](Documents/Clone-and-Run-a-Notebook.md). 
 
 _Deploy the model as a real time inference in the new environment_
 
-Step 4 - Once the code as been added to the new environment, then all the code should be executed. This will create the model and will deploy it into a real time inference.
+**Step 4** - Once the code as been added to the new environment, then all the code should be executed. This will create the model and will deploy it into a real time inference.
 
 **Note: This example considers that all the code will be migrated from one enviroment to the other and it will be executed in the destination environment (which is will be the final one). Another option might be to download the model created in the "dev" environment, then upload the model in the new environment using the web portal Register Model option and then only execute the notebook that deploys the model.**
 
 
-## Life-cycle management with Azure Machine Learning, Azure DevOps Repos and Azure DevOps Pipelines
+## Option 2: Life-cycle management with Azure Machine Learning, Azure DevOps Repos and Azure DevOps Pipelines
 
 1. The first task is to be able to version control the models. Now, the code generated, like the Python notebooks or scripts can be easily versioned controlled in GitHub/DevOps repositories and this is the recommended approach, but in addition to the notebooks and scripts you also need a way to version control the models, which are different entities than the python files. This is important as data scientists may create multiple versions of the model and very easily lose track of these in search of better accuracy or performance. Azure Machine Learning provides a central model registry, which forms the foundation of the lifecycle management process. This repository enables version control of models, it stores model metrics, it allows for one-click deployment and even tracks all deployments of the models so that you can restrict usage, in case the model becomes stale or its efficacy is no longer acceptable. Having this model registry is key as it also helps trigger other activities in the lifecycle when new changes appear or metrics cross a threshold.
 
