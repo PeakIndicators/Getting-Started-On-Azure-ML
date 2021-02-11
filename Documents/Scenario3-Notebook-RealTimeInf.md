@@ -82,7 +82,7 @@ The files created by this command are stored in the .azureml directory of the St
 
 As we can see, this implies the creation of separate python files for training, scoring, testing and also configuration files. But this depends on what step(s) the user requires in order to start the deployment. More details are given in the sub-sections below.
 
-#### Create a Pipeline to execute ML tasks and save all the relevant information in an Azure DevOps Artifact
+####  <a name = 'Create-Pipeline'></a> Create a Pipeline to execute ML tasks and save all the relevant information in an Azure DevOps Artifact
 
 1.  Once all the necessary code is added to the repository a pipeline should be created with the necessary steps steps: - _Team Responsible: DevOps Development Team_
 
@@ -128,7 +128,7 @@ If these steps are followed, this means the following flow of the diagram have b
 
 This can be achieved from 3 different ways:
 
-##### <a name = 'Release-Pipeline'></a> Create a Release Pipeline to deploy the Azure DevOps Artifact created in the previous pipeline
+##### <a name = 'Release-Pipeline'></a> Option 1: Create a Release Pipeline to deploy the Azure DevOps Artifact created in the previous pipeline
 This step will execute the **Deploy model** task of the diagram _MLOps flow within Azure Machine Learning_.
 
 ![](../Images/devops12.PNG)
@@ -164,11 +164,13 @@ This deployment is an example of deploying a model into an Azure Kubernetes Serv
 
 ![](../Images/devops16.PNG)
 
-##### <a name = 'RealTime-Pipeline-notebook'></a> Deploy real-time machine learning services with Azure Machine Learning notebooks
+##### <a name = 'RealTime-Pipeline-notebook'></a>Option 2: Deploy real-time machine learning services with Azure Machine Learning notebooks
 
 Instead of deploying the model using Azure DevOps Pipelines, the same can be achieved by running a notebook in Azure ML. More details can be seen in 
 [Deploy real-time machine learning services with Azure Machine Learning](../Documents/Deploy-Real-Time-Service.md).
 
 ##### <a name = 'RealTime-Pipeline-webPortal'></a> Deploy real-time machine learning services with Azure Machine Learning web portal
+
+This step has the assumption that while running the [Create a Pipeline to execute ML tasks and save all the relevant information in an Azure DevOps Artifact](#Create-Pipeline) the register model step was configured and ran successfully.
 
 
