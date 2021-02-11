@@ -15,7 +15,7 @@ In this module, you will learn how to:
 * Consume a real-time inferencing service.
 * Troubleshoot service deployment
 
-## Deploying a model as a real-time service
+## <a name = 'Deploy-RTinf'></a>Deploying a model as a real-time service
 
 You can deploy a model as a real-time web service to several kinds of compute target, including local compute, an Azure Machine Learning compute instance, an Azure Container Instance (ACI), an Azure Kubernetes Service (AKS) cluster, an Azure Function  or an Internet of Things (IoT) module. Azure Machine Learning uses containers as a deployment mechanism, packaging the model and the code to use it as an image that can be deployed to a container in your chosen compute target.
 
