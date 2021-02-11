@@ -55,7 +55,7 @@ Once you have opened a terminal on JupyterLab switch your directory to where you
 
 After following the instructions to get a list of available directories enter: 
 
-`cd your_directory'
+`cd your_directory`
 
 and run `git clone` followed by the path copied from the Clone URL in the previous section, as shown in the following example:
 
