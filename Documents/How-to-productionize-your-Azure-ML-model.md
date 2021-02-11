@@ -26,7 +26,7 @@ In this tutorial we are going to focus on different ways of deploying the result
 
 * Scenario 2 - Model was build using studio designer and it needs to be deployed as a batch inference.
 
-* Scenario 3 - Model was build using studio notebooks and now it needs to be deployed as a webservice (real-time or batch).
+* Scenario 3 - Model was build using studio notebooks and now it needs to be deployed as a real time webservice.
 
 * Scenario 4 - Model was build using studio notebooks and now its results needs to be stored in a daily basis in a data lake file or database table.
 
@@ -34,17 +34,20 @@ In this tutorial we are going to focus on different ways of deploying the result
 
 In this scenario we are considering that the model training, scoring and evaluation is being done through studio designer and we just need to deploy it as a real time webservice in another environment (the idea is the developer is working in a development enviromnent with production data, once he gets the best model, that will be deployed to a production resource as a real-time webservice).
 
-Register the model (optional, see below).
-Prepare an inference configuration (unless using no-code deployment).
-Prepare an entry script (unless using no-code deployment).
-Choose a compute target.
-Deploy the model to the compute target.
-Test the resulting web service.
+* Register the model (optional, see below).
+* Prepare an inference configuration (unless using no-code deployment).
+* Prepare an entry script (unless using no-code deployment).
+* Choose a compute target.
+* Deploy the model to the compute target.
+* Test the resulting web service.
 
+WIP
 
+## Scenario 2 - Model was build using studio designer and it needs to be deployed as a batch inference.
 
+WIP
 
-## Scenario 2 - Model was build using studio notebooks and now it needs to be deployed as a webservice (real-time or batch).
+## Scenario 3 - Model was build using studio notebooks and now it needs to be deployed as a real time webservice.
 
 ### Life-cycle management with Azure Machine Learning and Azure DevOps
 
@@ -129,7 +132,7 @@ Once the pipeline is setup, it should be executed. The screenshot below shows ex
 ![](../Images/devops7.png)
 
 **Very Important Notes:**
-* The above represent examples of pipelines that can be created. As stated, these are just examples and it really depends on what it's agreed/defined to do in Azure DevOps and what is agreed/defined to do in Azure ML. _Example:_ the user might want to train and register the model in an Azure ML notebook and in Azure DevOps he only wants to download the model in order to be able to deploy it, if that is the case then the pipeline should only start from _Download the Model_ task onwards.
+* The above represent examples of pipelines that can be created. As stated, these are just examples and it really depends on what it's agreed/defined to do in Azure DevOps and what is agreed/defined to do in Azure ML. _Example:_ the user might want to train the model in an Azure ML notebook and in Azure DevOps he only wants to register and download the model in order to be able to deploy it, if that is the case then the pipeline should only start from _Download the Model_ task onwards.
 * In order to deploy the model the following tasks are mandatory:
    * Download Model
    * Copy Files to Artifact Staging Directory
@@ -180,3 +183,7 @@ This deployment is an example of deploying a model into an Azure Kubernetes Serv
 * The flow for training, validating and deploying a model within Azure DevOps can be defined as:
 
 ![](../Images/devops16.PNG)
+
+## Scenario 4 - Model was build using studio notebooks and now its results needs to be stored in a daily basis in a data lake file or database table.
+
+WIP
