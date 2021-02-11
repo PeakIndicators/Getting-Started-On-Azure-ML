@@ -1,4 +1,4 @@
-# Scenario 4 - Model was build using studio notebooks and now its results needs to be deployed as a batch inference (stored in a specific shedule in a data lake file or database table).
+# Scenario 4 - Model was build using studio notebooks and now its results needs to be deployed as a batch inference (stored in a specific shedule in a data lake file or database table)
 
 **Work in Progress**
 
