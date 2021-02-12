@@ -28,13 +28,13 @@ _Development Stage_
 
 **Step 1** - The notebook is developed and tested in a "dev" environment, the code should be build using the Azure ML Pipelines concept and the deployment code should be build as a real-time inference.
 
-For the Azure ML Pipeline development more information can be seen in [Create Pipelines](../Documents/Orchestrate-ML-With-Pipelines.md) but be aware that only these 2 steps are needed:
+For the Azure ML Pipeline development, more information can be seen in [Create Pipelines](../Documents/Orchestrate-ML-With-Pipelines.md) but be aware that, for the development phase, only these 2 steps are needed:
    * Create an Azure Machine Learning pipeline.
    * Publish an Azure Machine Learning pipeline.
    
  **Note: Schedule an Azure Machine Learning pipeline is not needed at this stage since this is just a development environment.**
  
- For the deployment development more information can be seen in [Deploy real-time machine learning services with Azure Machine Learning](../Documents/Deploy-Real-Time-Service.md#Deploy-RTinf), once again only section _Deploying a model as a real-time service_ is needed. 
+For the deployment development more information can be seen in [Deploy real-time machine learning services with Azure Machine Learning](../Documents/Deploy-Real-Time-Service.md#Deploy-RTinf), once again only section _Deploying a model as a real-time service_ is needed. 
 
 **Step 2** - Once all the code is properly tested, it should be archived in a git repository. In this tutorial, we are considering Azure DevOps Repos as the Git Repository but others can be used. More details on how to do this step can be found in [Integrating Azure ML notebooks with Git](../Documents/Integrating_AzureML_notebooks_with%20Git.md).
 
