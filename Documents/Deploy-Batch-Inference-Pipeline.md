@@ -43,7 +43,7 @@ Azure Machine Learning provides a type of pipeline step specifically for perform
 
 ![](../Images/36.PNG)
 
-## <a name = 'Batch-Pipeline-run'> 4. Run the pipeline and retrieve the step output
+## <a name = 'Batch-Pipeline-publish'> 4. Run the pipeline and retrieve the step output
 
 After your pipeline has been defined, you can run it and wait for it to complete. Then you can retrieve the **parallel_run_step.txt** file from the output of the step to view the results, as shown in the following code example:
 
