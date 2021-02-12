@@ -16,7 +16,7 @@ In Azure Machine Learning, you can implement batch inferencing solutions by crea
 ## Creating a batch inference pipeline
 To create a batch inferencing pipeline, perform the following tasks:
 
-## 1. Register a model
+## <a name = 'Register'> 1. Register a model
 To use a trained model in a batch inferencing pipeline, you must register it in your Azure Machine Learning workspace.
 
 To register a model from a local file, you can use the **register** method of the **Model** object as shown in the following example code:
@@ -27,7 +27,7 @@ Alternatively, if you have a reference to the **Run** used to train the model, y
 
 ![](../Images/34.PNG)
 
-## 2. Create a scoring script
+## <a name = 'Batch-Pipeline-scoring'> 2. Create a scoring script
 Batch inferencing service requires a scoring script to load the model and use it to predict new values. It must include two functions:
 
 * **init()**: Called when the pipeline is initialized.
@@ -37,19 +37,19 @@ Typically, you use the **init** function to load the model from the model regist
 
 ![](../Images/35.PNG)
 
-## 3. Create a pipeline with a ParallelRunStep
+## <a name = 'Batch-Pipeline-parallelstep'> 3. Create a pipeline with a ParallelRunStep
 
 Azure Machine Learning provides a type of pipeline step specifically for performing parallel batch inferencing. Using the **ParallelRunStep** class, you can read batches of files from a **File** dataset and write the processing output to a **PipelineData** reference. Additionally, you can set the **output_action** setting for the step to "append_row", which will ensure that all instances of the step being run in parallel will collate their results to a single output file named *parallel_run_step.txt.* The following code snippet shows an example of creating a pipeline with a **ParallelRunStep**:
 
 ![](../Images/36.PNG)
 
-## 4. Run the pipeline and retrieve the step output
+## <a name = 'Batch-Pipeline-run'> 4. Run the pipeline and retrieve the step output
 
 After your pipeline has been defined, you can run it and wait for it to complete. Then you can retrieve the **parallel_run_step.txt** file from the output of the step to view the results, as shown in the following code example:
 
 ![](../Images/37.PNG)
 
-## Publishing a batch inference pipeline
+## <a name = 'Batch-Pipeline-publish'></a>Publishing and Scheduling a batch inference pipeline
 
 You can publish a batch inferencing pipeline as a REST service, as shown in the following example code:
 
