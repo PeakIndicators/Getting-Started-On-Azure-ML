@@ -22,11 +22,11 @@ This step is meant to the done in the "dev" environment, the notebook code shoul
 For the deployment development more information can be seen in [Deploy batch inference pipelines with Azure Machine Learning](../Documents/Deploy-Batch-Inference-Pipeline.md). 
 The following steps should be developed:
 
-* ![Register a Model](../Documents/Deploy-Batch-Inference-Pipeline.md#Register)
-* ![Create a scoring script](../Documents/Deploy-Batch-Inference-Pipeline.md#Batch-Pipeline-scoring)
-* ![Create a pipeline with a ParallelRunStep](../Documents/Deploy-Batch-Inference-Pipeline.md#Batch-Pipeline-parallelstep)
-* ![Run the pipeline and retrieve the step output](../Documents/Deploy-Batch-Inference-Pipeline.md#Batch-Pipeline-publish)
-* ![Publishing and Scheduling a batch inference pipeline]((../Documents/Deploy-Batch-Inference-Pipeline.md#Batch-Pipeline-publish)
+* [Register a Model](../Documents/Deploy-Batch-Inference-Pipeline.md#Register)
+* [Create a scoring script](../Documents/Deploy-Batch-Inference-Pipeline.md#Batch-Pipeline-scoring)
+* [Create a pipeline with a ParallelRunStep](../Documents/Deploy-Batch-Inference-Pipeline.md#Batch-Pipeline-parallelstep)
+* [Run the pipeline and retrieve the step output](../Documents/Deploy-Batch-Inference-Pipeline.md#Batch-Pipeline-publish)
+* [Publishing and Scheduling a batch inference pipeline](../Documents/Deploy-Batch-Inference-Pipeline.md#Batch-Pipeline-publish)
 
 ## Archiving and Version Controlling
 
