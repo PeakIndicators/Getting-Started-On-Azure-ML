@@ -36,7 +36,7 @@ Once all the code is properly tested, it should be archived in a git repository.
 
 ![](../Images/devops2d.gif)
 
-**Note 1 : This example considers that all the code will be migrated from one enviroment to the other and it will be executed in the destination environment (which is will be the final one). Another option might be to download the model created in the "dev" environment, then upload it in the new environment using the web portal Register Model option (see image below) and then only execute the notebook that deploys the model.**
+**Note 2 : This example considers the pipeline will be scheduled within Azure ML Studio, another option can be to schedule and execute the pipeline using Azure Data Factory, more details can be seen [here](https://docs.microsoft.com/en-us/azure/data-factory/transform-data-machine-learning-service).**
 
 ## Useful links: 
 https://vladiliescu.net/deploying-models-with-azure-ml-pipelines/
