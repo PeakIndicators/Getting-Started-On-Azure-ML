@@ -46,8 +46,9 @@ _Deploy the model as a real time inference in the new environment_
 
 **Step 4** - Once the code as been added to the new environment, then all the code should be executed. This will create the model and will deploy it into a real time inference.
 
-**Note: This example considers that all the code will be migrated from one enviroment to the other and it will be executed in the destination environment (which is will be the final one). Another option might be to download the model created in the "dev" environment, then upload it in the new environment using the web portal Register Model option and then only execute the notebook that deploys the model.**
+**Note: This example considers that all the code will be migrated from one enviroment to the other and it will be executed in the destination environment (which is will be the final one). Another option might be to download the model created in the "dev" environment, then upload it in the new environment using the web portal Register Model option (see image below) and then only execute the notebook that deploys the model.**
 
+![](../Images/devops2d.gif)
 
 ## Option 2: Life-cycle management with Azure Machine Learning, Azure DevOps Repos and Azure DevOps Pipelines
 
