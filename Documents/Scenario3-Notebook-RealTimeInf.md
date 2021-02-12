@@ -6,15 +6,19 @@ For this scenario this tutorial will explain 2 different options:
 
   This option consists of the following flow:
   
-<<<Insert image here>>>
+<p align="center">
+  <img src="../Images/devops2c.png">
+</p>
   
 * Option 2: Life-cycle management with Azure Machine Learning, Azure DevOps Repos and Azure DevOps Pipelines
 
   This option consists of the following flow:
 
 <p align="center">
-  <img src="../Images/devops2.PNG">
+  <img src="../Images/devops2b.png">
 </p>
+
+This flow reflects the entire life-cycle management including Model Monitoring and Model Retrain, this section will only focus on the highlighted areas. The remaining ones are explained [here](../Documents/monitor-model-productionize.md) and [here](../Documents/retrain-model-productionize.md).
 
 ## Option 1: Life-cycle management with Azure Machine Learning and Azure DevOps Repos 
 
@@ -59,12 +63,18 @@ This may sound simple and the most logical way of doing it, but nobody has been 
 The following flow (also presented at the begining of this page) is a good representation of the MLOps flow within Azure Machine Learning.
 
 <p align="center">
-  <img src="../Images/devops2.PNG">
+  <img src="../Images/devops2b.png">
 </p>
+
+Once again, this flow reflects the entire life-cycle management including Model Monitoring and Model Retrain, this section will only focus on the highlighted areas. The remaining ones are explained [here](../Documents/monitor-model-productionize.md) and [here](../Documents/retrain-model-productionize.md).
 
 ## Explaining MLOps flow within Azure Machine Learning and Azure DevOps
 
-The idea behind the diagram shown above will be explained in the following sections.
+Taking into consideration the diagram shown previously describing the MLOps flow, we will go into a bit more detail on how the process will work.
+
+[](../Images/devops2a.png)
+
+The idea behind these diagrams will be explained in the following sections.
 
 ### Train, Validate and Deploy the Model
 
