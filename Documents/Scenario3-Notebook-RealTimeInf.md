@@ -48,7 +48,12 @@ This step is meant to the done in the "dev" environment, the notebook code shoul
 **Notebook: Deploy the Model** 
 
 For the deployment development more information can be seen in [Deploy real-time machine learning services with Azure Machine Learning](../Documents/Deploy-Real-Time-Service.md#Deploy-RTinf), once again only section _Deploying a model as a real-time service_ is needed. 
+The following steps should be developed:
 
+* [Register a Model](../Documents/Deploy-Real-Time-Service.md#Inf-Pipeline-register) - This step will register the model. It's not needed if the development is done using option shown in [Note 1](#Note1) below. 
+* [Define an inference configuration](../Documents/Deploy-Real-Time-Service.md#Inf-Pipeline-infconfig) - This step will create the scoring script real time inferencing service required to load the model and use it to predict new values and an environment in which the script will run. 
+* [Define a deployment configuration](../Documents/Deploy-Real-Time-Service.md#Inf-Pipeline-infdepconfig) - This step will configure the compute to which the service will be deployed.
+* [Deploy the model](../Documents/Deploy-Real-Time-Service.md#Inf-Pipeline-depmodel) - This is where the code to deploy the model as a real time inference is going to be built.
 
 
 ## Archiving and Version Controlling
