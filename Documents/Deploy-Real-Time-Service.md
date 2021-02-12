@@ -23,7 +23,7 @@ You can deploy a model as a real-time web service to several kinds of compute ta
 
 To deploy a model as a real-time inferencing service, you must perform the following tasks:
 
-## 1. Register a trained model
+## <a name = 'Inf-Pipeline-register'> 1. Register a model
 
 After successfully training a model, you must register it in your Azure Machine Learning workspace. Your real-time service will then be able to load the model when required.
 
@@ -46,7 +46,7 @@ Select the model you would like more information on and you will get additional 
 ![](../Images/74.png)
 
 
-## 2. Define an inference configuration
+## <a name = 'Inf-Pipeline-infconfig'> 2. Define an inference configuration
 The model will be deployed as a service that consist of:
 
 * A script to load the model and return predictions for submitted data.
@@ -75,7 +75,7 @@ After creating the entry script and environment configuration file, you can comb
 
 ![](../Images/22.PNG)
 
-## 3. Define a deployment configuration
+## <a name = 'Inf-Pipeline-infdepconfig'> 3. Define a deployment configuration
 Now that you have the entry script and environment, you need to configure the compute to which the service will be deployed. If you are deploying to an AKS cluster, you must create the cluster and a compute target for it before deploying:
 
 ![](../Images/23.PNG)
@@ -88,7 +88,7 @@ The code to configure an ACI deployment is similar, except that you do not need 
 
 **Note:** To deploy a model to an Azure Function, you do not need to create a deployment configuration. Instead, you need to package the model based on the type of function trigger you want to use. This functionality is in preview at the time of writing. For more details, see [Deploy a machine learning model to Azure Functions](https://aka.ms/AA70rrn) in the Azure Machine Learning documentation.
 
-## 4. Deploy the model
+## <a name = 'Inf-Pipeline-depmodel'> 4. Deploy the model
 
 After all of the configuration is prepared, you can deploy the model. The easiest way to do this is to call the **deploy** method of the **Model** class, like this:
 
