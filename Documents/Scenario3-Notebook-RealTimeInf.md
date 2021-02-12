@@ -59,7 +59,7 @@ Once all the code is properly tested, it should be archived in a git repository.
 
 **Step 1:** The migration of the code to a new environment is a very simple task, it consists of cloning the repository from the previous step (Step 2) into the new environment. More details on how to do this can be seen in [Clone and Run a Notebook](Documents/Clone-and-Run-a-Notebook.md). 
 
-**Step 2:** Once the code as been added to the new environment, then all the code should be executed. This will create the model and will deploy it into a real time inference (this means the model will be deployed into a container as a webservice and can be consumed as a REST API, more details on how to consume the model can be seen [here](../Documents/Deploy-Real-Time-Service.md#Consume_inf).
+**Step 2:** Once the code as been added to the new environment, then all the code should be executed. This will create the model and will deploy it into a real time inference (this means the model will be deployed into a container as a webservice and can be consumed as a REST API, more details on how to consume the model can be seen [here](../Documents/Deploy-Real-Time-Service.md#Consume_inf)).
 
 **Note: This example considers that all the code will be migrated from one enviroment to the other and it will be executed in the destination environment (which is will be the final one). Another option might be to download the model created in the "dev" environment, then upload it in the new environment using the web portal Register Model option (see image below) and then only execute the notebook that deploys the model.**
 
