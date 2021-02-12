@@ -1,6 +1,8 @@
 # Scenario 4 - Model was built using studio notebooks and now its results needs to be deployed as a batch inference (stored in a specific shedule in a data lake file or database table)
 
-This life cycle is based on the following tasks:
+This life cycle is based on the following flow:
+
+![](../Images/devops_batch1.png)
 
 _Development Stage_
 
