@@ -8,28 +8,35 @@ Explaning the flow in detail:
 
 ## Development Stage
 
-**Step 1** - The notebook is developed and tested in a "dev" environment, the code should be build using the Azure ML Pipelines concept and the deployment code should be build as a batch inference.
+**Pipeline 1: Train and Validate the Model** 
 
-For the Azure ML Pipeline development, more information can be seen in [Create Pipelines](../Documents/Orchestrate-ML-With-Pipelines.md) but be aware that, while developing, only these 2 steps are needed:
-   * Create an Azure Machine Learning pipeline.
-   * Publish an Azure Machine Learning pipeline.
+This step is meant to the done in the "dev" environment, the notebook code should be build using the Azure ML Pipelines concept, more information can be seen in [Create Pipelines](../Documents/Orchestrate-ML-With-Pipelines.md) but be aware that, while developing, only these 2 steps are needed:
+
+   * Create an Azure Machine Learning pipeline. - to prepare and train the data
+   * Publish an Azure Machine Learning pipeline - not a mandatory step but it's recommended. If the pipeline is published then it can be executed at any time without the need of running the notebook.
    
  **Note: Schedule an Azure Machine Learning pipeline is not needed at this stage since this is just a development environment. But the code should be developed so it can be executed in the production environment**
  
+**Pipeline 2: Deploy the Model** 
+
 For the deployment development more information can be seen in [Deploy batch inference pipelines with Azure Machine Learning](../Documents/Deploy-Batch-Inference-Pipeline.md). 
 
-**Step 2** - Once all the code is properly tested, it should be archived in a git repository. In this tutorial, we are considering Azure DevOps Repos as the Git Repository but others can be used. More details on how to do this step can be found in [Integrating Azure ML notebooks with Git](../Documents/Integrating_AzureML_notebooks_with%20Git.md).
+## Archiving and Version Controlling
 
-_Migrate to another environment stage_
+Once all the code is properly tested, it should be archived in a git repository. In this tutorial, we are considering Azure DevOps Repos as the Git Repository but others can be used. More details on how to do this step can be found in [Integrating Azure ML notebooks with Git](../Documents/Integrating_AzureML_notebooks_with%20Git.md).
 
-**Step 3** - The migration of the code to a new environment is a very simple task, it consists of cloning the repository from the previous step (Step 2) into the new environment. More details on how to do this can be seen in [Clone and Run a Notebook](Documents/Clone-and-Run-a-Notebook.md). 
+## Migrating and Deploying to a different environment
 
-_Deploy the model as a real time inference in the new environment_
+**Step 1:** The migration of the code to a new environment is a very simple task, it consists of cloning the repository from the previous step (Step 2) into the new environment. More details on how to do this can be seen in [Clone and Run a Notebook](Documents/Clone-and-Run-a-Notebook.md). 
 
-**Step 4** - Once the code as been added to the new environment, then all the code should be executed. This will create the model and will deploy it into a real time inference.
 
-**Note: This example considers that all the code will be migrated from one enviroment to the other and it will be executed in the destination environment (which is will be the final one). Another option might be to download the model created in the "dev" environment, then upload it in the new environment using the web portal Register Model option (see image below) and then only execute the notebook that deploys the model.**
+**Step 2:** Once the code has been added to the new environment, then all the code should be executed. This will create and register the model and also will scheduled pipeline 2 with the recurrence defined (Minute, Hour, Day, Week or Month). This will mean the code associated with that pipeline will be executed with the defined recurrence and the predictions will be stored in the defined target area with that frequency.
+
+**Note 1 : This example considers that all the code will be migrated from one enviroment to the other and it will be executed in the destination environment (which is will be the final one). Another option might be to download the model created in the "dev" environment, then upload it in the new environment using the web portal Register Model option (see image below) and then only execute the notebook that deploys the model.**
 
 ![](../Images/devops2d.gif)
 
-Source: https://vladiliescu.net/deploying-models-with-azure-ml-pipelines/
+**Note 1 : This example considers that all the code will be migrated from one enviroment to the other and it will be executed in the destination environment (which is will be the final one). Another option might be to download the model created in the "dev" environment, then upload it in the new environment using the web portal Register Model option (see image below) and then only execute the notebook that deploys the model.**
+
+## Useful links: 
+https://vladiliescu.net/deploying-models-with-azure-ml-pipelines/
