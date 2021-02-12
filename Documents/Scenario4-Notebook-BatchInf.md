@@ -1,10 +1,12 @@
 # Scenario 4 - Model was built using studio notebooks and now its results needs to be deployed as a batch inference (stored in a specific shedule in a data lake file or database table)
 
-This life cycle is based on the following flow:
+The life cycle defined in this tutorial to suppport this solution is based on the following flow:
 
 ![](../Images/devops_batch1.png)
 
-_Development Stage_
+Explaning the flow in detail:
+
+## Development Stage
 
 **Step 1** - The notebook is developed and tested in a "dev" environment, the code should be build using the Azure ML Pipelines concept and the deployment code should be build as a batch inference.
 
