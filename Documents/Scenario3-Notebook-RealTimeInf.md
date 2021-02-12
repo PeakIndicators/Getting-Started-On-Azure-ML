@@ -72,7 +72,7 @@ Once again, this flow reflects the entire life-cycle management including Model 
 
 Taking into consideration the diagram shown previously describing the MLOps flow, we will go into a bit more detail on how the process will work.
 
-[](../Images/devops2a.png)
+![](../Images/devops2a.png)
 
 The idea behind these diagrams will be explained in the following sections.
 
