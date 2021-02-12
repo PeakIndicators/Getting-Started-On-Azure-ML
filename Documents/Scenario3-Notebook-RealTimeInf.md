@@ -31,6 +31,7 @@ _Development Stage_
 For the Azure ML Pipeline development more information can be seen in [Create Pipelines](../Documents/Orchestrate-ML-With-Pipelines.md) but be aware that only these 2 steps are needed:
    * Create an Azure Machine Learning pipeline.
    * Publish an Azure Machine Learning pipeline.
+   
  **Note: Schedule an Azure Machine Learning pipeline is not needed at this stage since this is just a development environment.**
  
  For the deployment development more information can be seen in [Deploy real-time machine learning services with Azure Machine Learning](../Documents/Deploy-Real-Time-Service.md#Deploy-RTinf), once again only section _Deploying a model as a real-time service_ is needed. 
@@ -45,7 +46,7 @@ _Deploy the model as a real time inference in the new environment_
 
 **Step 4** - Once the code as been added to the new environment, then all the code should be executed. This will create the model and will deploy it into a real time inference.
 
-**Note: This example considers that all the code will be migrated from one enviroment to the other and it will be executed in the destination environment (which is will be the final one). Another option might be to download the model created in the "dev" environment, then upload the model in the new environment using the web portal Register Model option and then only execute the notebook that deploys the model.**
+**Note: This example considers that all the code will be migrated from one enviroment to the other and it will be executed in the destination environment (which is will be the final one). Another option might be to download the model created in the "dev" environment, then upload it in the new environment using the web portal Register Model option and then only execute the notebook that deploys the model.**
 
 
 ## Option 2: Life-cycle management with Azure Machine Learning, Azure DevOps Repos and Azure DevOps Pipelines
