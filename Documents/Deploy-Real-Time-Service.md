@@ -98,7 +98,7 @@ For ACI or local services, you can omit the **deployment_target parameter** (or 
 
 **More Information**: For more information about deploying models with Azure Machine Learning, see [Deploy models with Azure Machine Learning](https://aka.ms/AA70zfv) in the documentation.
 
-## Consuming a real-time inferencing service
+## <a name = 'Consume_inf'> Consuming a real-time inferencing service
 
 After deploying a real-time service, you can consume it from client applications to predict labels for new data cases.
 
