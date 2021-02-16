@@ -53,3 +53,5 @@ For most scenarios a compute instance is enough for developing and testing code.
 To stop your compute instance please follow the steps provided in:
 
 * [Stop a Compute Instance](../Documents/Stop-Compute-Instance.md)
+
+_Source: https://docs.microsoft.com/en-us/azure/machine-learning/how-to-create-manage-compute-instance?tabs=azure-studio_
