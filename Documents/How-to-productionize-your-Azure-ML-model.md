@@ -60,4 +60,4 @@ Click on each scenario to understand how it works:
 
 * [Scenario 3](../Documents/Scenario3-Notebook-RealTimeInf.md) - Model was built using studio notebooks and now it needs to be deployed as a real time inference.
 
-* [Scenario 4](../Documents/Scenario4-Notebook-BatchInf.md) - Model was build usint studio notebooks and now its results needs to be deployed as a batch inference (stored in a specific shedule in a data lake file or database table).
+* [Scenario 4](../Documents/Scenario4-Notebook-BatchInf.md) - Model was build using studio notebooks and now its results needs to be deployed as a batch inference (stored in a specific shedule in a data lake file or database table).
