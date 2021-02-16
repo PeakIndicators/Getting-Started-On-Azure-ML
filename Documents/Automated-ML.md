@@ -6,10 +6,43 @@ Automated ML provides the automation of intensive tasks, it rapidly iterates ove
 
 In this tutorial, we will guide you on how to do the following tasks:
 
+* Understand Automated ML supported models and primary metrics
 * Run an automated machine learning experiment.
 * View experiment details.
 * Deploy the model.
 
+## Supported Models and Primary Metrics
+
+Automated machine learning tries different models and algorithms during the automation and tuning process. As a user, there is no need for you to specify the algorithm. The following table summarizes the supported models by task type.
+
+|Classification|Regression|Time Series Forecasting|
+|--------------|--------------|-----------------|
+|Logistic Regression*	|Elastic Net*	|Elastic Net|
+|Light GBM*	|Light GBM*	|Light GBM|
+|Gradient Boosting*	|Gradient Boosting*	|Gradient Boosting|
+|Decision Tree*	|Decision Tree*	|Decision Tree|
+|K Nearest Neighbors*	|K Nearest Neighbors*	|K Nearest Neighbors|
+|Linear SVC*	|LARS Lasso*	|LARS Lasso|
+|Support Vector Classification (SVC)* |Stochastic Gradient Descent (SGD)* |Stochastic Gradient Descent (SGD)|
+|Random Forest*	|Random Forest*	|Random Forest|
+|Extremely Randomized Trees*	|Extremely Randomized Trees*	|Extremely Randomized Trees|
+|Xgboost*	|Xgboost*	|Xgboost|
+|Averaged Perceptron Classifier|Online Gradient Descent Regressor	|Auto-ARIMA|
+|Naive Bayes*	|Fast Linear Regressor|	Prophet|
+|Stochastic| Gradient Descent (SGD)*	|	ForecastTCN|
+|Linear SVM Classifier*| | |
+
+**Note: Only the algorithms marked with * support convertion to ONNX. As we can see, ONNX only supports classification and regression tasks at this time.**
+
+The primary metric parameter determines the metric to be used during model training for optimization. The available metrics you can select is determined by the task type you choose and the following table shows valid primary metrics for each task type.
+
+|Classification|Regression|Time Series Forecasting|
+|--------------|--------------|-----------------|
+|accuracy - Image classification, Sentiment analysis, Churn prediction|spearman_correlation	|spearman_correlation|
+|AUC_weighted - Fraud detection, Image classification, Anomaly detection/spam detection |normalized_root_mean_squared_error - Price prediction (house/product/tip), Review score prediction |normalized_root_mean_squared_error - Price prediction (forecasting), Inventory optimization, Demand forecasting|
+|average_precision_score_weighted - Sentiment analysis |r2_score - Airline delay, Salary estimation, Bug resolution time	|r2_score - Price prediction (forecasting), Inventory optimization, Demand forecasting|
+|norm_macro_recall - Churn prediction |normalized_mean_absolute_error	|normalized_mean_absolute_error|
+|precision_score_weighted| | |		
 
 ### Before you start
 
