@@ -32,4 +32,6 @@ The contents of the .zip file retrieved from the Download of the Best Model Deta
 
 ![](../Images/devops2d.gif)
 
+This will mean using the downloaded files retrieved on the Download Best Model details stage.
+
 **Step 2:** Deploy the model in this new environment as a real-time webservice by following the steps defined in [here](../Documents/Automated-ML.md#Deploy-AutomatedML-Model).
