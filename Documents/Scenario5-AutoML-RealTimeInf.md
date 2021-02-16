@@ -28,7 +28,7 @@ The contents of the .zip file retrieved from the Download of the Best Model Deta
 
 ## Migrating and Deploying to a different environment
 
-**Step 1:** Upload the model to the new environment. Following the steps shown below:
+**Step 1:** Upload and register the model to the new environment. Following the steps shown below:
 
 ![](../Images/devops2d.gif)
 
