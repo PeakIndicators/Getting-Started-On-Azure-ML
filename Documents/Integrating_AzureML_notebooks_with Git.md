@@ -81,6 +81,7 @@ Git downloads a copy of the code, including all commits and branches from the re
 `git checkout <branch_name>`
  
 **GIT Status**
+
 `git status`
 
 At any time a GIT status can be done to check any differences between the clone and the repository (it will list the files that changed between the repository and the clone made).
@@ -88,6 +89,7 @@ At any time a GIT status can be done to check any differences between the clone 
 If there were changes, this means your clone is out of sync and it needs to be updated, in this case a GIT Push should be performed before any development.
 
 **GIT Pull**
+
 `git pull origin <branch_name>`
 
 There are cases where, you already started changing your code in your clone and forgot to push the latest changes from the repository. If that is the case while doing git pull you may find some issues due to conflicts. In [here](https://www.freecodecamp.org/news/git-pull-force-how-to-overwrite-local-changes-with-git/) you find some good examples on how to overcome this problem.
@@ -102,8 +104,9 @@ When the developer is happy with the changes and wants to add them to the reposi
 
 This step will stage the files/directories into the GIT repository staging area.
 Go to the directory where the new data was stored and: 
-•	if it’s a file then `git add <file>` 
-•	or `git add .` if you want to add the entire content of the folder.
+
+* if it’s a file then `git add <file>` 
+* or `git add .` if you want to add the entire content of the folder.
 
 _Note: This step will only stage the files. Next step is to commit them._
 
@@ -115,6 +118,7 @@ Once the files are staged in the GIT Repository Staging area then they to be com
 
 The first time we perform a commit, GIT might ask some more details on who is performing the commit.
 For that we need to “tell” Git who we are by running:
+
 `git config --global user.email "you@example.com"`
 `git config --global user.name "Your Name"`
  
@@ -142,6 +146,7 @@ _Source: https://www.git-tower.com/learn/git/faq/difference-between-git-fetch-gi
 **GIT Push**
 
 To finalize the process, even though we’ve added and commit the changes, it means they are only in GIT repository staging area. To move them to the target repository the following command needs to be executed:
+
 `git push origin <branch_name>`
 
 Switch back to the Azure DevOps web portal and select **History** view to show your new commit. The new repository should show the commit you just made to your notebook.
