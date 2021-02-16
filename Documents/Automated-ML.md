@@ -38,11 +38,11 @@ The primary metric parameter determines the metric to be used during model train
 
 |Classification|Regression|Time Series Forecasting|
 |--------------|--------------|-----------------|
-|accuracy - Image classification, Sentiment analysis, Churn prediction|spearman_correlation	|spearman_correlation|
-|AUC_weighted - Fraud detection, Image classification, Anomaly detection/spam detection |normalized_root_mean_squared_error - Price prediction (house/product/tip), Review score prediction |normalized_root_mean_squared_error - Price prediction (forecasting), Inventory optimization, Demand forecasting|
-|average_precision_score_weighted - Sentiment analysis |r2_score - Airline delay, Salary estimation, Bug resolution time	|r2_score - Price prediction (forecasting), Inventory optimization, Demand forecasting|
-|norm_macro_recall - Churn prediction |normalized_mean_absolute_error	|normalized_mean_absolute_error|
-|precision_score_weighted| | |		
+|**accuracy** - Image classification, Sentiment analysis, Churn prediction|**spearman_correlation**	|**spearman_correlation**|
+|**AUC_weighted** - Fraud detection, Image classification, Anomaly detection/spam detection |**normalized_root_mean_squared_error** - Price prediction (house/product/tip), Review score prediction |**normalized_root_mean_squared_error** - Price prediction (forecasting), Inventory optimization, Demand forecasting|
+|**average_precision_score_weighted** - Sentiment analysis |**r2_score** - Airline delay, Salary estimation, Bug resolution time	|**r2_score** - Price prediction (forecasting), Inventory optimization, Demand forecasting|
+|**norm_macro_recall** - Churn prediction |**normalized_mean_absolute_error**	|**normalized_mean_absolute_error**|
+|**precision_score_weighted**| | |		
 
 ### Before you start
 
