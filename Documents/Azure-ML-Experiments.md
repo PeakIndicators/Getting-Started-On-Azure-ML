@@ -148,4 +148,4 @@ Experiments in Azure Machine Learning need to be initiated from some sort of *co
 ### Clean-up
 If you’re finished working with Azure Machine Learning for now refer to [this page](../Documents/Stop-Compute-Instance.md) to stop your compute instance.  
 
-_Source: https://docs.microsoft.com/en-gb/azure/machine-learning/how-to-track-experiments and https://docs.microsoft.com/en-gb/azure/machine-learning/how-to-track-designer-experiments
+_Source: https://docs.microsoft.com/en-gb/azure/machine-learning/how-to-track-experiments and https://docs.microsoft.com/en-gb/azure/machine-learning/how-to-track-designer-experiments_
