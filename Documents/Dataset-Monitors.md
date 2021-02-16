@@ -186,4 +186,4 @@ Metrics can be queried in the Azure Application Insights resource associated wit
 
 Limitations and known issues for data drift monitors can be seen in the [Detect data drift on datasets troubleshooting](https://docs.microsoft.com/en-gb/azure/machine-learning/how-to-monitor-datasets?tabs=azure-studio#troubleshooting) page.
 
-##### _Source: https://docs.microsoft.com/en-gb/azure/machine-learning/how-to-monitor-datasets?tabs=azure-studio
+_Source: https://docs.microsoft.com/en-gb/azure/machine-learning/how-to-monitor-datasets?tabs=azure-studio_
