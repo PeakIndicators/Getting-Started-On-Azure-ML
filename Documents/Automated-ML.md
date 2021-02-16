@@ -175,7 +175,8 @@ Now we have an operational web service to generate predictions.
 
 ### <a name = 'Download-AutomatedML-Model'> Download the Best Model details
 
-Azure Automated ML also allows the user to download the Best Model details. This will mean a .zip file will be saved in a chosen area. The file contains:
+Azure Automated ML also allows the user to download the Best Model details. This will mean a .zip file will be downloaded to your local machine. 
+The file contains the following:
 * the model file
 * the scoring script
 * the environment details 
