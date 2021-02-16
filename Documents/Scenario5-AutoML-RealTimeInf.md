@@ -14,7 +14,7 @@ Going into a bit more depth, for each stage of the flow we have:
 
 ## Development Stage
 
-**Automated ML: Train and Retrieve the Best Model** 
+**Automated ML: Train, Retrieve and Download the Best Model** 
 
 This step is meant to the done in the "dev" environment, it consists of:
 
