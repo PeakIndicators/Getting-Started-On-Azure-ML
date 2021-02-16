@@ -26,7 +26,7 @@ In a real-time inference the model is up and running continuously on a server, u
 
 **The decision on which deployment solution to follow depends on how the use case results should be delivered.*
 
-![Machine Learning Crash Course](https://developers.google.com/machine-learning/crash-course/static-vs-dynamic-inference/video-lecture) provided by Google has some interesting information regarding advantages and disadvantages, we quote a couple below:
+[Machine Learning Crash Course](https://developers.google.com/machine-learning/crash-course/static-vs-dynamic-inference/video-lecture) provided by Google has some interesting information regarding advantages and disadvantages, we quote a couple below:
 
 Here are the pros and cons of real time inference:
 
