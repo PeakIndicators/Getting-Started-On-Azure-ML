@@ -103,6 +103,9 @@ These settings are to better control the training job. Otherwise, defaults are a
 Once all the setting are properly filled, select **Save**.
 
 7. Select **View featurization settings**. 
+In every automated machine learning experiment, your data is automatically scaled and normalized to help certain algorithms that are sensitive to features that are on different scales. This scaling and normalization is referred to as featurization.
+When configuring your experiments, the user can enable/disable the setting featurization.  
+**Note: Automated ML featurization steps (feature normalization, handling missing data, converting text to numeric, etc.) will become part of the underlying model. When using the model for predictions, the same featurization steps applied during training are applied to your input data automatically.**
 
 ![](../Images/automatedml6.PNG)
 
@@ -167,3 +170,6 @@ Once completed, the webservice can also be seen from the **Endpoints** on the le
 ![](../Images/automatedml13.PNG)
  
 Now we have an operational web service to generate predictions.
+
+_Sources: https://docs.microsoft.com/en-us/azure/machine-learning/how-to-configure-auto-train#configure-your-experiment-settings
+https://docs.microsoft.com/en-us/azure/machine-learning/tutorial-first-experiment-automated-ml
