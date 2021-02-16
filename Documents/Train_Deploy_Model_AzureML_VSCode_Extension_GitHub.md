@@ -243,3 +243,5 @@ A file containing your model configurations appears in Visual Studio Code with s
 `Azure ML: Save and Continue`
 
 At this point, a request is sent to Azure to deploy your web service. This process takes several minutes. Once deployed, the new service appears under the *Endpoints* node.
+
+_Source: https://docs.microsoft.com/en-us/azure/machine-learning/tutorial-train-deploy-image-classification-model-vscode_
