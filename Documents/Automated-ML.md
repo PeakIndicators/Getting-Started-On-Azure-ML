@@ -56,7 +56,7 @@ Another example, using time-series forecasting model, can be seen here: https://
 
 Anyway, independent on the type of model, the steps are very similar.
 
-### Create a new Automated ML run
+### <a name = 'New-AutomatedML-Run'> Create a new Automated ML run
 
 1. Sign in to [Azure Machine Learning studio](https://ml.azure.com/).
 
@@ -124,7 +124,7 @@ _Preparation takes 10-15 minutes to prepare the experiment run. Once running, it
 ![](../Images/automatedml8.PNG)
 
 
-### Explore automated ML models
+### <a name = 'Explore-AutomatedML-Models'> Explore automated ML models
 Once the automated ML run finishes or even when it's running. You can check the models that are being/were tested.
 
 1. Navigate to the Models tab and see the algorithms (models) tested. By default, the models are ordered by metric score as they complete. 
@@ -135,7 +135,7 @@ The following navigates through the Details and the Metrics tabs to view the sel
 
 ![](../Images/automatedml9.gif)
 
-### Deploy the best model
+### <a name = 'Deploy-AutomatedML-Model'> Deploy the best model
 
 The automated machine learning interface allows you to deploy the best model as a web service in a few steps. Deployment is the integration of the model so it can predict on new data and identify potential areas of opportunity.
 
