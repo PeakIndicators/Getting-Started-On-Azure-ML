@@ -8,7 +8,7 @@ The flow to achieve it can be defined as:
   <img src="../Images/devops2c.png">
 </p>
 
-Going into a bit more depth in each stage of the flow we have:
+Going into a bit more depth, for each stage of the flow we have:
 
 ![](../Images/devops_autmoml1.png)
 
