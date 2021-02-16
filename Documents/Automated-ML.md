@@ -171,5 +171,5 @@ Once completed, the webservice can also be seen from the **Endpoints** on the le
  
 Now we have an operational web service to generate predictions.
 
-_Sources: https://docs.microsoft.com/en-us/azure/machine-learning/how-to-configure-auto-train#configure-your-experiment-settings
-https://docs.microsoft.com/en-us/azure/machine-learning/tutorial-first-experiment-automated-ml
+_Sources: https://docs.microsoft.com/en-us/azure/machine-learning/how-to-configure-auto-train#configure-your-experiment-settings and
+https://docs.microsoft.com/en-us/azure/machine-learning/tutorial-first-experiment-automated-ml_
