@@ -201,3 +201,5 @@ In this exercise, the code to create and publish a pipeline is provided in a not
 
 ### Clean-up
 If you’re finished working with Azure Machine Learning for now refer to [this page](../Documents/Stop-Compute-Instance.md) to stop your compute instance. 
+
+_Source: https://docs.microsoft.com/en-us/azure/machine-learning/how-to-create-machine-learning-pipelines_
