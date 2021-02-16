@@ -146,3 +146,5 @@ Also in this tutorial, we provide some python templates that can also be cloned.
 
 ## Use files from Git and version my files
 You can access all Git operations by using a terminal window. All Git files and folders will be stored in your workspace file system. For more details check: [Integrating AzureML notebooks with Git](../Documents/Integrating_AzureML_notebooks_with%20Git.md).
+
+_Source: https://docs.microsoft.com/en-us/azure/machine-learning/how-to-run-jupyter-notebooks and https://docs.microsoft.com/en-us/azure/machine-learning/how-to-manage-files_
