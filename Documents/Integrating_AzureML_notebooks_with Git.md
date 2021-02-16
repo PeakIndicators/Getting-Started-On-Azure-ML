@@ -3,13 +3,6 @@
 To integrate code in Jupyterlab notebooks in GIT the recommended approach by Microsoft is to use a GIT command-line. 
 The steps required to do this is shown and documented below. 
 
-![](../Images/Dev10.PNG)
-
-*Process used to integrate the code in GIT*
-
-**GIT Clone — clone the repo to your Azure ML JupyterLab**
-To work with a Git repo, you need to clone the repo you will be working on for this project to your computing environment. Cloning a repo creates a complete local copy of the repo for you to work with and downloads all commits and branches in the repo and sets up a named relationship with the repo on the server. Use this relationship to interact with the existing repo, pushing and pulling changes to share code with your team.
-
 ## <a name = 'Prerequisites-1'></a>Prerequisites
 
 Make sure you have done the following before following this document:
@@ -18,6 +11,14 @@ Make sure you have done the following before following this document:
 * [Created a Compute Instance](../Documents/Create-Compute-Instance.md).
 * [Created and run a Python or R notebook](../Documents/Creating-and-Running-a-Python-Notebook.md)
 
+The following diagram explain the process to integrate the code in GIT
+
+![](../Images/Dev10.PNG)
+
+This tutorial will now explain each step.
+
+**GIT Clone — clone the repo to your Azure ML JupyterLab**
+To work with a Git repo, you need to clone the repo you will be working on for this project to your computing environment. Cloning a repo creates a complete local copy of the repo for you to work with and downloads all commits and branches in the repo and sets up a named relationship with the repo on the server. Use this relationship to interact with the existing repo, pushing and pulling changes to share code with your team.
 
 1. From your web browser, sign in to your organization, `(https://dev.azure.com/{yourorganization})`, open the team project and select **Repos > Files**. 
 
@@ -68,26 +69,84 @@ Git downloads a copy of the code, including all commits and branches from the re
 
 `cd your_directory`
 
-## Work with the code
+**GIT Checkout**
 
-An example of how working with Git to save work with `commit` and sharing code with `push`. 
+1. Still in a Terminal Session in Azure ML JupyterLab go to the repository folder that was cloned:
+2. Check the GIT repository existing branches:
 
-1. Navigate to one of the Jupyter Lab notebooks containing code and make some changes 'for e.g. add a comment `#testing my first edit` in one of the cells
+`git branch -a`
 
-2. Navigate back to the terminal and ensure you are still in the directory of the repository you cloned. 
+3. Checkout the branch you need (the one created for the project):
 
-3. Commit your changes by entering the following command in the Git command window, i.e. your terminal. 
+`git checkout <branch_name>`
+ 
+**GIT Status**
+`git status`
 
-`git commit -a -m "My first commit"`
+At any time a GIT status can be done to check any differences between the clone and the repository (it will list the files that changed between the repository and the clone made).
+ 
+If there were changes, this means your clone is out of sync and it needs to be updated, in this case a GIT Push should be performed before any development.
 
-When using `git commit`, `-a` means to commit all changed files and `-m` specifies a commit message.
+**GIT Pull**
+`git pull origin <branch_name>`
 
-4. Push your changes up to the Git repository on the server by entering the following command into the Git command window:
 
-`git push`. 
+## Work with the code (Start Developing and pushing the changes to the repository)
 
-5. Switch back to the web portal and select **History** from the **Code** view to show your new commit. The new repository should show the commit you just made to your notebook.
+Once the right branch is checked out and the status doesn’t find any differences between the repository and the clone, the development can start.
 
+When the developer is happy with the changes and wants to add them to the repository. The following steps are needed/recommended:
+
+**GIT Add**
+
+This step will stage the files/directories into the GIT repository staging area.
+Go to the directory where the new data was stored and: 
+•	if it’s a file then `git add <file>` 
+•	or `git add .` if you want to add the entire content of the folder.
+
+_Note: This step will only stage the files. Next step is to commit them._
+
+**GIT Commit**
+
+Once the files are staged in the GIT Repository Staging area then they to be committed. For that, the following command needs to be executed:
+
+`git commit -m <commit_message>`
+
+The first time we perform a commit, GIT might ask some more details on who is performing the commit.
+For that we need to “tell” Git who we are by running:
+`git config --global user.email "you@example.com"`
+`git config --global user.name "Your Name"`
+ 
+And then run the commit command. 
+ 
+_Note: Always insert a commit message, so it's easy to identify what was done._
+
+Next step is to push the changes to the target repository (currently they were only committed to the staging area). But before doing that, it’s mandatory to always check if we have the latest version of it. We do that by performing a GIT Fetch.
+
+**GIT Fetch**
+
+`git fetch origin` (it will ask for the clone repository password provided in Azure DevOps)
+ 
+Once everything is up-to-date then the final step is then to push the changes made into the target repository.
+
+Note: GIT also provides another command/option to download data from the remote repository into the clone, it is called git pull.
+
+* What is the difference between git fetch and git pull?
+       * git fetch - only downloads new data from a remote repository - but it doesn't integrate any of this new data into your working files. Fetch is great for getting a fresh view on all the things that happened in a remote repository. Due to it's "harmless" nature, you can rest assured: fetch will never manipulate, destroy, or screw up anything. This means you can never fetch often enough.
+       *	git pull -  in contrast, is used with a different goal in mind: to update your current head branch with the latest changes from the remote server. This means that pull not only downloads new data; it also directly integrates it into your current working copy files. This has a couple of consequences: Since "git pull" tries to merge remote changes with your local ones, a so-called "merge conflict" can occur. Check out our in-depth tutorial on How to deal with merge conflicts for more information. Like for many other actions, it's highly recommended to start a "git pull" only with a clean working copy. This means that you should not have any uncommitted local changes before you pull. Use Git's Stash feature to save your local changes temporarily.
+
+_Source: https://www.git-tower.com/learn/git/faq/difference-between-git-fetch-git-pull_
+
+**GIT Push**
+
+To finalize the process, even though we’ve added and commit the changes, it means they are only in GIT repository staging area. To move them to the target repository the following command needs to be executed:
+`git push origin <branch_name>`
+
+5. Switch back to the Azure DevOps web portal and select **History** view to show your new commit. The new repository should show the commit you just made to your notebook.
+
+![](../Images/devOpsgit1.PNG) 
+
+**Important Notes**
 It is important that you commit and push changes you want to keep to the Git repository on the server (Remote Git repository). This is also particularly important if you want to clone your repository to your local laptop too. In this case you want to commit and push changes you make in one repository (for e.g. Azure ML JupyterLab) before your make changes to your work in another repository (local laptop). 
 
 For more details on working with Git commands click [here](https://docs.microsoft.com/en-us/azure/devops/repos/git/?view=azure-devops).
