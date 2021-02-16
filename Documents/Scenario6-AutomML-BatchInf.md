@@ -44,7 +44,7 @@ This will mean using the downloaded files retrieved on the Download Best Model d
 
 **Step 2:** Deploy the model in this new environment as a batch inference by following the steps defined:
 
-* The migration of the code to a new environment is a very simple task, it consists of cloning the repository from the previous step (Step 2) into the new environment. More details on how to do this can be seen in [Clone and Run a Notebook](Documents/Clone-and-Run-a-Notebook.md). 
+* The migration of the code to a new environment is a very simple task, it consists of cloning the repository from the previous step (Step 2) into the new environment. More details on how to do this can be seen in [Clone and Run a Notebook](../Documents/Clone-and-Run-a-Notebook.md). 
 * Once the code has been added to the new environment, then all the code should be executed. This will create and register the model and also will scheduled pipeline 2 with the recurrence defined (Minute, Hour, Day, Week or Month). This will mean the code associated with that pipeline will be executed with the defined recurrence and the predictions will be stored in the defined target area (ex: data lake, datawarehouse, ...) with that frequency.
 
 <a name = 'Note'> **Note: This example considers the pipeline will be scheduled within Azure ML Studio, another option can be to schedule and execute the pipeline using Azure Data Factory, more details can be seen [here](https://docs.microsoft.com/en-us/azure/data-factory/transform-data-machine-learning-service).**
