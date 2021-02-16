@@ -140,3 +140,5 @@ keyvault.set_secret(name="mysecret", value = my_secret)
 ```
 
 There is also a batch version, **set_secrets()** that allows you to set multiple secrets at a time.
+
+_Source: https://docs.microsoft.com/en-us/azure/machine-learning/how-to-use-secrets-in-runs_
