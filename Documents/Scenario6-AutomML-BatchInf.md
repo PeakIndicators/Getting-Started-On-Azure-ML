@@ -42,7 +42,7 @@ Once all the notebook code is properly tested, it also should be archived in a g
 
 This will mean using the downloaded files retrieved on the Download Best Model details stage.
 
-**Step 2:** Deploy the model in this new environment as a batch inference by following the steps defined:
+**Step 2:** Deploy the model in this new environment as a batch inference by following the steps below:
 
 * The migration of the code to a new environment is a very simple task, it consists of cloning the repository from the previous step (Step 2) into the new environment. More details on how to do this can be seen in [Clone and Run a Notebook](../Documents/Clone-and-Run-a-Notebook.md). 
 * Once the code has been added to the new environment, then all the code should be executed. This will create and register the model and also will scheduled pipeline 2 with the recurrence defined (Minute, Hour, Day, Week or Month). This will mean the code associated with that pipeline will be executed with the defined recurrence and the predictions will be stored in the defined target area (ex: data lake, datawarehouse, ...) with that frequency.
