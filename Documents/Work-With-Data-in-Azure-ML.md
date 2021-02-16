@@ -54,3 +54,5 @@ In most machine learning projects, you will likely need to work with data source
   The following example demonstrates what the form looks like when you create an **Azure blob datastore**:
 
 ![](../Images/new-datastore-form.png)
+
+_Source: https://docs.microsoft.com/en-us/azure/machine-learning/how-to-connect-data-ui, https://docs.microsoft.com/en-us/azure/machine-learning/how-to-access-data and https://docs.microsoft.com/en-us/azure/machine-learning/how-to-create-register-datasets_
