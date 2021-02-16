@@ -225,3 +225,4 @@ Experiments in Azure Machine Learning need to be initiated from some sort of *co
 ### Clean-up
 If you’re finished working with Azure Machine Learning for now refer to [this page](../Documents/Stop-Compute-Instance.md) to stop your compute instance.  
 
+_Source: https://docs.microsoft.com/en-us/azure/machine-learning/how-to-access-data and https://aka.ms/AA70zfl_
