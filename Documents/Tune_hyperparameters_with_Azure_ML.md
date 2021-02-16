@@ -210,7 +210,7 @@ To prepare the hyperdrive experiment, you must use a **HyperDriveConfig** object
       experiment = Experiment(workspace = ws, name = 'hyperdrive_training')
       hyperdrive_run = experiment.submit(config=hyperdrive)
 
-### onitor and review hyperdrive runs
+### Monitor and review hyperdrive runs
 You can monitor hyperdrive experiments in Azure Machine Learning studio, or by using the Jupyter Notebooks **RunDetails** widget.
 
 The experiment will initiate a child run for each hyperparameter combination to be tried, and you can retrieve the logged metrics these runs using the following code.
