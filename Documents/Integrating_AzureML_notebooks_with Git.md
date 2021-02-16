@@ -142,7 +142,7 @@ _Source: https://www.git-tower.com/learn/git/faq/difference-between-git-fetch-gi
 To finalize the process, even though we’ve added and commit the changes, it means they are only in GIT repository staging area. To move them to the target repository the following command needs to be executed:
 `git push origin <branch_name>`
 
-5. Switch back to the Azure DevOps web portal and select **History** view to show your new commit. The new repository should show the commit you just made to your notebook.
+Switch back to the Azure DevOps web portal and select **History** view to show your new commit. The new repository should show the commit you just made to your notebook.
 
 ![](../Images/devOpsgit1.PNG) 
 
