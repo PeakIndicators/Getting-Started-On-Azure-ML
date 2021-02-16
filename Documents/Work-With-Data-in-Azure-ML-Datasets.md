@@ -100,3 +100,4 @@ Specifically, Azure Machine Learning dataset's data profile includes:
 | Skewness |	Measure of how different this column's data is from a normal distribution. |
 | Kurtosis |	Measure of how heavily tailed this column's data is compared to a normal distribution. |
 
+_Source: https://docs.microsoft.com/en-us/azure/machine-learning/how-to-create-register-datasets, https://docs.microsoft.com/en-us/azure/machine-learning/how-to-access-data and https://docs.microsoft.com/en-us/azure/machine-learning/how-to-create-register-datasets_
