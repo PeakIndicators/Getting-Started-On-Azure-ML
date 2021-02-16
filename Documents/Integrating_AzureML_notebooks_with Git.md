@@ -90,6 +90,7 @@ If there were changes, this means your clone is out of sync and it needs to be u
 **GIT Pull**
 `git pull origin <branch_name>`
 
+There are cases where, you already started changing your code in your clone and forgot to push the latest changes from the repository. If that is the case while doing git pull you may find some issues due to conflicts. In [here](https://www.freecodecamp.org/news/git-pull-force-how-to-overwrite-local-changes-with-git/) you find some good examples on how to overcome this problem.
 
 ## Work with the code (Start Developing and pushing the changes to the repository)
 
