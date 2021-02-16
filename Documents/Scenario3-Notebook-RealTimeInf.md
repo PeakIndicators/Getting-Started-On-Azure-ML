@@ -1,4 +1,4 @@
-# Scenario 3 - Model was built using studio Notebooks and it needs to be deployed as a real time inference in another environment
+# Scenario 3 - Model was built using studio Notebooks and it needs to be deployed as a real-time inference in another environment
 
 For this scenario this tutorial will explain 2 different options:
 
