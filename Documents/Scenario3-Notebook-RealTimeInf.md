@@ -51,7 +51,7 @@ For the deployment development more information can be seen in [Deploy real-time
 The following steps should be developed:
 
 * [Register a Model](../Documents/Deploy-Real-Time-Service.md#Inf-Pipeline-register) - This step will register the model. It's not needed if the development is done using option shown in the [Note](#Note1) below. 
-* [Define an inference configuration](../Documents/Deploy-Real-Time-Service.md#Inf-Pipeline-infconfig) - This step will create the scoring script and the environment settings where the script will run. This will allow loading of the model as a real time inferencing service and use it to predict new values. 
+* [Define an inference configuration](../Documents/Deploy-Real-Time-Service.md#Inf-Pipeline-infconfig) - This step will create the scoring script, an environment in which the script will run and a real-time inferencing service required to load the model and use it to predict new values. 
 * [Define a deployment configuration](../Documents/Deploy-Real-Time-Service.md#Inf-Pipeline-infdepconfig) - This step will configure the compute to which the service will be deployed.
 * [Deploy the model](../Documents/Deploy-Real-Time-Service.md#Inf-Pipeline-depmodel) - This is where the code to deploy the model as a real time inference is going to be built.
 
