@@ -172,7 +172,6 @@ Once completed, the webservice can also be seen from the **Endpoints** on the le
  
 Now we have an operational web service to generate predictions.
 
-
 ### <a name = 'Download-Best-Model'> Download the Best Model details
 
 Azure Automated ML also allows the user to download the Best Model details. This will mean a .zip file will be downloaded to your local machine. 
