@@ -1,4 +1,4 @@
-# Scenario 4 - Model was build using studio Notebooks and it needs to be deployed as a batch inference in another environment (stored in a specific shedule in a data lake file or database table)
+# Scenario 4 - Model was build using studio Notebooks and it needs to be deployed as a batch inference in another environment
 
 The life cycle defined in this tutorial to suppport this solution is based on the following flow:
 
