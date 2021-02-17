@@ -24,7 +24,7 @@ This step is meant to the done in the "dev" environment, it consists of:
 
 ## Archiving and Version Controlling
 
-The contents of the .zip file retrieved from the _Download of the Best Model Details_ task should be stored in the GIT repository for future reference and versioning control. 
+The contents of the .zip file retrieved from the _Download of the Best Model details_ task should be stored in the GIT repository for future reference and versioning control. 
 
 ## Migrating and Deploying to a different environment
 
