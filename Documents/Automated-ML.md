@@ -136,6 +136,16 @@ The following navigates through the Details and the Metrics tabs to view the sel
 
 ![](../Images/automatedml9.gif)
 
+### <a name = 'Download-Best-Model'> Download the Best Model details
+
+Azure Automated ML also allows the user to download the Best Model details. This will mean a .zip file will be downloaded to your local machine. 
+The file contains the following:
+* the model file
+* the scoring script
+* the environment details 
+ 
+ ![](../Images/automatedml14.gif)
+
 ### <a name = 'Deploy-AutomatedML-Model'> Deploy the Best Model
 
 The automated machine learning interface allows you to deploy the best model as a web service in a few steps. Deployment is the integration of the model so it can predict on new data and identify potential areas of opportunity.
@@ -169,16 +179,6 @@ Once completed, the webservice can also be seen from the **Endpoints** on the le
 ![](../Images/automatedml13.PNG)
  
 Now we have an operational web service to generate predictions.
-
-### <a name = 'Download-Best-Model'> Download the Best Model details
-
-Azure Automated ML also allows the user to download the Best Model details. This will mean a .zip file will be downloaded to your local machine. 
-The file contains the following:
-* the model file
-* the scoring script
-* the environment details 
- 
- ![](../Images/automatedml14.gif)
 
 _Sources: https://docs.microsoft.com/en-us/azure/machine-learning/how-to-configure-auto-train#configure-your-experiment-settings and
 https://docs.microsoft.com/en-us/azure/machine-learning/tutorial-first-experiment-automated-ml_
