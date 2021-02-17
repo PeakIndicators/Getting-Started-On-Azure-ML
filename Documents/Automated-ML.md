@@ -153,7 +153,6 @@ Deploying a model might take about 20 minutes to complete. The deployment proces
 ![](../Images/automatedml11.PNG)
 
 3. Populate the Deploy a model pane with the following:
-
    * Select a **Deployment Name**
    * Add a **Deployment description**
    * Select the **Compute type** - both Compute Instances or Inference Clusters can be choosen. Inference Clusters are more powerful and are recommended for production enviromnemts with high usage. For development, testing or low usage webservices Compute Instances can be used.
@@ -165,7 +164,6 @@ Deploying a model might take about 20 minutes to complete. The deployment proces
 4. Select **Deploy**.
 
 A green success message appears at the top of the Run screen, and in the Model summary pane, a status message appears under **Deploy status**. Select **Refresh** periodically to check the deployment status.
-
 Once completed, the webservice can also be seen from the **Endpoints** on the left pane under **Assets** section, then **Real-time Endpoints**
 
 ![](../Images/automatedml13.PNG)
