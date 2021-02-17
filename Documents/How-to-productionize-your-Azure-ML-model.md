@@ -60,8 +60,8 @@ Click on each scenario to understand how it works:
 
 * [Scenario 3](../Documents/Scenario3-Notebook-RealTimeInf.md) - Model was built using studio **Notebooks** and it needs to be deployed as a **real-time inference** in another environment.
 
-* [Scenario 4](../Documents/Scenario4-Notebook-BatchInf.md) - Model was build using studio **Notebooks** and it needs to be deployed as a **batch inference** in another environment (stored in a specific shedule in a data lake file or database table).
+* [Scenario 4](../Documents/Scenario4-Notebook-BatchInf.md) - Model was build using studio **Notebooks** and it needs to be deployed as a **batch inference** in another environment.
 
 * [Scenario 5](../Documents/Scenario5-AutoML-RealTimeInf.md) - Model was build using studio **Automated ML** and it needs to be deployed as a **real-time inference** in another environment.
 
-* [Scenario 6](../Documents/Scenario6-AutomML-BatchInf.md) - Model was build using studio **Automated ML** and it needs to be deployed as a **batch inference** in another environment (stored in a specific shedule in a data lake file or database table).
+* [Scenario 6](../Documents/Scenario6-AutomML-BatchInf.md) - Model was build using studio **Automated ML** and it needs to be deployed as a **batch inference** in another environment.
