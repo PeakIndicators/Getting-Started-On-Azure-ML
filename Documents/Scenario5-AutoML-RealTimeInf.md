@@ -1,8 +1,8 @@
 # Scenario 5 - Model was build using studio Automated ML and it needs to be deployed as a real-time inference in another environment
 
-In this scenario, this tutorial will demonstrate how to deploy the best model defined within the Azure Studio Automated ML run as a real-time inference but in a different environment than the one where the Automated ML run took place.
+In this scenario, this tutorial will demonstrate how to deploy the best model defined within the Azure Studio Automated ML run as a real-time inference. But with the caveat that the deployment will be done in a different environment than the one where the Automated ML run took place.
 
-The flow to achieve it can be defined as:
+The flow to achieve this can be defined as:
 
 <p align="center">
   <img src="../Images/devops2c.png">
