@@ -62,7 +62,7 @@ Once all the code is properly tested, it should be archived in a git repository.
 
 ## Migrating and Deploying to a different environment
 
-**Step 1:** The migration of the code to a new environment is a very simple task, it consists of cloning the repository from the previous step (Step 2) into the new environment. More details on how to do this can be seen in [Clone and Run a Notebook](Documents/Clone-and-Run-a-Notebook.md). 
+**Step 1:** The migration of the code to a new environment is a very simple task, it consists of cloning the repository from the previous task (Archiving and Version Controlling) into the new environment. More details on how to do this can be seen in [Clone and Run a Notebook](Documents/Clone-and-Run-a-Notebook.md). 
 
 **Step 2:** Once the code has been added to the new environment, then all the code should be executed. This will create the model and will deploy it into a real time inference (this means the model will be deployed into a container as a webservice and can be consumed as a REST API, more details on how to consume the model can be seen [here](../Documents/Deploy-Real-Time-Service.md#Consume_inf)).
 
@@ -73,15 +73,15 @@ Once all the code is properly tested, it should be archived in a git repository.
 
 ## Option 2: Life-cycle management with Azure Machine Learning, Azure DevOps Repos and Azure DevOps Pipelines
 
-1. The first task is to be able to version control the models. Now, the code generated, like the Python notebooks or scripts can be easily versioned controlled in GitHub/DevOps repositories and this is the recommended approach, but in addition to the notebooks and scripts you also need a way to version control the models, which are different entities than the python files. This is important as data scientists may create multiple versions of the model and very easily lose track of these in search of better accuracy or performance. Azure Machine Learning provides a central model registry, which forms the foundation of the lifecycle management process. This repository enables version control of models, it stores model metrics, it allows for one-click deployment and even tracks all deployments of the models so that you can restrict usage, in case the model becomes stale or its efficacy is no longer acceptable. Having this model registry is key as it also helps trigger other activities in the lifecycle when new changes appear or metrics cross a threshold.
+1. The first task is to be able to version control the models. The code generated, as with the Python notebooks or scripts, can be easily versioned controlled in GitHub/DevOps repositories. This is the recommended approach. Besides the notebooks and scripts, you also need a way to version control the models, which are different entities than the python file. This is important as data scientists may create multiple versions of the model and very easily lose track of these in search of better accuracy or performance. Azure Machine Learning provides a central model registry, which forms the foundation of the lifecycle management process. This repository enables version control of models, stores model metrics, allows for one-click deployment and even tracks all deployments of the models allowing you to restrict usage in case the model becomes stale or its efficacy is no longer acceptable. Having this model registry is key as it also helps trigger other activities in the lifecycle when new changes appear or metrics cross a threshold.
 
 2. The next step in the ML lifecycle management, after a data scientist has created and validated a model or a ML pipeline, is that it needs to be packaged, so that it can be executed where it needs to be deployed.
 
 Once these tasks are done, then a tight collaboration between the DevOps development team and the Data Science team, using Azure ML, needs to kick-off.
 
-**Azure DevOps** is the environment to manage app lifecycles and now it also enables data science teams and devOps teams to collaborate seamlessly and trigger new versions of the code whenever certain conditions are met for the MLOps cycle, as they are the ones often leveraging the new versions of the ML models, infusing them into apps or updating inference call URLs, when desired.
+DevOps teams are often the ones leveraging the new versions of the ML models, infusing them into apps or updating inference call URLs. **Azure DevOps** is the environment of choice to manage app life-cycles, and it now also enables data science teams and DevOps teams to collaborate seamlessly and trigger new versions of the code whenever certain conditions are met for the MLOps cycle. 
 
-This may sound simple and the most logical way of doing it, but nobody has been able to bring MLOps to life with such close-knit integration into the whole process. Azure Machine Learning does an amazing job of it enabling data science teams to become immensely productive.
+This may sound simple and the most logical way of doing it, but nobody has yet brought MLOps to life with such close-knit integration into the whole process. Azure Machine Learning does an amazing job of enabling integration, allowing data science teams to become immensely productive.
 
 The following flow (also presented at the begining of this page) is a good representation of the MLOps flow within Azure Machine Learning.
 
