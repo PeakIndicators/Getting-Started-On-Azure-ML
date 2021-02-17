@@ -50,7 +50,7 @@ This step is meant to the done in the "dev" environment, the notebook code shoul
 For the deployment development more information can be seen in [Deploy real-time machine learning services with Azure Machine Learning](../Documents/Deploy-Real-Time-Service.md#Deploy-RTinf), once again only section _Deploying a model as a real-time service_ is needed. 
 The following steps should be developed:
 
-* [Register a Model](../Documents/Deploy-Real-Time-Service.md#Inf-Pipeline-register) - This step will register the model. It's not needed if the development is done using option shown in [Note 1](#Note1) below. 
+* [Register a Model](../Documents/Deploy-Real-Time-Service.md#Inf-Pipeline-register) - This step will register the model. It's not needed if the development is done using option shown in [Note](#Note1) below. 
 * [Define an inference configuration](../Documents/Deploy-Real-Time-Service.md#Inf-Pipeline-infconfig) - This step will create the scoring script real time inferencing service required to load the model and use it to predict new values and an environment in which the script will run. 
 * [Define a deployment configuration](../Documents/Deploy-Real-Time-Service.md#Inf-Pipeline-infdepconfig) - This step will configure the compute to which the service will be deployed.
 * [Deploy the model](../Documents/Deploy-Real-Time-Service.md#Inf-Pipeline-depmodel) - This is where the code to deploy the model as a real time inference is going to be built.
@@ -66,7 +66,7 @@ Once all the code is properly tested, it should be archived in a git repository.
 
 **Step 2:** Once the code has been added to the new environment, then all the code should be executed. This will create the model and will deploy it into a real time inference (this means the model will be deployed into a container as a webservice and can be consumed as a REST API, more details on how to consume the model can be seen [here](../Documents/Deploy-Real-Time-Service.md#Consume_inf)).
 
-**Note: This example considers that all the code will be migrated from one enviroment to the other and it will be executed in the destination environment (which is will be the final one). Another option might be to download the model created in the "dev" environment, then upload it in the new environment using the web portal Register Model option (see image below) and then only execute the notebook that deploys the model.**
+<a name = 'Note1'> **Note: This example considers that all the code will be migrated from one enviroment to the other and it will be executed in the destination environment (which is will be the final one). Another option might be to download the model created in the "dev" environment, then upload it in the new environment using the web portal Register Model option (see image below) and then only execute the notebook that deploys the model.**
 
 ![](../Images/devops2d.gif)
 
