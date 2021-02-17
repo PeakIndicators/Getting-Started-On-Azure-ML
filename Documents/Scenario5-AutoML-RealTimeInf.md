@@ -20,11 +20,11 @@ This step is meant to the done in the "dev" environment, it consists of:
 
 * Running an automated machine learning experiment - This means creating an Automated ML run, more details can be seen [here](../Documents/Automated-ML.md#New-AutomatedML-Run).
 * View experiment details - This means exploring the Automated ML models that were tested, more details can be seen [here](../Documents/Automated-ML.md#Explore-AutomatedML-Models).
-* Download the Best Model details - Once the Best Model is chosen, the next step is to download its information so it can be applied in a different environments, more details on how to download the Best Model details can be seen [here](../Documents/Automated-ML.md#Download-AutomatedML-Model).
+* Download the Best Model details - Once the Best Model is chosen, the next step is to download its information so it can be applied in a different environment, more details on how to download the Best Model details can be seen [here](../Documents/Automated-ML.md#Download-AutomatedML-Model).
 
 ## Archiving and Version Controlling
 
-The contents of the .zip file retrieved from the Download of the Best Model Details should be stored in the GIT repository for future reference and versioning control. 
+The contents of the .zip file retrieved from the _Download of the Best Model Details_ task should be stored in the GIT repository for future reference and versioning control. 
 
 ## Migrating and Deploying to a different environment
 
@@ -32,6 +32,6 @@ The contents of the .zip file retrieved from the Download of the Best Model Deta
 
 ![](../Images/devops2d.gif)
 
-This will mean using the downloaded files retrieved on the Download Best Model details stage.
+This will mean using the downloaded files retrieved on the _Download Best Model details_ task and that were stored in GIT repository (task: _Archiving and Version Controlling_).
 
 **Step 2:** Deploy the model in this new environment as a real-time webservice by following the steps defined in [here](../Documents/Automated-ML.md#Deploy-AutomatedML-Model).
