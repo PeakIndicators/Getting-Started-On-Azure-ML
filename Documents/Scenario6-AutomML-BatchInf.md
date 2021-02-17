@@ -1,4 +1,4 @@
-# Scenario 6 - Model was build using studio Automated ML and it needs to be deployed as a batch inference in another environment (stored in a specific shedule in a data lake file or database table)
+# Scenario 6 - Model was build using studio Automated ML and it needs to be deployed as a batch inference in another environment
 
 In this scenario, this tutorial will demonstrate how to deploy the best model defined within the Azure Studio Automated ML run as a batch inference. But with the caveat that the deployment will be done in a different environment than the one where the Automated ML run took place.
 
