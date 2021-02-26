@@ -28,13 +28,13 @@ For the deployment, the following steps should be developed:
 ![](../Images/devops2d.gif)
 This will mean using the downloaded files retrieved on the _Download Best Model details_ stage.
 * Scoring script - This step consists of getting the scoring script retrieved on the _Download Best Model details_ stage into the new environment. 
-* [Create a pipeline with a ParallelRunStep](../Documents/Deploy-Batch-Inference-Pipeline.md#Batch-Pipeline-parallelstep) - This task consists of creating a pipeline particular step called _ParallelRunStep_ that is specifically defined for performing parallel batch inferencing.
+* Create a pipeline with a Pipeline Run Step - To perform high performance parallel batch inferencing then the pipeline particular step called [ParallelRunStep](../Documents/Deploy-Batch-Inference-Pipeline.md#Batch-Pipeline-parallelstep) should be used. When you only want to run the model from time to time, generating all possible predictions in a batch without any parallel concerns then [PythonScriptStep](https://vladiliescu.net/deploying-models-with-azure-ml-pipelines/#step-1-fetching-new-data) is the one to use.
 * [Run the pipeline and retrieve the step output](../Documents/Deploy-Batch-Inference-Pipeline.md#Batch-Pipeline-publish) - In the example provided in this tutorial, this is where the output of the model is stored in a file (but other options are available such as: saving the model output in a database table, publishing it as a REST service that then can be invoked by Power BI,...).
 * [Publishing and Scheduling a batch inference pipeline](../Documents/Deploy-Batch-Inference-Pipeline.md#Batch-Pipeline-publish) - The model will be published as a batch inferencing pipeline. For this particular example, everytime it is invoked it will be storing a file in the defined storage area. Once again, in the example, the scheduling is being done within the Azure ML pipeline code but the option defined in [Note](#Note) can also be considered.
 
 ## Archiving and Version Controlling
 
-The contents of the .zip file retrieved from the _Download of the Best Model details_ should be stored in the GIT repository for future reference and versioning control. 
+The contents of the .zip file retrieved from the _Download of the Best Model details_ should be stored in the GIT repository for future reference and versioning control. The .zip file is not needed in GIT, only its contents. 
 Once all the notebooks code is properly tested, it also should be archived in the GIT repository. In this tutorial, we are considering Azure DevOps Repos as the GIT Repository but others can be used. More details on how to do this step can be found in [Integrating Azure ML notebooks with Git](../Documents/Integrating_AzureML_notebooks_with%20Git.md).
 
 ## Migrating and Deploying to a different environment
@@ -48,6 +48,7 @@ This will mean using the downloaded files retrieved on the _Download Best Model 
 **Step 2:** Deploy the model in this new environment as a batch inference by following the steps below:
 
 * The migration of the code to a new environment is a very simple task, it consists of cloning the repository from the previous task (_Archiving and Version Controlling_) into the new environment. More details on how to do this can be seen in [Clone and Run a Notebook](../Documents/Clone-and-Run-a-Notebook.md). 
+
 * Once the code has been added to the new environment, it should be executed. This will create and register the model and will also scheduled the pipeline with the recurrence defined (Minute, Hour, Day, Week or Month). This will mean the code associated with that pipeline will be executed with the defined recurrence and the predictions will be retrieved with that frequency.
 
 <a name = 'Note'> **Note: This example considers the pipeline will be scheduled within Azure ML Studio, another option can be to schedule and execute the pipeline using Azure Data Factory, more details can be seen [here](https://docs.microsoft.com/en-us/azure/data-factory/transform-data-machine-learning-service).**
