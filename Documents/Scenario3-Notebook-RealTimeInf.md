@@ -40,7 +40,7 @@ Explaining each step in detail:
 
 This step is meant to the done in the "dev" environment, the notebook code should be build using the Azure ML Pipelines concept, more information can be seen in [Create Pipelines](../Documents/Orchestrate-ML-With-Pipelines.md) but be aware that, while developing, only these 2 steps are needed:
 
-   * Create an Azure Machine Learning pipeline. - to prepare and train the data
+   * Create an Azure Machine Learning pipeline - to prepare and train the data
    * Publish an Azure Machine Learning pipeline - not a mandatory step but it's recommended. If the pipeline is published then it can be executed at any time without the need of running the notebook.
    
  **Note: Schedule an Azure Machine Learning pipeline is not needed at this stage since this is just a development environment. But the code should be developed so it can be executed in the production environment**
