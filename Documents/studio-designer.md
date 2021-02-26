@@ -294,15 +294,4 @@ After the publishing finishes, the pipeline endpoint can be viewed by
 
 ![](../Images/designer25.gif)
 
-
-**NOTE:**
-
-* _What is Real-Time Inference?_
-
-Real-Time Inference is the process of generating machine learning predictions in real time upon request. It is also known as online inference or dynamic inference. Typically, these predictions are generated on a single observation of data at runtime. Predictions generated using real-time inference may be generated at any time of the day.
-
-* _What is Batch Inference?_
-
-Batch inference, or offline inference, is the process of generating predictions on a batch of observations. The batch jobs are typically generated on some recurring schedule (e.g. hourly, daily). These predictions are then stored in a database/storage account and can be made available to developers or end users. Batch inference may sometimes take advantage of big data technologies such as Spark to generate predictions. This allows data scientists and machine learning engineers to take advantage of scalable compute resources to generate many predictions at once.
-
 _Sources: https://docs.microsoft.com/en-us/azure/machine-learning/algorithm-module-reference/module-reference and https://docs.microsoft.com/en-us/azure/machine-learning/tutorial-designer-automobile-price-train-score_
