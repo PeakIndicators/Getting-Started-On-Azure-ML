@@ -40,4 +40,4 @@ _Option 1_ - Deploying directly in the portal by executing the following:
 
 ![](../Images/devops24.gif)
 
-_Option 2_ - Create a notebook to build this real time inference webservice. More details can be seen [here](./Documents/Deploy-Real-Time-Service.md#Inf-Pipeline-infconfig).
+_Option 2_ - Create a notebook to build this real time inference webservice. More details can be seen [here](../Documents/Deploy-Real-Time-Service.md#Inf-Pipeline-infconfig).
