@@ -168,6 +168,10 @@ After the run completes, the results of the pipeline run can be analised. First,
 
 ![](../Images/designer15.gif)
 
+**Note :** For the scoring column to be added to the output, on the scoring task the following needs to be enabled:
+
+![](../Images/designer26.png)
+
 #### Evaluate models
 The Evaluate Model will provide information on how well the trained model performed on the test dataset.
 
