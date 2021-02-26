@@ -1,5 +1,9 @@
 # Scenario 6 - Model was build using studio Automated ML and it needs to be deployed as a batch inference in another environment
 
+## Before you start
+This tutorial will only show how to deploy a batch inference in another environment using Azure ML Studio as the deployment tool. Some of these tasks can also be done using Azure DevOps <-> Azure ML Studio existing partnership. Once you have all the necessary code / configuration files, instead of executing those directly in Azure ML Studio, you can use Azure DevOps pipelines. More details can be seen [here](../Documents/Scenario3-Notebook-RealTimeInf.md#MLOpsTrainandDeploy).
+
+## Introduction
 In this scenario, this tutorial will demonstrate how to deploy the best model defined within the Azure Studio Automated ML run as a batch inference. But with the caveat that the deployment will be done in a different environment than the one where the Automated ML run took place.
 
 The life cycle defined in this tutorial to suppport this solution is based on the following flow:
