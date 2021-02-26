@@ -61,7 +61,7 @@ Content:
  * Build AI solutions with AzureML:
    * [Create a Pipeline](Documents/Orchestrate-ML-With-Pipelines.md)
    * [Deploy a model as a real-time inferencing service](Documents/Deploy-Real-Time-Service.md)
-   * [Create a batch webservice](Documents/Deploy-Batch-Inference-Pipeline.md)
+   * [Create a batch inferencing service](Documents/Deploy-Batch-Inference-Pipeline.md)
    * [Tune hyperparameters with Azure ML](Documents/Tune_hyperparameters_with_Azure_ML.md)
    * [Automate machine learning model selection with Azure Machine Learning](Documents/Automate-ML-model-selection.md)
    * [Explain machine learning models with Azure Machine Learning](Documents/Explain-machine-learning-models-with-AzureML.md)
