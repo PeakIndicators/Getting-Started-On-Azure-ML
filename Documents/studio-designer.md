@@ -22,7 +22,7 @@ If you have not already done so, please:
 If you do not see the graphical elements mentioned in the steps below, such as buttons, you may not have the right level of permissions to studio. Please contact your Azure subscription administrator to verify that you have been granted the correct level of access.
 
 
-## Create a pipeline
+## <a name = 'DesignerCreatePipeline'> Create a pipeline
 1. Sign in to [Azure Machine Learning studio](https://ml.azure.com/).
 
 2. Select **Designer** on the left pane under **Author** section and select **Easy-to-use prebuilt modules**.
@@ -137,7 +137,7 @@ _The final pipeline should look something like this:_
 ![](../Images/designer11.PNG)
 
 
-### Submit the pipeline
+### <a name = 'DesignerSubmitPipeline'> Submit the pipeline
 The pipeline is all setup, we will now submit a pipeline run to train the machine learning model designed. Any valid pipeline run can be submitted at any point, which can be used to review changes to it pipeline during development.
 
 1. At the top of the canvas, select **Submit**.
