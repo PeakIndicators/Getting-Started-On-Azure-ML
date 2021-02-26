@@ -1,5 +1,8 @@
 # Scenario 4 - Model was build using studio Notebooks and it needs to be deployed as a batch inference in another environment
 
+## Bedore you start
+This tutorial will only show how to deploy a batch inference in another environment using Azure ML Studio as the deployment tool. Some of these tasks can also be done using Azure DevOps <-> Azure ML Studio existing partnership. Once you have all the necessary code/configuration files, instead of executing those directly in Azure ML Studio, you can use Azure DevOps pipelines. More details can be seen [here](./Documents/Scenario3-Notebook-RealTimeInf.md#MLOpsTrainandDeploy)
+
 The life cycle defined in this tutorial to suppport this solution is based on the following flow:
 
 ![](../Images/devops_batch1.png)
@@ -26,7 +29,7 @@ The following steps should be developed:
 * [Create a scoring script](../Documents/Deploy-Batch-Inference-Pipeline.md#Batch-Pipeline-scoring) - This step will create the scoring script batch inferencing service required to load the model and use it to predict new values. 
 * Create a pipeline with a Pipeline Run Step - To perform high performance parallel batch inferencing then the pipeline particular step called [ParallelRunStep](../Documents/Deploy-Batch-Inference-Pipeline.md#Batch-Pipeline-parallelstep) should be used. When you only want to run the model from time to time, generating all possible predictions in a batch without any parallel concerns then [PythonScriptStep](https://vladiliescu.net/deploying-models-with-azure-ml-pipelines/#step-1-fetching-new-data) is the one to use.
 * [Run the pipeline and retrieve the step output](../Documents/Deploy-Batch-Inference-Pipeline.md#Batch-Pipeline-publish) - In the example provided in this tutorial, this is where the output of the model will be stored in a file/database table.
-* [Publishing and Scheduling a batch inference pipeline](../Documents/Deploy-Batch-Inference-Pipeline.md#Batch-Pipeline-publish) - The model will be published as a batch inferencing pipeline as a REST service. For this particular example, everytime it is invoked it will be storing a file in the defined target area. Once again, in the example, the scheduling is being done within the Azure ML pipeline code but the option defined in [Note 2](#Note2) can also be considered.
+* [Publishing and Scheduling a batch inference pipeline](../Documents/Deploy-Batch-Inference-Pipeline.md#Batch-Pipeline-publish) - The model will be published as a batch inferencing pipeline as a REST service. For this particular example, everytime it is invoked it will be storing a file in the defined target area. Once again, in the example, the scheduling is being done within the Azure ML pipeline code but the option defined in [Note 1](#Note1) can also be considered.
 
 ## Archiving and Version Controlling
 
@@ -43,7 +46,7 @@ Once all the code is properly tested, it should be archived in a git repository.
 
 ![](../Images/devops2d.gif)
 
-<a name = 'Note2'> **Note 2 : This example considers the pipeline will be scheduled within Azure ML Studio, another option can be to schedule and execute the pipeline using Azure Data Factory, more details can be seen [here](https://docs.microsoft.com/en-us/azure/data-factory/transform-data-machine-learning-service).**
+<a name = 'Note1'> **Note 1 : This example considers the pipeline will be scheduled within Azure ML Studio, another option can be to schedule and execute the pipeline using Azure Data Factory, more details can be seen [here](https://docs.microsoft.com/en-us/azure/data-factory/transform-data-machine-learning-service).**
 
 ## Useful links: 
 https://vladiliescu.net/deploying-models-with-azure-ml-pipelines/
