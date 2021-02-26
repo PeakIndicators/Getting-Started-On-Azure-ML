@@ -19,8 +19,8 @@ Things are fairly simple (process wise) until we get to the final stage **Integr
 This is where Azure Machine Learning studio shines the most. It presents the most complete and intuitive model lifecycle management experience alongside integrating with Azure DevOps and also with GitHub.
 
 Now the big question is what is the best way to run a machine learning model in production. There are 2 options: 
- * Using real-time inference
- * Using batch inference 
+ * Using real-time inference - Real-Time Inference is the process of generating machine learning predictions in real time upon request. It is also known as online inference or dynamic inference. Typically, these predictions are generated on a single observation of data at runtime. Predictions generated using real-time inference may be generated at any time of the day.
+ * Using batch inference - Batch inference, or offline inference, is the process of generating predictions on a batch of observations. The batch jobs are typically generated on some recurring schedule (e.g. hourly, daily). These predictions are then stored in a database/storage account and can be made available to developers or end users. Batch inference may sometimes take advantage of big data technologies such as Spark to generate predictions. This allows data scientists and machine learning engineers to take advantage of scalable compute resources to generate many predictions at once.
 
 In a real-time inference the model is up and running continuously on a server, usually exposed as a WebService, generating real time predictions whenever it's invoked. In contrast, in batch inference the idea is to only run the model from time to time, generating all possible predictions in a batch, removing the need to have your model up all the time.
 
