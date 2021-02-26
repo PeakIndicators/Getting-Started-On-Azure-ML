@@ -42,8 +42,10 @@ This step is meant to the done in the "dev" environment, the notebook code shoul
 
    * Create an Azure Machine Learning pipeline - to prepare and train the data
    * Publish an Azure Machine Learning pipeline - not a mandatory step but it's recommended. If the pipeline is published then it can be executed at any time without the need of running the notebook.
-   
- **Note: Schedule an Azure Machine Learning pipeline is not needed at this stage since this is just a development environment. But the code should be developed so it can be executed in the production environment**
+
+There is also an option to only create a notebook to train and validate the model without using the Azure ML pipelines concept, but this will mean you can't execute it or schedule it in an automated way. Everytime you need to run it you manually need to run the notebook.
+
+ **Note : Schedule an Azure Machine Learning pipeline is not needed at this stage since this is just a development environment. But the code should be developed so it can be executed in the production environment**
  
 **Notebook: Deploy the Model** 
 
