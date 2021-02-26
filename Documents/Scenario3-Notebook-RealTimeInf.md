@@ -99,7 +99,7 @@ Taking into consideration the diagram shown previously describing the MLOps flow
 
 The idea behind these diagrams will be explained in the following sections.
 
-### Train, Validate and Deploy the Model
+### <a name = 'MLOpsTrainandDeploy'> Train, Validate and Deploy the Model
 
 Once the data scientist is happy with the prediction developed in Azure Machine Learning, an Azure DevOps pipeline/release can be created to automate the process of training, registering and deploying the model and this is where the collaboration between DevOps Development Team and Data Science Team begins.
 
