@@ -81,7 +81,7 @@ Content:
     * [Installing Anaconda on macOS](Documents/Anaconda_macos.md)
     * [Installing Anaconda on Linux](Documents/Anaconda_linux.md)
     * [Getting Started with Anaconda](Documents/Starting_with_conda.md)
-  * Install Visual Studio Code and practise using it to build and debug your Pyton code:
+  * Install Visual Studio Code and practise using it to build and debug your Python code:
     * [Getting Started with Python in Visual Studio Code](Documents/Installing_VS_Code.md)
     * [Data Science in Visual Studio Code](Documents/DS_Visual_Studio_Code.md)
   * Connect your Visual Studio Code with AzureML:
