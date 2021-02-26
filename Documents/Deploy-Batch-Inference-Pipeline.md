@@ -3,7 +3,7 @@
 ## Before you start
 
 This tutorial is based on the Azure ML Batch Inference definition. In Azure, Batch Inference is sometimes related with high-performance parallel computing. It performs the parallelization by creating a pool of tasks and run them in parallel in the compute nodes. More details can be seen [here](https://docs.microsoft.com/en-us/azure/machine-learning/tutorial-pipeline-batch-scoring-classification).
-If the aim is only to have a batch process that runs the model from time to time, generating all possible predictions in a batch and store those in a file, database, etc then follow the example provided [here](https://vladiliescu.net/deploying-models-with-azure-ml-pipelines/).
+If the aim is only to have a batch process that runs the model from time to time with no parallel concerns, generating all possible predictions in a batch and storing those in a file, database, etc then follow the example provided [here](https://vladiliescu.net/deploying-models-with-azure-ml-pipelines/).
 
 ## Introduction
 
