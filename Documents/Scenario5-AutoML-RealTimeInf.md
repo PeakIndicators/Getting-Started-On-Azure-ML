@@ -24,7 +24,7 @@ This step is meant to the done in the "dev" environment, it consists of:
 
 ## Archiving and Version Controlling
 
-The contents of the .zip file retrieved from the _Download of the Best Model details_ task should be stored in the GIT repository for future reference and versioning control. 
+The contents of the .zip file retrieved from the _Download of the Best Model details_ task should be stored in the GIT repository for future reference and versioning control. You shouldn't add the .zip file to GIT but it's contents.
 
 ## Migrating and Deploying to a different environment
 
@@ -32,6 +32,6 @@ The contents of the .zip file retrieved from the _Download of the Best Model det
 
 ![](../Images/devops2d.gif)
 
-This will mean using the downloaded files retrieved on the _Download Best Model details_ task and that were stored in GIT repository (task: _Archiving and Version Controlling_).
+This will mean using the .pkl file retrieved on the _Download Best Model details_ task and that were stored in GIT repository (task: _Archiving and Version Controlling_).
 
 **Step 2:** Deploy the model in this new environment as a real-time webservice by following the steps defined in [here](../Documents/Automated-ML.md#Deploy-AutomatedML-Model).
