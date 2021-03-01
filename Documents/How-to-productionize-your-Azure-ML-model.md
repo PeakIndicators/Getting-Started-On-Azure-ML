@@ -66,5 +66,5 @@ Click on each scenario to understand how it works:
 
 * [Scenario 6](../Documents/Scenario6-AutomML-BatchInf.md) - Model was build using studio **Automated ML** and it needs to be deployed as a **batch inference** in another environment.
 
-## Useful links
+### Useful links
 _[How to consume an Azure Machine Learning web service that has been deployed from a Machine Learning experiment](https://github.com/uglide/azure-content/blob/master/articles/machine-learning/machine-learning-consume-web-services.md)_
