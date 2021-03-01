@@ -65,3 +65,6 @@ Click on each scenario to understand how it works:
 * [Scenario 5](../Documents/Scenario5-AutoML-RealTimeInf.md) - Model was build using studio **Automated ML** and it needs to be deployed as a **real-time inference** in another environment.
 
 * [Scenario 6](../Documents/Scenario6-AutomML-BatchInf.md) - Model was build using studio **Automated ML** and it needs to be deployed as a **batch inference** in another environment.
+
+## Useful links
+[How to consume an Azure Machine Learning web service that has been deployed from a Machine Learning experiment](https://github.com/uglide/azure-content/blob/master/articles/machine-learning/machine-learning-consume-web-services.md)
