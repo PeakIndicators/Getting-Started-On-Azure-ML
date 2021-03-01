@@ -206,3 +206,7 @@ In this exercise, the code to deploy a model as a real-time inferencing service 
 If you’re finished working with Azure Machine Learning for now refer to [this page](../Documents/Stop-Compute-Instance.md) to stop your compute instance.  
 
 _Source: https://docs.microsoft.com/en-us/azure/machine-learning/how-to-deploy-and-where?tabs=python and https://docs.microsoft.com/en-us/azure/machine-learning/how-to-deploy-pipelines_
+
+
+## Useful links
+_[How to consume an Azure Machine Learning web service that has been deployed from a Machine Learning experiment](https://github.com/uglide/azure-content/blob/master/articles/machine-learning/machine-learning-consume-web-services.md)_
