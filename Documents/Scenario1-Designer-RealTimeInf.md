@@ -38,7 +38,7 @@ All the filed retrieved from the _Download the Model details_ task should be sto
 
 ![](../Images/devops2d.gif)
 
-This will mean using the .pkl file retrieved on the _Download the Model details_ task and that were stored in GIT repository (task: _Archiving and Version Controlling_).
+This will mean using the .pkl file retrieved on the _Download the Model details_ task and that was stored in GIT repository (task: _Archiving and Version Controlling_).
 
 **Step 2:** Select the model registered in the previous step and deploy it in this new environment as a real-time webservice. This will mean the remaining downloaded files from   _Download the Model details_ task are going to be needed (scoring script and environment configuration). This step can be achieved from 2 different ways:
 
