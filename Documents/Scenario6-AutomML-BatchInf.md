@@ -26,7 +26,7 @@ For the deployment, the following steps should be developed:
 
 * Register the Model - This step will upload and register the model, following the steps shown below:
 ![](../Images/devops2d.gif)
-This will mean using the downloaded files retrieved on the _Download Best Model details_ stage.
+This will mean using the .pkl file retrieved on the _Download Best Model details_ stage.
 * Scoring script - This step consists of getting the scoring script and configuration details retrieved on the _Download Best Model details_ stage into the new environment. 
 * Create a pipeline with a Pipeline Run Step - To perform high performance parallel batch inferencing then the pipeline particular step called [ParallelRunStep](../Documents/Deploy-Batch-Inference-Pipeline.md#Batch-Pipeline-parallelstep) should be used. When you only want to run the model from time to time, generating all possible predictions in a batch without any parallel concerns then [PythonScriptStep](https://vladiliescu.net/deploying-models-with-azure-ml-pipelines/#step-1-fetching-new-data) is the one to use.
 * [Run the pipeline and retrieve the step output](../Documents/Deploy-Batch-Inference-Pipeline.md#Batch-Pipeline-publish) - In the example provided in this tutorial, this is where the output of the model is stored in a file (but other options are available such as: saving the model output in a database table, publishing it as a REST service that then can be invoked by Power BI,...).
