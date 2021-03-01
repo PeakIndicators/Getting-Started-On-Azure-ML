@@ -108,3 +108,7 @@ In this exercise, the code to deploy a model as a batch inferencing service is p
 If you’re finished working with Azure Machine Learning for now refer to [this page](../Documents/Stop-Compute-Instance.md) to stop your compute instance.  
 
 _Source: https://docs.microsoft.com/en-us/azure/machine-learning/tutorial-pipeline-batch-scoring-classification_
+
+
+## Useful links
+_[How to consume an Azure Machine Learning web service that has been deployed from a Machine Learning experiment](https://github.com/uglide/azure-content/blob/master/articles/machine-learning/machine-learning-consume-web-services.md)_
