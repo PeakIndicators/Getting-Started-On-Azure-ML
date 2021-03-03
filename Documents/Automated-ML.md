@@ -95,7 +95,7 @@ These settings are to better control the training job. Otherwise, defaults are a
 | Primary metric|	Evaluation metric that the machine learning algorithm will be measured by.	|
 | Explain best model|	Automatically shows explainability on the best model created by automated ML.|
 |Blocked algorithms|	Algorithms you want to exclude from the training job	|
-|Exit criterion|	If a criteria is met, the training job is stopped. Training job time (hours): This causes the experiment to end after a maximum of the amount of hours defined, if you define 0.25 it means 15 minutes. Metric score threshold: This causes the experiment to end if a model achieves the primary metric score defined (or less).|
+|Exit criterion|	If a criteria is met, the training job is stopped. **Training job time (hours)**: This causes the experiment to end after the amount of hours defined is reached (you can also defined minutes, ex: if you define 0.25 it means 15 minutes). **Metric score threshold*: This causes the experiment to end if the primary metric defined achieves this value or less.|
 |Validation|	Choose a cross-validation type and number of tests.|
 |Concurrency|	The maximum number of parallel iterations executed per iteration|
 
