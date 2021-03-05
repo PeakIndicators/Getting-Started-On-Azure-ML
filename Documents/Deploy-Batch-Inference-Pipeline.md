@@ -160,10 +160,10 @@ You can also schedule the published pipeline to have it run automatically, as sh
 
     weekly = ScheduleRecurrence(frequency='Week', interval =1)
     pipeline_schedule = Schedule.create~(ws, name='Weekly Predictions',
-										    description= 'batch inferencing',
-										    pipeline_id=published_pipeline.id,
-										    experiment_name='Batch_Prediction',
-										    recurrence=weekly)
+					     description= 'batch inferencing',
+					     pipeline_id=published_pipeline.id,
+					     experiment_name='Batch_Prediction',
+					     recurrence=weekly)
 
 ## Exercise - Create a Batch Inferencing Service
 
