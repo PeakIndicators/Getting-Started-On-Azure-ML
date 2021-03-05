@@ -26,11 +26,20 @@ To use a trained model in a batch inferencing pipeline, you must register it in 
 
 To register a model from a local file, you can use the **register** method of the **Model** object as shown in the following example code:
 
-![](../Images/33.PNG)
+	from azureml.import Model
+
+	classification_model = Model.Register(workspace=your_workspace,
+					      model_name='classification_model',
+					      model_path='outputs/classification_model.pkl', 
+					      description='A classification model to predict diabetes')
 
 Alternatively, if you have a reference to the **Run** used to train the model, you can use its **register_model** method as shown in the following example code:
 
-![](../Images/34.PNG)
+	# Register the model
+	run.register_model(model_path='outputs/classification_model.pkl', model_name='classification_model',
+                   	   tags={'Training context':'Inline Training'},
+			   description='A Classification model to predict diabetes',
+                   	   properties={'AUC': run.get_metrics()['AUC'], 'Accuracy': run.get_metrics()['Accuracy']})
 
 ## <a name = 'Batch-Pipeline-scoring'> 2. Create a scoring script
 Batch inferencing service requires a scoring script to load the model and use it to predict new values. It must include two functions:
