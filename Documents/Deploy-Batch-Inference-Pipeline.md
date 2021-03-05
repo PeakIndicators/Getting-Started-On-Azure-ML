@@ -111,7 +111,28 @@ Azure Machine Learning provides a type of pipeline step specifically for perform
 
 After your pipeline has been defined, you can run it and wait for it to complete. Then you can retrieve the **parallel_run_step.txt** file from the output of the step to view the results, as shown in the following code example:
 
-![](../Images/37.PNG)
+    from azureml.core import Experiment
+    import pandas as pd
+
+    # Run the pipeline as an experiment
+    pipeline_run = Experiment(ws, 'batch_prediction_pipeline').submit(pipeline)
+    pipeline_run.wait_for_completion(show_output=True)
+
+    # Get the run for first and only step in our pipleine, and download its output
+    prediction_run = next(pipeline_run.get_children())
+    prediction_output = prediction_run.get_output_data('inferences')
+    prediction_output.download(local_path='results')
+
+    # Traverse the folder hierarchy and find the results file
+    for root, dirs, files in os.walk('results'):
+        for file in files:
+            if file.endswith('parallel_run_step.txt'):
+                result_file = os.path.join(root,file)
+
+    # cleanup output format
+    df = pd.read_csv(result_file, delimiter=":", header=None)
+    df.columns = ["File", "Prediction"]
+    print(df)
 
 ## <a name = 'Batch-Pipeline-publish'></a>Publishing and Scheduling a batch inference pipeline
 
