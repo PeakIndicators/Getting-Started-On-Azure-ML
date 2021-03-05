@@ -159,7 +159,7 @@ You can also schedule the published pipeline to have it run automatically, as sh
     from azureml.pipeline import ScheduleRecurrence, Schedule
 
     weekly = ScheduleRecurrence(frequency='Week', interval =1)
-    pipeline_schedule = Schedule.create~(ws, name='Weekly Predictions',
+    pipeline_schedule = Schedule.create(ws, name='Weekly Predictions',
 					     description= 'batch inferencing',
 					     pipeline_id=published_pipeline.id,
 					     experiment_name='Batch_Prediction',
