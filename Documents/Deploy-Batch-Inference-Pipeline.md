@@ -40,7 +40,31 @@ Batch inferencing service requires a scoring script to load the model and use it
 
 Typically, you use the **init** function to load the model from the model registry, and use the **run** function to generate predictions from each batch of data and return the results. The following example script shows this pattern:
 
-![](../Images/35.PNG)
+    import os
+    import numpy as np
+    from azureml.core import Model
+    import joblib
+
+    def init():
+        # Runs when the pipeline step is initialized
+        global model
+        # load the model
+        model_path = Model.get_model_path('classification_model')
+        model = joblib.load(model_path)
+
+
+    def run(mini_batch):
+        # This runs for each batch
+        resultList = []
+        # process each file in the batch
+        for f in mini_batch:
+            # Read the comma-delimited data into an array
+            data = np.genfromtxt(f, delimiter=',')
+            # Reshape into a 2-dimensional array for prediction (model expects multiple items)
+                prediction = model.predict(data.reshape(1, -1))
+               # Append prediction to results
+                resultList.append("{}: {}".format(os.path.basename(f), prediction[0]))
+          return resultList
 
 ## <a name = 'Batch-Pipeline-parallelstep'> 3. Create a pipeline with a ParallelRunStep
 
