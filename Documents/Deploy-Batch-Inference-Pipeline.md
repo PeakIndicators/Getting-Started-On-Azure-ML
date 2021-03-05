@@ -70,7 +70,42 @@ Typically, you use the **init** function to load the model from the model regist
 
 Azure Machine Learning provides a type of pipeline step specifically for performing parallel batch inferencing. Using the **ParallelRunStep** class, you can read batches of files from a **File** dataset and write the processing output to a **PipelineData** reference. Additionally, you can set the **output_action** setting for the step to "append_row", which will ensure that all instances of the step being run in parallel will collate their results to a single output file named *parallel_run_step.txt.* The following code snippet shows an example of creating a pipeline with a **ParallelRunStep**:
 
-![](../Images/36.PNG)
+
+    from azureml.pipeline.steps import ParallelRunConfig, ParallelRunStep
+    from azureml.pipeline.core import PipelineData
+    from azureml.pipeline.core import Pipeline
+
+    # Set default data store
+    ws.set_default_datastore('workspaceblobstore')
+
+    # Set the output location
+    default_ds = ws.get_default_datastore()
+    output_dir = PipelineData(name='inferences', 
+                            datastore=default_ds, 
+                            output_path_on_compute='results')
+
+    # Define the parallel run step configuration
+    parallel_run_config = ParallelRunConfig(
+        source_directory=experiment_folder,			# The location of the script
+        entry_script="batch_scoring_script.py",
+        mini_batch_size="5",
+        error_threshold=10,
+        output_action="append_row",
+        environment=batch_env,
+        compute_target=inference_cluster,
+        node_count=2)
+
+    parallelrun_step = ParallelRunStep(
+        name='batch-score',
+        parallel_run_config=parallel_run_config,
+        inputs=[batch_data_set.as_named_input('batch_data')],
+        output=output_dir,
+        arguments=[],
+     allow_reuse=True
+    )
+
+    # Create the pipeline
+    pipeline = Pipeline(workspace=ws, steps=[parallelrun_step])
 
 ## <a name = 'Batch-Pipeline-publish'> 4. Run the pipeline and retrieve the step output
 
