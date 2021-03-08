@@ -59,6 +59,7 @@ For a regression model, there are no classes so the local importance values simp
 
 You can use the Azure Machine Learning SDK to create explainers for models, even if they were not trained using an Azure Machine Learning experiment.
 
+
 ### Creating an explainer
 
 To interpret a local model, you must install the **azureml-interpret** package and use it to create an explainer. There are multiple types of explainer, including:
@@ -134,10 +135,65 @@ To retrieve local feature importance from a **MimicExplainer** or a **TabularExp
 
 ## Creating explanations
 
+### Creating an exaplantion for a model trained outside of an Azure Machine Learning experiment
+Once you have a trained model you can you a suitable explainer from the Azure ML interpretability library. The example below shows how to use a **Tabular Explainer** to evaluate to a model trained outside of an Azure Machine Learning experiment. 
+
+**Note:** You can generate global and local explanations for a model trained outside of an Azure Machine Learning Experiment but at the time (08/03/21) it is not possible to genrate visualizations to help evaluate global and local feature importance for your model. This is only available for models trained in Azure Machine Learning experiment runs that were configured to generate and upload explanations; or for the run which produces the best performing model in as automated machine learning experiment. 
+
+      from interpret.ext.blackbox import TabularExplainer
+
+      # "features" and "classes" fields are optional
+      tab_explainer = TabularExplainer(model,
+                              X_train, 
+                              features=features, 
+                              classes=labels)
+      print(tab_explainer, "ready!")
+      
+Once an explainer for your model has been created you use it to evaluate the overall feature importance in your model as shown below. 
+The output is displayed with the most important feature listed first. 
+
+      # You can use the training data or the test data here
+      global_tab_explanation = tab_explainer.explain_global(X_train)
+
+      # Get the top features by importance
+      global_tab_feature_importance = global_tab_explanation.get_feature_importance_dict()
+      for feature, importance in global_tab_feature_importance.items():
+       print(feature,":", importance)
+       
+You can also use it to generate explanations for individul observations. This explanation quantifies the extent to which each feature influences the decision to predict each of the possible label values. In the case of a binary model for e.g., you can quantify the influence of each feature for each of these two label values for individual observations in a dataset. In the example below we evaluate the first two cases in the test dataset. 
+      
+      # Select the first two cases in the test dataset
+      X_explain = X_test[0:2]
+
+      # Get predictions
+      predictions = model.predict(X_explain)
+
+      # Get local explanations
+      local_tab_explanation = tab_explainer.explain_local(X_explain)
+
+      # Get feature names and importance for each possible label
+      local_tab_features = local_tab_explanation.get_ranked_local_names()
+      local_tab_importance = local_tab_explanation.get_ranked_local_values()
+
+      # This prints the feature names and importance for each label per observation
+      for l in range(len(local_tab_features)):
+      print('Support for', labels[l])
+      label = local_tab_features[l]
+      for o in range(len(label)):
+            print("\tObservation", o + 1)
+            feature_list = label[o]
+            total_support = 0
+            for f in range(len(feature_list)):
+                  print("\t\t", feature_list[f], ':', local_tab_importance[l][o][f])
+                  total_support += local_tab_importance[l][o][f]
+            print("\t\t ----------\n\t\t Total:", total_support, "Prediction:", labels[predictions[o]])
+
+
+
 When you use an estimator or a script to train a model in an Azure Machine Learning experiment, you can create an explainer and upload the explanation it generates to the run for later analysis.
 
 ### Creating an explanation in the experiment script
-To create an explanation in the experiment script, you'll need to ensure that the **azureml-interpret** and **azureml-contrib-interpret** packages are installed in the run environment. Then you can use these to create an explanation from your trained model and upload it to the run outputs. The following code example shows how code to generate and upload a model explanation can be incorporated into an experiment script.
+To create an explanation in the experiment script, you'll need to ensure that the **azureml-interpret** and **azureml-contrib-interpret** packages are installed in the run environment. Then you can use these to create an explanation from your trained model and upload it to the run outputs. The following code example shows how code, to generate and upload a model explanation, can be incorporated into an experiment script.
 
       # Import Azure ML run library
       from azureml.core.run import Run
@@ -178,7 +234,7 @@ You can also use the **ExplanationClient** object to download the explanation in
 
 Model explanations in Azure Machine Learning studio include multiple visualizations that you can use to explore feature importance.
 
-**Note:** Visualizations are only available for experiment runs that were configured to generate and upload explanations. When using automated machine learning, only the run producing the best model has explanations generated by default.
+**Note:** Visualizations are only available for experiment runs that were configured to generate and upload explanations. When using automated machine learning, only the run producing the best model has explanations generated by default. Another important note is that visual widgets and visualizations in Azure Machine Learning studio are only displayed when an explainer is incorporated in an Azure Machine Learning experiment. 
 
 ### Visualizing global feature importance
 The first visualization on the **Explanations** tab for a run shows global feature importance.
