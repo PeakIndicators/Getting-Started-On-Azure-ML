@@ -23,6 +23,7 @@ Content:
 * Lab Exercises and and documentation on working with Compute in AzureML
   * [Create Compute Instances](Create-Compute-Instance.md)
   * [Stop a Compute Instance](Stop-Compute-Instance.md)
+  * [Create a Compute Cluster](Create-Compute-Cluster.md)
   * [Creating and Running a Python or R Notebook](Creating-and-Running-a-Python-Notebook.md)
   * [Cloning and Running a Notebook](Clone-and-Run-a-Notebook.md)
   * [JupyterLab notebook templates](../labs)
