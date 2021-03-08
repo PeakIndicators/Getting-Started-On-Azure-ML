@@ -201,7 +201,7 @@ Now it's your chance to detect and mitigate unfairness in a model.
 
 In this exercise, you will:
 
-* Use the Fairlearn package with Azure Machine Learning to evaluate prediction performance disparity.
+* Use the Fairlearn and raiwidgets packages with Azure Machine Learning to evaluate prediction performance disparity.
 * Use the Fairlearn package with Azure Machine Learning to mitigate unfairness.
 
 ### Detect and Mitigate Unfairness
