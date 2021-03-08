@@ -42,7 +42,7 @@ Compute clusters can run jobs securely in a virtual network environment, without
 
 ![](../Images/compute-cluster2.PNG)
 
-  * **Compute name**: *enter a unique name
+  * **Compute name**: *enter a unique name*
         
         Naming rules:
         * Name is required and must be between 3 to 24 characters long.
@@ -78,7 +78,7 @@ When you no longer intend to use your compute cluster you can delete it as shown
 
 * Click delete
 
-![](../Images/compute-cluster5.PNG)
+![](../Images/compute-cluster6.PNG)
 
 * Confirm you want to delete your compute cluster
 
