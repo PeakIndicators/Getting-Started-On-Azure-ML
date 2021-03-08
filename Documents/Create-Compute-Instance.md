@@ -44,7 +44,6 @@ For most scenarios a compute instance is enough for developing and testing code.
 
 ![](../Images/NewCompute4.PNG)
 
-**Note:** Creating a Compute Cluster or an Inference Cluster is a very similar process, therefore we believe there isn't the need to specify those in this tutorial. The concepts are similar to the Compute Instance shown above.
 
 ## Stop Compute Instance
 
