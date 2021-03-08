@@ -231,3 +231,4 @@ In this exercise, the code to evaluate models for fairness is provided in a note
 If you’re finished working with Azure Machine Learning for now refer to [this page](../Documents/Stop-Compute-Instance.md) to stop your compute instance. 
 
 *Source: https://docs.microsoft.com/en-us/learn/modules/detect-mitigate-unfairness-models-with-azure-machine-learning/*
+*source: https://pypi.org/project/raiwidgets/*
