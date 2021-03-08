@@ -64,6 +64,7 @@ Content:
    * [Deploy a model as a batch inferencing service](Documents/Deploy-Batch-Inference-Pipeline.md)
    * [Tune hyperparameters with Azure ML](Documents/Tune_hyperparameters_with_Azure_ML.md)
    * [Automate machine learning model selection with Azure Machine Learning](Documents/Automate-ML-model-selection.md)
+   * [Explore differential privacy](Documents/Explore-differential-privacy.md)
    * [Explain machine learning models with Azure Machine Learning](Documents/Explain-machine-learning-models-with-AzureML.md)
    * [Detect and mitigate unfairness in models with Azure Machine Learning](Documents/Detect-mitigate-unfairness-in-models.md)
    * [Monitor models with Azure Machine Learning](Documents/Monitor_Models_AzureML.md)
