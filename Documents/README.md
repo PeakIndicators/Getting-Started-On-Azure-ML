@@ -34,7 +34,7 @@ Content:
    * [Create a batch webservice](Deploy-Batch-Inference-Pipeline.md)
    * [Tune hyperparameters with Azure ML](Tune_hyperparameters_with_Azure_ML.md)
    * [Automate machine learning model selection with Azure Machine Learning](Automate-ML-model-selection.md)
-   * [Explore differential privacy](Explore-differential-privacy.md
+   * [Explore differential privacy](Explore-differential-privacy.md)
    * [Explain machine learning models with Azure Machine Learning](Explain-machine-learning-models-with-AzureML.md)
    * [Detect and mitigate unfairness in models with Azure Machine Learning](Detect-mitigate-unfairness-in-models.md)
    * [Monitor models with Azure Machine Learning](Monitor_Models_AzureML.md)
