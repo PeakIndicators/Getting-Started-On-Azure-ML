@@ -77,11 +77,12 @@ Trade-off overall predictive performance for the lower disparity in predictive p
 
 The rest of this module explores the **Fairlearn** package - a Python package that you can use to evaluate and mitigate unfairness in machine learning models.
 
-## Analyze model fairness with Fairlearn
+## Analyze model fairness with Fairlearn and Responsible-AI-Widgets (raiwidgets)
 
 **Fairlearn** is a Python package that you can use to analyze models and evaluate disparity between predictions and prediction performance for one or more sensitive features.
+**raiwidgets** extends the Fairlearn repository and provides user interfaces for model interpretability and fairness assessment of machine learning models. Raiwidget offers several different user interfaces which can be further explored [here](https://pypi.org/project/raiwidgets/). In this tutorial we will be exploring the user interface **Fairness Dashboard**.
 
-It works by calculating group metrics for the sensitive features you specify. The metrics themselves are based on standard **scikit-learn** model evaluation metrics, such as *accuracy, precision* or *recall* for classification models.
+Fairlearn works by calculating group metrics for the sensitive features you specify. The metrics themselves are based on standard **scikit-learn** model evaluation metrics, such as *accuracy, precision* or *recall* for classification models.
 
 The Fairlearn API is extensive, offering multiple ways to explore disparity in metrics across sensitive feature groupings. For a binary classification model, you might start by comparing the selection rate (the number of positive predictions for each group) by using the **selection_rate** function. This function returns the overall selection rate for the test dataset. You can also use standard **sklearn.metrics** functions (such as **accuracy_score**, **precision_score** or **recall_score**) to get an overall view of how the model performs.
 
@@ -94,19 +95,60 @@ For example, in a binary classification model for loan repayment prediction, whe
 | 50 or younger |	0.298178 | 0.89619 | 0.825926 | 0.825926 |
 | Over 50 |	0.708995 | 0.888889 |	0.937984 | 0.902985 |
 
-### Visualizing metrics in a dashboard
-It's often easier to compare metrics visually, so Fairlearn provides an interactive dashboard widget that you can use in a notebook to display group metrics for a model. The widget enables you to choose a sensitive feature and performance metric to compare and then calculates and visualizes the metrics and disparity, like this:
+### Visualizing metrics using Fairness Dashboard
+It's often easier to compare metrics visually, the Fairness Dashboard is a user interface for Fairlearn which enables you to use common fairness metrics to assess understand how your model's predictions impact differet groupps (e.g., different ethnicities), and compare multiple models along different fairness and performance metrics.
 
-![](../Images/Unfairness3.PNG)
+#### Setup and single-model assessment
+To assess a single model’s fairness and performance, the dashboard widget can be launched within a Jupyter notebook as follows:
 
-![](../Images/Unfairness4.PNG)
+    from raiwidgets import FairnessDashboard
 
-### Integration with Azure Machine Learning
+    # A_test contains your sensitive features (e.g., age, binary gender)
+    # y_true contains ground truth labels
+    # y_pred contains prediction labels
+
+    FairnessDashboard(sensitive_features=A_test,
+                      y_true=Y_test,
+                      y_pred={"predictive_model": model.predict(X_test)})
+                      
+Once you load the visualization dashboard, the widget walks the user through the assessment setup, where the user is asked to select
+
+![](../Images/raiwidgets0.PNG)
+
+1. The sensitive feature of interest(e.g., `binary gender` or `age`). 
+
+![](../Images/raiwidgets1.PNG)
+
+2. The performance metric (e.g., model precision) along which to evaluate the overall model performance.
+
+![](../Images/raiwidgets2.PNG)
+
+3. The fairness metric (e.g., demographic parity ratio) along which to evaluate any disparities across groups.
+
+![](../Images/raiwidgets3.PNG)
+
+These selections are then used to obtain the visualization of the model’s impact on the subgroups. (e.g., one is interested to consider non-binary gender for fairness testing and selects "demographic parity ratio" as a metric of interest to see how females and males are selected to get a loan).
+
+![](../Images/raiwidgets4.PNG)
+
+![](../Images/raiwidgets5.PNG)
+
+![](../Images/raiwidgets6.PNG)
+
+![](../Images/raiwidgets7.PNG)
+
+### Comparing multiple models
 Fairlearn integrates with Azure Machine Learning by enabling you to run an experiment in which the dashboard metrics are uploaded to your Azure Machine Learning workspace. This enables you to share the dashboard in Azure Machine Learning studio so that your data science team can track and compare disparity metrics for models registered in the workspace.
 
 ## Mitigate unfairness with Fairlearn
+A common approach to mitigation is to use one of the algorithms and constraints to train multiple models and then compare their performance, selection rate and disparity metrics to find the optimal model for your needs. Often, the choice of the model involves a trade-off between raw predictive performance and fairness - based on your definition of fairness for a given scenario. Generally, fairness is measured by a reduction in the disparity of feature selection (for example, ensuring that an equal proportion of members from each gender group is approved for a bank loan) or by a reduction in the disparity of performance metric (for example, ensuring that a model is equally accurate at identifying repayers and defaulters in each age group).
 
-In addition to enabling you to analyze disparity in selection rates and predictive performance across sensitive features, Fairlearn provides support for mitigating unfairness in models.
+In addition to enabling you to analyze disparity in selection rates and predictive performance across sensitive features, the dashboard also enables comparison of multiple models, such as the models produced by different learning algorithms and different mitigation approaches, including Fairlearn's [GridSearch](https://fairlearn.github.io/v0.5.0/api_reference/fairlearn.reductions.html#fairlearn.reductions.GridSearch), [ExponentiatedGradient](https://fairlearn.github.io/v0.5.0/api_reference/fairlearn.reductions.html#fairlearn.reductions.ExponentiatedGradient), and [ThresholdOptimizer](https://fairlearn.github.io/v0.5.0/api_reference/fairlearn.postprocessing.html#fairlearn.postprocessing.ThresholdOptimizer).
+
+As before, select the sensitive feature and the performance metric. The model comparison view then depicts the performance and disparity of all the provided models in a scatter plot. This allows the you to examine trade-offs between performance and fairness. Each of the dots can be clicked to open the assessment of the corresponding model. The figure below shows the model comparison view with `binary gender` selected as a sensitive feature and accuracy rate selected as the performance metric.
+You can select an individual model in the scatterplot to see its details, enabling you to explore the options and select the best model for your fairness requirements.
+
+![](../Images/raiwidgets8.PNG)
 
 ### Mitigation algorithms and parity constraints
 The mitigation support in Fairlearn is based on the use of algorithms to create alternative models that apply *parity constraints* to produce comparable metrics across sensitive feature groups. Fairlearn supports the following mitigation techniques. 
@@ -118,29 +160,42 @@ The mitigation support in Fairlearn is based on the use of algorithms to create 
 | Threshold Optimizer |	A post-processing technique that applies a constraint to an existing classifier, transforming the prediction as appropriate |	Binary classification |
 
 
-The choice of parity constraint depends on the technique being used and the specific fairness criteria you want to apply. Constraints in Fairlearn include:
-
- * **Demographic parity**: Use this constraint with any of the mitigation algorithms to minimize disparity in the selection rate across sensitive feature groups. For example, in a binary classification scenario, this constraint tries to ensure that an equal number of positive predictions are made in each group.
-* **True positive rate parity**: Use this constraint with any of the mitigation algorithms to minimize disparity in true positive rate across sensitive feature groups. For example, in a binary classification scenario, this constraint tries to ensure that each group contains a comparable ratio of true positive predictions.
-* **False-positive rate parity**: Use this constraint with any of the mitigation algorithms to minimize disparity in *false_positive_rate* across sensitive feature groups. For example, in a binary classification scenario, this constraint tries to ensure that each group contains a comparable ratio of false-positive predictions.
-* **Equalized odds**: Use this constraint with any of the mitigation algorithms to minimize disparity in combined *true positive rate* and *false_positive_rate* across sensitive feature groups. For example, in a binary classification scenario, this constraint tries to ensure that each group contains a comparable ratio of true positive and false-positive predictions.
-* **Error rate parity**: Use this constraint with any of the reduction-based mitigation algorithms (**Exponentiated Gradient** and **Grid Search**) to ensure that the error for each sensitive feature group does not deviate from the overall error rate by more than a specified amount.
-* **Bounded group loss**: Use this constraint with any of the reduction-based mitigation algorithms to restrict the loss for each sensitive feature group in a *regression* model.
-
-## Training and evaluating mitigated models
-A common approach to mitigation is to use one of the algorithms and constraints to train multiple models and then compare their performance, selection rate and disparity metrics to find the optimal model for your needs. Often, the choice of the model involves a trade-off between raw predictive performance and fairness - based on your definition of fairness for a given scenario. Generally, fairness is measured by a reduction in the disparity of feature selection (for example, ensuring that an equal proportion of members from each gender group is approved for a bank loan) or by a reduction in the disparity of performance metric (for example, ensuring that a model is equally accurate at identifying repayers and defaulters in each age group).
-
-Fairlearn enables you to train mitigated models and visualize them using the dashboard, like this.
-
-![](../Images/Unfairness5.PNG)
-
-You can select an individual model in the scatterplot to see its details, enabling you to explore the options and select the best model for your fairness requirements.
-
-
 ### Integration with Azure Machine Learning
-Just as when analyzing an individual model, you can register all of the models found during your mitigation testing and upload the dashboard metrics to Azure Machine Learning.
+Just as when analyzing an individual model, you can register all of the models found during your mitigation testing and upload the dashboard metrics to Azure Machine Learning as shown in the example below. 
 
-## Exercise - Use Fairlearn with Azure Machine Learning
+    # Register the models
+    registered_model_predictions = dict()
+    for model_name, prediction_data in predictions.items():
+        model_file = os.path.join(model_dir, model_name + ".pkl")
+        registered_model = Model.register(model_path=model_file,
+                                          model_name=model_name,
+                                          workspace=ws)
+         registered_model_predictions[registered_model.id] = prediction_data
+
+    #  Create a group metric set for binary classification based on the Age feature for all of the models
+    sf = { 'Age': S_test.Age}
+    dash_dict = _create_group_metric_set(y_true=y_test,
+                                        predictions=registered_model_predictions,
+                                        sensitive_features=sf,
+                                        prediction_type='binary_classification')
+
+    exp = Experiment(ws, "mslearn-diabetes-fairness")
+    print(exp)
+
+    run = exp.start_logging(snapshot_directory=None)
+    RunDetails(run).show()
+
+    # Upload the dashboard to Azure Machine Learning
+    try:
+        dashboard_title = "Fairness Comparison of Diabetes Models"
+        upload_id = upload_dashboard_dictionary(run,
+                                                dash_dict,
+                                                dashboard_name=dashboard_title)
+        print("\nUploaded to id: {0}\n".format(upload_id))
+    finally:
+        run.complete()
+
+## Exercise - Use Fairlearn and raiwidgets with Azure Machine Learning
 
 Now it's your chance to detect and mitigate unfairness in a model.
 
