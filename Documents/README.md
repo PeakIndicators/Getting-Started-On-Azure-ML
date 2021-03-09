@@ -23,7 +23,7 @@ Content:
 * Lab Exercises and and documentation on working with Compute in AzureML
   * [Create Compute Instances](Create-Compute-Instance.md)
   * [Stop a Compute Instance](Stop-Compute-Instance.md)
-  * [Create a Compute Cluster](Create-Compute-Cluster.md)
+  * [Create and Remove a Compute Cluster](Create-Compute-Cluster.md)
   * [Creating and Running a Python or R Notebook](Creating-and-Running-a-Python-Notebook.md)
   * [Cloning and Running a Notebook](Clone-and-Run-a-Notebook.md)
   * [JupyterLab notebook templates](../labs)
@@ -32,7 +32,7 @@ Content:
  * Build AI solutions with AzureML:
    * [Create a Pipeline](Orchestrate-ML-With-Pipelines.md)
    * [Deploy a model as a real-time inferencing service](Deploy-Real-Time-Service.md)
-   * [Create a batch webservice](Deploy-Batch-Inference-Pipeline.md)
+   * [Deploy a model as a batch inferencing service](Deploy-Batch-Inference-Pipeline.md)
    * [Tune hyperparameters with Azure ML](Tune_hyperparameters_with_Azure_ML.md)
    * [Automate machine learning model selection with Azure Machine Learning](Automate-ML-model-selection.md)
    * [Explore differential privacy](Explore-differential-privacy.md)
