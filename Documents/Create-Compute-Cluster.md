@@ -1,4 +1,4 @@
-# Create a Compute Cluster
+# Create and Remove a Compute Cluster
 
 This document details how to create a compute cluster in the studio. 
 
