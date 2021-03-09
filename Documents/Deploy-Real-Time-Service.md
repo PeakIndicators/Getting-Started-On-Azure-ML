@@ -1,4 +1,4 @@
-# Deploy real-time machine learning services with Azure Machine Learning
+# Deploy a model as a real-time inferencing service
 
 ## Introduction
 
