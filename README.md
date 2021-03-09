@@ -28,7 +28,6 @@ We recommend the use of the most up-to-date browser that's compatible with your 
 
 We will also re-use some of Microsoft documentation (see: https://docs.microsoft.com/en-us/azure/machine-learning/) on the subject but we will try to present it in a structured way. This repo contains snippets of code and notebooks that you will be able to run in your own time. All the code used in this repo is shown in Python unless specifiied otheriwse. 
 
-
 Content: 
 
 * Introduction to Azure Machine Learning (AzureML):
@@ -90,7 +89,13 @@ Content:
     * [Azure Machine Learning in Visual Studio Code](Documents/VS_Code_Azure_ML_Git.md)
     * [Train and deploy an image classification TensorFlow model using the Azure Machine Learning Visual Studio Code Extension](Documents/Train_Deploy_Model_AzureML_VSCode_Extension_GitHub.md)
 
-* Integrate your work with Git
+* Integrate your work with Git:
   * [Create a project in Azure DevOps and establish a Git repo for source code](Documents/Create_project_Azure_DevOps.md)
   * [Integrating AzureML notebooks with Git](Documents/Integrating_AzureML_notebooks_with%20Git.md)
   * [Working with Git locally](Documents/Working_with_Git_locally.md)
+
+* Azure ML access and Custom Roles:
+  For this section we will redirect you to some Microsoft webpages which are really good an have a detailed explanation of each topic below:
+  * [Create a custom Role](https://docs.microsoft.com/en-us/azure/role-based-access-control/custom-roles#steps-to-create-a-custom-role)
+  * [Examples of Azure ML Custom Roles](https://docs.microsoft.com/en-us/azure/machine-learning/how-to-assign-roles#example-custom-roles)
+  * [Manage Users and Roles](https://docs.microsoft.com/en-us/azure/machine-learning/how-to-assign-roles)
