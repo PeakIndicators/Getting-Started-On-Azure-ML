@@ -95,7 +95,8 @@ Content:
   * [Working with Git locally](Documents/Working_with_Git_locally.md)
 
 * Azure ML access and Custom Roles:
-  For this section we will redirect you to some Microsoft webpages which are really good an have a detailed explanation of each topic below:
+  
+  This section will show some Microsoft webpages which are really good an have a detailed explanation of each topic below:
   * [Create a custom Role](https://docs.microsoft.com/en-us/azure/role-based-access-control/custom-roles#steps-to-create-a-custom-role)
   * [Examples of Azure ML Custom Roles](https://docs.microsoft.com/en-us/azure/machine-learning/how-to-assign-roles#example-custom-roles)
   * [Manage Users and Roles](https://docs.microsoft.com/en-us/azure/machine-learning/how-to-assign-roles)
