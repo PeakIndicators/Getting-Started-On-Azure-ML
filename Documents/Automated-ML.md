@@ -49,7 +49,7 @@ The primary metric parameter determines the metric to be used during model train
 
 If you have not already done so, please:
 
-* Create a Compute Cluster, this Automated ML feature won't work with a compute instance, it requires a compute cluster. More details can be seen in: [compute instance](../Documents/Create-Compute-Instance.md).
+* Create a Compute Cluster, this Automated ML feature won't work with a compute instance, it requires a compute cluster. More details can be seen in: [Create and Remove a Compute Cluster](../Documents/Create-Compute-Cluster.md).
 * Create a Datastore and a Dataset with the data you want to use. For more information see: [Create a Datastore using the web portal](../Documents/Work-With-Data-in-Azure-ML.md) and [Create Datasets using the web portal](../Documents/Work-With-Data-in-Azure-ML-Datasets.md).
 
 The steps described below show how to create a simple classification model using automated machine learning in the Azure Machine Learning studio. This classification model predicts if a client will subscribe to a fixed term deposit with a financial institution.
