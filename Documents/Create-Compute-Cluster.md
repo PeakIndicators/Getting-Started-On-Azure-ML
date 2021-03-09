@@ -1,9 +1,9 @@
 # Create and Remove a Compute Cluster
 
-This document details how to create a compute cluster in the studio. 
+This document details how to create a compute cluster in Azure ML Studio. 
 
 ## What's a compute target?
-With Azure Machine Learning, you can train your model on a variety of resources or environments, collectively referred to as compute targets. A compute target can be a local machine or a cloud resource, such as an Azure Machine Learning Compute, Azure HDInsight, or a remote virtual machine. You can also create compute targets for model deployment as described in ["Where and how to deploy your models"](https://docs.microsoft.com/en-us/azure/machine-learning/how-to-deploy-and-where).
+With Azure Machine Learning, you can train your model on a variety of resources or environments, collectively referred to as compute targets. A compute target can be a local machine or a cloud resource, such as an Azure Machine Learning Compute, Azure HDInsight, or a remote virtual machine. You can also create compute targets for model deployment as described in [Deploy a model as a batch inferencing service](../Documents/Deploy-Batch-Inference-Pipeline.md) and [Deploy a model as a real-time inferencing service](../Documents/Deploy-Real-Time-Service.md).
 
 Compute types include:
 * **[Compute instance](./Documents/Create-Compute-Instance.md):** Development workstations that data scientists can use to work with data and models.
@@ -72,19 +72,10 @@ Compute clusters can run jobs securely in a virtual network environment, without
 
 When you no longer intend to use your compute cluster you can delete it as shown below: 
 
-* Select the Compute Cluster you want to delete
+* Select the Compute Cluster you want to delete.
 
-* Click delete
+* Click delete.
 
 ![](../Images/compute-cluster6.PNG)
 
-* Confirm you want to delete your compute cluster
-
-
-
-
-
-
-
-
-
+* Confirm you want to delete your compute cluster.
