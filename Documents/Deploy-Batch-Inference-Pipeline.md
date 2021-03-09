@@ -1,4 +1,4 @@
-# Deploy batch inference pipelines with Azure Machine Learning 
+# Deploy a model as a batch inferencing service
 
 ## Before you start
 
