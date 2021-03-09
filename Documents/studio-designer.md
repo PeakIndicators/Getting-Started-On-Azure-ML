@@ -15,7 +15,7 @@ In part one of the tutorial, we will describe how to:
 
 If you have not already done so, please:
 
-* Create a Compute Cluster, the Designer won't work with a compute instance, it requires a compute cluster. More details can be seen in: [create and Remove a Compute Cluster](../Documents/Create-Compute-Cluster.md).
+* Create a Compute Cluster, the Designer won't work with a compute instance, it requires a compute cluster. More details can be seen in: [Create and Remove a Compute Cluster](../Documents/Create-Compute-Cluster.md).
 * Create a Datastore and a Dataset with the data you want to use. For more information see: [Create a Datastore using the web portal](../Documents/Work-With-Data-in-Azure-ML.md) and [Create Datasets using the web portal](../Documents/Work-With-Data-in-Azure-ML-Datasets.md).
 
 **Note**
