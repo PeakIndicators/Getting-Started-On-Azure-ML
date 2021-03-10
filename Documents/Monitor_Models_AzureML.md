@@ -17,6 +17,8 @@ You can use Application Insights to monitor telemetry from many kinds of applica
 
 ## Enable Application Insights
 
+## Using Python Notebooks
+
 To log telemetry in application insights from an Azure machine learning service, you must have an Application Insights resource associated with your Azure Machine Learning workspace and you must configure your service to use it for telemetry logging.
 
 ### Associate Application Insights with a workspace
@@ -95,6 +97,25 @@ def run(raw_data):
 
 Azure Machine Learning creates a custom dimension in the Application Insights data model for the output you write.
 
+### Configure logging with Azure Machine Learning studio
+You can also enable Azure Application Insights from Azure Machine Learning studio. When you're ready to deploy your model as a web service, use the following steps to enable Application Insights:
+
+1 - Sign in to [Azure ML Studio](https://ml.azure.com).
+
+2 - Go to **Models** and select the model you want to deploy.
+
+3 - Select **+Deploy**.
+
+4 - Fill the Deploy model form.
+
+5 - Expand the **Advanced** menu.
+
+![](../Images/deploy-form.png)
+
+6 - Select **Enable Application Insights diagnostics and data collection**.
+
+![](../Images/enable-app-insights.png)
+
 ### View logged data and query logs in Application Insights
 To analyze captured log data, you can use the Log Analytics query interface for Application Insights in the Azure portal. This interface supports a SQL-like query syntax that you can use to extract fields from logged data, including custom dimensions created by your Azure Machine Learning service. This SQL-like query syntax uses **Kusto query language**, more details can be seen [here](https://docs.microsoft.com/en-us/services-hub/health/log_analytics_query_language).
 
@@ -167,4 +188,4 @@ In this exercise, the code to configure application insights for a deployed pred
 ### Clean-up
 If you’re finished working with Azure Machine Learning for now refer to [this page](../Documents/Stop-Compute-Instance.md) to stop your compute instance. 
 
-_Source: https://docs.microsoft.com/en-us/azure/machine-learning/monitor-azure-machine-learning_
+_Source: https://docs.microsoft.com/en-us/azure/machine-learning/monitor-azure-machine-learning and https://docs.microsoft.com/en-us/azure/machine-learning/how-to-enable-app-insights_
