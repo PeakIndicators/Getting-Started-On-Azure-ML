@@ -51,7 +51,47 @@ Application Insights automatically captures any information written to the stand
 ### Write log data
 To capture telemetry data for Application insights, you can write any values to the standard output log in the scoring script for your service by using a `print` statement, as shown in the following example:
 
-![](../Images/79.PNG)
+```
+import pickle
+import json
+import numpy 
+from sklearn.externals import joblib
+from sklearn.linear_model import Ridge
+from azureml.core.model import Model
+import time
+
+def init():
+    global model
+    #Print statement for appinsights custom traces:
+    print ("model initialized" + time.strftime("%H:%M:%S"))
+
+    # note here "sklearn_regression_model.pkl" is the name of the model registered under the workspace
+    # this call should return the path to the model.pkl file on the local disk.
+    model_path = Model.get_model_path(model_name = 'sklearn_regression_model.pkl')
+
+    # deserialize the model file back into a sklearn model
+    model = joblib.load(model_path)
+
+
+# note you can pass in multiple rows for scoring
+def run(raw_data):
+    try:
+        data = json.loads(raw_data)['data']
+        data = numpy.array(data)
+        result = model.predict(data)
+        # Log the input and output data to appinsights:
+        info = {
+            "input": raw_data,
+            "output": result.tolist()
+            }
+        print(json.dumps(info))
+        # you can return any datatype as long as it is JSON-serializable
+        return result.tolist()
+    except Exception as e:
+        error = str(e)
+       print (error + time.strftime("%H:%M:%S"))
+        return error
+```
 
 Azure Machine Learning creates a custom dimension in the Application Insights data model for the output you write.
 
