@@ -11,7 +11,7 @@ One of the benefits of Azure Machine Learning is the ability to create cloud-bas
 * **Compute instances:** Development workstations that data scientists can use to work with data and models.
 * [Compute clusters:](../Documents/Create-Compute-Cluster.md)  Scalable clusters of virtual machines for on-demand processing of experiment code.
 * [Inference clusters:](../Documents/Create-Inference-Cluster.md) Deployment targets for predictive services that use your trained models.
-* **Attached compute:** Links to other Azure compute resources, such as Virtual Machines or Azure Databricks clusters.
+* [Attached compute:](../Documents/Create-Attached-Compute.md) Links to other Azure compute resources, such as Virtual Machines or Azure Databricks clusters.
 
 
 For most scenarios a compute instance is enough for developing and testing code.  As a development environment, *a compute instance cannot, however, be shared with other users in your workspace—each individual will have to create their own compute instance.* 
