@@ -9,8 +9,8 @@ With Azure Machine Learning, you can train your model on a variety of resources 
 Compute types include:.
 
 * **[Compute Instance](../Documents/Create-Compute-Instance.md)**: Development workstations that data scientists can use to work with data and models.
-* **Inference Cluster**: Deployment targets for predictive services that use your trained models.
 * **[Compute Cluster](../Documents/Create-Compute-Cluster.md)**: Scalable clusters of virtual machines for on-demand processing of experiment code.
+* **Inference Cluster**: Deployment targets for predictive services that use your trained models.
 * **[Attached Compute](../Documents/Create-Attached-Compute.md)**: Links to other Azure compute resources, such as Virtual Machines or Azure Databricks clusters.
 
 ## Inference Clusters
@@ -71,13 +71,3 @@ When you no longer intend to use your Inference cluster you can delete it as sho
 ![](../Images/InferenceClusters5.PNG)
 
 * Confirm you want to delete your Inference cluster.
-
-
-
-
-
-
-
-
-
-
