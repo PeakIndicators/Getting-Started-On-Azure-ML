@@ -29,8 +29,8 @@ Compute clusters can run jobs securely in a virtual network environment, without
 
 ![](../Images/compute-cluster1.PNG)
 
-2. Select **Create** in the middle of the page.
-3. If you see a list of compute resources, select **+New** above the list.
+2. If you have no Compute Clusters select **Create** in the middle of the page.
+3. If you see a list of Compute Clusters, select **+New** above the list.
 4. Select as appropriate for your requirements. Typically you can select as shown below:
    * **Region**: Should be the same region as your studio to avoid latency
    * **Virtual machine priority**: Dedicated- Low priority virtual machines are cheaper but don't guarantee the compute nodes. Your job may be preempted.
