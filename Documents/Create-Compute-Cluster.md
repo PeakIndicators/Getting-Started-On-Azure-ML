@@ -6,8 +6,8 @@ This document details how to create a compute cluster in Azure ML Studio.
 With Azure Machine Learning, you can train your model on a variety of resources or environments, collectively referred to as compute targets. A compute target can be a local machine or a cloud resource, such as an Azure Machine Learning Compute, Azure HDInsight, or a remote virtual machine. You can also create compute targets for model deployment as described in [Deploy a model as a batch inferencing service](../Documents/Deploy-Batch-Inference-Pipeline.md) and [Deploy a model as a real-time inferencing service](../Documents/Deploy-Real-Time-Service.md).
 
 Compute types include:
-* **[Compute instance](./Documents/Create-Compute-Instance.md):** Development workstations that data scientists can use to work with data and models.
-* **[Inference Cluster](./Documents/Create-Inference-Cluster.md):** Deployment targets for predictive services that use your trained models.
+* **[Compute instance](../Documents/Create-Compute-Instance.md):** Development workstations that data scientists can use to work with data and models.
+* **[Inference Cluster](../Documents/Create-Inference-Cluster.md):** Deployment targets for predictive services that use your trained models.
 * **Compute Cluster:** Scalable clusters of virtual machines for on-demand processing of experiment code.
 * **Attached compute:** Links to other Azure compute resources, such as Virtual Machines or Azure Databricks clusters.
 
