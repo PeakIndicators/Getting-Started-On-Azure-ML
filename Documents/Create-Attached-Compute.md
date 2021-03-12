@@ -19,7 +19,7 @@ To use compute targets created outside the Azure Machine Learning workspace, you
 * Training a model using Spark MLib on Databricks and deploying the model to ACI/AKS.
 * Using Azure Databricks with automated machine learning capabilities on Azure ML SDK.
 * Using Databricks as a compute target from an Azure Machine Learning pipeline. 
-* See [here](https://docs.microsoft.com/en-us/azure/machine-learning/how-to-configure-databricks-automl-environment) for more information on how to use Azure Databricks with Azure Machine Learning and AutoML.
+See [here](https://docs.microsoft.com/en-us/azure/machine-learning/how-to-configure-databricks-automl-environment) for more information on how to use Azure Databricks with Azure Machine Learning and AutoML.
 
  **Note**: Use Attached compute to attach a compute target for training. Use Inference clusters to attach an AKS cluster for inferencing.
  
