@@ -9,7 +9,7 @@ Compute types include:
 * **[Compute Instance](../Documents/Create-Compute-Instance.md):** Development workstations that data scientists can use to work with data and models.
 * **[Inference Cluster](../Documents/Create-Inference-Cluster.md):** Deployment targets for predictive services that use your trained models.
 * **Compute Cluster:** Scalable clusters of virtual machines for on-demand processing of experiment code.
-* **Attached Compute:** Links to other Azure compute resources, such as Virtual Machines or Azure Databricks clusters.
+* [Attached Compute](../Documents/Create-Attached-Compute.md): Links to other Azure compute resources, such as Virtual Machines or Azure Databricks clusters.
 
 ### What is a Compute Cluster?
 Azure Machine Learning compute cluster is a managed-compute infrastructure that allows you to easily create a single or multi-node compute. The compute is created within your workspace region as a resource that can be shared with other users in your workspace. The compute scales up automatically when a job is submitted and can be put in an Azure Virtual Network. The compute executes in a containerized environment and packages your model dependencies in a Docker container. You can use Azure Machine Learning compute cluster to distribute a training or batch inference process across a cluster of CPU or GPU compute nodes in the cloud.  
