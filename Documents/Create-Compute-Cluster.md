@@ -6,10 +6,10 @@ This document details how to create a compute cluster in Azure ML Studio.
 With Azure Machine Learning, you can train your model on a variety of resources or environments, collectively referred to as compute targets. A compute target can be a local machine or a cloud resource, such as an Azure Machine Learning Compute, Azure HDInsight, or a remote virtual machine. You can also create compute targets for model deployment as described in [Deploy a model as a batch inferencing service](../Documents/Deploy-Batch-Inference-Pipeline.md) and [Deploy a model as a real-time inferencing service](../Documents/Deploy-Real-Time-Service.md).
 
 Compute types include:
-* **[Compute instance](../Documents/Create-Compute-Instance.md):** Development workstations that data scientists can use to work with data and models.
+* **[Compute Instance](../Documents/Create-Compute-Instance.md):** Development workstations that data scientists can use to work with data and models.
 * **[Inference Cluster](../Documents/Create-Inference-Cluster.md):** Deployment targets for predictive services that use your trained models.
 * **Compute Cluster:** Scalable clusters of virtual machines for on-demand processing of experiment code.
-* **Attached compute:** Links to other Azure compute resources, such as Virtual Machines or Azure Databricks clusters.
+* **Attached Compute:** Links to other Azure compute resources, such as Virtual Machines or Azure Databricks clusters.
 
 ### What is a Compute Cluster?
 Azure Machine Learning compute cluster is a managed-compute infrastructure that allows you to easily create a single or multi-node compute. The compute is created within your workspace region as a resource that can be shared with other users in your workspace. The compute scales up automatically when a job is submitted and can be put in an Azure Virtual Network. The compute executes in a containerized environment and packages your model dependencies in a Docker container. You can use Azure Machine Learning compute cluster to distribute a training or batch inference process across a cluster of CPU or GPU compute nodes in the cloud.  
