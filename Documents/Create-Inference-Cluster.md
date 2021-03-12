@@ -48,7 +48,7 @@ Compute types include:.
         * If - character is used, then it needs to be followed by at least one letter later in the name
 
 * **Region**: Should be the same region as your studio to avoid latency
-* **Virtual machine size**: Think about the size of your data, what types of machine learning models, how quickly you want it to run etc. you will be using etc. Supported virtual machine sizes might be restricted in your region. Check the [availability list](https://azure.microsoft.com/global-infrastructure/services/?products=virtual-machines).
+* **Virtual machine size**: Think about the size of your data, what types of machine learning models you want to build, whether you will be building data pipelines, how quickly you want it to run, etc. Supported virtual machine sizes might be restricted in your region; for example there is one in the UK South but none in the UK West at the time of writing (12/03/21). Check the [availability list](https://azure.microsoft.com/global-infrastructure/services/?products=virtual-machines).
 *  **Cluster purpose** : Select **Production** or **Dev-test**. 
 *  **Number of nodes**: The number of nodes multiplied by the virtual machine’s number of cores (vCPUs) must be greater than or equal to 12.
 * **Network configuration**: Select **Advanced** to create the compute within an existing virtual network. For more information about AKS in a virtual network, see [Network isolation during training and inference with private endpoints and virtual networks](https://docs.microsoft.com/en-us/azure/machine-learning/how-to-secure-inferencing-vnet).
