@@ -73,7 +73,7 @@ When you no longer intend to use your compute cluster you can delete it as shown
 
 * Select the Compute Cluster you want to delete.
 
-* Click delete.
+* Click **Delete**.
 
 ![](../Images/compute-cluster6.PNG)
 
