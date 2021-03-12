@@ -8,9 +8,9 @@ With Azure Machine Learning, you can train your model on a variety of resources 
 
 Compute types include:.
 
-* [Compute Instance](../Documents/Create-Compute-Instance.md): Development workstations that data scientists can use to work with data and models.
-* [Inference Cluster](../Documents/Create-Inference-Cluster.md): Deployment targets for predictive services that use your trained models.
-* [Compute Cluster](../Documents/Create-Compute-Cluster.md): Scalable clusters of virtual machines for on-demand processing of experiment code.
+* **[Compute Instance](../Documents/Create-Compute-Instance.md):** Development workstations that data scientists can use to work with data and models.
+* **[Inference Cluster](../Documents/Create-Inference-Cluster.md):** Deployment targets for predictive services that use your trained models.
+* **[Compute Cluster](../Documents/Create-Compute-Cluster.md):** Scalable clusters of virtual machines for on-demand processing of experiment code.
 * **Attached Compute**: Links to other Azure compute resources, such as Virtual Machines or Azure Databricks clusters.
 
 ## Attached Compute
