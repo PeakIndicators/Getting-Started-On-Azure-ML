@@ -21,7 +21,7 @@ Compute clusters can run jobs securely in a virtual network environment, without
 1. Navigate to [Azure Machine Learning studio](https://ml.azure.com/).
 2. Under **Manage**, select **Compute**, you will see four kinds of compute resources.
 
-![](../Images/TypesOfComputeInstances.PNG)
+![](../Images/clusters.PNG)
 
 ### Create a Compute Cluster
 
