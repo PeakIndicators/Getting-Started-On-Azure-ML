@@ -53,6 +53,7 @@ Content:
   * [Create Compute Instances](Documents/Create-Compute-Instance.md)
   * [Stop a Compute Instance](Documents/Stop-Compute-Instance.md)
   * [Create and Remove a Compute Cluster](Documents/Create-Compute-Cluster.md)
+  * [Create and Remove an Inference Cluster](Documents/Create-Inference-Cluster.md)
   * [Creating and Running a Python or R Notebook](Documents/Creating-and-Running-a-Python-Notebook.md)
   * [Cloning and Running a Notebook](Documents/Clone-and-Run-a-Notebook.md)
   * [JupyterLab notebook templates](labs)
