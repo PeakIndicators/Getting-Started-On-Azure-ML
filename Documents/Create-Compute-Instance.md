@@ -9,8 +9,8 @@ One of the benefits of Azure Machine Learning is the ability to create cloud-bas
 ![](../Images/TypesOfComputeInstances.PNG)
 
 * **Compute instances:** Development workstations that data scientists can use to work with data and models.
-* **[Compute clusters:](../Documents/Create-Compute-Cluster.md)**  Scalable clusters of virtual machines for on-demand processing of experiment code.
-* **Inference clusters:** Deployment targets for predictive services that use your trained models.
+* [Compute clusters:](../Documents/Create-Compute-Cluster.md)**  Scalable clusters of virtual machines for on-demand processing of experiment code.
+* [Inference clusters:](../Documents/Create-Inference-Cluster.md) Deployment targets for predictive services that use your trained models.
 * **Attached compute:** Links to other Azure compute resources, such as Virtual Machines or Azure Databricks clusters.
 
 
